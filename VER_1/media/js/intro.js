@@ -1,0 +1,32 @@
+$(document).ready(function(){
+    $("#flex").click(function(){
+        $("#mainLoad").load("flex.html");
+    });
+    $("#gird").click(function(){
+        $("#mainLoad").load("gird.html");
+    });
+    $("#table").click(function(){
+        $("#mainLoad").load("table.html");
+    });
+    $("#media").click(function(){
+        $("#mainLoad").load("media.html");
+    });
+    $("#accordion").click(function(){
+        $("#mainLoad").load("accordion.html");
+    });
+    $("#modal").click(function(){
+        $("#mainLoad").load("modal.html");
+    });
+    $("#video").click(function(){
+        $("#mainLoad").load("video.html");
+    });
+    $("#carousel").click(function(){
+        $("#mainLoad").load("carousel.html");
+    });
+    $("#icon").click(function(){
+        $("#mainLoad").load("icon.html");
+    });
+    $("#tabs").click(function(){
+        $("#mainLoad").load("tabs.html");
+    });
+});

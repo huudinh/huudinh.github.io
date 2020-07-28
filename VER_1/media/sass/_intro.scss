@@ -1,0 +1,55 @@
+.font {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.header {
+    background: linear-gradient(to left, #28a5f5, #1e87f0);
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 21px 40px;
+    color: #fff;
+    @media #{$r768}{
+        padding: 21px 20px;
+    }
+    &__logo {
+        font-size: 24px;
+        font-weight: 600
+    }
+    &__slogan {
+        text-align: right;
+        font-size: 14px;
+        @media #{$r768}{
+            display: none;
+        }
+    }
+    &.row>div {
+        align-self: flex-end
+    }
+}
+.sidebarBox {
+    padding: 20px;
+    & h2 {
+        font-size: 20px;
+        padding: 0 10px;
+    }
+    & a {
+        display: block;
+        width: 100%;
+        padding: 5px 10px;
+        &a:hover {
+            background: #eee;
+        }
+    }
+}
+.main {
+    padding: 0px 20px 50px;
+    #mainLoad{
+        &>.container{
+            margin-left:0;
+        }
+    }
+}
+

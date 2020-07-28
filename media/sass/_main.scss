@@ -179,7 +179,7 @@
 		&::after {
 			content: '\e895';
 			display: inline-block;
-			@extend %icon;
+			// @extend %icon;
 		}
 	}
 

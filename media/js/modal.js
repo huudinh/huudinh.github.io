@@ -1,25 +1,41 @@
 // modal
-$(".modal-btn").click(function (e) {
-    e.preventDefault();
-    dataModal = $(this).attr("data-modal");
-    $("#" + dataModal).css({
-        "display": "block"
-    });
-    // $("body").css({"overflow-y": "hidden"}); //Prevent double scrollbar.
-});
+let modalButton = document.getElementsByClassName('modal-btn');
+let modals = document.getElementsByClassName('modal');
+let modalClose = document.getElementsByClassName('modal-close');
+let closePic = document.getElementsByClassName('modal-closePic');
+let modalBG = document.getElementsByClassName('modal-bg');
 
-$(".modal-close,.modal-closePic, .modal-bg").click(function () {
-    $(".modal").css({
-        "display": "none",
-    });
-    // $("body").css({"overflow-y": "auto"}); //Prevent double scrollbar.
-});
+for (let i = 0; i < modalButton.length; i++) {
+    for (let j = 0; j < modals.length; j++) {
+        let modalCheck = function () {
+            let x = modalButton[j].getAttribute('data-modal');
+            let y = modals[j].getAttribute('id');
+            if (x == y) {
+                return true;
+            }
+        }
 
-$('iframe[src*="https://www.facebook.com/"]').addClass("facebook-iframe");
+        //Show Modal
+        modalButton[j].addEventListener("click", () => {
+            if (modalCheck()) {
+                modals[j].style.display = "block";
+            }
+        });
 
-$(".modal-close,.modal-closePic, .modal-bg").click(function () {
-    $(this).parent().find('.facebook-iframe').each(function (index) {
-        $(this).attr('src', $(this).attr('src'));
-        return false;
-    });
-});
+        //Hide Modal
+        let modalHide = function (n) {
+            for (let i = 0; i < n.length; i++) {
+                n[i].addEventListener("click", () => {
+                    if (modalCheck()) {
+                        modals[j].style.display = "none";
+                        modals[j].stopVideo();
+                    }
+                });
+            }
+        }
+
+        modalHide(modalClose);
+        modalHide(modalBG);
+        modalHide(closePic);
+    }
+}

@@ -1,73 +1,72 @@
 .accordion {
-    &>ul>li {
-        padding-top:10px;
-        @media #{$r414}{
-            padding-top:1px;
+    margin: 0 auto;
+    &-title {
+        background: #f5f5f5;
+        cursor: pointer;
+        display: block;
+        border: none;
+        padding: 1em 0.5em;
+        width: 100%;
+        margin: 1px 0;
+        text-align: left;
+        &:focus {
+            border: none;
+            outline: none;
         }
-        span {
-            text-transform: uppercase;
-            color: #fff;
-            font-size: 13px;
-            display: block;
-            line-height: 25px;
-            padding: 8px 20px;
-            position: relative;
-            cursor: pointer;
-            border-radius: 8px;
-            background:linear-gradient(#526294,#614586);
-            @media #{$r414}{
-                line-height: 20px;
-                padding:8px 20px 8px 10px;
-                font-size:11px;
-            }
-            &:after {
-                content: '+';
-                font-weight: bold;
-                display: block;
-                position: absolute;
-                right: 20px;
-                top: 12px;
-                font-size: 15px;
-                line-height: 16px;
-                width: 15px;
-                height: 15px;
-                -webkit-border-radius: 50%;
-                border-radius: 50%;
-                text-align: center;
-                @media #{$r414}{
-                    right:8px;
-                }
-                
-            }
+        &:after {
+            content: "\002B";
+            color: #777;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
         }
-        &.toggled span:after {
-            content: '–';
-            color: #fff;
-            font-size: 16px;
-            line-height: 13px;
+
+        &.active:after {
+            content: "\2212";
         }
     }
-    & ul{
-        padding:0;
-        li{
-            list-style: none;
-            @media #{$r414}{
-                font-size:12px;
-                text-align: justify;
-            }
+    &-content {
+        padding: 0 10px;
+        height: 0;
+        line-height: 1.5;
+        overflow: hidden;
+        transition: all 0.25s linear;
+    }
+}
+.accordions {
+    &-title {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        margin:1px 0;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+        &.active,
+        &:hover {
+            background-color: #ccc;
         }
-        ul {
-            margin: 0;
-            padding:15px 20px 0;
-            display: none;
-            @media #{$r414}{
-                padding:5px;
-            }
-            li a {
-                display: block;
-                color: #3e3e3e;
-                text-decoration: none;
-            }
+        &:after {
+            content: "\2212";
+            color: #777;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
         }
-    } 
+
+        &.active:after {
+            content: "\002B";
+        }
+    }
+    &-content {
+        padding: 0 18px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
 }
