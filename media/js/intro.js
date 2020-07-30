@@ -5,6 +5,7 @@ x = x.split('huudinh.github.io/');
 x = x[1].split('.html');
 x = x[0].toUpperCase();
 title[0].innerHTML = x + ' - ' + data.titlePage;
+console.log(title[0]);
 /* END TITLE PAGE */
 
 /* HEADER */
