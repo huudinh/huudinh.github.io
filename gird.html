@@ -1,175 +1,200 @@
-<div class="container">
-    <h1>Gird system</h1>
-    <p>It's build width Flexbox and is fully responsive. Allows up to 12 columns across the page.</p>
-    <p> if you do not want to use all 12 collumn individually, you can group the columns together to create wider columns;</p>
-    <div class="container">
-        <div class="row">
-            <div class="col-1"><p>col-1</p></div>
-            <div class="col-1"><p>col-1</p></div>
-            <div class="col-1"><p>col-1</p></div>
-            <div class="col-1"><p>col-1</p></div>
-            <div class="col-1"><p>col-1</p></div>
-            <div class="col-1"><p>col-1</p></div>
-            <div class="col-1"><p>col-1</p></div>
-            <div class="col-1"><p>col-1</p></div>
-            <div class="col-1"><p>col-1</p></div>
-            <div class="col-1"><p>col-1</p></div>
-            <div class="col-1"><p>col-1</p></div>
-            <div class="col-1"><p>col-1</p></div>
-        </div>
-        <div class="row">
-            <div class="col-3"><p>col-3</p></div>
-            <div class="col-3"><p>col-3</p></div>
-            <div class="col-3"><p>col-3</p></div>
-            <div class="col-3"><p>col-3</p></div>
-            
-        </div>
-        <div class="row">
-            <div class="col-4"><p>col-4</p></div>
-            <div class="col-4"><p>col-4</p></div>
-            <div class="col-4"><p>col-4</p></div>
-        </div>
-        <div class="row">
-            <div class="col-4"><p>col-4</p></div>
-            <div class="col-8"><p>col-8</p></div>
-        </div>
-        <div class="row">
-            <div class="col-6"><p>col-6</p></div>
-            <div class="col-6"><p>col-6</p></div>
-        </div>
-        <div class="row">
-            <div class="col-12"><p>col-12</p></div>
-        </div>
-    </div>
-    <style>
-        .main .row div {
-            background: #f1f1f1f1;
-            border: 2px solid #fff;
-        }
-        .main .row div p{
-            padding:8px;
-            margin:0;
-            text-align: center;
-        }
-    </style>
-    <h3>Grid Classes</h3>
-    <p>Grid system has four classes:</p>
-    <ol>
-        <li><b>.col-</b>    (extra small devices - screen width less than 576px)</li>
-        <li><b>.col-md-</b> (medium devices - screen width equal to or greater than 812px)</li>
-        <li><b>.col-lg-</b> (large devices - screen width equal to or greater than 992px)</li>
-        <li><b>.col-xl-</b> (xlarge devices - screen width equal to or greater than 1200px)</li>
-    </ol>
-    <h3>Equal-width</h3>
-    <div class="container">
-        <div class="row">
-            <div class="col"><p>.col</p></div>
-            <div class="col"><p>.col</p></div>
-        </div>
-        <div class="row">
-            <div class="col"><p>.col</p></div>
-            <div class="col"><p>.col</p></div>
-            <div class="col"><p>.col</p></div>
-        </div>
-    </div>
-    <h3>Setting one column width</h3>
-    <div class="container">
-        <div class="row">
-            <div class="col"><p>.col</p></div>
-            <div class="col-6"><p>.col-6</p></div>
-            <div class="col"><p>.col</p></div>
-        </div>
-        <div class="row">
-            <div class="col"><p>.col</p></div>
-            <div class="col-5"><p>.col-5</p></div>
-            <div class="col"><p>.col</p></div>
-        </div>
-    </div>
-    <h3>Variable width content</h3>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col col-lg-2"><p>.col-lg-2</p></div>
-            <div class="col-md-auto"><p>.col-md-auto</p></div>
-            <div class="col col-lg-2"><p>.col-lg-2</p></div>
-        </div>
-        <div class="row">
-            <div class="col"><p>.col</p></div>
-            <div class="col-md-auto"><p>.col-md-auto</p></div>
-            <div class="col col-lg-4"><p>.col-lg-4</p></div>
-        </div>
-    </div>
-    <h3>Responsive class</h3>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-8"><p>.col-12 .col-md-8</p></div>
-            <div class="col-6 col-md-4"><p>.col-6 .col-md-4</p></div>
-        </div>
-        <div class="row">
-            <div class="col-6 col-md-4"><p>.col-6 .col-md-4</p></div>
-            <div class="col-6 col-md-4"><p>.col-6 .col-md-4</p></div>
-            <div class="col-6 col-md-4"><p>.col-6 .col-md-4</p></div>
-        </div>
-    </div>
-    <h3>Alignment</h3>
-    <h6>.row .justify-content-start</h6>
-    <div class="container">
-        <div class="row justify-content-start">
-            <div class="col-4"><p>.col-4</p></div>
-            <div class="col-4"><p>.col-4</p></div>
-        </div>
-        
-    </div>
-    <h6>.row .justify-content-center</h6>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-4"><p>.col-4</p></div>
-            <div class="col-4"><p>.col-4</p></div>
-        </div>
-    </div>
-    <h6>.row .justify-content-end</h6>
-    <div class="container">
-        <div class="row justify-content-end">
-            <div class="col-4"><p>.col-4</p></div>
-            <div class="col-4"><p>.col-4</p></div>
-        </div>
-    </div>
-    <h6>.row .justify-content-around</h6>
-    <div class="container">
-        <div class="row justify-content-around">
-            <div class="col-4"><p>.col-4</p></div>
-            <div class="col-4"><p>.col-4</p></div>
-        </div>
-    </div>
-    <h6>.row .justify-content-between</h6>
-    <div class="container">
-        <div class="row justify-content-between">
-            <div class="col-4"><p>.col-4</p></div>
-            <div class="col-4"><p>.col-4</p></div>
-        </div>
-    </div>
-    <h3>Order class</h3>
-    <p>Use <b>.order-</b> classes for controlling the visual order of your content. These classes are responsive, so you can set the <b>order</b> by breakpoint (e.g., <b>order-1.order-md-2</b> )</p>
-    <h6>1 -> 2 -> 3</h6>
-    <div class="container">
-        <div class="row">
-            <div class="col order-lg-2"><p>1.col.order-lg-2</p></div>
-            <div class="col order-md-12"><p>2.col.order-md-12</p></div>
-            <div class="col order-xl-1"><p>3.col.order-xl-1</p></div>
-        </div>
-    </div>
-    <h3>Margin utilities</h3>
-    <div class="container">
-        <div class="row">
-            <div class="col-4"><p>.col-4</p></div>
-            <div class="col-4 ml-auto"><p>.col-4.ml-auto</p></div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 ml-auto"><p>.col-lg-3.ml-auto</p></div>
-            <div class="col-lg-3 ml-auto"><p>.col-lg-3.ml-auto</p></div>
-        </div>
-        <div class="row">
-            <div class="col-auto mr-auto"><p>.col-auto.mr-auto</p></div>
-            <div class="col-auto"><p>.col-auto</p></div>
-        </div>
-    </div>
-</div>
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>SCI FRAMEWORK</title>
+	<meta name="Resource-type" content="Document" />
+	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<link id="pagestyle" rel="stylesheet" type="text/css" href="media/css/style.css" />
+</head>
+
+<body>
+	<div class="header"></div>
+	<div class="sidebar">
+		<div class="sidebarBox sidebar-left"></div>
+		<div class="main">
+			<div id="mainLoad">
+                <div class="container">
+                    <h1>Gird system</h1>
+                    <p>It's build width Flexbox and is fully responsive. Allows up to 12 columns across the page.</p>
+                    <p> if you do not want to use all 12 collumn individually, you can group the columns together to create wider columns;</p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-1"><p>col-1</p></div>
+                            <div class="col-1"><p>col-1</p></div>
+                            <div class="col-1"><p>col-1</p></div>
+                            <div class="col-1"><p>col-1</p></div>
+                            <div class="col-1"><p>col-1</p></div>
+                            <div class="col-1"><p>col-1</p></div>
+                            <div class="col-1"><p>col-1</p></div>
+                            <div class="col-1"><p>col-1</p></div>
+                            <div class="col-1"><p>col-1</p></div>
+                            <div class="col-1"><p>col-1</p></div>
+                            <div class="col-1"><p>col-1</p></div>
+                            <div class="col-1"><p>col-1</p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3"><p>col-3</p></div>
+                            <div class="col-3"><p>col-3</p></div>
+                            <div class="col-3"><p>col-3</p></div>
+                            <div class="col-3"><p>col-3</p></div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col-4"><p>col-4</p></div>
+                            <div class="col-4"><p>col-4</p></div>
+                            <div class="col-4"><p>col-4</p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4"><p>col-4</p></div>
+                            <div class="col-8"><p>col-8</p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6"><p>col-6</p></div>
+                            <div class="col-6"><p>col-6</p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"><p>col-12</p></div>
+                        </div>
+                    </div>
+                    <style>
+                        .main .row div {
+                            background: #f1f1f1f1;
+                            border: 2px solid #fff;
+                        }
+                        .main .row div p{
+                            padding:8px;
+                            margin:0;
+                            text-align: center;
+                        }
+                    </style>
+                    <h3>Grid Classes</h3>
+                    <p>Grid system has four classes:</p>
+                    <ol>
+                        <li><b>.col-</b>    (extra small devices - screen width less than 576px)</li>
+                        <li><b>.col-md-</b> (medium devices - screen width equal to or greater than 812px)</li>
+                        <li><b>.col-lg-</b> (large devices - screen width equal to or greater than 992px)</li>
+                        <li><b>.col-xl-</b> (xlarge devices - screen width equal to or greater than 1200px)</li>
+                    </ol>
+                    <h3>Equal-width</h3>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col"><p>.col</p></div>
+                            <div class="col"><p>.col</p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col"><p>.col</p></div>
+                            <div class="col"><p>.col</p></div>
+                            <div class="col"><p>.col</p></div>
+                        </div>
+                    </div>
+                    <h3>Setting one column width</h3>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col"><p>.col</p></div>
+                            <div class="col-6"><p>.col-6</p></div>
+                            <div class="col"><p>.col</p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col"><p>.col</p></div>
+                            <div class="col-5"><p>.col-5</p></div>
+                            <div class="col"><p>.col</p></div>
+                        </div>
+                    </div>
+                    <h3>Variable width content</h3>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col col-lg-2"><p>.col-lg-2</p></div>
+                            <div class="col-md-auto"><p>.col-md-auto</p></div>
+                            <div class="col col-lg-2"><p>.col-lg-2</p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col"><p>.col</p></div>
+                            <div class="col-md-auto"><p>.col-md-auto</p></div>
+                            <div class="col col-lg-4"><p>.col-lg-4</p></div>
+                        </div>
+                    </div>
+                    <h3>Responsive class</h3>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-md-8"><p>.col-12 .col-md-8</p></div>
+                            <div class="col-6 col-md-4"><p>.col-6 .col-md-4</p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 col-md-4"><p>.col-6 .col-md-4</p></div>
+                            <div class="col-6 col-md-4"><p>.col-6 .col-md-4</p></div>
+                            <div class="col-6 col-md-4"><p>.col-6 .col-md-4</p></div>
+                        </div>
+                    </div>
+                    <h3>Alignment</h3>
+                    <h6>.row .justify-content-start</h6>
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-4"><p>.col-4</p></div>
+                            <div class="col-4"><p>.col-4</p></div>
+                        </div>
+                        
+                    </div>
+                    <h6>.row .justify-content-center</h6>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-4"><p>.col-4</p></div>
+                            <div class="col-4"><p>.col-4</p></div>
+                        </div>
+                    </div>
+                    <h6>.row .justify-content-end</h6>
+                    <div class="container">
+                        <div class="row justify-content-end">
+                            <div class="col-4"><p>.col-4</p></div>
+                            <div class="col-4"><p>.col-4</p></div>
+                        </div>
+                    </div>
+                    <h6>.row .justify-content-around</h6>
+                    <div class="container">
+                        <div class="row justify-content-around">
+                            <div class="col-4"><p>.col-4</p></div>
+                            <div class="col-4"><p>.col-4</p></div>
+                        </div>
+                    </div>
+                    <h6>.row .justify-content-between</h6>
+                    <div class="container">
+                        <div class="row justify-content-between">
+                            <div class="col-4"><p>.col-4</p></div>
+                            <div class="col-4"><p>.col-4</p></div>
+                        </div>
+                    </div>
+                    <h3>Order class</h3>
+                    <p>Use <b>.order-</b> classes for controlling the visual order of your content. These classes are responsive, so you can set the <b>order</b> by breakpoint (e.g., <b>order-1.order-md-2</b> )</p>
+                    <h6>1 -> 2 -> 3</h6>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col order-lg-2"><p>1.col.order-lg-2</p></div>
+                            <div class="col order-md-12"><p>2.col.order-md-12</p></div>
+                            <div class="col order-xl-1"><p>3.col.order-xl-1</p></div>
+                        </div>
+                    </div>
+                    <h3>Margin utilities</h3>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4"><p>.col-4</p></div>
+                            <div class="col-4 ml-auto"><p>.col-4.ml-auto</p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 ml-auto"><p>.col-lg-3.ml-auto</p></div>
+                            <div class="col-lg-3 ml-auto"><p>.col-lg-3.ml-auto</p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto mr-auto"><p>.col-auto.mr-auto</p></div>
+                            <div class="col-auto"><p>.col-auto</p></div>
+                        </div>
+                    </div>
+                </div>             
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="media/js/data.js"></script>  
+	<script type="text/javascript" src="media/js/intro.js"></script>  
+	<script type="text/javascript" src="media/js/lib.js"></script>  
+</body>
+</html>

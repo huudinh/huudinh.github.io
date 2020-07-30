@@ -1,208 +1,230 @@
-<link rel="stylesheet" type="text/css" href="media/css/style.css" />
-<div class="container">
-    <h1>Modal</h1>
-    <p>Use modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.
-    </p>
-    <h3>Modal popup</h3>
-    <p>Popup effect <b>.animate-pop</b>, ...</p>
-    <a href="#" class="modal-btn btn" data-modal="modal-pop"> .animate-pop</a>
-    <a href="#" class="modal-btn btn" data-modal="modal-top"> .animate-top</a>
-    <a href="#" class="modal-btn btn" data-modal="modal-bottom"> .animate-bottom</a>
-    <a href="#" class="modal-btn btn" data-modal="modal-left"> .animate-left</a>
-    <a href="#" class="modal-btn btn" data-modal="modal-right"> .animate-right</a>
-    <a href="#" class="modal-btn btn" data-modal="modal-opacity"> .animate-opacity</a>
-    <a href="#" class="modal-btn btn" data-modal="modal-zoom"> .animate-zoom</a>
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml">
 
-    <div class="modal" id="modal-pop">
-        <div class="modal-bg"></div>
-        <div class="modal-box animate-pop">
-            <div class="modal-header">
-                <div class="modal-close">&times;</div>
-                <div class="modal-title">Simple modal box</div>
-            </div>
-            <div class="modal-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic soluta saepe, atque, iure quidem
-                    maiores non dolores, fuga eaque voluptatibus corporis accusantium quas. Eligendi velit eum fugiat
-                    eius? Distinctio reiciendis sint error, repellat
-                    ut soluta doloremque, accusamus vitae placeat?</p>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>SCI FRAMEWORK</title>
+	<meta name="Resource-type" content="Document" />
+	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<link id="pagestyle" rel="stylesheet" type="text/css" href="media/css/style.css" />
+</head>
 
-            </div>
-        </div>
-    </div>
-    <div class="modal" id="modal-top">
-        <div class="modal-bg"></div>
-        <div class="modal-box animate-top">
-            <div class="modal-header">
-                <div class="modal-close">&times;</div>
-                <div class="modal-title">Simple modal box</div>
-            </div>
-            <div class="modal-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic soluta saepe, atque, iure quidem
-                    maiores non dolores, fuga eaque voluptatibus corporis accusantium quas. Eligendi velit eum fugiat
-                    eius? Distinctio reiciendis sint error, repellat
-                    ut soluta doloremque, accusamus vitae placeat?</p>
-
-            </div>
-        </div>
-    </div>
-    <div class="modal" id="modal-bottom" style="display: none;">
-        <div class="modal-bg"></div>
-        <div class="modal-box animate-bottom">
-            <div class="modal-header">
-                <div class="modal-close">&times;</div>
-                <div class="modal-title">Simple modal box</div>
-            </div>
-            <div class="modal-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic soluta saepe, atque, iure quidem
-                    maiores non dolores, fuga eaque voluptatibus corporis accusantium quas. Eligendi velit eum fugiat
-                    eius? Distinctio reiciendis sint error, repellat
-                    ut soluta doloremque, accusamus vitae placeat?</p>
-
-            </div>
-        </div>
-    </div>
-    <div class="modal" id="modal-left" style="display: none;">
-        <div class="modal-bg"></div>
-        <div class="modal-box animate-left">
-            <div class="modal-header">
-                <div class="modal-close">&times;</div>
-                <div class="modal-title">Simple modal box</div>
-            </div>
-            <div class="modal-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic soluta saepe, atque, iure quidem
-                    maiores non dolores, fuga eaque voluptatibus corporis accusantium quas. Eligendi velit eum fugiat
-                    eius? Distinctio reiciendis sint error, repellat
-                    ut soluta doloremque, accusamus vitae placeat?</p>
-
-            </div>
-        </div>
-    </div>
-    <div class="modal" id="modal-right" style="display: none;">
-        <div class="modal-bg"></div>
-        <div class="modal-box animate-right">
-            <div class="modal-header">
-                <div class="modal-close">&times;</div>
-                <div class="modal-title">Simple modal box</div>
-            </div>
-            <div class="modal-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic soluta saepe, atque, iure quidem
-                    maiores non dolores, fuga eaque voluptatibus corporis accusantium quas. Eligendi velit eum fugiat
-                    eius? Distinctio reiciendis sint error, repellat
-                    ut soluta doloremque, accusamus vitae placeat?</p>
-
-            </div>
-        </div>
-    </div>
-    <div class="modal" id="modal-opacity" style="display: none;">
-        <div class="modal-bg"></div>
-        <div class="modal-box animate-opacity">
-            <div class="modal-header">
-                <div class="modal-close">&times;</div>
-                <div class="modal-title">Simple modal box</div>
-            </div>
-            <div class="modal-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic soluta saepe, atque, iure quidem
-                    maiores non dolores, fuga eaque voluptatibus corporis accusantium quas. Eligendi velit eum fugiat
-                    eius? Distinctio reiciendis sint error, repellat
-                    ut soluta doloremque, accusamus vitae placeat?</p>
-
-            </div>
-        </div>
-    </div>
-    <div class="modal" id="modal-zoom" style="display: none;">
-        <div class="modal-bg"></div>
-        <div class="modal-box animate-zoom">
-            <div class="modal-header">
-                <div class="modal-close">&times;</div>
-                <div class="modal-title">Simple modal box</div>
-            </div>
-            <div class="modal-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic soluta saepe, atque, iure quidem
-                    maiores non dolores, fuga eaque voluptatibus corporis accusantium quas. Eligendi velit eum fugiat
-                    eius? Distinctio reiciendis sint error, repellat
-                    ut soluta doloremque, accusamus vitae placeat?</p>
-
-            </div>
-        </div>
-    </div>
-
-    <h3>Modal Photo</h3>
-
-    <a href="#" class="modal-btn" data-modal="modal-pic">
-        <img style="width:30%;cursor:zoom-in" src="https://www.w3schools.com/w3css/img_snowtops.jpg" alt="">
-    </a>
-
-    <div class="modal" id="modal-pic">
-        <div class="modal-closePic">&times;</div>
-        <div class="modal-bg"></div>
-        <div class="modal-box modal-box-img animate-zoom">
-            <div class="modal-pic">
-                <img style="width:100%" src="https://www.w3schools.com/w3css/img_snowtops.jpg" alt="">
-
-            </div>
-        </div>
-    </div>
-
-    <h3>Modal Video</h3>
-
-    <style>
-        .modal-pic iframe {
-            margin: 0 auto;
-            display: block;
-        }
-    </style>
-
-    <a href="#" class="modal-btn modal-clip" data-video="D8ZYZX0gpFM"  data-modal="modal-clip">
-        <img style="width:30%;cursor:zoom-in" src="https://www.w3schools.com/w3css/img_lights.jpg" alt="">
-    </a>
-    <a href="#" class="modal-btn modal-clip" data-video="JE1XUXPcbcM"  data-modal="modal-clip">
-        <img style="width:30%;cursor:zoom-in" src="https://www.w3schools.com/w3css/img_lights.jpg" alt="">
-    </a>
-
-    <!-- <div class="modal modal-clipBox" id="modal-pic-2">
-        <div class="modal-closePic">&times;</div>
-        <div class="modal-bg"></div>
-        <div class="modal-box modal-box-img animate-zoom">
-            <div class="modal-pic">
-                <iframe width="640" height="350"
-                    src="//www.youtube-nocookie.com/embed/D8ZYZX0gpFM?controls=1&nocookie=true" frameborder="0"
-                    allowfullscreen></iframe>
-            </div>
-        </div>
-    </div> -->
-
-    <h3>Modal LiveStream Facebook</h3>
-
-    <a href="#" class="modal-btn" data-modal="modal-live">
-        <img style="width:30%;cursor:zoom-in" src="https://www.w3schools.com/w3css/img_snowtops.jpg" alt="">
-    </a>
-    <div class="modal" id="modal-live">
-        <div class="modal-closePic">&times;</div>
-        <div class="modal-bg"></div>
-        <div class="modal-box modal-box-live animate-zoom">
-            <div class="modal-pic">
-                <iframe
-                    src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FThamMyDongA%2Fvideos%2F2221635598095880%2F&show_text=0&width=267"
-                    width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                    allowTransparency="true" allowFullScreen="true"></iframe>
-            </div>
-        </div>
-    </div>
-    <a href="#" class="modal-btn" data-modal="modal-live2">
-        <img style="width:30%;cursor:zoom-in" src="https://www.w3schools.com/w3css/img_snowtops.jpg" alt="">
-    </a>
-    <div class="modal" id="modal-live2">
-        <div class="modal-closePic">&times;</div>
-        <div class="modal-bg"></div>
-        <div class="modal-box modal-box-live animate-zoom">
-            <div class="modal-pic">
-                <iframe
-                    src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FThamMyDongA%2Fvideos%2F2221635598095880%2F&show_text=0&width=267"
-                    width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                    allowTransparency="true" allowFullScreen="true"></iframe>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script src="media/js/lib.js"></script>
+<body>
+	<div class="header"></div>
+	<div class="sidebar">
+		<div class="sidebarBox sidebar-left"></div>
+		<div class="main">
+			<div id="mainLoad">
+                <div class="container">
+                    <h1>Modal</h1>
+                    <p>Use modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.
+                    </p>
+                    <h3>Modal popup</h3>
+                    <p>Popup effect <b>.animate-pop</b>, ...</p>
+                    <a href="#" class="modal-btn btn" data-modal="modal-pop"> .animate-pop</a>
+                    <a href="#" class="modal-btn btn" data-modal="modal-top"> .animate-top</a>
+                    <a href="#" class="modal-btn btn" data-modal="modal-bottom"> .animate-bottom</a>
+                    <a href="#" class="modal-btn btn" data-modal="modal-left"> .animate-left</a>
+                    <a href="#" class="modal-btn btn" data-modal="modal-right"> .animate-right</a>
+                    <a href="#" class="modal-btn btn" data-modal="modal-opacity"> .animate-opacity</a>
+                    <a href="#" class="modal-btn btn" data-modal="modal-zoom"> .animate-zoom</a>
+                
+                    <div class="modal" id="modal-pop">
+                        <div class="modal-bg"></div>
+                        <div class="modal-box animate-pop">
+                            <div class="modal-header">
+                                <div class="modal-close">&times;</div>
+                                <div class="modal-title">Simple modal box</div>
+                            </div>
+                            <div class="modal-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic soluta saepe, atque, iure quidem
+                                    maiores non dolores, fuga eaque voluptatibus corporis accusantium quas. Eligendi velit eum fugiat
+                                    eius? Distinctio reiciendis sint error, repellat
+                                    ut soluta doloremque, accusamus vitae placeat?</p>
+                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="modal-top">
+                        <div class="modal-bg"></div>
+                        <div class="modal-box animate-top">
+                            <div class="modal-header">
+                                <div class="modal-close">&times;</div>
+                                <div class="modal-title">Simple modal box</div>
+                            </div>
+                            <div class="modal-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic soluta saepe, atque, iure quidem
+                                    maiores non dolores, fuga eaque voluptatibus corporis accusantium quas. Eligendi velit eum fugiat
+                                    eius? Distinctio reiciendis sint error, repellat
+                                    ut soluta doloremque, accusamus vitae placeat?</p>
+                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="modal-bottom" style="display: none;">
+                        <div class="modal-bg"></div>
+                        <div class="modal-box animate-bottom">
+                            <div class="modal-header">
+                                <div class="modal-close">&times;</div>
+                                <div class="modal-title">Simple modal box</div>
+                            </div>
+                            <div class="modal-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic soluta saepe, atque, iure quidem
+                                    maiores non dolores, fuga eaque voluptatibus corporis accusantium quas. Eligendi velit eum fugiat
+                                    eius? Distinctio reiciendis sint error, repellat
+                                    ut soluta doloremque, accusamus vitae placeat?</p>
+                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="modal-left" style="display: none;">
+                        <div class="modal-bg"></div>
+                        <div class="modal-box animate-left">
+                            <div class="modal-header">
+                                <div class="modal-close">&times;</div>
+                                <div class="modal-title">Simple modal box</div>
+                            </div>
+                            <div class="modal-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic soluta saepe, atque, iure quidem
+                                    maiores non dolores, fuga eaque voluptatibus corporis accusantium quas. Eligendi velit eum fugiat
+                                    eius? Distinctio reiciendis sint error, repellat
+                                    ut soluta doloremque, accusamus vitae placeat?</p>
+                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="modal-right" style="display: none;">
+                        <div class="modal-bg"></div>
+                        <div class="modal-box animate-right">
+                            <div class="modal-header">
+                                <div class="modal-close">&times;</div>
+                                <div class="modal-title">Simple modal box</div>
+                            </div>
+                            <div class="modal-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic soluta saepe, atque, iure quidem
+                                    maiores non dolores, fuga eaque voluptatibus corporis accusantium quas. Eligendi velit eum fugiat
+                                    eius? Distinctio reiciendis sint error, repellat
+                                    ut soluta doloremque, accusamus vitae placeat?</p>
+                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="modal-opacity" style="display: none;">
+                        <div class="modal-bg"></div>
+                        <div class="modal-box animate-opacity">
+                            <div class="modal-header">
+                                <div class="modal-close">&times;</div>
+                                <div class="modal-title">Simple modal box</div>
+                            </div>
+                            <div class="modal-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic soluta saepe, atque, iure quidem
+                                    maiores non dolores, fuga eaque voluptatibus corporis accusantium quas. Eligendi velit eum fugiat
+                                    eius? Distinctio reiciendis sint error, repellat
+                                    ut soluta doloremque, accusamus vitae placeat?</p>
+                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="modal-zoom" style="display: none;">
+                        <div class="modal-bg"></div>
+                        <div class="modal-box animate-zoom">
+                            <div class="modal-header">
+                                <div class="modal-close">&times;</div>
+                                <div class="modal-title">Simple modal box</div>
+                            </div>
+                            <div class="modal-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic soluta saepe, atque, iure quidem
+                                    maiores non dolores, fuga eaque voluptatibus corporis accusantium quas. Eligendi velit eum fugiat
+                                    eius? Distinctio reiciendis sint error, repellat
+                                    ut soluta doloremque, accusamus vitae placeat?</p>
+                
+                            </div>
+                        </div>
+                    </div>
+                
+                    <h3>Modal Photo</h3>
+                
+                    <a href="#" class="modal-btn" data-modal="modal-pic">
+                        <img style="width:30%;cursor:zoom-in" src="https://www.w3schools.com/w3css/img_snowtops.jpg" alt="">
+                    </a>
+                
+                    <div class="modal" id="modal-pic">
+                        <div class="modal-closePic">&times;</div>
+                        <div class="modal-bg"></div>
+                        <div class="modal-box modal-box-img animate-zoom">
+                            <div class="modal-pic">
+                                <img style="width:100%" src="https://www.w3schools.com/w3css/img_snowtops.jpg" alt="">
+                
+                            </div>
+                        </div>
+                    </div>
+                
+                    <h3>Modal Video</h3>
+                
+                    <style>
+                        .modal-pic iframe {
+                            margin: 0 auto;
+                            display: block;
+                        }
+                    </style>
+                
+                    <a href="#" class="modal-btn modal-clip" data-video="D8ZYZX0gpFM"  data-modal="modal-clip">
+                        <img style="width:30%;cursor:zoom-in" src="https://www.w3schools.com/w3css/img_lights.jpg" alt="">
+                    </a>
+                    <a href="#" class="modal-btn modal-clip" data-video="JE1XUXPcbcM"  data-modal="modal-clip">
+                        <img style="width:30%;cursor:zoom-in" src="https://www.w3schools.com/w3css/img_lights.jpg" alt="">
+                    </a>
+                
+                    <!-- <div class="modal modal-clipBox" id="modal-pic-2">
+                        <div class="modal-closePic">&times;</div>
+                        <div class="modal-bg"></div>
+                        <div class="modal-box modal-box-img animate-zoom">
+                            <div class="modal-pic">
+                                <iframe width="640" height="350"
+                                    src="//www.youtube-nocookie.com/embed/D8ZYZX0gpFM?controls=1&nocookie=true" frameborder="0"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div> -->
+                
+                    <h3>Modal LiveStream Facebook</h3>
+                
+                    <a href="#" class="modal-btn" data-modal="modal-live">
+                        <img style="width:30%;cursor:zoom-in" src="https://www.w3schools.com/w3css/img_snowtops.jpg" alt="">
+                    </a>
+                    <div class="modal" id="modal-live">
+                        <div class="modal-closePic">&times;</div>
+                        <div class="modal-bg"></div>
+                        <div class="modal-box modal-box-live animate-zoom">
+                            <div class="modal-pic">
+                                <iframe
+                                    src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FThamMyDongA%2Fvideos%2F2221635598095880%2F&show_text=0&width=267"
+                                    width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                                    allowTransparency="true" allowFullScreen="true"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="modal-btn" data-modal="modal-live2">
+                        <img style="width:30%;cursor:zoom-in" src="https://www.w3schools.com/w3css/img_snowtops.jpg" alt="">
+                    </a>
+                    <div class="modal" id="modal-live2">
+                        <div class="modal-closePic">&times;</div>
+                        <div class="modal-bg"></div>
+                        <div class="modal-box modal-box-live animate-zoom">
+                            <div class="modal-pic">
+                                <iframe
+                                    src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FThamMyDongA%2Fvideos%2F2221635598095880%2F&show_text=0&width=267"
+                                    width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                                    allowTransparency="true" allowFullScreen="true"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>     
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="media/js/data.js"></script>  
+	<script type="text/javascript" src="media/js/intro.js"></script>  
+	<script type="text/javascript" src="media/js/lib.js"></script>  
+</body>
+</html>

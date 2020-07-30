@@ -226,7 +226,7 @@ for (let i = 0; i < modalButton.length; i++) {
 // Video Popup
 
 // Chèn Box Modal
-let container = document.getElementsByClassName('container');
+let container = document.getElementsByTagName('body');
 container[0].insertAdjacentHTML('beforeEnd',
 `<div class="modal modal-clipBox" id="modal-clip">
     <div class="modal-closePic">&times;</div>

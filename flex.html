@@ -1,351 +1,379 @@
-<div class="container">
-    <h1>Flexbox</h1>
-    <p>The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning.</p>
-    <p>To create a flexbox container and to transform direct children into flex items, user the <b>.flex</b> class</p>
-    <div class="flex">
-        <p>Flex item 1</p>
-        <p>Flex item 2</p>
-        <p>Flex item 3</p>
-    </div>
-    <br>
-    <p>To create an inline flexbox container, use the <b>.flex-inline</b> class</p>
-    <div class="flex-inline">
-        <p>Flex item 1</p>
-        <p>Flex item 2</p>
-        <p>Flex item 3</p>
-    </div>
-       
-    <style>
-        .main .flex,.main .flex-inline  {
-            background: #f1f1f1f1;
-        }
-        .main .flex p,.main .flex-inline p{
-            border-right: 2px solid #fff;
-            padding:8px;
-            margin-bottom:0;
-            text-align: center;
-            background:#ddd;
-        }
-        .main .flex-wrap p,.main .flex-wrap-reverse p{
-            margin-bottom:3px;
-        }
-    </style>
-    <h3>Horizontal Direction</h3>
-    <p>Use <b>.flex-row</b> to display the flex items horizontally (side by side). This id default.</p>
-    <p><b>Tip:</b> Use <b>.flex-row-reverse</b> to right-align the horizontal direction:</p>
-    <div class="flex flex-row">
-        <p>Flex item 1</p>
-        <p>Flex item 2</p>
-        <p>Flex item 3</p>
-    </div>
-    <br>
-    <div class="flex flex-row-reverse">
-        <p>Flex item 1</p>
-        <p>Flex item 2</p>
-        <p>Flex item 3</p>
-    </div>
-    <h3>Justify Content</h3>
-    <p>Use the <b>.justify-content-*</b> classes to change the alignment of flex items. Valid classes are <b>start</b> (default), <b>end</b>, <b>center</b>, <b>betwwen</b> or <b>around</b>:</p>
-    <h6>.justify-content-start</h6>
-    <div class="flex justify-content-start">
-        <p>Flex item 1</p>
-        <p>Flex item 2</p>
-        <p>Flex item 3</p>
-    </div>
-    <h6>.justify-content-end</h6>
-    <div class="flex justify-content-end">
-        <p>Flex item 1</p>
-        <p>Flex item 2</p>
-        <p>Flex item 3</p>
-    </div>
-    <h6>.justify-content-center</h6>
-    <div class="flex justify-content-center">
-        <p>Flex item 1</p>
-        <p>Flex item 2</p>
-        <p>Flex item 3</p>
-    </div>
-    <h6>.justify-content-between</h6>
-    <div class="flex justify-content-between">
-        <p>Flex item 1</p>
-        <p>Flex item 2</p>
-        <p>Flex item 3</p>
-    </div>
-    <h6>.justify-content-around</h6>
-    <div class="flex justify-content-around">
-        <p>Flex item 1</p>
-        <p>Flex item 2</p>
-        <p>Flex item 3</p>
-    </div>
-    <h3>Fill / Equal Widths</h3>
-    <p>Use <b>.flex-fill</b> on flex items to force them into equal widths:</p>
-    <div class="flex justify-content-around">
-        <p class="flex-fill">Flex item 1</p>
-        <p class="flex-fill">Flex item 2</p>
-        <p class="flex-fill">Flex item 3</p>
-    </div>
-    <h3>Grow</h3>
-    <p>Use <b>.flex-grow</b> on flex items to take up the rest of the space. In the example below, the first two flex items take up their necessary space, white the last item takes up the rest of the available space:</p>
-    <div class="flex ">
-        <p>Flex item 1</p>
-        <p>Flex item 2</p>
-        <p class="flex-grow">Flex item 3</p>
-    </div>
-    <h3>Order</h3>
-    <p>Use <b>.flex-grow</b> on flex items to take up the rest of the space. In the example below, the first two flex items take up their necessary space, white the last item takes up the rest of the available space:</p>
-    <div class="flex ">
-        <p class="order-3">Flex item 1</p>
-        <p class="order-2">Flex item 2</p>
-        <p class="order-1">Flex item 3</p>
-    </div>
-    <h3>Auto Margins</h3>
-    <p>Easily add auto margins to flex items width <b>.mr-auto</b> (push items to the right), or by using <b>.ml-auto</b> (push items to the left)</p>
-    <div class="flex ">
-        <p class="mr-auto">Flex item 1 (.mr-auto)</p>
-        <p class="">Flex item 2</p>
-        <p class="">Flex item 3</p>
-    </div>
-    <br>
-    <div class="flex ">
-        <p class="mr-auto">Flex item 1 (.mr-auto)</p>
-        <p class="">Flex item 2</p>
-        <p class="ml-auto">Flex item 3 (.ml-auto)</p>
-    </div>
-    <h3>Wrap</h3>
-    <p>Control how flex items wrap in a flex container width <b>.flex-nowrap</b> (default), <b>.flex-wrap</b> or <b>.flex-wrap-reverse</b></p>
-    <h6>.flex-nowrap</h6>
-    <div class="flex flex-nowrap ">
-        <p>Flex item 1</p>
-        <p>Flex item 2</p>
-        <p>Flex item 3</p>
-        <p>Flex item 4</p>
-        <p>Flex item 5</p>
-        <p>Flex item 6</p>
-        <p>Flex item 7</p>
-        <p>Flex item 8</p>
-        <p>Flex item 9</p>
-        <p>Flex item 10</p>
-        <p>Flex item 11</p>
-        <p>Flex item 12</p>
-        <p>Flex item 13</p>
-        <p>Flex item 14</p>
-        <p>Flex item 15</p>
-        <p>Flex item 16</p>
-    </div>
-    <h6>.flex-wrap</h6>
-    <div class="flex flex-wrap ">
-        <p>Flex item 1</p>
-        <p>Flex item 2</p>
-        <p>Flex item 3</p>
-        <p>Flex item 4</p>
-        <p>Flex item 5</p>
-        <p>Flex item 6</p>
-        <p>Flex item 7</p>
-        <p>Flex item 8</p>
-        <p>Flex item 9</p>
-        <p>Flex item 10</p>
-        <p>Flex item 11</p>
-        <p>Flex item 12</p>
-        <p>Flex item 13</p>
-        <p>Flex item 14</p>
-        <p>Flex item 15</p>
-        <p>Flex item 16</p>
-    </div>
-    <h6>.flex-wrap-reverse</h6>
-    <div class="flex flex-wrap-reverse ">
-        <p>Flex item 1</p>
-        <p>Flex item 2</p>
-        <p>Flex item 3</p>
-        <p>Flex item 4</p>
-        <p>Flex item 5</p>
-        <p>Flex item 6</p>
-        <p>Flex item 7</p>
-        <p>Flex item 8</p>
-        <p>Flex item 9</p>
-        <p>Flex item 10</p>
-        <p>Flex item 11</p>
-        <p>Flex item 12</p>
-        <p>Flex item 13</p>
-        <p>Flex item 14</p>
-        <p>Flex item 15</p>
-        <p>Flex item 16</p>
-    </div>
-    <h3>Align Content</h3>
-    <p>Control the vertical alignment of gathered flex items with the <b>.align-content-*</b> classes. Valid classes are <b>.align-content-start</b> (default), <b>.align-content-end</b>, <b>.align-content-center</b>, <b>.align-content-between</b>, <b>.align-content-around</b> and .align-content-streth</p>
-    <h6>.align-content-start</h6>
-    <div class="flex flex-wrap align-content-start " style="height:150px;">
-        <p>Flex item 1</p>
-        <p>Flex item 2</p>
-        <p>Flex item 3</p>
-        <p>Flex item 4</p>
-        <p>Flex item 5</p>
-        <p>Flex item 6</p>
-        <p>Flex item 7</p>
-        <p>Flex item 8</p>
-        <p>Flex item 9</p>
-        <p>Flex item 10</p>
-        <p>Flex item 11</p>
-        <p>Flex item 12</p>
-        <p>Flex item 13</p>
-        <p>Flex item 14</p>
-        <p>Flex item 15</p>
-        <p>Flex item 16</p>
-    </div>
-    <h6>.align-content-end</h6>
-    <div class="flex flex-wrap align-content-end " style="height:150px;">
-        <p>Flex item 1</p>
-        <p>Flex item 2</p>
-        <p>Flex item 3</p>
-        <p>Flex item 4</p>
-        <p>Flex item 5</p>
-        <p>Flex item 6</p>
-        <p>Flex item 7</p>
-        <p>Flex item 8</p>
-        <p>Flex item 9</p>
-        <p>Flex item 10</p>
-        <p>Flex item 11</p>
-        <p>Flex item 12</p>
-        <p>Flex item 13</p>
-        <p>Flex item 14</p>
-        <p>Flex item 15</p>
-        <p>Flex item 16</p>
-    </div>
-    <h6>.align-content-center</h6>
-    <div class="flex flex-wrap align-content-center " style="height:150px;">
-        <p>Flex item 1</p>
-        <p>Flex item 2</p>
-        <p>Flex item 3</p>
-        <p>Flex item 4</p>
-        <p>Flex item 5</p>
-        <p>Flex item 6</p>
-        <p>Flex item 7</p>
-        <p>Flex item 8</p>
-        <p>Flex item 9</p>
-        <p>Flex item 10</p>
-        <p>Flex item 11</p>
-        <p>Flex item 12</p>
-        <p>Flex item 13</p>
-        <p>Flex item 14</p>
-        <p>Flex item 15</p>
-        <p>Flex item 16</p>
-    </div>
-    <h6>.align-content-between</h6>
-    <div class="flex flex-wrap align-content-between " style="height:150px;">
-        <p>Flex item 1</p>
-        <p>Flex item 2</p>
-        <p>Flex item 3</p>
-        <p>Flex item 4</p>
-        <p>Flex item 5</p>
-        <p>Flex item 6</p>
-        <p>Flex item 7</p>
-        <p>Flex item 8</p>
-        <p>Flex item 9</p>
-        <p>Flex item 10</p>
-        <p>Flex item 11</p>
-        <p>Flex item 12</p>
-        <p>Flex item 13</p>
-        <p>Flex item 14</p>
-        <p>Flex item 15</p>
-        <p>Flex item 16</p>
-    </div>
-    <h6>.align-content-around</h6>
-    <div class="flex flex-wrap align-content-around " style="height:150px;">
-        <p>Flex item 1</p>
-        <p>Flex item 2</p>
-        <p>Flex item 3</p>
-        <p>Flex item 4</p>
-        <p>Flex item 5</p>
-        <p>Flex item 6</p>
-        <p>Flex item 7</p>
-        <p>Flex item 8</p>
-        <p>Flex item 9</p>
-        <p>Flex item 10</p>
-        <p>Flex item 11</p>
-        <p>Flex item 12</p>
-        <p>Flex item 13</p>
-        <p>Flex item 14</p>
-        <p>Flex item 15</p>
-        <p>Flex item 16</p>
-    </div>
-    <h6>.align-content-stretch</h6>
-    <div class="flex flex-wrap align-content-stretch " style="height:150px;">
-        <p>Flex item 1</p>
-        <p>Flex item 2</p>
-        <p>Flex item 3</p>
-        <p>Flex item 4</p>
-        <p>Flex item 5</p>
-        <p>Flex item 6</p>
-        <p>Flex item 7</p>
-        <p>Flex item 8</p>
-        <p>Flex item 9</p>
-        <p>Flex item 10</p>
-        <p>Flex item 11</p>
-        <p>Flex item 12</p>
-        <p>Flex item 13</p>
-        <p>Flex item 14</p>
-        <p>Flex item 15</p>
-        <p>Flex item 16</p>
-    </div>
-    <h3>Align Items</h3>
-    <p>Control the vertical alignment of single rows of flex items with the <b>.align-items-*</b> classes. Valid classes are <b>.align-items-start</b>, <b>.align-items-end</b>, <b>.align-items-center</b>, <b>.align-items-baseline</b>, and <b>.align-items-stretch</b>(default)</p>
-    <h6>.align-items-start</h6>
-    <div class="flex align-items-start " style="height:100px;">
-        <p>Flex item 1</p>
-        <p>Flex item 2</p>
-        <p>Flex item 3</p>
-    </div>
-    <h6>.align-items-end</h6>
-    <div class="flex align-items-end " style="height:100px;">
-        <p>Flex item 1</p>
-        <p>Flex item 2</p>
-        <p>Flex item 3</p>
-    </div>
-    <h6>.align-items-center</h6>
-    <div class="flex align-items-center " style="height:100px;">
-        <p>Flex item 1</p>
-        <p>Flex item 2</p>
-        <p>Flex item 3</p>
-    </div>
-    <h6>.align-items-baseline</h6>
-    <div class="flex align-items-baseline " style="height:100px;">
-        <p>Flex item 1</p>
-        <p>Flex item 2</p>
-        <p>Flex item 3</p>
-    </div>
-    <h6>.align-items-stretch</h6>
-    <div class="flex align-items-stretch " style="height:100px;">
-        <p>Flex item 1</p>
-        <p>Flex item 2</p>
-        <p>Flex item 3</p>
-    </div>
-    <h3>Align Self</h3>
-    <p>Control the vertical alignment of a specified flex item width the <b>.align-self-*</b> classes. Valid classes are <b>.align-self-start</b>, <b>align-selft-end</b>, <b>.align-selft-center</b>, <b>.align-selft-baseline</b>, and <b>.align-self-stretch</b> (default)</p>
-    <div class="flex " style="height:100px;">
-        <p>Flex item 1</p>
-        <p class="align-self-start">Flex item 2 (.align-self-start)</p>
-        <p>Flex item 3</p>
-    </div>
-    <br>
-    <div class="flex " style="height:100px;">
-        <p>Flex item 1</p>
-        <p class="align-self-end">Flex item 2 (.align-self-end)</p>
-        <p>Flex item 3</p>
-    </div>
-    <br>
-    <div class="flex " style="height:100px;">
-        <p>Flex item 1</p>
-        <p class="align-self-center">Flex item 2 (.align-self-center)</p>
-        <p>Flex item 3</p>
-    </div>
-    <br>
-    <div class="flex " style="height:100px;">
-        <p>Flex item 1</p>
-        <p class="align-self-baseline">Flex item 2 (.align-self-baseline)</p>
-        <p>Flex item 3</p>
-    </div>
-    <br>
-    <div class="flex " style="height:100px;">
-        <p>Flex item 1</p>
-        <p class="align-self-stretch">Flex item 2 (.align-self-stretch)</p>
-        <p>Flex item 3</p>
-    </div>
-</div>
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>SCI FRAMEWORK</title>
+	<meta name="Resource-type" content="Document" />
+	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<link id="pagestyle" rel="stylesheet" type="text/css" href="media/css/style.css" />
+</head>
+
+<body>
+	<div class="header"></div>
+	<div class="sidebar">
+		<div class="sidebarBox sidebar-left"></div>
+		<div class="main">
+			<div id="mainLoad">
+                <div class="container">
+                    <h1>Flexbox</h1>
+                    <p>The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning.</p>
+                    <p>To create a flexbox container and to transform direct children into flex items, user the <b>.flex</b> class</p>
+                    <div class="flex">
+                        <p>Flex item 1</p>
+                        <p>Flex item 2</p>
+                        <p>Flex item 3</p>
+                    </div>
+                    <br>
+                    <p>To create an inline flexbox container, use the <b>.flex-inline</b> class</p>
+                    <div class="flex-inline">
+                        <p>Flex item 1</p>
+                        <p>Flex item 2</p>
+                        <p>Flex item 3</p>
+                    </div>
+                       
+                    <style>
+                        .main .flex,.main .flex-inline  {
+                            background: #f1f1f1f1;
+                        }
+                        .main .flex p,.main .flex-inline p{
+                            border-right: 2px solid #fff;
+                            padding:8px;
+                            margin-bottom:0;
+                            text-align: center;
+                            background:#ddd;
+                        }
+                        .main .flex-wrap p,.main .flex-wrap-reverse p{
+                            margin-bottom:3px;
+                        }
+                    </style>
+                    <h3>Horizontal Direction</h3>
+                    <p>Use <b>.flex-row</b> to display the flex items horizontally (side by side). This id default.</p>
+                    <p><b>Tip:</b> Use <b>.flex-row-reverse</b> to right-align the horizontal direction:</p>
+                    <div class="flex flex-row">
+                        <p>Flex item 1</p>
+                        <p>Flex item 2</p>
+                        <p>Flex item 3</p>
+                    </div>
+                    <br>
+                    <div class="flex flex-row-reverse">
+                        <p>Flex item 1</p>
+                        <p>Flex item 2</p>
+                        <p>Flex item 3</p>
+                    </div>
+                    <h3>Justify Content</h3>
+                    <p>Use the <b>.justify-content-*</b> classes to change the alignment of flex items. Valid classes are <b>start</b> (default), <b>end</b>, <b>center</b>, <b>betwwen</b> or <b>around</b>:</p>
+                    <h6>.justify-content-start</h6>
+                    <div class="flex justify-content-start">
+                        <p>Flex item 1</p>
+                        <p>Flex item 2</p>
+                        <p>Flex item 3</p>
+                    </div>
+                    <h6>.justify-content-end</h6>
+                    <div class="flex justify-content-end">
+                        <p>Flex item 1</p>
+                        <p>Flex item 2</p>
+                        <p>Flex item 3</p>
+                    </div>
+                    <h6>.justify-content-center</h6>
+                    <div class="flex justify-content-center">
+                        <p>Flex item 1</p>
+                        <p>Flex item 2</p>
+                        <p>Flex item 3</p>
+                    </div>
+                    <h6>.justify-content-between</h6>
+                    <div class="flex justify-content-between">
+                        <p>Flex item 1</p>
+                        <p>Flex item 2</p>
+                        <p>Flex item 3</p>
+                    </div>
+                    <h6>.justify-content-around</h6>
+                    <div class="flex justify-content-around">
+                        <p>Flex item 1</p>
+                        <p>Flex item 2</p>
+                        <p>Flex item 3</p>
+                    </div>
+                    <h3>Fill / Equal Widths</h3>
+                    <p>Use <b>.flex-fill</b> on flex items to force them into equal widths:</p>
+                    <div class="flex justify-content-around">
+                        <p class="flex-fill">Flex item 1</p>
+                        <p class="flex-fill">Flex item 2</p>
+                        <p class="flex-fill">Flex item 3</p>
+                    </div>
+                    <h3>Grow</h3>
+                    <p>Use <b>.flex-grow</b> on flex items to take up the rest of the space. In the example below, the first two flex items take up their necessary space, white the last item takes up the rest of the available space:</p>
+                    <div class="flex ">
+                        <p>Flex item 1</p>
+                        <p>Flex item 2</p>
+                        <p class="flex-grow">Flex item 3</p>
+                    </div>
+                    <h3>Order</h3>
+                    <p>Use <b>.flex-grow</b> on flex items to take up the rest of the space. In the example below, the first two flex items take up their necessary space, white the last item takes up the rest of the available space:</p>
+                    <div class="flex ">
+                        <p class="order-3">Flex item 1</p>
+                        <p class="order-2">Flex item 2</p>
+                        <p class="order-1">Flex item 3</p>
+                    </div>
+                    <h3>Auto Margins</h3>
+                    <p>Easily add auto margins to flex items width <b>.mr-auto</b> (push items to the right), or by using <b>.ml-auto</b> (push items to the left)</p>
+                    <div class="flex ">
+                        <p class="mr-auto">Flex item 1 (.mr-auto)</p>
+                        <p class="">Flex item 2</p>
+                        <p class="">Flex item 3</p>
+                    </div>
+                    <br>
+                    <div class="flex ">
+                        <p class="mr-auto">Flex item 1 (.mr-auto)</p>
+                        <p class="">Flex item 2</p>
+                        <p class="ml-auto">Flex item 3 (.ml-auto)</p>
+                    </div>
+                    <h3>Wrap</h3>
+                    <p>Control how flex items wrap in a flex container width <b>.flex-nowrap</b> (default), <b>.flex-wrap</b> or <b>.flex-wrap-reverse</b></p>
+                    <h6>.flex-nowrap</h6>
+                    <div class="flex flex-nowrap ">
+                        <p>Flex item 1</p>
+                        <p>Flex item 2</p>
+                        <p>Flex item 3</p>
+                        <p>Flex item 4</p>
+                        <p>Flex item 5</p>
+                        <p>Flex item 6</p>
+                        <p>Flex item 7</p>
+                        <p>Flex item 8</p>
+                        <p>Flex item 9</p>
+                        <p>Flex item 10</p>
+                        <p>Flex item 11</p>
+                        <p>Flex item 12</p>
+                        <p>Flex item 13</p>
+                        <p>Flex item 14</p>
+                        <p>Flex item 15</p>
+                        <p>Flex item 16</p>
+                    </div>
+                    <h6>.flex-wrap</h6>
+                    <div class="flex flex-wrap ">
+                        <p>Flex item 1</p>
+                        <p>Flex item 2</p>
+                        <p>Flex item 3</p>
+                        <p>Flex item 4</p>
+                        <p>Flex item 5</p>
+                        <p>Flex item 6</p>
+                        <p>Flex item 7</p>
+                        <p>Flex item 8</p>
+                        <p>Flex item 9</p>
+                        <p>Flex item 10</p>
+                        <p>Flex item 11</p>
+                        <p>Flex item 12</p>
+                        <p>Flex item 13</p>
+                        <p>Flex item 14</p>
+                        <p>Flex item 15</p>
+                        <p>Flex item 16</p>
+                    </div>
+                    <h6>.flex-wrap-reverse</h6>
+                    <div class="flex flex-wrap-reverse ">
+                        <p>Flex item 1</p>
+                        <p>Flex item 2</p>
+                        <p>Flex item 3</p>
+                        <p>Flex item 4</p>
+                        <p>Flex item 5</p>
+                        <p>Flex item 6</p>
+                        <p>Flex item 7</p>
+                        <p>Flex item 8</p>
+                        <p>Flex item 9</p>
+                        <p>Flex item 10</p>
+                        <p>Flex item 11</p>
+                        <p>Flex item 12</p>
+                        <p>Flex item 13</p>
+                        <p>Flex item 14</p>
+                        <p>Flex item 15</p>
+                        <p>Flex item 16</p>
+                    </div>
+                    <h3>Align Content</h3>
+                    <p>Control the vertical alignment of gathered flex items with the <b>.align-content-*</b> classes. Valid classes are <b>.align-content-start</b> (default), <b>.align-content-end</b>, <b>.align-content-center</b>, <b>.align-content-between</b>, <b>.align-content-around</b> and .align-content-streth</p>
+                    <h6>.align-content-start</h6>
+                    <div class="flex flex-wrap align-content-start " style="height:150px;">
+                        <p>Flex item 1</p>
+                        <p>Flex item 2</p>
+                        <p>Flex item 3</p>
+                        <p>Flex item 4</p>
+                        <p>Flex item 5</p>
+                        <p>Flex item 6</p>
+                        <p>Flex item 7</p>
+                        <p>Flex item 8</p>
+                        <p>Flex item 9</p>
+                        <p>Flex item 10</p>
+                        <p>Flex item 11</p>
+                        <p>Flex item 12</p>
+                        <p>Flex item 13</p>
+                        <p>Flex item 14</p>
+                        <p>Flex item 15</p>
+                        <p>Flex item 16</p>
+                    </div>
+                    <h6>.align-content-end</h6>
+                    <div class="flex flex-wrap align-content-end " style="height:150px;">
+                        <p>Flex item 1</p>
+                        <p>Flex item 2</p>
+                        <p>Flex item 3</p>
+                        <p>Flex item 4</p>
+                        <p>Flex item 5</p>
+                        <p>Flex item 6</p>
+                        <p>Flex item 7</p>
+                        <p>Flex item 8</p>
+                        <p>Flex item 9</p>
+                        <p>Flex item 10</p>
+                        <p>Flex item 11</p>
+                        <p>Flex item 12</p>
+                        <p>Flex item 13</p>
+                        <p>Flex item 14</p>
+                        <p>Flex item 15</p>
+                        <p>Flex item 16</p>
+                    </div>
+                    <h6>.align-content-center</h6>
+                    <div class="flex flex-wrap align-content-center " style="height:150px;">
+                        <p>Flex item 1</p>
+                        <p>Flex item 2</p>
+                        <p>Flex item 3</p>
+                        <p>Flex item 4</p>
+                        <p>Flex item 5</p>
+                        <p>Flex item 6</p>
+                        <p>Flex item 7</p>
+                        <p>Flex item 8</p>
+                        <p>Flex item 9</p>
+                        <p>Flex item 10</p>
+                        <p>Flex item 11</p>
+                        <p>Flex item 12</p>
+                        <p>Flex item 13</p>
+                        <p>Flex item 14</p>
+                        <p>Flex item 15</p>
+                        <p>Flex item 16</p>
+                    </div>
+                    <h6>.align-content-between</h6>
+                    <div class="flex flex-wrap align-content-between " style="height:150px;">
+                        <p>Flex item 1</p>
+                        <p>Flex item 2</p>
+                        <p>Flex item 3</p>
+                        <p>Flex item 4</p>
+                        <p>Flex item 5</p>
+                        <p>Flex item 6</p>
+                        <p>Flex item 7</p>
+                        <p>Flex item 8</p>
+                        <p>Flex item 9</p>
+                        <p>Flex item 10</p>
+                        <p>Flex item 11</p>
+                        <p>Flex item 12</p>
+                        <p>Flex item 13</p>
+                        <p>Flex item 14</p>
+                        <p>Flex item 15</p>
+                        <p>Flex item 16</p>
+                    </div>
+                    <h6>.align-content-around</h6>
+                    <div class="flex flex-wrap align-content-around " style="height:150px;">
+                        <p>Flex item 1</p>
+                        <p>Flex item 2</p>
+                        <p>Flex item 3</p>
+                        <p>Flex item 4</p>
+                        <p>Flex item 5</p>
+                        <p>Flex item 6</p>
+                        <p>Flex item 7</p>
+                        <p>Flex item 8</p>
+                        <p>Flex item 9</p>
+                        <p>Flex item 10</p>
+                        <p>Flex item 11</p>
+                        <p>Flex item 12</p>
+                        <p>Flex item 13</p>
+                        <p>Flex item 14</p>
+                        <p>Flex item 15</p>
+                        <p>Flex item 16</p>
+                    </div>
+                    <h6>.align-content-stretch</h6>
+                    <div class="flex flex-wrap align-content-stretch " style="height:150px;">
+                        <p>Flex item 1</p>
+                        <p>Flex item 2</p>
+                        <p>Flex item 3</p>
+                        <p>Flex item 4</p>
+                        <p>Flex item 5</p>
+                        <p>Flex item 6</p>
+                        <p>Flex item 7</p>
+                        <p>Flex item 8</p>
+                        <p>Flex item 9</p>
+                        <p>Flex item 10</p>
+                        <p>Flex item 11</p>
+                        <p>Flex item 12</p>
+                        <p>Flex item 13</p>
+                        <p>Flex item 14</p>
+                        <p>Flex item 15</p>
+                        <p>Flex item 16</p>
+                    </div>
+                    <h3>Align Items</h3>
+                    <p>Control the vertical alignment of single rows of flex items with the <b>.align-items-*</b> classes. Valid classes are <b>.align-items-start</b>, <b>.align-items-end</b>, <b>.align-items-center</b>, <b>.align-items-baseline</b>, and <b>.align-items-stretch</b>(default)</p>
+                    <h6>.align-items-start</h6>
+                    <div class="flex align-items-start " style="height:100px;">
+                        <p>Flex item 1</p>
+                        <p>Flex item 2</p>
+                        <p>Flex item 3</p>
+                    </div>
+                    <h6>.align-items-end</h6>
+                    <div class="flex align-items-end " style="height:100px;">
+                        <p>Flex item 1</p>
+                        <p>Flex item 2</p>
+                        <p>Flex item 3</p>
+                    </div>
+                    <h6>.align-items-center</h6>
+                    <div class="flex align-items-center " style="height:100px;">
+                        <p>Flex item 1</p>
+                        <p>Flex item 2</p>
+                        <p>Flex item 3</p>
+                    </div>
+                    <h6>.align-items-baseline</h6>
+                    <div class="flex align-items-baseline " style="height:100px;">
+                        <p>Flex item 1</p>
+                        <p>Flex item 2</p>
+                        <p>Flex item 3</p>
+                    </div>
+                    <h6>.align-items-stretch</h6>
+                    <div class="flex align-items-stretch " style="height:100px;">
+                        <p>Flex item 1</p>
+                        <p>Flex item 2</p>
+                        <p>Flex item 3</p>
+                    </div>
+                    <h3>Align Self</h3>
+                    <p>Control the vertical alignment of a specified flex item width the <b>.align-self-*</b> classes. Valid classes are <b>.align-self-start</b>, <b>align-selft-end</b>, <b>.align-selft-center</b>, <b>.align-selft-baseline</b>, and <b>.align-self-stretch</b> (default)</p>
+                    <div class="flex " style="height:100px;">
+                        <p>Flex item 1</p>
+                        <p class="align-self-start">Flex item 2 (.align-self-start)</p>
+                        <p>Flex item 3</p>
+                    </div>
+                    <br>
+                    <div class="flex " style="height:100px;">
+                        <p>Flex item 1</p>
+                        <p class="align-self-end">Flex item 2 (.align-self-end)</p>
+                        <p>Flex item 3</p>
+                    </div>
+                    <br>
+                    <div class="flex " style="height:100px;">
+                        <p>Flex item 1</p>
+                        <p class="align-self-center">Flex item 2 (.align-self-center)</p>
+                        <p>Flex item 3</p>
+                    </div>
+                    <br>
+                    <div class="flex " style="height:100px;">
+                        <p>Flex item 1</p>
+                        <p class="align-self-baseline">Flex item 2 (.align-self-baseline)</p>
+                        <p>Flex item 3</p>
+                    </div>
+                    <br>
+                    <div class="flex " style="height:100px;">
+                        <p>Flex item 1</p>
+                        <p class="align-self-stretch">Flex item 2 (.align-self-stretch)</p>
+                        <p>Flex item 3</p>
+                    </div>
+                </div>                
+
+
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="media/js/data.js"></script>  
+	<script type="text/javascript" src="media/js/intro.js"></script>  
+	<script type="text/javascript" src="media/js/lib.js"></script>  
+</body>
+</html>
+
