@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="media/css/style.css" />
 <div class="container">
     <h1>Tabs</h1>
     <p>Use Flexbox and Jquery</p>
@@ -16,6 +17,7 @@
         }
         .tabs a{
             margin:0 2px;
+            display: inline-block;
         }
     </style>
     <div class="tabs flex ">
@@ -24,33 +26,55 @@
         <a href="#" class="tab btn">Tab3</a>
         <a href="#" class="tab btn">Tab4</a>
     </div>
+
     <h3>Tabs Photo</h3>
     <div class="tabs flex opacity ">
         <a href="#" class="tab active ">
-            <img style="width:100%" src="https://www.w3schools.com/w3css/img_lights.jpg" alt="">
+            <img style="width:100%" src="https://www.w3schools.com/w3css/img_lights.jpg" alt=""/>
         </a>
         <a href="#" class="tab ">
-            <img style="width:100%" src="https://www.w3schools.com/w3css/img_snowtops.jpg" alt="">
+            <img style="width:100%" src="https://www.w3schools.com/w3css/img_snowtops.jpg" alt=""/>
         </a>
         <a href="#" class="tab ">
-            <img style="width:100%" src="https://www.w3schools.com/w3css/img_mountains.jpg" alt="">
+            <img style="width:100%" src="https://www.w3schools.com/w3css/img_mountains.jpg" alt=""/>
         </a>
+    </div>
+
+    <h3>Tab Block Content</h3>
+    <div class="tabs_bock">
+        <ul class="tabs flex justify-content-center">
+            <li class="tab-link btn current" data-tab="tab-11">Tab One</li>
+            <li class="tab-link btn" data-tab="tab-12">Tab Two</li>
+            <li class="tab-link btn" data-tab="tab-13">Tab Three</li>
+        </ul>
+        <div id="tab-11" class="tab-content current">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+        <div id="tab-12" class="tab-content">
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <div id="tab-13" class="tab-content">
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </div>
     </div>
     <h3>Tab Block Content</h3>
-    <ul class="tabs flex justify-content-center">
-        <li class="tab-link btn current" data-tab="tab-1">Tab One</li>
-        <li class="tab-link btn" data-tab="tab-2">Tab Two</li>
-        <li class="tab-link btn" data-tab="tab-3">Tab Three</li>
-    </ul>
-    <div id="tab-1" class="tab-content current">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    <div class="tabs_bock">
+        <ul class="tabs flex justify-content-center">
+            <li class="tab-link btn current" data-tab="tab-21">Tab One</li>
+            <li class="tab-link btn" data-tab="tab-22">Tab Two</li>
+            <li class="tab-link btn" data-tab="tab-23">Tab Three</li>
+        </ul>
+        <div id="tab-21" class="tab-content current">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+        <div id="tab-22" class="tab-content">
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <div id="tab-23" class="tab-content">
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </div>
     </div>
-    <div id="tab-2" class="tab-content">
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </div>
-    <div id="tab-3" class="tab-content">
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    </div>
+   
 
     <h3>Tab Carousel </h3>
             <div class="row">
@@ -78,6 +102,4 @@
     
    
 </div>
-<script src="media/js/owlCarousel.js"></script>
-<script src="media/js/owlCarouselThumb.js"></script>
-<script src="media/js/addon.js"></script>
+<script src="media/js/lib.js"></script>

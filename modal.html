@@ -12,6 +12,7 @@
     <a href="#" class="modal-btn btn" data-modal="modal-right"> .animate-right</a>
     <a href="#" class="modal-btn btn" data-modal="modal-opacity"> .animate-opacity</a>
     <a href="#" class="modal-btn btn" data-modal="modal-zoom"> .animate-zoom</a>
+
     <div class="modal" id="modal-pop">
         <div class="modal-bg"></div>
         <div class="modal-box animate-pop">
@@ -124,10 +125,13 @@
             </div>
         </div>
     </div>
+
     <h3>Modal Photo</h3>
+
     <a href="#" class="modal-btn" data-modal="modal-pic">
         <img style="width:30%;cursor:zoom-in" src="https://www.w3schools.com/w3css/img_snowtops.jpg" alt="">
     </a>
+
     <div class="modal" id="modal-pic">
         <div class="modal-closePic">&times;</div>
         <div class="modal-bg"></div>
@@ -140,6 +144,7 @@
     </div>
 
     <h3>Modal Video</h3>
+
     <style>
         .modal-pic iframe {
             margin: 0 auto;
@@ -147,10 +152,14 @@
         }
     </style>
 
-    <a href="#" class="modal-btn modal-clip" data-modal="modal-pic-2">
+    <a href="#" class="modal-btn modal-clip" data-video="D8ZYZX0gpFM"  data-modal="modal-clip">
         <img style="width:30%;cursor:zoom-in" src="https://www.w3schools.com/w3css/img_lights.jpg" alt="">
     </a>
-    <div class="modal " id="modal-pic-2" data-video-id="D8ZYZX0gpFM">
+    <a href="#" class="modal-btn modal-clip" data-video="JE1XUXPcbcM"  data-modal="modal-clip">
+        <img style="width:30%;cursor:zoom-in" src="https://www.w3schools.com/w3css/img_lights.jpg" alt="">
+    </a>
+
+    <!-- <div class="modal modal-clipBox" id="modal-pic-2">
         <div class="modal-closePic">&times;</div>
         <div class="modal-bg"></div>
         <div class="modal-box modal-box-img animate-zoom">
@@ -160,23 +169,10 @@
                     allowfullscreen></iframe>
             </div>
         </div>
-    </div>
-    <h3>Light Box Video https://fslightbox.com/</h3>
-    <a data-fslightbox="gallery" href="https://www.w3schools.com/w3css/img_lights.jpg">
-        <img style="width:30%;cursor:zoom-in" src="https://www.w3schools.com/w3css/img_lights.jpg" alt="">
-    </a>
-    <br>
-    <a data-fslightbox="gallery" href="https://www.youtube.com/watch?v=xshEZzpS4CQ">
-        <img style="width:30%;cursor:zoom-in" src="https://www.w3schools.com/w3css/img_lights.jpg" alt="">
-        <p>YouTube video</p>
-    </a>
-    <br>
-    <a data-fslightbox="gallery" href="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4">
-        <img style="width:30%;cursor:zoom-in" src="https://www.w3schools.com/w3css/img_lights.jpg" alt="">
-        <p>HTML video</p>
-    </a>
+    </div> -->
 
     <h3>Modal LiveStream Facebook</h3>
+
     <a href="#" class="modal-btn" data-modal="modal-live">
         <img style="width:30%;cursor:zoom-in" src="https://www.w3schools.com/w3css/img_snowtops.jpg" alt="">
     </a>
@@ -209,14 +205,4 @@
     </div>
 </div>
 
-
-<script src="media/js/fslightbox.js"></script>
-<script>
-    
-    fsLightboxInstances['first-lightbox'].open(0);
-    fsLightboxInstances['second-lightbox'].props.onOpen = () => console.log('Lightbox open!');
-</script>
-
-<script src="media/js/modal.js"></script>
-<!-- <script src="media/js/modal-video.js"></script>
-<script src="media/js/owlCarousel.js"></script> -->
+<script src="media/js/lib.js"></script>
