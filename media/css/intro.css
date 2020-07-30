@@ -1,0 +1,45 @@
+.font {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+
+.header {
+  background: linear-gradient(to left, #28a5f5, #1e87f0);
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 21px 40px;
+  color: #fff; }
+  @media (max-width: 812px) {
+    .header {
+      padding: 21px 20px; } }
+  .header__logo {
+    font-size: 24px;
+    font-weight: 600; }
+  .header__slogan {
+    text-align: right;
+    font-size: 14px; }
+    @media (max-width: 812px) {
+      .header__slogan {
+        display: none; } }
+  .header.row > div {
+    align-self: flex-end; }
+
+.sidebarBox {
+  padding: 20px; }
+  .sidebarBox h2 {
+    font-size: 20px;
+    padding: 0 10px; }
+  .sidebarBox a {
+    display: block;
+    width: 100%;
+    padding: 5px 10px; }
+    .sidebarBox aa:hover {
+      background: #eee; }
+
+.main {
+  padding: 0px 20px 50px; }
+  .main #mainLoad > .container {
+    margin-left: 0; }
+
+/*# sourceMappingURL=intro.css.map */
