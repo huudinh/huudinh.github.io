@@ -1,66 +1,38 @@
-$(document).ready(function () {
-  function layoutHandler() {
-    if (window.innerWidth < 1025) {
-      $(".mn1,.mn2,.mn3,.mn4,.mn5,.mn6,.mn7,.mn8,.mn9").click(function () {
-        $(this).parent().find('.menuSubBox').toggle();
-      });
-    }
-    if (window.innerWidth < 1025){
-      $(".LP .siteHeaderMain a").click(function(){
-        $(".LP .siteHeaderMain").removeClass("active");
-        $(".siteHeader-bg").removeClass("active");
-      });
-      
-    }
-  }
-  layoutHandler();
+// Add Smooth Scrolling Link
+const links = document.querySelectorAll(".menu a, a[href='#pageReg'], header a");
 
-  $(".siteHeaderNav").click(function () {
-    $(".siteHeaderMain").addClass("active");
-    $(".siteHeader-bg").addClass("active");
-  });
-  $(".siteHeader-bg").click(function () {
-    $(".siteHeaderMain").removeClass("active");
-    $(".siteHeader-bg").removeClass("active");
-  });
-
-  
-  $(document).on("scroll", onScroll);
-  $(".menu a, a[href='#pageReg'],header a").on('click', function (event) {
-    if (this.hash !== "") {
-      event.preventDefault();
-      var hash = this.hash;
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top - 70
-      }, 900);
-      return false;
-      var target = this.hash,
-        menu = target;
-      $target = $(target);
-      $('html, body').stop().animate({
-        'scrollTop': $(target).offset().top - 70
-      }, 70, 'swing', function () {
-        window.location.hash = target;
-        $(document).on("scroll", onScroll);
-      });
-    }
-  });
-
-});
-
-function onScroll(event) {
-  var scrollPos = $(document).scrollTop();
-  $('.menu  a').each(function () {
-    var currLink = $(this);
-    var refElement = $(currLink.attr("href"));
-    if (refElement.position().top - 70 <= scrollPos && refElement.position().top - 50 + refElement.height() > scrollPos) {
-      $('.menu  a').removeClass("active");
-      currLink.addClass("active");
-    } else {
-      currLink.removeClass("active");
-    }
-  });
+for (const link of links) {
+    link.addEventListener("click", clickHandler);
 }
 
+function clickHandler(e) {
+    e.preventDefault();
+    const href = this.getAttribute("href");
+    const offsetTop = document.querySelector(href).offsetTop;
 
+    scroll({
+        top: offsetTop - 70,
+        behavior: "smooth"
+    });
+}
 
+// onScroll Active Menu
+const menu = document.querySelectorAll('.menu a');
+window.onscroll = function () { myFunction() };
+
+function myFunction() {
+    let y = document.documentElement.scrollTop;
+    let sections = document.querySelectorAll('.temp');
+    let i = 0;
+    sections.forEach(function (section){
+        let z = section.offsetTop - 70;
+        let active = document.querySelectorAll('.menu a.active');
+        if ( z <= y ){
+            active[0].classList.remove('active');
+            menu[i].classList.add('active');
+        }
+        if(i < menu.length - 1){
+            i++;
+        }
+    });
+}
