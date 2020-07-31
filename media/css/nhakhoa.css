@@ -1212,7 +1212,7 @@ p {
 
 .animate-pop {
   animation-name: modalbox;
-  animation-duration: .4s;
+  animation-duration: 0.4s;
   animation-timing-function: cubic-bezier(0, 0, 0.3, 1.6); }
 
 @-webkit-keyframes modalbox {
@@ -1229,6 +1229,30 @@ p {
   100% {
     top: 0;
     opacity: 1; } }
+.slide_run {
+  visibility: hidden; }
+
+.slide {
+  animation-name: slide;
+  -webkit-animation-name: slide;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  visibility: visible; }
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(70%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0%); } }
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%); } }
 .tns-outer {
   padding: 0 !important; }
   .tns-outer [hidden] {
@@ -1533,17 +1557,31 @@ button:focus {
   background: rgba(0, 0, 0, 0.7);
   overflow: auto;
   animation: opac 0.3s; }
+  .modal-video {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 56.25%; }
+    .modal-video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      border: none; }
   .modal-close {
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 1;
     color: #000;
     text-shadow: 0 1px 0 #fff;
-    opacity: .5;
+    opacity: 0.5;
     float: right;
     cursor: pointer; }
     .modal-closePic {
-      font-family: Verdana,sans-serif;
+      font-family: Verdana, sans-serif;
       color: #ddd;
       text-shadow: none;
       opacity: 1;
@@ -1569,7 +1607,7 @@ button:focus {
       .modal-closePic:hover {
         color: #fff; }
   .modal-bg {
-    content: '';
+    content: "";
     display: block;
     position: fixed;
     width: 100%;
@@ -1586,6 +1624,15 @@ button:focus {
       .modal-box {
         margin: 20px auto 0;
         width: 90%; } }
+    .modal-box-video {
+      width: 65%;
+      max-width: 65%; }
+      @media (max-width: 414px) {
+        .modal-box-video {
+          max-width: 100%;
+          width: 100%;
+          margin: 0;
+          padding: 43px 10px; } }
     .modal-box-img {
       max-width: 90%; }
       @media (max-width: 414px) {
@@ -2324,9 +2371,6 @@ header {
         padding: 6px 14px;
         display: table;
         margin: 10px auto 0; } }
-  .regist a::after {
-    content: '\e895';
-    display: inline-block; }
   @media (max-width: 414px) {
     .registNote {
       font-size: 12px; } }

@@ -123,14 +123,14 @@ let tab_navs = document.querySelectorAll("ul.tabs li");
 let tab_links = document.querySelectorAll('ul.tabs li.tab-link');
 // let tab_contents = document.querySelectorAll('.tab-content');
 
-for(let tab_nav of tab_navs){
+for (let tab_nav of tab_navs) {
     tab_nav.addEventListener('click', (e) => {
         let tab_id = e.target.getAttribute('data-tab');
 
         let navParent = e.target.parentElement;
         let navChildrens = navParent.children;
 
-        for(let navChildren of navChildrens){
+        for (let navChildren of navChildrens) {
             navChildren.classList.remove('current');
         }
 
@@ -138,10 +138,10 @@ for(let tab_nav of tab_navs){
         let navParent2 = e.target.parentElement.parentElement;
         let navChildrens2 = navParent2.children;
 
-        for(let navChildren2 of navChildrens2){
+        for (let navChildren2 of navChildrens2) {
             navChildren2.classList.remove('current');
         }
-        
+
         let tab_id_active = document.getElementById(tab_id);
 
         tab_nav.classList.add('current');
@@ -153,32 +153,32 @@ for(let tab_nav of tab_navs){
 
 const tab_nav_sis = document.querySelectorAll('.tabs .tab');
 
-for(let tab_nav_si of tab_nav_sis ){
+for (let tab_nav_si of tab_nav_sis) {
     tab_nav_si.addEventListener('click', (e) => {
         let navParent = e.target.parentElement;
         let navChildrens = navParent.children;
 
-        for(let navChildren of navChildrens){
+        for (let navChildren of navChildrens) {
             navChildren.classList.remove('active');
         }
-      
-        tab_nav_si.classList.add('active');     
+
+        tab_nav_si.classList.add('active');
     });
 }
 
 //Tabs Single IMG
 
 const tab_nav_si_imgs = document.querySelectorAll('.tabs .tab img');
-for(let tab_nav_si_img of tab_nav_si_imgs ){
+for (let tab_nav_si_img of tab_nav_si_imgs) {
     tab_nav_si_img.addEventListener('click', (e) => {
         let navParent = e.target.parentElement.parentElement;
         let navChildrens = navParent.children;
 
-        for(let navChildren of navChildrens){
+        for (let navChildren of navChildrens) {
             navChildren.classList.remove('active');
         }
-      
-        tab_nav_si_img.classList.add('active');    
+
+        tab_nav_si_img.classList.add('active');
     });
 }
 
@@ -228,21 +228,19 @@ for (let i = 0; i < modalButton.length; i++) {
 // Chèn Box Modal
 let container = document.getElementsByTagName('body');
 container[0].insertAdjacentHTML('beforeEnd',
-`<div class="modal modal-clipBox" id="modal-clip">
+    `<div class="modal modal-clipBox" id="modal-clip">
     <div class="modal-closePic">&times;</div>
     <div class="modal-bg"></div>
-    <div class="modal-box modal-box-img animate-zoom">
-        <div class="modal-pic">
-            <iframe id="youtube" width="640" height="350"
-                src="" frameborder="0"
-                allowfullscreen></iframe>
+    <div class="modal-box modal-box-video animate-zoom">
+        <div class="modal-video">
+            <iframe id="youtube" src="" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
 </div>`
 );
 
 let modalVideos = document.getElementsByClassName('modal-clip');
-for(let modalVideo of modalVideos){
+for (let modalVideo of modalVideos) {
 
     let modalSrc = modalVideo.getAttribute('data-video');
 
@@ -258,25 +256,43 @@ for(let modalVideo of modalVideos){
         youtube.setAttribute('src', modalSrc);
         setTimeout(() => {
             modalClipBoxs[0].style.display = "block";
-        },200);
+        }, 200);
     });
-    
-    for(let item of closePic){
-        for(let modalClipBox of modalClipBoxs){
+
+    for (let item of closePic) {
+        for (let modalClipBox of modalClipBoxs) {
             item.addEventListener("click", () => {
-                modalClipBox.style.display = "none";                    
+                modalClipBox.style.display = "none";
             });
         }
 
     }
 
     // Tat Popup Video Background
-    for(let item of modalBG){
-        for(let modalClipBox of modalClipBoxs){
+    for (let item of modalBG) {
+        for (let modalClipBox of modalClipBoxs) {
             item.addEventListener("click", () => {
                 modalClipBox.style.display = "none";
             });
         }
 
+    }
+}
+
+//Lazy LDP
+// window.addEventListener("scroll", function () { 
+//     myLoad('section','loaded');
+//     myLoad('run','runslide');
+// }); 
+
+function myLoad(sec,name) {
+    const section_loads = document.querySelectorAll(sec);
+    let winTop = document.documentElement.scrollTop;
+
+    for (let i = 0; i < section_loads.length; i++){
+        let pos = section_loads[i].offsetTop;
+        if (pos < winTop + 600) {
+            section_loads[i].classList.add(name);
+        }
     }
 }

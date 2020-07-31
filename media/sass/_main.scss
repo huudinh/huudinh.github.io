@@ -175,13 +175,6 @@
 		}
 	}
 
-	a {
-		&::after {
-			content: '\e895';
-			display: inline-block;
-			// @extend %icon;
-		}
-	}
 
 	&Note {
 		@media #{$r414} {

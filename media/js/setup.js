@@ -18,9 +18,11 @@ function clickHandler(e) {
 
 // onScroll Active Menu
 const menu = document.querySelectorAll('.menu a');
-window.onscroll = function () { myFunction() };
+window.addEventListener("scroll", function () { 
+    onScroll();
+}); 
 
-function myFunction() {
+function onScroll() {
     let y = document.documentElement.scrollTop;
     let sections = document.querySelectorAll('.temp');
     let i = 0;
@@ -36,3 +38,10 @@ function myFunction() {
         }
     });
 }
+
+// Add Lazy Screen LDP
+window.addEventListener("scroll", function () { 
+    myLoad('section','loaded');
+    myLoad('.slide_run','slide');
+}); 
+
