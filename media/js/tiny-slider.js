@@ -509,7 +509,7 @@ var tns = (function (){
         center: false,
         controls: true,
         controlsPosition: 'top',
-        controlsText: ['prev', 'next'],
+        controlsText: ['&#10094', '&#10095'],
         controlsContainer: false,
         prevButton: false,
         nextButton: false,

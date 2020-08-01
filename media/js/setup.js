@@ -8,40 +8,33 @@ for (const link of links) {
 function clickHandler(e) {
     e.preventDefault();
     const href = this.getAttribute("href");
-    const offsetTop = document.querySelector(href).offsetTop;
-
-    scroll({
-        top: offsetTop - 70,
-        behavior: "smooth"
-    });
+    
+    if(href != '#'){
+        const offsetTop = document.querySelector(href).offsetTop;
+        scroll({
+            top: offsetTop - 70,
+            behavior: "smooth"
+        });
+    }
 }
 
-// onScroll Active Menu
-const menu = document.querySelectorAll('.menu a');
 window.addEventListener("scroll", function () { 
+    // Add Onscroll .menu a
     onScroll();
-}); 
-
-function onScroll() {
-    let y = document.documentElement.scrollTop;
-    let sections = document.querySelectorAll('.temp');
-    let i = 0;
-    sections.forEach(function (section){
-        let z = section.offsetTop - 70;
-        let active = document.querySelectorAll('.menu a.active');
-        if ( z <= y ){
-            active[0].classList.remove('active');
-            menu[i].classList.add('active');
-        }
-        if(i < menu.length - 1){
-            i++;
-        }
-    });
-}
-
-// Add Lazy Screen LDP
-window.addEventListener("scroll", function () { 
+    // Add Lazy Screen LDP
     myLoad('section','loaded');
     myLoad('.slide_run','slide');
 }); 
+
+
+// Add Class : 1. Name Button / 2. Name Object / 3. Name Class Add
+addClass('.siteHeaderNav','.siteHeaderMain','active');
+addClass('.siteHeaderNav','.siteHeader-bg','active');
+
+// Remove Class : 1. Name Button / 2. Name Object / 3. Name Class Add
+removeClass('.siteHeader-bg','.siteHeaderMain','active');
+removeClass('.siteHeader-bg','.siteHeader-bg','active');
+removeClass('.siteHeader a','.siteHeaderMain','active');
+removeClass('.siteHeader a','.siteHeader-bg','active');
+
 

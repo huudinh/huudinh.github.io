@@ -1,3 +1,22 @@
+// onScroll Active Menu
+function onScroll() {
+    const menu = document.querySelectorAll('.menu a');
+    let y = document.documentElement.scrollTop;
+    let sections = document.querySelectorAll('.temp');
+    let i = 0;
+    sections.forEach(function (section){
+        let z = section.offsetTop - 70;
+        let active = document.querySelectorAll('.menu a.active');
+        if ( z <= y ){
+            active[0].classList.remove('active');
+            menu[i].classList.add('active');
+        }
+        if(i < menu.length - 1){
+            i++;
+        }
+    });
+}
+
 // Accrodion Single
 var Accordion = function (options) {
     var element = typeof options.element === 'string' ?
@@ -294,5 +313,31 @@ function myLoad(sec,name) {
         if (pos < winTop + 600) {
             section_loads[i].classList.add(name);
         }
+    }
+}
+
+// Remove Class : 1. Name Button / 2. Name Object / 3. Name Class Add
+function addClass(btn,obj,className){
+    let btns = document.querySelectorAll(btn);
+    let objs = document.querySelectorAll(obj);
+    for(let i = 0; i < btns.length; i++){
+        btns[i].addEventListener('click', () => {
+            for (let j = 0; j < objs.length; j++){
+                objs[j].classList.add(className);
+            }
+        });
+    }
+}
+
+// Remove Class : 1. Name Button / 2. Name Object / 3. Name Class Add
+function removeClass(btn,obj,className){
+    let btns = document.querySelectorAll(btn);
+    let objs = document.querySelectorAll(obj);
+    for(let i = 0; i < btns.length; i++){
+        btns[i].addEventListener('click', () => {
+            for (let j = 0; j < objs.length; j++){
+                objs[j].classList.remove(className);
+            }
+        });
     }
 }
