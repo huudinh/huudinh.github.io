@@ -2150,19 +2150,19 @@ header {
         header .siteHeaderNav, header .siteHeaderCall {
           display: flex; } }
     header .siteHeaderNav {
-      font-size: 30px;
+      font-size: 45px;
       width: 40px;
       height: 40px;
-      left: 5px;
+      left: 0;
+      top: 17px;
       color: #eee;
-      padding-right: 35px;
-      border-right: 1px solid #eee; }
+      padding-right: 25px; }
       @media (max-width: 812px) {
         header .siteHeaderNav {
-          left: 20px; } }
+          padding-right: 0; } }
       @media (max-width: 414px) {
         header .siteHeaderNav {
-          left: 30px; } }
+          left: 10px; } }
     header .siteHeaderCall {
       font-size: 20px;
       width: 40px;
@@ -2178,6 +2178,8 @@ header {
       @media (max-width: 414px) {
         header .siteHeaderCall {
           right: 15px; } }
+      header .siteHeaderCall svg {
+        fill: white; }
     header .siteHeader__item.active {
       background-color: #0153a2; }
     header .siteHeaderRegist, header .siteHeaderPhone {
@@ -2313,20 +2315,20 @@ header {
     .temp2.loaded:after, .temp3.loaded:after, .temp4.loaded:after {
       opacity: 0; }
 
-.temp1, .temp3, .tempReg {
+.temp1, .temp3 {
   background-position: center 0;
   background-repeat: no-repeat; }
   @media (max-width: 1440px) {
-    .temp1, .temp3, .tempReg {
+    .temp1, .temp3 {
       background-size: 132%; } }
   @media (max-width: 1024px) {
-    .temp1, .temp3, .tempReg {
+    .temp1, .temp3 {
       background-size: 150%; } }
   @media (max-width: 812px) {
-    .temp1, .temp3, .tempReg {
+    .temp1, .temp3 {
       background-size: 154%; } }
   @media (max-width: 414px) {
-    .temp1, .temp3, .tempReg {
+    .temp1, .temp3 {
       background-size: 100%; } }
 
 .regist {
@@ -2445,8 +2447,7 @@ header {
     text-align: left; }
   .temp2 .thumbPic {
     color: #004689;
-    font-size: 15px;
-    cursor: pointer; }
+    font-size: 15px; }
     @media (max-width: 414px) {
       .temp2 .thumbPic {
         font-size: 13px; } }
@@ -2457,7 +2458,8 @@ header {
         text-transform: uppercase; }
     .temp2 .thumbPic__more {
       color: #aeaeae;
-      font-size: 12px; }
+      font-size: 12px;
+      cursor: pointer; }
       .temp2 .thumbPic__more i {
         color: #fff;
         background: #aeaeae;
@@ -2575,22 +2577,18 @@ header {
   width: 100%; }
 
 .tempReg {
-  padding: 148px 0; }
+  padding: 133px 0; }
   .tempReg.loaded {
     background-image: url(../images/reg-bg.jpg); }
     @media (max-width: 414px) {
       .tempReg.loaded {
         background: #046f9f; } }
-  @media (max-width: 1440px) {
-    .tempReg {
-      padding: 145px 0; } }
   @media (max-width: 1366px) {
     .tempReg {
       padding: 80px 0;
-      background-size: 113%; } }
+      background-size: cover; } }
   @media (max-width: 1280px) {
     .tempReg {
-      background-size: 100%;
       padding: 50px 0; } }
   @media (max-width: 1024px) {
     .tempReg {

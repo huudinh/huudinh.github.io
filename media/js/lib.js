@@ -197,7 +197,6 @@ for (let i = 0; i < modalButton.length; i++) {
             if (x == y) {
                 return true;
             }
-            console.log(y);
         }
         //Show Modal
         modalButton[i].addEventListener("click", () => {

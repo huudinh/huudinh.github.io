@@ -301,7 +301,6 @@
 	.thumbPic {
 		color: #004689;
 		font-size: 15px;
-		cursor: pointer;
 		@media #{$r414}{
 			font-size:13px;
 		}
@@ -318,7 +317,7 @@
 		&__more {
 			color: #aeaeae;
 			font-size: 12px;
-
+			cursor: pointer;
 			i {
 				color: #fff;
 				background: #aeaeae;
@@ -492,8 +491,6 @@
 	}
 }
 .tempReg {
-	@extend %tempBG;
-
 	&.loaded {
 		background-image: url(../images/reg-bg.jpg);
 
@@ -502,18 +499,13 @@
 		}
 	}
 
-	padding: 148px 0;
-	@media #{$r1440}{
-		padding:145px 0;
-	}
-
+	padding: 133px 0;
 	@media #{$r1366} {
 		padding: 80px 0;
-		background-size:113%;
+		background-size:cover;
 	}
 
 	@media #{$r1280} {
-		background-size: 100%;
 		padding: 50px 0;
 	}
 

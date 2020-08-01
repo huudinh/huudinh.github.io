@@ -222,18 +222,18 @@ header{
             }
         }
         &Nav{
-            font-size:30px;
+            font-size:45px;
             width:40px;
             height:40px;
-            left:5px;
+            left:0;
+            top:17px;
             color:#eee;
-            padding-right:35px;
-            border-right:1px solid #eee;
+            padding-right:25px;
             @media #{$r768}{
-                left:20px;
+                padding-right:0;
             }
             @media #{$r414}{
-                left:30px;
+                left:10px;
             }
         }
         &Call{
@@ -250,6 +250,9 @@ header{
             }
             @media #{$r414}{
                 right:15px;
+            }
+            svg{
+                fill:white;
             }
         }
         &__item.active {

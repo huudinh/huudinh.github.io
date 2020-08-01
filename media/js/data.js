@@ -37,6 +37,10 @@ let data = {
             name : 'Icon Font',
             link : 'icon.html'
         },        
+        {
+            name : 'Icon Symbol',
+            link : 'symbols.html'
+        },        
     ],
 
 }
