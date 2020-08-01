@@ -191,18 +191,19 @@ let modalBG = document.getElementsByClassName('modal-bg');
 
 for (let i = 0; i < modalButton.length; i++) {
     for (let j = 0; j < modals.length; j++) {
+        let x = modalButton[i].getAttribute('data-modal');
+        let y = modals[j].getAttribute('id');
         let modalCheck = function () {
-            let x = modalButton[j].getAttribute('data-modal');
-            let y = modals[j].getAttribute('id');
             if (x == y) {
                 return true;
             }
+            console.log(y);
         }
-
         //Show Modal
-        modalButton[j].addEventListener("click", () => {
+        modalButton[i].addEventListener("click", () => {
             if (modalCheck()) {
                 modals[j].style.display = "block";
+                
             }
         });
 
