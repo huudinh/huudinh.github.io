@@ -136,6 +136,23 @@ for (i = 0; i < acc.length; i++) {
     });
 }
 
+// Accrodions Level 
+var acc = document.getElementsByClassName("accordions_lv-title");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            console.log(panel);
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+
 //Tabs
 
 let tab_navs = document.querySelectorAll("ul.tabs li");
