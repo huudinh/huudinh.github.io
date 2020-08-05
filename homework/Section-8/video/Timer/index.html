@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C4EJSUILab - Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div style="padding: 2em;">
+        <h2>
+            Implement a timer, with time out entered and can be stopped by users. <a href="https://bit.ly/c4t-timer">Link demo</a>
+        </h2>
+        <h3>
+            Steps suggestion:
+        </h3>
+        <ol>
+            <li>
+                <p>Learn how to stop an interval in JS, Google: 'JS clearInverval function'</p>
+            </li>
+            <li>
+                <p>Create UI structure in HTML file</p>
+            </li>
+            <li>
+                <p>In JS, create a variable to represent the current time (in seconds)</p>
+            </li>
+            <li>
+                <p>Assume the time out is always 5 seconds</p>
+            </li>
+            <li>
+                <p>Register start button click event, when users click it, set the current time to 5 seconds, start a timer using setInterval</p>
+            </li>
+            <li>
+                <p>In setInterval callback, reduce current time by 1</p>
+            </li>
+            <li>
+                <p>When the current time is reduced to 0, stop the timer by calling clearInterval</p>
+            </li>
+            <li>
+                <p>Register stop button click event, when users click it. Stop the timer
+                </p>
+            </li>
+            <li>
+                <p>Now go back to step 4, remove the 'time out is 5 seconds' assumption, when users click on start button, get the time from input and assign it to the current time</p>
+            </li>
+        </ol>
+    </div>
+
+    <div style="padding: 2em;">
+        <div id="timer">
+            <input type="number" min="1" placeholder="Seconds" id="box">
+            <button id="start_btn">Start</button>
+            <button id="stop_btn" disabled>Stop</button>
+        </div>
+        <br>
+        <div id="res">0</div>
+    </div>
+    
+    <script src="index.js"></script>    
+</body>
+</html>

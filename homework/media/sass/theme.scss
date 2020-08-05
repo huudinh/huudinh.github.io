@@ -1,0 +1,54 @@
+.main{
+    align-content: stretch;
+    height:100vh;
+    margin:0;
+    &Content{
+        padding:2em 1em;
+    }
+}
+.side{
+    background:#e9ebee;
+    padding:0;
+    max-width: 350px;
+
+    &Bar{
+        padding:10px;
+        overflow-y: auto;
+        height: 99%;
+        .accordions{
+            &-title{
+                background-color:#fff;
+                &.active{
+                    background-color:#fff;
+                }
+            }
+
+        }
+        .accordions_lv-title,
+        .accordions_lv-title.active{
+            background:#fff;
+            &:hover{
+                background:#e9ebee;
+            }
+        }
+        a{
+            &:hover{
+                color:#c00;
+                text-decoration: underline;
+            }
+        }
+
+    }
+}
+a{
+    color:blue;
+    text-decoration: underline;
+}
+@media screen and (max-width:414px){
+    .main{
+        height:auto;
+    }
+    .side{
+        max-width: 100%;
+    }
+}

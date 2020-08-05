@@ -145,7 +145,6 @@ for (i = 0; i < acc.length; i++) {
         this.classList.toggle("active");
         var panel = this.nextElementSibling;
         if (panel.style.display === "block") {
-            console.log(panel);
             panel.style.display = "none";
         } else {
             panel.style.display = "block";

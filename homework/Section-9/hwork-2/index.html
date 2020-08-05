@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 2</title>
+</head>
+<body>
+<pre>
+    2. Using fetch() to load data from an API, we can use 2 async/await to get the connection from fetch() and and the data from json() function, these 2 awaits can be replaced by 2 then() calls. Figure out how to do it, here is a hint:
+
+        const fetchPromise = fetch(<URL>);
+
+        fetchPromise.then(connection => {
+            console.log(‘Connected’);
+            console.log(connection);
+        });
+        
+        After getting the connection you get can be accessed, get data by handling the Promise returned by json() function
+        
+        const fetchPromise = fetch(<URL>);
+        fetchPromise.then(connection => {
+            console.log(‘Connected’);
+            console.log(connection);
+            const jsonPromise = connection.json();
+            jsonPromise...
+        });
+    
+</pre>
+    <script src="index.js"></script>
+</body>
+</html>

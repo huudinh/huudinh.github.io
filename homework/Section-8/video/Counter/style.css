@@ -1,0 +1,15 @@
+.counter{
+    border:2px solid black;
+    padding: 10px 15px;
+    position: relative;
+    left: 45%;
+    background-color: darkgrey;
+}
+.counter:hover {
+    filter: brightness(60%);
+  }
+#counter_value{
+    position: relative;
+    left: 45%;
+    padding: 10px 20px;
+}

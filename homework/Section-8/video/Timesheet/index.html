@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C4EJSUILab - Timesheet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div style="padding: 2em;">
+        <h2>
+            Take a look at the following Timesheet
+        </h2>
+        <p>
+            <img src="images/download.png" alt="">
+        </p>
+        <p>
+            1) In JS, Initialize a variable named timeSheetData to store the data above, log/print it out
+        </p>
+        <p>
+            2) In HTML, create a <table> with the same headers as the above timesheet. If you have not worked with table before, watch the ‘HTML - List and Table’ video or see this quick example.
+        </p>
+        <p>
+            <img src="images/download-1.png" alt="">
+        </p>
+        <p>
+            3) Get (Read) the table body from DOM
+        </p>
+        <p>
+            <img src="images/download-2.png" alt="">
+        </p>     
+        <p>
+            4) Insert ALL of the data in timeSheetData into the table body, each task in a row
+        </p>
+        <p>
+            <img src="images/download-3.png" alt="">
+        </p>         
+        <p>
+            The first, placeholder, row now can be removed
+        </p>
+        <p>
+            <img src="images/download-4.png" alt="">
+        </p>
+        <p>
+            5) Update the UI (HTML) as follows:
+        </p>
+        <p>
+            <img src="images/download-5.png" alt="">
+        </p>
+        <p>
+            6) Perform add new line when ‘Add’ button is clicked (note: Instead of only inserting new HTML into the table body, you should update timeSheetData first, then use timeSheetData to update the table)
+        </p>
+        <p><a href="https://youtu.be/MMZs061ahAE?t=4">Link demo</a></p>
+        <p>
+            7) Add new columns name Actions, with each line, add a delete button in the newly added column
+        </p>
+        <p>
+            <img src="images/download-6.png" alt="">
+        </p>
+        <p>
+            8) When users click on the delete button, remove the respective line
+        </p>
+        <p>
+            <b><i>Hint:</i></b>
+        </p>
+        <p>
+            Declare removeLine function with on parameter: index of the item to delete
+        </p>
+        <p>
+            <i>First solution: Call removeLine inside onClick value of button: onClick=”removeLine(1)”</i>
+        </p>
+        <p>
+            <i>
+                Second solution: Add a custom property to each button, for example: <br>data_index=”1”. Then use in event callback e.target to get the index of the line in which the button is clicked. Finally, use removeLine()
+            </i>
+        </p>
+        <p>
+            <a href="https://youtu.be/5N3qaH5FvvM">Link demo</a>
+        </p>
+        <p>
+            9) Add Update, Clear buttons and U button in each line
+        </p>
+        <p>
+            <img src="images/download-7.png" alt="">
+        </p>      
+        <p>
+            10) Implement update
+        </p>  
+        <p>
+            <a href="https://youtu.be/HTLK8gaNrJ0?t=4">Link demo</a>
+        </p>
+
+
+    </div>
+
+    <div style="padding: 2em;">
+        <input type="text" placeholder="Enter project" id="new_project">
+        <input type="text" placeholder="Enter task" id="new_task">
+        <input type="number" placeholder="Time spent" id="new_time">
+        <button id="add_btn">Add</button>
+        <button id="clear_btn">Clear</button>
+        <table id="table">
+            <thead>
+                <th>Project</th>
+                <th>Task</th>
+                <th>Time Spent</th>
+                <th>Actions</th>
+            </thead>
+            <tbody id="body"></tbody>
+        </table>
+    </div>
+    
+    <script src="data.js"></script>    
+    <script src="index.js"></script>    
+</body>
+</html>

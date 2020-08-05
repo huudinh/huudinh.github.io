@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C4EJSUILab - Random Quote</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <div style="padding: 2em;">
+        <h2>
+            Implement an offline random quote app. <a href="https://bit.ly/c4t-quote">Link demo</a>
+        </h2>
+        <h2>
+            The quote data to randomize from is from <a href="https://raw.githubusercontent.com/edtechkidsvn/quotes/master/data.json">this</a>
+        </h2>  
+        <h3>
+            Step suggestion:
+        </h3>      
+        <ol>
+            <li>
+                <p>Create UI structure in HTML file</p>
+            </li>
+            <li>
+                <p>In JS, copy the data from the provided link, paste it to JS code and assign it to a variable / constant</p>
+            </li>
+            <li>
+                <p>
+                    Randomly pick a quote from the data
+                </p>
+            </li>
+            <li>
+                <p>
+                    Use DOM to show the quote content and author to users
+                </p>
+            </li>
+            <li>
+                <p>
+                    Register to reload button's click event. When users click on this button, randomly pick a quote and show it to users again
+                </p>
+            </li>
+        </ol>
+    </div>
+
+    <div style="padding: 2em;">
+        <button id="reload">
+            <i style='font-size:24px' class='fas'>&#xf1da;</i> reload
+        </button>
+        <br>
+        <br>
+        <div id="quote"></div>
+        <br>
+        <div id="author"></div>
+    </div>
+    
+    <script src="data.js"></script>    
+    <script src="index.js"></script>    
+</body>
+</html>

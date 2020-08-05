@@ -1,0 +1,25 @@
+#timer{
+    border: none;
+    margin: 30px 650px 0px 0px;
+    text-align: right;
+}
+#box{
+    border: 1px solid lightgray;
+    text-align: right;
+}
+#box::placeholder{
+    text-align: right;
+}
+#start_btn{
+    background-color: lightgray;
+    border: none;
+}
+#stop_btn{
+    background-color: lightgray;
+    border: none;
+}
+#res{
+    margin: 0px 650px 0px 0px;
+    text-align: right;
+    font-weight: bold;
+}
