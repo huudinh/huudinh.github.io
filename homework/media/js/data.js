@@ -9,15 +9,15 @@ let data = {
                     sub : [
                         {
                             name : 'Homework 1',
-                            link : '/section-1/hwork-1/'
+                            link : 'hwork-1.html'
                         },
                         {
                             name : 'Homework 2',
-                            link : '/section-1/hwork-2/'
+                            link : './section-1/hwork-2/'
                         },
                         {
                             name : 'Homework 3',
-                            link : '/section-1/hwork-3/'
+                            link : './section-1/hwork-3/'
                         },
                     ]
                 },
