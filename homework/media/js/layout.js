@@ -40,7 +40,7 @@ function getMenuC3(x){
     let subs = nav[x].sub[x].sub;
     for(let i = 0; i < subs.length; i++){
         let link = `
-            <li><a href="${subs[i].link}">${subs[i].name}</a></li>
+            <li><a onclick="loadSection('${subs[i].link}')" href="#">${subs[i].name}</a></li>
         `;
         menu += link;
     }
@@ -51,3 +51,11 @@ function getMenuC3(x){
 menu =`${getMenuC1()}`;
 
 menuBox[0].insertAdjacentHTML('beforeEnd',`${menu}`);
+
+// add Homework Section
+function loadSection(link){
+    const main = document.getElementById('myframe');
+    main.setAttribute('src', link);
+
+}
+
