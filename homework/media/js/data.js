@@ -25,7 +25,7 @@ let data = {
                         },
                         {
                             name : 'Homework 5',
-                            link : 'Section-4/hwork-5/index.html'
+                            link : 'Section-1/hwork-5/index.html'
                         },
                         {
                             name : 'Homework 6',

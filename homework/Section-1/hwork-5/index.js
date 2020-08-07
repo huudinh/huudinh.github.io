@@ -1,2 +1,6 @@
 console.log("Bài 5: ");
-alert("You look beautyful today");
+setTimeout(()=>{
+
+    alert("You look beautyful today");
+    
+},3000);
