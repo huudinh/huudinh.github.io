@@ -26,7 +26,7 @@ function getMenuC2(x){
         let menu_2 = `
             <div class="accordions_lv-content">
                 <ul>
-                    ${getMenuC3(i)}
+                    ${getMenuC3(x,i)}
                 </ul>
             </div>
         `;
@@ -35,9 +35,13 @@ function getMenuC2(x){
     
     return menu;
 }
-function getMenuC3(x){
+function getMenuC3(x,j){
     let menu = "";   
-    let subs = nav[x].sub[x].sub;
+    let subs = nav[x].sub[j].sub;
+    // console.log(x);
+    // console.log(j);
+    console.log(subs);
+    
     for(let i = 0; i < subs.length; i++){
         let link = `
             <li><a onclick="loadSection('${subs[i].link}')" href="#">${subs[i].name}</a></li>
