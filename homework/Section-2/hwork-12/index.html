@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 12</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div style="padding: 2em;">
+        <h2>Section 2 - Homework 12</h2>
+        <h3>Use <a href="https://turtle-js.herokuapp.com/" target="_blank">JS Turtle</a> , to draw a polygon, the number of polygon’s edges entered by users
+        </h3>
+        <p>
+            <img src="images/Screenshot_1.png" alt="">
+        </p>
+        <p>
+            <img src="images/Screenshot_2.png" alt="">
+        </p>
+        <pre>
+            //Ve hinh theo so canh user nhap
+            clear();
+            function draw() {
+              let x = prompt("Enter number of edge:")
+              for (let i = 1; i <= x; i++) {
+                fd(150);
+                rt(360 / x);
+              }
+            }
+            draw();
+            
+            //Vẽ Hình Tròn(Nhap 999)
+            clear();
+            function draw() {
+              let x = prompt("Enter number of edge:")
+              for (let i = 1; i <= x; i++) {
+                fd(1);
+                rt(360 / x);
+              }
+            }
+            draw();            
+
+        </pre>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 11</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div style="padding: 2em;">
+        <h2>Section 2 - Homework 11</h2>
+        <h3>Use <a href="https://turtle-js.herokuapp.com/" target="_blank">JS Turtle</a> , to draw the following shapes</h3>
+        <p>
+            <img src="images/Screenshot_1.png" alt="">
+        </p>
+        <pre>
+            // Vẽ Hình Vuông:
+            function drawSquare() {
+                for (let i = 1; i <= 4; i++) {
+                    fd(100);
+                    lt(90);
+                }
+            }
+            drawSquare();
+            
+            //Vẽ Hình Tam Giác:
+            clear();
+            lt(60);
+            function drawTriangle() {
+                for (let i = 1; i <= 3; i++) {
+                    fd(150);
+                    lt(120);
+                }
+            }
+            drawTriangle();
+            
+            // Vẽ Hình Ngũ Giác
+            clear();
+            function draw() {
+                for (let i = 1; i <= 5; i++) {
+                    fd(150);
+                    rt(72);
+                }
+            }
+            draw();
+            
+            //Vẽ Hình Lục Giác
+            clear();
+            function draw() {
+                for (let i = 1; i <= 6; i++) {
+                    fd(150);
+                    rt(60);
+                }
+            }
+            draw();
+
+        </pre>
+
+    </div>
+</body>
+</html>

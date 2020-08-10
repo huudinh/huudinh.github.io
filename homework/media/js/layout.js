@@ -38,9 +38,6 @@ function getMenuC2(x){
 function getMenuC3(x,j){
     let menu = "";   
     let subs = nav[x].sub[j].sub;
-    // console.log(x);
-    // console.log(j);
-    console.log(subs);
     
     for(let i = 0; i < subs.length; i++){
         let link = `

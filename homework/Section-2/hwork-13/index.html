@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 13</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div style="padding: 2em;">
+        <h2>Section 2 - Homework 13</h2>
+        <h3>Use <a href="https://turtle-js.herokuapp.com/" target="_blank">JS Turtle</a> , to draw n polygons, n entered by users
+        </h3>
+        <p>
+            <img src="images/Screenshot_1.png" alt="">
+        </p>
+        <pre>
+          clear();
+          function draw() {
+            let x = prompt("Enter number of polygons: ");
+            for (let i = 1; i <= x; i++) {
+              for (let j = 1; j <= i + 2; j++) {
+                fd(100);
+                rt(360 / (i + 2));
+              }
+            }
+          }
+          draw();          
+
+        </pre>
+
+    </div>
+</body>
+</html>

@@ -1,6 +1,11 @@
 console.log('D. In dãy số do người dùng nhập số đầu và cuối (n và c):')
-let n = prompt('Enter begin number: ')
-let c = prompt('Enter end number: ')
-for (let i = n; i < c; i++) {
-    console.log(i);
-}
+
+setTimeout(()=>{
+
+    let n = prompt('Enter n: ')
+    let c = prompt('Enter c: ')
+    for (let i = c; i < n; i++) {
+        console.log(i);
+    }
+
+},3000);
