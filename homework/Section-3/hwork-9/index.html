@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 9</title>
+    <script src="js/index.js"></script>
+
+</head>
+<body>
+    <div style="padding: 0 2em;">
+        <h2>Section 3 - Homework 9</h2>
+        <pre>
+            Given the array
+
+            const colors = [‘red’, ‘gray’, ‘blue’, ‘purple’, ‘cyan’];
+            
+            Use <a href="https://turtle-js.herokuapp.com/" target="_blank">JS Turtle</a>, to draw the following shapes            
+        </pre>   
+        <p>
+            <img src="images/Screenshot_1.png" alt="">
+        </p>    
+        <pre>
+            let colorList = ['gray', 'blue', 'purple', 'cyan'];
+            clear();
+            for (let i = 0; i < colorList.length; i++) {
+                color(colorList[i]);
+                for (let n = 0; n < 4; n++) {
+                    fd(25 * (i + 1));
+                    rt(90);
+                }
+            };            
+        </pre>      
+        
+
+    </div>
+</body>
+</html>
