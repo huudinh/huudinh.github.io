@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 11</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div style="padding: 2em;">
+        <h2>Section 4 - Homework 11</h2>
+        <p>
+            (Optional) Add circle to the command
+        </p>        
+        <pre>
+
+            const circle = {
+                shape: 'circle',
+                x: 100,
+                y: 50,
+                radius: 30,
+            };
+        
+
+        </pre>
+
+        <p>
+            <img src="images/Screenshot_1.png" alt="">
+        </p>
+        <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            const circle = {
+                shape: 'circle',
+                x: 100,
+                y: 50,
+                radius: 30,
+            };
+            
+            penup();
+            rt(90);
+            fd(circle.x);
+            lt(90);
+            fd(circle.y);
+            pendown();
+            
+            for(let i = 0; i < 999; i++) {
+                fd(2);
+                rt((90 - (Math.acos(1/(circle.radius)) * (360/(2 * Math.PI)))));
+            }
+            
+        </pre>
+    </div>
+</body>
+</html>

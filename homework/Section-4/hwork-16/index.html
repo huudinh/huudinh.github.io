@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 14</title>
+    <script src="index.js"></script>
+</head>
+<div style="padding: 2em;">
+    <h2>Section 4 - Homework 16</h2>
+    <p>
+        There are at least two ways to delete a property-value pair from an object, the first one is the one you learned in class, to use delete keyword (which you already learned).. The second one is to create a new object without the property-value pair and just use the new object from then. For example:
+    </p>     
+    <pre>
+        const oldData = {
+            firedRice: {
+                Price: 30,
+                vnName: ‘Com rang dua bo’
+            },
+            noddle: {
+                price: 20,
+                vnName: ‘My tom chanh’
+            },
+            pho: {
+                price: 35,
+                vnName: ‘Pho bo tai chin’
+            },
+        };
+            
+    </pre>
+    <p>If noddle removal is needed, a new object named newData is created containing data from oldData object, without noddle property. This gives the benefit of preserving the old data so it can be traced back when debugging in the future.</p>
+    <pre>
+        console.log(newData);
+        // Console
+
+    </pre>
+    <p>
+        <img src="images/Screenshot_1.png" alt="">
+    </p>
+    <p>
+        This can be done elegantly using JS 6 rest operator, learn it and write an example to demonstrate your understanding. If you need hints, find them at the end of this homework
+    </p>
+</div>
+</html>

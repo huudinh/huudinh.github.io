@@ -268,8 +268,24 @@ let data = {
                             link : 'Section-4/hwork-11/'
                         },
                         {
-                            name : 'Hints',
+                            name : 'Homework 12',
                             link : 'Section-4/hwork-12/'
+                        },
+                        {
+                            name : 'Tools 1',
+                            link : 'Section-4/hwork-13/'
+                        },
+                        {
+                            name : 'Tools 2',
+                            link : 'Section-4/hwork-14/'
+                        },
+                        {
+                            name : 'Homework 15',
+                            link : 'Section-4/hwork-15/'
+                        },
+                        {
+                            name : 'Homework 16',
+                            link : 'Section-4/hwork-16/'
                         },
                     ]
                 },

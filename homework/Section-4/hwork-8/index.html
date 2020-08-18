@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 8</title>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div style="padding: 2em;">
+        <h2>Section 4 - Homework 8</h2>
+        <p>
+            Given the object
+        </p>
+        <pre>
+
+            const square = {
+                x: 100,
+                y: 50,
+                width: 20,
+            };
+            
+
+        </pre>
+
+        <p>
+            Use <a href="https://turtle-js.herokuapp.com/#" target="_blank">JS Turtle</a>, to draw a square at position
+            (x, y) with size width
+        </p>
+
+        <p>
+            <img src="images/Screenshot_1.png" alt="">
+        </p>
+        <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            clear();
+            const pos = {
+                x: 100,
+                y: 50,
+                width: 20,
+            };
+            penup();
+            rt(90);
+            fd(pos.x);
+            lt(90);
+            fd(pos.y);
+            for(let i = 0; i<4; i++)
+            {
+                pendown();
+                fd(pos.width);
+                rt(90);
+            }
+            
+        </pre>
+    </div>
+</body>
+
+</html>

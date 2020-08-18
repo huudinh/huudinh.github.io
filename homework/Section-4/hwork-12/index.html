@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 12</title>
+    <script src="index.js"></script>
+</head>
+<div style="padding: 2em;">
+    <h2>Section 4 - Homework 12</h2>
+    <p>
+        (Optional) Execute all command from <a href="https://gist.githubusercontent.com/qhuydtvt/1e63092d33122aded10e72b72337188c/raw/68c610d897555cdf186e7a0e105ed2e866caf313/cmdExtended.js" target="_blank">this</a>
+    </p>        
+    
+
+    <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        const cmds = [
+        {
+            shape: 'circle',
+            x: 0,
+            y: -20,
+            radius: 60,
+        },
+        {
+            shape: 'circle',
+            x: 0,
+            y: 80,
+            radius: 40,
+        },
+        {
+            shape: 'circle',
+            x: -75,
+            y: 10,
+            radius: 20,
+        },
+          {
+            shape: 'circle',
+            x: 75,
+            y: 10,
+            radius: 20,
+        },
+        {
+            shape: 'square',
+            x: -65,
+            y: -100,
+            width: 30,
+        },
+          {
+            shape: 'square',
+            x: 38,
+            y: -100,
+            width: 30,
+        },
+      
+      {
+            shape: 'rect',
+            x: -30,
+            y: 80,
+            width: 20,
+            height: 4
+        },
+        {
+            shape: 'rect',
+            x: 10,
+            y: 80,
+            width: 20,
+            height: 4
+        },
+          {
+            shape: 'rect',
+            x: -10,
+            y: 50,
+            width: 20,
+            height: 6
+        },
+      {
+            shape: 'square',
+            x: 500,
+            y: 500,
+            width: 20,
+        },
+    ];
+    
+    for(let info of cmds) {
+        switch(info.shape) {
+            case 'square': {
+                penup();
+                rt(90);
+                fd(info.x);
+                lt(90);
+                fd(info.y);
+                pendown();
+    
+                for(let i = 0; i < 4; i++) {
+                    fd(info.width);
+                    rt(90);
+                }
+                home();
+                break;
+            }
+            case 'rect': {
+                penup();
+                rt(90);
+                fd(info.x);
+                lt(90);
+                fd(info.y);
+                pendown();
+    
+                for(let i = 0; i < 4; i++) {
+                    if(i % 2 == 0) {
+                        fd(info.height);
+                    } else {
+                        fd(info.width);
+                    }
+                    rt(90);
+                }
+                home();
+                break;
+            }
+            case 'circle': {
+                penup();
+                rt(90);
+                fd(info.x);
+                lt(90);
+                fd(info.y);
+                pendown();
+    
+                for(let i = 0; i < 999; i++) {
+                    fd(2);
+                    rt((90 - (Math.acos(1/(info.radius)) * (360/(2 * Math.PI)))));
+                }
+            }
+        }
+    }
+        
+    </pre>
+</div>
+</html>

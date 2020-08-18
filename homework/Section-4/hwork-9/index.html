@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 9</title>
+    <script src="js/index.js"></script>
+
+</head>
+<body>
+    <div style="padding: 2em;">
+        <h2>Section 4 - Homework 9</h2>
+        <p>
+            Given the object
+        </p>        
+        <pre>
+
+            const rect = {
+                x: 100,
+                y: 50,
+                width: 20,
+                height: 40,
+            };
+
+        </pre>
+
+        <p>
+            Use <a href="https://turtle-js.herokuapp.com/#" target="_blank">JS Turtle</a>, o draw a rectangle at position (x, y) with size width and height
+        </p>
+
+        <p>
+            <img src="images/Screenshot_1.png" alt="">
+        </p>
+        <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            clear();
+            const pos = {
+                x: 100,
+                y: 50,
+                width: 20,
+                height: 40,
+            };
+            
+            penup();
+            rt(90);
+            fd(pos.x);
+            lt(90);
+            fd(pos.y);
+        
+            for (let i = 0; i < 2; i++) {
+                pendown();
+                fd(pos.height);
+                rt(90);
+                fd(pos.width);
+                rt(90);
+            }
+            
+        </pre>
+    </div>
+</body>
+</html>

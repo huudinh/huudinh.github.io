@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 10</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div style="padding: 2em;">
+        <h2>Section 4 - Homework 10</h2>
+        <p>
+            Given <a href="https://gist.githubusercontent.com/qhuydtvt/86ec0e962782b0d7509e881ad18c3447/raw/0add6fcf2ab007deef6d373aec3ed8ad4474cc58/turtleCmd.js">this data structure</a>, in which:
+        </p>        
+        <pre>
+
+            {
+                shape: 'rect',
+                x: 8,
+                y: 70,
+                width: 12,
+                height: 40,
+                  }
+              
+              rect means draw a rectangle with the respective 
+              position (x, y) and size (width, height)
+              
+              {
+                shape: 'square',
+                x: 20,
+                y: 40,
+                width: 50,
+                    },
+              
+              square means draw a square with the 
+              respective position (x, y) and size (width)
+
+        </pre>
+
+        <p>
+            Go through and execute all command.
+
+            Note: To make turtle go to the initial position with initial angle, use <a href="https://github.com/raimohanska/turtle-js" target="_blank">home()</a>  statements.
+        </p>
+
+
+        <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            let rectangle = {
+                shape: 'rect',
+                x: 8,
+                y: 70,
+                width: 12,
+                height: 40,
+            };
+            
+            let square = {
+                shape: 'square',
+                x: 20,
+                y: 40,
+                width: 50,
+            };
+            
+            penup();
+            rt(90);
+            fd(rectangle.x);
+            lt(90);
+            fd(rectangle.y);
+            pendown();
+            
+            for(let i = 0; i < 4; i++) {
+                if(i % 2 == 0) {
+                    fd(rectangle.height);
+                } else {
+                    fd(rectangle.width);
+                }
+                rt(90);
+            }
+            
+            home();
+            
+            penup();
+            rt(90);
+            fd(square.x);
+            lt(90);
+            fd(square.y);
+            pendown();
+            
+            for(let i = 0; i < 4; i++) {
+                fd(square.width);
+                rt(90);
+            } 
+            
+            
+            
+            
+        </pre>
+    </div>
+</body>
+</html>
