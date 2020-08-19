@@ -5,6 +5,9 @@ setTimeout(() => {
     let n;
     while (true) {
         n = prompt('Nhap vao ten cua ban');
+        if(n == ''){
+            break;
+        }
         if (n.length > 15) {
             alert('Ten cua ban qua dai');
         } else {

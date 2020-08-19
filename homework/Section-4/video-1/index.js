@@ -1,4 +1,8 @@
-console.log("VD1: Khởi tạo một mảng chứa tên những bộ phim bạn thích");
+console.log("VD1: Declare a variable Object");
 
-let phim = [ 'F&F' , 'one piece' , 'naruto' , 'JAV', 'Mắt biếc'];
-console.log(phim); 
+let movie = {
+    title: 'The dark night rises',
+    year: 2012,
+    rate: 8.4
+};
+console.log(movie);

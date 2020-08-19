@@ -10,19 +10,28 @@ setTimeout(() => {
 
     while (true) {
         let n = prompt('Nhập vào lựa chọn của bạn');
-        if (n < 1) {
-            alert('Không hợp lệ, vui lòng nhập 1,2,3 hoặc 4');
-        } else if (n < 3) {
-            alert('Đáp án sai, trả lời lại ?');
-        } else if (n == 3) {
-            alert('bạn đã đúng');
-            alert('con nhện có 8 chân')
+        if (n == null || n == undefined) {
+            alert('GoodBye!');
             break;
-        } else if (n == 4) {
-            alert('Đáp án sai, trả lời lại ?');
         } else {
-            alert('Không hợp lệ, vui lòng nhập 1,2,3 hoặc 4')
+
+            if (n < 1) {
+                alert('Không hợp lệ, vui lòng nhập 1,2,3 hoặc 4');
+            } else if (n < 3) {
+                alert('Đáp án sai, trả lời lại ?');
+            } else if (n == 3) {
+                alert('bạn đã đúng');
+                alert('con nhện có 8 chân')
+                break;
+            } else if (n == 4) {
+                alert('Đáp án sai, trả lời lại ?');
+            } else {
+                alert('Không hợp lệ, vui lòng nhập 1,2,3 hoặc 4')
+            }            
+
         }
+
+
     }
 
 

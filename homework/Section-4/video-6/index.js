@@ -1,26 +1,33 @@
-console.log("VD6: Read Array");
+console.log("VD6: Object containing Array");
+console.log('1. Create an object named movie, with title, year and rate and characters. The characters contain at least 3 characters of the movie');
+let movie = {
+    title: 'Attack on titans',
+    year: 2013,
+    rate: 8.8,
+    casts: ['Eren', 'Armin', 'Mikasa']
+};
+console.log(movie);
 
-setTimeout(() => {
+console.log('2. Print or log out the movie data in the following format');
+for (let item in movie) {
+    if (item == 'title') {
+        console.log(movie[item]);
+    } else if (item == 'character') {
+        console.log(...movie[item]);
+    } else {
+        console.log(`${item}: ${movie[item]}`);
+    }
+}
+console.log('3. Add new cast to the movie and then log it back')
 
-    let phim = ['F&F', 'one piece', 'naruto', 'JAV', 'Mắt biếc'];
+movie.casts = ['Eren', 'Armin', 'Mikasa','Levi'];
 
-    console.log(phim);
-    console.log('1. Đọc tất cả mục trong mảng :')
-    for (let i = 0; i < phim.length; i++) {
-        console.log(phim[i]);
-    }                   
-    
-    console.log('2. Đọc nửa mục đầu tiên trong mảng');
-    for (let i = 0; i < phim.length / 2; i++) {
-        console.log(phim[i]);
-    }                  
-    
-    console.log('3. Đọc tất cả các mục đến vị trí n');
-    let n = prompt('Nhap vao vi tri ');
-
-    for (let i = 0; i < n; i++) {
-        console.log(phim[i]);
-    }                 
-    
-
-}, 3000);
+for (let item in movie) {
+    if (item == 'title') {
+        console.log(movie[item]);
+    } else if (item == 'character') {
+        console.log(...movie[item]);
+    } else {
+        console.log(`${item}: ${movie[item]}`);
+    }
+}

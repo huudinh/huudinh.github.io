@@ -177,39 +177,39 @@ let data = {
                     name : '3.2 - Video',
                     sub : [
                         {
-                            name : 'Video 1: Add new',
+                            name : 'Video 1: Array - Init',
                             link : 'Section-3/video-1/'
                         },
                         {
-                            name : 'Video 2: Add new',
+                            name : 'Video 2: Array - Add new',
                             link : 'Section-3/video-2/'
                         },
                         {
-                            name : 'Video 3: Read',
+                            name : 'Video 3: Array - Read',
                             link : 'Section-3/video-3/'
                         },
                         {
-                            name : 'Video 4: Update',
+                            name : 'Video 4: Array - Update',
                             link : 'Section-3/video-4/'
                         },
                         {
-                            name : 'Video 5: Delete',
+                            name : 'Video 5: Array - Delete',
                             link : 'Section-3/video-5/'
                         },
                         {
-                            name : 'Video 6: Read',
+                            name : 'Video 6: Array - Read All',
                             link : 'Section-3/video-6/'
                         },
                         {
-                            name : 'Video 7: Update All',
+                            name : 'Video 7: Array - Update All',
                             link : 'Section-3/video-7/'
                         },
                         {
-                            name : 'Video 8: While(true)',
+                            name : 'Video 8: Login Bug',
                             link : 'Section-3/video-8/'
                         },
                         {
-                            name : 'Video 9',
+                            name : 'Video 9: Quick Quiz',
                             link : 'Section-3/video-9/'
                         },
                     ]
@@ -293,40 +293,156 @@ let data = {
                     name : '4.2 - Video',
                     sub : [
                         {
-                            name : 'Video 1: Add new',
+                            name : 'Video 1: Object - Init',
                             link : 'Section-4/video-1/'
                         },
                         {
-                            name : 'Video 2: Add new',
+                            name : 'Video 2: Object - Read',
                             link : 'Section-4/video-2/'
                         },
                         {
-                            name : 'Video 3: Read',
+                            name : 'Video 3: Object - Update',
                             link : 'Section-4/video-3/'
                         },
                         {
-                            name : 'Video 4: Update',
+                            name : 'Video 4: Object - Create',
                             link : 'Section-4/video-4/'
                         },
                         {
-                            name : 'Video 5: Delete',
+                            name : 'Video 5: Array of Object',
                             link : 'Section-4/video-5/'
                         },
                         {
-                            name : 'Video 6: Read',
+                            name : 'Video 6: Object containing Array',
                             link : 'Section-4/video-6/'
                         },
                         {
-                            name : 'Video 7: Update All',
+                            name : 'Video 7: Object and Array',
                             link : 'Section-4/video-7/'
                         },
                         {
-                            name : 'Video 8: While(true)',
+                            name : 'Video 8: Object - Optional',
                             link : 'Section-4/video-8/'
                         },
+                    ]
+                },
+               
+            ]
+        },
+        {
+            name : 'Section 5 : HTML + JSLab',
+            sub : [
+                {
+                    name : '5.1 - Homework',
+                    sub : [
                         {
-                            name : 'Video 9',
-                            link : 'Section-4/video-9/'
+                            name : 'Homework 1: Learn HTML',
+                            link : 'Section-5/hwork-1/'
+                        },
+                        {
+                            name : 'Homework 2: Base HTML',
+                            link : 'Section-5/hwork-2/'
+                        },
+                        {
+                            name : 'Homework 3: Tools',
+                            link : 'Section-5/hwork-3/'
+                        },
+                    ]
+                },
+                {
+                    name : '5.2 - Video',
+                    sub : [
+                        {
+                            name : 'Video 1.1: Random Number',
+                            link : 'Section-5/video-1-1/'
+                        },
+                        {
+                            name : 'Video 1.2: Random Array',
+                            link : 'Section-5/video-1-2/'
+                        },
+                        {
+                            name : 'Video 1.3: Quizzes',
+                            link : 'Section-5/video-1-3/'
+                        },
+                        {
+                            name : 'Video 1.4: Quizzes Random',
+                            link : 'Section-5/video-1-4/'
+                        },
+                        {
+                            name : 'Video 1.5: Quizzes Correct',
+                            link : 'Section-5/video-1-5/'
+                        },
+                        {
+                            name : 'Video 1.6: Quizzes appears once',
+                            link : 'Section-5/video-1-6/'
+                        },
+                        {
+                            name : 'Video 1.7: Quizzes total ',
+                            link : 'Section-5/video-1-7/'
+                        },
+                        {
+                            name : 'Video 1.8: Quizzes Shuffle choices',
+                            link : 'Section-5/video-1-8/'
+                        },
+                        {
+                            name : 'Video 2.1: Jobs Data',
+                            link : 'Section-5/video-2-1/'
+                        },
+                        {
+                            name : 'Video 2.2: Jobs show',
+                            link : 'Section-5/video-2-2/'
+                        },
+                        {
+                            name : 'Video 2.3: Jobs first',
+                            link : 'Section-5/video-2-3/'
+                        },
+                        {
+                            name : 'Video 2.4: Jobs Title',
+                            link : 'Section-5/video-2-4/'
+                        },
+                        {
+                            name : 'Video 2.5: Jobs benefits',
+                            link : 'Section-5/video-2-5/'
+                        },
+                        {
+                            name : 'Video 2.6: Jobs benefitValues ',
+                            link : 'Section-5/video-2-6/'
+                        },
+                        {
+                            name : 'Video 2.7: Jobs benefitValue of ALL ',
+                            link : 'Section-5/video-2-7/'
+                        },
+                        {
+                            name : 'Video 2.8: Jobs All',
+                            link : 'Section-5/video-2-8/'
+                        },
+                        {
+                            name : 'Video 3.1: Count Word',
+                            link : 'Section-5/video-3-1/'
+                        },
+                        {
+                            name : 'Video 3.2: Data Shop Laptop',
+                            link : 'Section-5/video-3-2/'
+                        },
+                        {
+                            name : 'Video 3.3: Brand Filter',
+                            link : 'Section-5/video-3-3/'
+                        },
+                        {
+                            name : 'Video 3.4: Filter total',
+                            link : 'Section-5/video-3-4/'
+                        },
+                        {
+                            name : 'Video 3.5: Filter detail',
+                            link : 'Section-5/video-3-5/'
+                        },
+                        {
+                            name : 'Video 3.6: Filter price',
+                            link : 'Section-5/video-3-6/'
+                        },
+                        {
+                            name : 'Video 3.7: Filter toLocaleString',
+                            link : 'Section-5/video-3-7/'
                         },
                     ]
                 },
