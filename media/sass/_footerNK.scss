@@ -6,7 +6,7 @@
 		line-height: 21px;
 	}
 	@extend %font1;
-	.icon_ft{
+	.icon_ft.img-bg{
 		background-image: url(../images/footer/footer_NK.png);
 	}
 	&>div {

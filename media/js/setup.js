@@ -17,6 +17,9 @@ function clickHandler(e) {
         });
     }
 }
+// add Img Lazy Demo
+addImgDefault('img.lazy','src');
+addImgDefault('source.lazy','srcset');
 
 window.addEventListener("scroll", function () { 
     // Add Onscroll .menu a
@@ -24,7 +27,11 @@ window.addEventListener("scroll", function () {
     // Add Lazy Screen LDP
     myLoad('section','loaded');
     myLoad('.slide_run','slide');
+    myLazy('img.lazy','src');
+    myLazy('source.lazy','srcset');
+    myLazy('.lazy-bg','img-bg');
 }); 
+
 
 
 // Add Class : 1. Name Button / 2. Name Object / 3. Name Class Add
@@ -36,5 +43,3 @@ removeClass('.siteHeader-bg','.siteHeaderMain','active');
 removeClass('.siteHeader-bg','.siteHeader-bg','active');
 removeClass('.siteHeader a','.siteHeaderMain','active');
 removeClass('.siteHeader a','.siteHeader-bg','active');
-
-

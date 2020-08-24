@@ -30,6 +30,10 @@ let data = {
             link : 'tabs.html'
         },
         {
+            name : 'Lazyload',
+            link : 'lazy.html'
+        },
+        {
             name : 'Modal',
             link : 'modal.html'
         },

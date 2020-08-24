@@ -330,17 +330,315 @@ let data = {
             ]
         },
         {
-            name : 'Section 5 : HTML + JSLab',
+            name : 'Section 5 + 6 : HTML/CSS + JSLab',
             sub : [
                 {
                     name : '5.1 - Homework',
                     sub : [
                         {
-                            name : 'Homework 1: Learn HTML',
+                            name : 'Homework 1: Learn HTML + CSS',
                             link : 'Section-5/hwork-1/'
                         },
                         {
-                            name : 'Homework 2: Base HTML',
+                            name : 'Homework 2: CV HTML + CSS',
+                            link : 'Section-5/hwork-2/'
+                        },
+                        {
+                            name : 'Homework 3: Tools',
+                            link : 'Section-5/hwork-3/'
+                        },
+                    ]
+                },
+                {
+                    name : '5.2 - Video',
+                    sub : [
+                        {
+                            name : 'Video 1.1: Random Number',
+                            link : 'Section-5/video-1-1/'
+                        },
+                        {
+                            name : 'Video 1.2: Random Array',
+                            link : 'Section-5/video-1-2/'
+                        },
+                        {
+                            name : 'Video 1.3: Quizzes',
+                            link : 'Section-5/video-1-3/'
+                        },
+                        {
+                            name : 'Video 1.4: Quizzes Random',
+                            link : 'Section-5/video-1-4/'
+                        },
+                        {
+                            name : 'Video 1.5: Quizzes Correct',
+                            link : 'Section-5/video-1-5/'
+                        },
+                        {
+                            name : 'Video 1.6: Quizzes appears once',
+                            link : 'Section-5/video-1-6/'
+                        },
+                        {
+                            name : 'Video 1.7: Quizzes total ',
+                            link : 'Section-5/video-1-7/'
+                        },
+                        {
+                            name : 'Video 1.8: Quizzes Shuffle choices',
+                            link : 'Section-5/video-1-8/'
+                        },
+                        {
+                            name : 'Video 2.1: Jobs Data',
+                            link : 'Section-5/video-2-1/'
+                        },
+                        {
+                            name : 'Video 2.2: Jobs show',
+                            link : 'Section-5/video-2-2/'
+                        },
+                        {
+                            name : 'Video 2.3: Jobs first',
+                            link : 'Section-5/video-2-3/'
+                        },
+                        {
+                            name : 'Video 2.4: Jobs Title',
+                            link : 'Section-5/video-2-4/'
+                        },
+                        {
+                            name : 'Video 2.5: Jobs benefits',
+                            link : 'Section-5/video-2-5/'
+                        },
+                        {
+                            name : 'Video 2.6: Jobs benefitValues ',
+                            link : 'Section-5/video-2-6/'
+                        },
+                        {
+                            name : 'Video 2.7: Jobs benefitValue of ALL ',
+                            link : 'Section-5/video-2-7/'
+                        },
+                        {
+                            name : 'Video 2.8: Jobs All',
+                            link : 'Section-5/video-2-8/'
+                        },
+                        {
+                            name : 'Video 3.1: Count Word',
+                            link : 'Section-5/video-3-1/'
+                        },
+                        {
+                            name : 'Video 3.2: Data Shop Laptop',
+                            link : 'Section-5/video-3-2/'
+                        },
+                        {
+                            name : 'Video 3.3: Brand Filter',
+                            link : 'Section-5/video-3-3/'
+                        },
+                        {
+                            name : 'Video 3.4: Filter total',
+                            link : 'Section-5/video-3-4/'
+                        },
+                        {
+                            name : 'Video 3.5: Filter detail',
+                            link : 'Section-5/video-3-5/'
+                        },
+                        {
+                            name : 'Video 3.6: Filter price',
+                            link : 'Section-5/video-3-6/'
+                        },
+                        {
+                            name : 'Video 3.7: Filter toLocaleString',
+                            link : 'Section-5/video-3-7/'
+                        },
+                    ]
+                },
+               
+            ]
+        },
+        {
+            name : 'Section 7 : Function & DOM',
+            sub : [
+                {
+                    name : 'Homework : Function & DOM',
+                    sub : [
+                        {
+                            name : 'Homework 1: InsertAdjacentHTML',
+                            link : 'Section-7/hwork-1/'
+                        },
+                        {
+                            name : 'Homework 2: setInterval',
+                            link : 'Section-7/hwork-2/'
+                        },
+                        {
+                            name : 'Homework 3: Function scope',
+                            link : 'Section-7/hwork-3/'
+                        },
+                        {
+                            name : 'Homework 4: Read Tag Name',
+                            link : 'Section-7/hwork-4/'
+                        },
+                        {
+                            name : 'Homework 5: Read Class Name',
+                            link : 'Section-7/hwork-5/'
+                        },
+                        {
+                            name : 'Homework 6: Remove DOM',
+                            link : 'Section-7/hwork-6/'
+                        },
+                        {
+                            name : 'Homework 7: Callback ',
+                            link : 'Section-7/hwork-7/'
+                        },
+                        {
+                            name : 'Homework 8: Function',
+                            link : 'Section-7/hwork-8/'
+                        },
+                        {
+                            name : 'Homework 9: Function parameters',
+                            link : 'Section-7/hwork-9/'
+                        },
+                        {
+                            name : 'Homework 10: Function parameters',
+                            link : 'Section-7/hwork-10/'
+                        },
+                        {
+                            name : 'Homework 11: DOM',
+                            link : 'Section-7/hwork-11/'
+                        },
+                        {
+                            name : 'Homework 12: DOM ECRUD',
+                            link : 'Section-7/hwork-12/'
+                        },
+                    ]
+                },
+            ]
+        },
+        {
+            name : 'Section 8 : UI APP',
+            sub : [
+                {
+                    name : '7.1 - Homework',
+                    sub : [
+                        {
+                            name : 'Homework 1: Learn HTML + CSS',
+                            link : 'Section-5/hwork-1/'
+                        },
+                        {
+                            name : 'Homework 2: CV HTML + CSS',
+                            link : 'Section-5/hwork-2/'
+                        },
+                        {
+                            name : 'Homework 3: Tools',
+                            link : 'Section-5/hwork-3/'
+                        },
+                    ]
+                },
+                {
+                    name : '5.2 - Video',
+                    sub : [
+                        {
+                            name : 'Video 1.1: Random Number',
+                            link : 'Section-5/video-1-1/'
+                        },
+                        {
+                            name : 'Video 1.2: Random Array',
+                            link : 'Section-5/video-1-2/'
+                        },
+                        {
+                            name : 'Video 1.3: Quizzes',
+                            link : 'Section-5/video-1-3/'
+                        },
+                        {
+                            name : 'Video 1.4: Quizzes Random',
+                            link : 'Section-5/video-1-4/'
+                        },
+                        {
+                            name : 'Video 1.5: Quizzes Correct',
+                            link : 'Section-5/video-1-5/'
+                        },
+                        {
+                            name : 'Video 1.6: Quizzes appears once',
+                            link : 'Section-5/video-1-6/'
+                        },
+                        {
+                            name : 'Video 1.7: Quizzes total ',
+                            link : 'Section-5/video-1-7/'
+                        },
+                        {
+                            name : 'Video 1.8: Quizzes Shuffle choices',
+                            link : 'Section-5/video-1-8/'
+                        },
+                        {
+                            name : 'Video 2.1: Jobs Data',
+                            link : 'Section-5/video-2-1/'
+                        },
+                        {
+                            name : 'Video 2.2: Jobs show',
+                            link : 'Section-5/video-2-2/'
+                        },
+                        {
+                            name : 'Video 2.3: Jobs first',
+                            link : 'Section-5/video-2-3/'
+                        },
+                        {
+                            name : 'Video 2.4: Jobs Title',
+                            link : 'Section-5/video-2-4/'
+                        },
+                        {
+                            name : 'Video 2.5: Jobs benefits',
+                            link : 'Section-5/video-2-5/'
+                        },
+                        {
+                            name : 'Video 2.6: Jobs benefitValues ',
+                            link : 'Section-5/video-2-6/'
+                        },
+                        {
+                            name : 'Video 2.7: Jobs benefitValue of ALL ',
+                            link : 'Section-5/video-2-7/'
+                        },
+                        {
+                            name : 'Video 2.8: Jobs All',
+                            link : 'Section-5/video-2-8/'
+                        },
+                        {
+                            name : 'Video 3.1: Count Word',
+                            link : 'Section-5/video-3-1/'
+                        },
+                        {
+                            name : 'Video 3.2: Data Shop Laptop',
+                            link : 'Section-5/video-3-2/'
+                        },
+                        {
+                            name : 'Video 3.3: Brand Filter',
+                            link : 'Section-5/video-3-3/'
+                        },
+                        {
+                            name : 'Video 3.4: Filter total',
+                            link : 'Section-5/video-3-4/'
+                        },
+                        {
+                            name : 'Video 3.5: Filter detail',
+                            link : 'Section-5/video-3-5/'
+                        },
+                        {
+                            name : 'Video 3.6: Filter price',
+                            link : 'Section-5/video-3-6/'
+                        },
+                        {
+                            name : 'Video 3.7: Filter toLocaleString',
+                            link : 'Section-5/video-3-7/'
+                        },
+                    ]
+                },
+               
+            ]
+        },
+        {
+            name : 'Section 9 : Netwoking',
+            sub : [
+                {
+                    name : '7.1 - Homework',
+                    sub : [
+                        {
+                            name : 'Homework 1: Learn HTML + CSS',
+                            link : 'Section-5/hwork-1/'
+                        },
+                        {
+                            name : 'Homework 2: CV HTML + CSS',
                             link : 'Section-5/hwork-2/'
                         },
                         {

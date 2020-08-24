@@ -4,14 +4,14 @@ function onScroll() {
     let y = document.documentElement.scrollTop;
     let sections = document.querySelectorAll('.temp');
     let i = 0;
-    sections.forEach(function (section){
+    sections.forEach(function (section) {
         let z = section.offsetTop - 70;
         let active = document.querySelectorAll('.menu a.active');
-        if ( z <= y ){
+        if (z <= y) {
             active[0].classList.remove('active');
             menu[i].classList.add('active');
         }
-        if(i < menu.length - 1){
+        if (i < menu.length - 1) {
             i++;
         }
     });
@@ -237,7 +237,7 @@ for (let i = 0; i < modalButton.length; i++) {
         modalButton[i].addEventListener("click", () => {
             if (modalCheck()) {
                 modals[j].style.display = "block";
-                
+
             }
         });
 
@@ -320,11 +320,11 @@ for (let modalVideo of modalVideos) {
 //     myLoad('run','runslide');
 // }); 
 
-function myLoad(sec,name) {
+function myLoad(sec, name) {
     const section_loads = document.querySelectorAll(sec);
     let winTop = document.documentElement.scrollTop;
 
-    for (let i = 0; i < section_loads.length; i++){
+    for (let i = 0; i < section_loads.length; i++) {
         let pos = section_loads[i].offsetTop;
         if (pos < winTop + 600) {
             section_loads[i].classList.add(name);
@@ -333,12 +333,12 @@ function myLoad(sec,name) {
 }
 
 // Remove Class : 1. Name Button / 2. Name Object / 3. Name Class Add
-function addClass(btn,obj,className){
+function addClass(btn, obj, className) {
     let btns = document.querySelectorAll(btn);
     let objs = document.querySelectorAll(obj);
-    for(let i = 0; i < btns.length; i++){
+    for (let i = 0; i < btns.length; i++) {
         btns[i].addEventListener('click', () => {
-            for (let j = 0; j < objs.length; j++){
+            for (let j = 0; j < objs.length; j++) {
                 objs[j].classList.add(className);
             }
         });
@@ -346,14 +346,67 @@ function addClass(btn,obj,className){
 }
 
 // Remove Class : 1. Name Button / 2. Name Object / 3. Name Class Add
-function removeClass(btn,obj,className){
+function removeClass(btn, obj, className) {
     let btns = document.querySelectorAll(btn);
     let objs = document.querySelectorAll(obj);
-    for(let i = 0; i < btns.length; i++){
+    for (let i = 0; i < btns.length; i++) {
         btns[i].addEventListener('click', () => {
-            for (let j = 0; j < objs.length; j++){
+            for (let j = 0; j < objs.length; j++) {
                 objs[j].classList.remove(className);
             }
         });
     }
 }
+
+
+// Lazy load
+function addImgDefault(sec, attr){
+    const section_loads = document.querySelectorAll(sec);
+    let data = 'data:image/gif;base64,R0lGODlhAQABAPAAAMzMzAAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==';
+
+    for (let i = 0; i < section_loads.length; i++) {
+        // add src default
+        switch(attr){
+            case 'src':
+                section_loads[i].src = data;
+                break;
+            case 'srcset':
+                section_loads[i].srcset = data;
+                break;
+            default:
+                console.log(`Sorry, we are out of ${attr}.`);
+        }
+    }    
+}
+
+function myLazy(sec, attr) {
+    const section_loads = document.querySelectorAll(sec);
+    let winTop = window.innerHeight;
+
+    for (let i = 0; i < section_loads.length; i++) {
+        let pos_top = section_loads[i].getBoundingClientRect().top;
+        let pos_bottom = section_loads[i].getBoundingClientRect().bottom;
+       
+        if (pos_top <= winTop && pos_bottom >= 0) {
+            switch(attr){
+                case 'src':
+                    section_loads[i].src = section_loads[i].dataset.src;
+                    section_loads[i].classList.remove('lazy');
+                    break;
+                case 'srcset':
+                    section_loads[i].srcset = section_loads[i].dataset.srcset;
+                    section_loads[i].classList.remove('lazy');
+                    break;
+                case 'img-bg':
+                    // section_loads[i].srcset = section_loads[i].dataset.srcset;
+                    section_loads[i].classList.remove('lazy-bg');
+                    section_loads[i].classList.add('img-bg');
+                    break;
+                default:
+                    console.log(`Sorry, we are out of ${attr}.`);
+            }
+            
+        }
+    }
+}
+ 

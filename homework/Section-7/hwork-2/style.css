@@ -1,0 +1,15 @@
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+ul {
+  border: 1px solid red;
+}
+ul li {
+  border: 1px solid blue;
+}
+button{
+  cursor: pointer;
+}

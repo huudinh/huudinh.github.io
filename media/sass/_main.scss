@@ -396,6 +396,7 @@
 	}
 
 	.anh {
+		height:403px;
 		@media #{$r1280} {
 			background-size: 59%;
 		}
@@ -408,19 +409,19 @@
 			background-size: 70%;
 		}
 
-		&.anh1 {
+		&.anh1.img-bg {
 			background: url(../images/slikh1.png) no-repeat center 0;
 		}
 
-		&.anh2 {
+		&.anh2.img-bg {
 			background: url(../images/slikh2.png) no-repeat center 0;
 		}
 
-		&.anh3 {
+		&.anh3.img-bg {
 			background: url(../images/slikh3.png) no-repeat center 0;
 		}
 
-		&.anh4 {
+		&.anh4.img-bg {
 			background: url(../images/slikh4.png) no-repeat center 0;
 			background-size: 65%;
 
@@ -429,7 +430,7 @@
 			}
 		}
 
-		&.anh5 {
+		&.anh5.img-bg {
 			background: url(../images/slikh5.png) no-repeat center 0;
 			background-size: 65%;
 
@@ -438,11 +439,11 @@
 			}
 		}
 
-		&.anh6 {
+		&.anh6.img-bg {
 			background: url(../images/slikh6.png) no-repeat center 0;
 		}
 
-		&.anh7 {
+		&.anh7.img-bg {
 			background: url(../images/slikh7.png) no-repeat center 0;
 		}
 
