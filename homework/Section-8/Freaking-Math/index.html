@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@600&display=swap" rel="stylesheet">
+    <title>Freaking Math</title>
+</head>
+
+<body>
+    <p>
+        Implement a freaking math game. <a href="https://bit.ly/c4t-fmath" target="_blank">Link demo</a>. Note: The settings
+            button is not required
+    </p>
+    <p>
+        Step suggestions:
+    </p>
+    <ol>
+        <li>Create UI structure in HTML file</li>
+        <li>Learn how to create a quiz, save the right answer (this quiz is correct or incorrect) for later, <em>ask
+                mentor if you get stuck</em>.</li>
+        <li>Using DOM, show the quiz to users</li>
+        <li>Register the correct (v), incorrect (x) buttons, when users click on one of these button, check with the
+            right answer</li>
+        <li>Learn how to play a sound, google <span class="ql-font-monospace">'JS Play audio'</span> and play the
+            incorrect or correct sound based on user's result</li>
+        <li>Update score based on user's result and use DOM to show it to them then show users a new quiz</li>
+        <li>Use <span class="ql-font-monospace">setInterval</span> to start counting down right after a new quiz is
+            shown, when count down to 0, play the incorrect sound, reset the score, and show them to users</li>
+        <li>Add CSS to present your result better</li>
+    </ol>
+
+    <div class="content">
+        <!-- Settings -->
+        <div class="setting">
+            <div class="setting_container">
+                <div class="setting_title">
+                    <i class="fas fa-cogs"></i>
+                    Settings
+                </div>
+                <div class="setting_items">
+                    <span>
+                        <span>Score</span>
+                        <input type="checkbox" id="score_box">
+                    </span>
+                    <span>
+                        <span>Timer</span>
+                        <input type="checkbox" id="timer_box">
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- Game -->
+
+        <!--button for play -->
+        <div class="contentplay">
+            <button onclick="firstTurn();" class="play">▶</button>
+            <p>Play now!</p>
+        </div>
+    
+        <!-- main content game -->
+        <div class="main">
+            <div id="totalTime" class="content-time">
+                <span class="title"></span>
+                <div id="bar-area">
+                </div>
+            </div>
+            <div class="result" id="game_score">
+                <input type="text" id="score" name="score" value="1" disabled>
+            </div>
+            <div class="sum">
+                <p><span id="sum1"></span> + <span id="sum2"></span> = <span id="resultrandom"></span></p>
+            </div>
+            <div class="buttons">
+                <button id="wrong">✖</button>
+                <button id="right">✔</button>
+            </div>
+            <div id="endGame">
+                <!--<span>You wrong!</span>-->
+                <span>You Lose, </span>
+                <a href="index.html">Play again!</a>
+            </div>
+           
+        </div>
+    
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

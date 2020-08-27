@@ -8,7 +8,34 @@
 </head>
 <body>
     <div style="padding: 0 2em;">
-        <h2>Section 7 - Homework 2</h2>    
+        <h2>Section 7 - Homework 7</h2> 
+        <p>
+            When using addEventListener, in the callback you can add a parameter / argument to get more information about the event, for example:
+        </p>   
+        <pre>
+            btn.addEventListener('click', (e) => {
+                // Callback body
+            });            
+        </pre>
+        <p>
+            e is called <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event" target="_blank">Event Object, which contains additional information about the events.</a>
+        </p>
+        <ol>
+            <li>
+                <p>
+                    Catch 'click' event from 2 different buttons, id='button1' and id='button2', in the callback body of the 2 events, print, or log out e.target. What is it?
+                </p>
+            </li>
+            <li>
+                <p>
+                    Catch a 'keydown' event from an input, in the callback body of the event, print / log out the e.key. What is it?
+                </p>
+            </li>
+        </ol>
+        
+        <button id = 'button1'>btn1</button>
+        <button id = 'button2'>btn2</button>
+        <input type = 'password' id = 'input'>
         
 
 

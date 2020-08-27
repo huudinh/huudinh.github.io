@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework 7</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div style="padding: 0 2em;">
+    <h2>Section 7 - Homework 12</h2>
+    <p>
+      Take a look at a list of belongings
+    </p>
+    <table>
+      <tr>
+        <td>Backpack</td>
+      </tr>
+      <tr>
+        <td>MiBand watch</td>
+      </tr>
+      <tr>
+        <td>Ring</td>
+      </tr>
+    </table>
+    <ol>
+      <li><a href="index-1.html">In JS, Initialize a variable named items to store the data above, log/print it ou</a>
+      </li>
+      <li><a href="index-2.html">In HTML, create an ul with some test items. If you have not worked with unordered list
+          before, watch the ‘HTML - List and Table’ video or see this quick example </a></li>
+      <li><a href="index-3.html">Get (Read) the list from DOM</a></li>
+      <li><a href="index-4.html">Show ALL of the data in items, each item is a tag</a></li>
+      <li><a href="index-5.html">Update the UI (HTML) as follows:</a></li>
+      <li><a href="index-6.html">Get the ‘New item’ input and ‘Add’ button</a></li>
+      <li><a href="index-7.html">Register ‘Add‘ button click event
+        </a></li>
+      <li><a href="index-8.html">When ‘Add’ button is clicked, the value of ‘New item’ input
+        </a></li>
+      <li><a href="index-9.html">When ‘Add’ button is clicked, add the value of ‘New item’ input to items Array</a></li>
+      <li><a href="index-10.html">Update UI (HTML) to reflect the update of items Array</a></li>
+      <li><a href="index-11.html">Reset the input after adding new item</a></li>
+      <li><a href="index-12.html">Add remove button for each item</a></li>
+      <li><a href="index-13.html">Register to each ‘remove’ buttons’ event</a></li>
+      <li><a href="index-14.html">Each time a ‘remove’ button clicked, identify the index of the clicked item</a></li>
+      <li><a href="index-15.html">Remove from items based on clicked item index
+        </a></li>
+      <li><a href="index-16.html">Update UI (HTML) to reflect the update of items Array</a></li>
+    </ol>
+    <p>
+      16. Update UI (HTML) to reflect the update of items Array
+    </p>
+    <p>
+      <img src="images/16.gif" alt="">
+    </p>
+
+    <h1>Your belongings</h1>
+    <input type="text" placeholder="New item" id="item_input">
+    <button id="add_btn">Add</button>
+    <ul id="item_list"></ul>
+
+  </div>
+  <!-- <script src="js/index.js"></script> -->
+  <script>
+    
+    let items = ['Backpack', 'MiBand watch', 'Ring'];
+
+    console.log(items);
+
+    const list = document.getElementById('item_list');
+
+    // function để cập nhật trang html theo danh sách items
+    function update_list() {
+      list.innerHTML = '';
+      for (let i = 0; i < items.length; i++) {
+        list.insertAdjacentHTML("beforeend", `<li><span>${items[i]} </span><button class="remove_btns">Remove</button></li>`);
+      };
+
+      // gắn thêm eventlistener vào từng item
+      const remove_btns = document.getElementsByClassName('remove_btns');
+      for (let i = 0; i < remove_btns.length; i++) {
+        remove_btns[i].addEventListener('click', () => {
+          items.splice(i, 1);
+          console.log(items);
+          update_list();
+        });
+      };
+    }
+
+    update_list();
+    // phần thêm vào list
+
+    const add_btn = document.getElementById('add_btn');
+    const item_input = document.getElementById('item_input');
+
+    add_btn.addEventListener('click', () => {
+      let new_item = item_input.value;
+      // kiểm tra nếu người dùng để trống thì ko cho vào list
+      if (new_item == '') {
+        alert('pls dont leave it blank');
+      } else {
+        items.push(new_item);
+        update_list();
+        item_input.value = '';
+        console.log(items);
+      };
+    });
+
+
+  </script>
+</body>
+
+</html>

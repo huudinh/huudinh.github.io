@@ -511,117 +511,33 @@ let data = {
             name : 'Section 8 : UI APP',
             sub : [
                 {
-                    name : '7.1 - Homework',
+                    name : 'UI APP Project',
                     sub : [
                         {
-                            name : 'Homework 1: Learn HTML + CSS',
-                            link : 'Section-5/hwork-1/'
+                            name : 'Video 1: Counter',
+                            link : 'Section-8/Counter/'
                         },
                         {
-                            name : 'Homework 2: CV HTML + CSS',
-                            link : 'Section-5/hwork-2/'
+                            name : 'Video 2: Timer',
+                            link : 'Section-8/Timer/'
                         },
                         {
-                            name : 'Homework 3: Tools',
-                            link : 'Section-5/hwork-3/'
-                        },
-                    ]
-                },
-                {
-                    name : '5.2 - Video',
-                    sub : [
-                        {
-                            name : 'Video 1.1: Random Number',
-                            link : 'Section-5/video-1-1/'
+                            name : 'Video 3: Random quote',
+                            link : 'Section-8/Random-quote/'
                         },
                         {
-                            name : 'Video 1.2: Random Array',
-                            link : 'Section-5/video-1-2/'
+                            name : 'Video 4: Timesheet',
+                            link : 'Section-8/Timesheet/'
                         },
                         {
-                            name : 'Video 1.3: Quizzes',
-                            link : 'Section-5/video-1-3/'
+                            name : 'Video 5: Freaking-Math',
+                            link : 'Section-8/Freaking-Math/'
                         },
                         {
-                            name : 'Video 1.4: Quizzes Random',
-                            link : 'Section-5/video-1-4/'
+                            name : 'Video 6: Freaking-Math-Jquery',
+                            link : 'Section-8/Freaking-Math-Jquery/'
                         },
-                        {
-                            name : 'Video 1.5: Quizzes Correct',
-                            link : 'Section-5/video-1-5/'
-                        },
-                        {
-                            name : 'Video 1.6: Quizzes appears once',
-                            link : 'Section-5/video-1-6/'
-                        },
-                        {
-                            name : 'Video 1.7: Quizzes total ',
-                            link : 'Section-5/video-1-7/'
-                        },
-                        {
-                            name : 'Video 1.8: Quizzes Shuffle choices',
-                            link : 'Section-5/video-1-8/'
-                        },
-                        {
-                            name : 'Video 2.1: Jobs Data',
-                            link : 'Section-5/video-2-1/'
-                        },
-                        {
-                            name : 'Video 2.2: Jobs show',
-                            link : 'Section-5/video-2-2/'
-                        },
-                        {
-                            name : 'Video 2.3: Jobs first',
-                            link : 'Section-5/video-2-3/'
-                        },
-                        {
-                            name : 'Video 2.4: Jobs Title',
-                            link : 'Section-5/video-2-4/'
-                        },
-                        {
-                            name : 'Video 2.5: Jobs benefits',
-                            link : 'Section-5/video-2-5/'
-                        },
-                        {
-                            name : 'Video 2.6: Jobs benefitValues ',
-                            link : 'Section-5/video-2-6/'
-                        },
-                        {
-                            name : 'Video 2.7: Jobs benefitValue of ALL ',
-                            link : 'Section-5/video-2-7/'
-                        },
-                        {
-                            name : 'Video 2.8: Jobs All',
-                            link : 'Section-5/video-2-8/'
-                        },
-                        {
-                            name : 'Video 3.1: Count Word',
-                            link : 'Section-5/video-3-1/'
-                        },
-                        {
-                            name : 'Video 3.2: Data Shop Laptop',
-                            link : 'Section-5/video-3-2/'
-                        },
-                        {
-                            name : 'Video 3.3: Brand Filter',
-                            link : 'Section-5/video-3-3/'
-                        },
-                        {
-                            name : 'Video 3.4: Filter total',
-                            link : 'Section-5/video-3-4/'
-                        },
-                        {
-                            name : 'Video 3.5: Filter detail',
-                            link : 'Section-5/video-3-5/'
-                        },
-                        {
-                            name : 'Video 3.6: Filter price',
-                            link : 'Section-5/video-3-6/'
-                        },
-                        {
-                            name : 'Video 3.7: Filter toLocaleString',
-                            link : 'Section-5/video-3-7/'
-                        },
+                       
                     ]
                 },
                
