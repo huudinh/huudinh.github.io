@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 6</title>
+    <style>
+        ul#item_list li{
+            padding:10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>
+        8. Create a quick API
+    </h2>
+    <div style="padding: 2em">
+        Using <a href="https://sheetdb.io/" target="_blank">SheetsDb</a>, create a quick API for a Wish List. <a href="https://www.youtube.com/watch?v=gYSunpr8IhI&feature=youtu.be" target="_blank"></a> Link video demo. Write an app to
+
+        <ol>
+            <li>
+                <p>
+                    Implement Add (POST) new wish list item. <a href="https://www.youtube.com/watch?v=6Zld8q4mG4g&feature=youtu.be" target="_blank">Link demo.</a> 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Implement Read (GET) all of wish list when the app starts. <a href="https://www.youtube.com/watch?v=Ftxx6ne4nrQ&feature=youtu.be" target="_blank">Link Demo</a>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Implement Remove (DELETE) a wish list item. <a href="https://www.youtube.com/watch?v=0s1qr3WKtxs&feature=youtu.be" target="_blank">Link demo</a>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    (Optional) Implement Search (GET - SEARCH) wish list when users type in New item box. <a href="https://www.youtube.com/watch?v=Z12XVjEYEb4&feature=youtu.be" target="_blank">Link demo</a>.
+                </p>
+            </li>
+        </ol>
+
+    </div>
+
+    <input type="text" placeholder="Enter new wish here" id="item_input">
+    <button id="add_btn">Add</button>
+    <ul id="item_list"></ul>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
