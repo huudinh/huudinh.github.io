@@ -1,11 +1,54 @@
-function calculateFunction(x1, y1, x2, y2) {
-    let result = Math.sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2))
-    return result;
+async function getAPI() {
+    const conn = await fetch('https://itunes.apple.com/us/rss/topsongs/all/limit=15/json');
+    const data = await conn.json();
+    showData(data.feed);
 }
-const x = calculateFunction(3, 10, 0, 6);
-console.log(x);
-if (x !== 5) {
-    console.log('Failed: the calculation is wrong');
-} else {
-    console.log('Passed, bravo');
+getAPI();
+
+//fnc Main
+function showData(data){
+    showTitle(data);
+    showList(data);
 }
+
+//fnc title
+function showTitle(data){
+    let titlePage = data.title.label;
+    const mainTitle = document.getElementById('main-title');
+    mainTitle.insertAdjacentText('beforeEnd',titlePage);
+}
+
+//fnc list
+function showList(data){
+    let entry = data.entry;
+    console.log(entry);
+    for(let prod of entry){
+        let link = prod['im:image'][2].label;
+        let title = prod['im:name'].label;
+        let author = prod['im:artist'].label;
+        product(link,title,author);
+    }
+}
+const mainProd = document.getElementById('main-content');
+
+//fnc prod
+function product(link,title,author){
+    mainProd.insertAdjacentHTML('beforeend',`
+        <div class="main-item">
+            <div class="main-pic">
+                <img src="${link}" alt="${title}"/>
+            </div>
+            <div class="title">
+                <b>${title}</b><br/>
+                <span>${author}</span>
+            </div>
+        </div>
+    `);
+}
+
+//Select song
+function songNumber(num){
+    const showsong = document.getElementById('number');
+    console.log(num);
+}
+songNumber(10);
