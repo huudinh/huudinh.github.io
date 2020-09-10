@@ -578,7 +578,7 @@ let data = {
                             link : 'Section-9/hwork-7/'
                         },
                         {
-                            name : 'Homework 8: Create API',
+                            name : 'Homework 8: Sheets API',
                             link : 'Section-9/hwork-8/'
                         },
                         {

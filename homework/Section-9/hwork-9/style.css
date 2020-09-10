@@ -21,3 +21,12 @@
     line-height: 14px;
     display: block;
 }
+.showMore{
+    padding:2px;
+}
+.show-songs{
+    display: flex;
+}
+.show-songs>div{
+    margin-right:10px;
+}
