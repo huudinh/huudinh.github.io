@@ -1,5 +1,5 @@
 // Add Smooth Scrolling Link
-const links = document.querySelectorAll(".menu a, a[href='#pageReg'], header a");
+const links = document.querySelectorAll(".menu a, a[href='#pageReg']");
 
 for (const link of links) {
     link.addEventListener("click", clickHandler);
