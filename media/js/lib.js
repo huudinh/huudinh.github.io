@@ -407,3 +407,27 @@ function myLazy(sec, attr) {
         }
     }
 }
+function autoLazy(sec, attr) {
+    const section_loads = document.querySelectorAll(sec);
+
+    for (let i = 0; i < section_loads.length; i++) {
+       setTimeout(()=>{
+           switch(attr){
+               case 'src':
+                   section_loads[i].src = section_loads[i].dataset.src;
+                   section_loads[i].classList.remove('lazy');
+                   break;
+               case 'srcset':
+                   section_loads[i].srcset = section_loads[i].dataset.srcset;
+                   section_loads[i].classList.remove('lazy');
+                   break;
+               case 'img-bg':
+                   section_loads[i].classList.remove('lazy-bg');
+                   section_loads[i].classList.add('img-bg');
+                   break;
+               default:
+                   console.log(`Sorry, we are out of ${attr}.`);
+           }
+       },5000);
+    }
+}

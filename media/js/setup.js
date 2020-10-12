@@ -32,6 +32,12 @@ window.addEventListener("scroll", function () {
     myLazy('.lazy-bg','img-bg');
 }); 
 
+autoLazy('section','loaded');
+autoLazy('.slide_run','slide');
+autoLazy('img.lazy','src');
+autoLazy('source.lazy','srcset');
+autoLazy('.lazy-bg','img-bg');
+
 
 
 // Add Class : 1. Name Button / 2. Name Object / 3. Name Class Add
