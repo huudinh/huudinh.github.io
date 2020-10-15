@@ -413,6 +413,9 @@ function autoLazy(sec, attr) {
     for (let i = 0; i < section_loads.length; i++) {
        setTimeout(()=>{
            switch(attr){
+               case 'loaded':
+                section_loads[i].classList.add('loaded');
+                   break;
                case 'src':
                    section_loads[i].src = section_loads[i].dataset.src;
                    section_loads[i].classList.remove('lazy');
