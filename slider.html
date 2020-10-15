@@ -150,7 +150,7 @@
                         </div>
                     </div>
                     <p></p>
-                    <h3>Add class <b>.slider_4, .slider_5 ...</b> for show 4 item, 5 item ...</h3>
+                    <h3>Add class Center <b>.slider_4, .slider_5 ...</b> for show 4 item, 5 item ...</h3>
                     <div class="slider_4">
                         <div>
                             <img class="tns-lazy"
@@ -392,7 +392,7 @@
             navPosition: 'bottom',
             controlsContainer: '#slider-nav',
         });
-       
+
         [].forEach.call(document.querySelectorAll('.multi_slide'), function (el) {
             tns({
                 container: el,
@@ -421,12 +421,15 @@
         var slider_4 = tns({
             container: '.slider_4',
             items: 4,
+            center: true,
             slideBy: 'page',
             autoplay: false,
             autoplayButtonOutput: false,
             mouseDrag: true,
             lazyload: true,
             gutter: 10,
+            swipeAngle: false,
+            controls: false,
             lazyloadSelector: '.tns-lazy',
             responsive: {
                 0: {
@@ -482,7 +485,23 @@
             navPosition: 'bottom',
             controlsPosition: 'bottom',
         });
+
+        slider_4.getInfo().slideItems[slider_4.getInfo().index].classList.add('active');
+        slider_4.events.on('indexChanged', () => {
+            const info = slider_4.getInfo();
+            const indexPrev = info.indexCached;
+            const indexCurr = info.index;
+            console.log(indexPrev, indexCurr);
+            info.slideItems[indexPrev].classList.remove('active');
+            info.slideItems[indexCurr].classList.add('active');
+        });
     </script>
+    <style>
+        .active img {
+            border:2px solid violet;
+
+        }
+    </style>
 </body>
 
 </html>
