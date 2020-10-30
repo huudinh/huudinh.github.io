@@ -1,0 +1,60 @@
+.register-container {
+    width: 100%;
+    min-width: 400px;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+.register-bg{
+    background: url("../images/login-background.jpg") no-repeat center center;
+    background-size: cover;
+    width:100%;
+    height:100%;
+    position: fixed;
+    display: block;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+}
+
+.register-container .form-wrapper {
+    max-width: 800px;
+    padding: 30px;
+    margin:0 auto;
+    background-color: rgba(255,255,255,.9);
+    border-radius: 20px;
+}
+
+.register-container .form-wrapper .logo {
+    width: 100%;
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.register-container .form-wrapper .logo span {
+    font-size: 32px;
+    font-weight: 300;
+    color: #4482ff;
+}
+
+.register-container .form-wrapper .form-container .name-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.register-container .form-wrapper .form-container .name-wrapper .input-wrapper {
+    width: 48%;
+}
+
+.register-container .form-wrapper .form-container .register-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.register-container .form-wrapper .form-container .register-footer #already-have-account {
+    cursor: pointer;
+}
+
