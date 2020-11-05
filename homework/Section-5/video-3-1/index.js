@@ -1,7 +1,7 @@
 console.log('3.1 C4EJSLab - Basic - part 1');
 console.log('Write a program to count the occurrences of the words \n\n');
 
-console.log('Cách 1: Tư duy thông thường');
+console.log('* Cách 1: Tư duy thông thường');
 {
 
     let arr = [];
@@ -22,7 +22,7 @@ console.log('Cách 1: Tư duy thông thường');
 
 }
 ///////////////////////////////////////////////////////////////////
-console.log('Cách 2: Dùng Object');
+console.log('* Cách 2: Dùng Object');
 {
 
     let count = {};
@@ -38,7 +38,7 @@ console.log('Cách 2: Dùng Object');
 
 }
 ///////////////////////////////////////////////////////////////////
-console.log('Cách 3: Dùng Array');
+console.log('* Cách 3: Dùng Array');
 {
 
     let count = [];
@@ -54,7 +54,7 @@ console.log('Cách 3: Dùng Array');
 
 }
 ///////////////////////////////////////////////////////////////////
-console.log('Cách 4: Foreach Object');
+console.log('* Cách 4: Foreach Object');
 {
 
     let count = {};

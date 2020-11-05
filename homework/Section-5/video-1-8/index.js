@@ -36,15 +36,16 @@ setTimeout(() => {
 
         let quiz = quizs[i];
         let arr = quiz.choice;
-
-        let currentIndex = arr.length, randomIndex, temporaryValue;
-        while (currentIndex != 0) {
-            randomIndex = Math.floor(Math.random() * currentIndex);
-            currentIndex -= 1;
-
-            temporaryValue = arr[currentIndex];
-            arr[currentIndex] = arr[randomIndex];
-            arr[randomIndex] = temporaryValue;
+        
+        // Shuffle 
+        let current = arr.length, random, temp;
+        while (current != 0) {
+            random = Math.floor(Math.random() * current);
+            current -= 1;
+            
+            temp = arr[current];
+            arr[current] = arr[random];
+            arr[random] = temp;
         }
 
         let answer = prompt(`${quiz.question}\n1. ${quiz.choice[0]}\n2. ${quiz.choice[1]}\n3. ${quiz.choice[2]}\n4. ${quiz.choice[3]}`);

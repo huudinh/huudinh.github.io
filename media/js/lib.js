@@ -178,6 +178,7 @@ for (let modalVideo of modalVideos) {
         for (let modalClipBox of modalClipBoxs) {
             item.addEventListener("click", () => {
                 modalClipBox.style.display = "none";
+                youtube.setAttribute('src', '');
             });
         }
 
@@ -188,6 +189,7 @@ for (let modalVideo of modalVideos) {
         for (let modalClipBox of modalClipBoxs) {
             item.addEventListener("click", () => {
                 modalClipBox.style.display = "none";
+                youtube.setAttribute('src', '');
             });
         }
 
