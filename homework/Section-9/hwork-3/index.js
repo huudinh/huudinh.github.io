@@ -6,7 +6,7 @@
     // });
 
     // Get 10 results starting from 20
-    // axios.get('https://sheetdb.io/api/v1/58f61be4dda40?limit=10&offset=20')
+    // axios.get('https://sheetdb.io/api/v1/58f61be4dda40?limit=2&offset=2')
     // .then( response => {
     //     console.log(response.data);
     // });

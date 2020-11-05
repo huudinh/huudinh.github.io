@@ -21,7 +21,7 @@ async function searchAPI(name) {
     update_list(prods);
 }
 // searchAPI('Mobel');
-// getAPI();
+getAPI();
 
 function postAPI(name) {
     id = makeid(5);

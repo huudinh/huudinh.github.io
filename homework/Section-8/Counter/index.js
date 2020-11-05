@@ -10,6 +10,7 @@ up.addEventListener('click', () => {
     counter_span.innerHTML = count;
 });
 
+
 down.addEventListener('click', () => {
     count--;
     counter_span.innerHTML = count;

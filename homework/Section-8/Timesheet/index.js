@@ -5,9 +5,10 @@ const new_time = document.getElementById('new_time');
 const add_btn = document.getElementById('add_btn');
 const clear_btn = document.getElementById('clear_btn');
 
+
 let update_num = 0;
 let update_state = false;
-
+console.log(update_state);
 console.log(table_body);
 
 function update_table() {
@@ -40,6 +41,7 @@ function update_table() {
 };
 
 update_table();
+console.log(update_state);
 
 add_btn.addEventListener('click', () => {
     if (new_project.value == '' || new_task.value == '' || new_time.value == '') {

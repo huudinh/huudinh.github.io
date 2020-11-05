@@ -3,9 +3,7 @@ setTimeout(() => {
 
     let names = prompt('Enter a sequence of names');
 
-    let changedName = names.split(",").map((name) => {
-        return `<${name}>`;
-    });
+    let changedName = names.split(",").map((name => `<${name}>`));
 
     alert(`${names} => ${changedName}`);
 

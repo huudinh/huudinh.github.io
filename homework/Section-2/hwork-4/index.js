@@ -6,6 +6,6 @@ setTimeout(()=>{
     for (var i = 1; i <= a; i++) {
         x = x * i;
     }
-    alert(`The factorial of ${a} is ${x} `);5
+    alert(`The factorial of ${a} is ${x} `);
     
 },3000);

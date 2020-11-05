@@ -159,7 +159,7 @@ for (let modalVideo of modalVideos) {
 
     let modalSrc = modalVideo.getAttribute('data-video');
 
-    modalSrc = `//www.youtube-nocookie.com/embed/${modalSrc}?rel=0&controls=1&autoplay=1&nocookie=true`;
+    modalSrc = `//www.youtube-nocookie.com/embed/${modalSrc}?rel=0&controls=1&autoplay=1&nocookie=true&mute=true`;
 
     //Tat Popup Video Button Close
     let modalClipBoxs = document.getElementsByClassName('modal-clipBox');

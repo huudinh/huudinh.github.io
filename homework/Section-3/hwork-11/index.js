@@ -4,7 +4,7 @@ setTimeout(()=>{
     
     let numbers = prompt('Enter a squence of numbers');
     
-    let oddNumbers = numbers.split(",").filter(num => num % 2 == 1 );
+    let oddNumbers = numbers.split(",").filter(num => num % 2 == 0 );
     
     alert(`${numbers} => ${oddNumbers}`); 
 

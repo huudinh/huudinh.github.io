@@ -117,7 +117,6 @@ function endGame() {
 	progress[0].value = 0;
 }
 
-
 var time = 0;
 
 function startCountdown() {

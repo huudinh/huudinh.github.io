@@ -9,6 +9,6 @@ setTimeout(() => {
             min = num[i];
         };
     };
-    alert(`The smallest number is ${min}`);
+    alert(`the smallest number is ${min}`);
 
 }, 3000);
