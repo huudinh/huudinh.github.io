@@ -92,21 +92,26 @@ components.chat = `
             <button id='create-conversation' class='btn'> + New Conversation</button>
           </div>
         </div>
-        
         <div class='conversation-detail'>
           <div id='conversation-name' class='conversation-header'>
-            Welcome to My Chat
           </div>
-
           <div class='conversation-messages' id='conversation-messages'>
           </div>
-
           <form name='message-form' id='message-form'>
             <div class='conversation-input'>
               <input id='message-input' name='message' placeholder='Type a message ...'></input>
               <button class='button' type='submit'>Send</button>
             </div>
-          <form>
+          </form>
+        </div>
+        <div class='conversation-members' id='conversation-members'>
+          <div id='member-list' class='member-list'>
+          </div>
+          <form class='add-member' id='add-member-form' name='add-member-form'>
+            <input class='input' id='add-member-input' name='memberEmail' placeholder='Email ...'></input>
+            <div id='member-email-error' class='error'></div>
+            <button class='btn' id='add-member-button'>Add Member</button>
+          </form>
         </div>
       </div>
     </div>
@@ -119,22 +124,21 @@ components.createConversation = `
     </div>
 
     <div class='main'>
-      <h3>Create a new conversation</h3>
-      <form id='create-conversation-form' class='conversation-form'>
-        <div class='input-wraper'>
-          <input class='input' id='conversationName' name='conversationName' placeholder='Conversation name'></input>
-          <div id='conversation-name-error' class='error'></div>
-        </div>
-
-        <div class='input-wraper'>
-          <input class='input' id='friendEmail' name='friendEmail' placeholder='Friend email'></input>
-          <div id='friend-email-error' class='error'></div>
-        </div>
-        <div>
-          <button class='btn' type='submit'>Create</button>
-          <button class='btn' id='cancel-create-conversation'>Cancel</button>
-        </div>
-      </form>
-    </div>
+    <h3>Create a new conversation</h3>
+    <form id='create-conversation-form' class='conversation-form'>
+      <div class='input-wraper'>
+        <input class='input' id='conversationName' name='conversationName' placeholder='Conversation name'></input>
+        <div id='conversation-name-error' class='error'></div>
+      </div>
+      <div class='input-wraper'>
+        <input class='input' id='friendEmail' name='friendEmail' placeholder='Friend email'></input>
+        <div id='friend-email-error' class='error'></div>
+      </div>
+      <div>
+        <button class='btn' type='submit'>Create</button>
+        <button class='btn' id='cancel-create-conversation'>Cancel</button>
+      </div>
+    </form>
+  </div>
   </div>
 `;

@@ -10,7 +10,7 @@ view.setActiveScreen = (screenName) => {
             // mount register screen
             document.getElementById('app').innerHTML = components.register;
 
-            // add register button listeners
+            // add already-have-acount button listeners
             document.getElementById('already-have-account').addEventListener('click', () => view.setActiveScreen('login'));
 
             // listen to form submit
@@ -65,6 +65,19 @@ view.setActiveScreen = (screenName) => {
                 controller.addMessage(newMessage);
 
                 messageForm.message.value = '';
+            });
+
+            // add member form listener
+            const addMemberForm = document.getElementById('add-member-form');
+            addMemberForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const newMemberEmail = addMemberForm.memberEmail.value;
+                controller.addMember({
+                    newMember: newMemberEmail,
+                });
+
+                addMemberForm.memberEmail.value = '';
             });
 
             // create conversation listener
@@ -157,8 +170,8 @@ view.addConversation = (conversationObj) => {
     }
 
     // media query listener
-    mediaQueryResult.addListener((mediaQuerry) => {
-        if (mediaQuerry.matches) {
+    mediaQueryResult.addListener((mediaQuery) => {
+        if (mediaQuery.matches) {
             const conversationElement = document.getElementById(conversationObj.id);
             const firstLetter = conversationObj.name.charAt(0).toUpperCase();
             conversationElement.firstChild.innerText = firstLetter;
@@ -171,7 +184,6 @@ view.addConversation = (conversationObj) => {
             document.getElementById('create-conversation').innerText = '+ New Conversation';
         }
     });
-
 };
 
 view.changeActiveConversation = () => {
@@ -186,6 +198,12 @@ view.changeActiveConversation = () => {
     document.getElementById('conversation-messages').innerHTML = '';
     for (let message of model.activeConversation.messages){
         view.addMessage(message);
+    }
+
+    // re-render member list
+    document.getElementById('member-list').innerHTML = '';
+    for (let member of model.activeConversation.users) {
+        view.addMember(member);
     }
 };
 
@@ -213,6 +231,22 @@ view.backToChatScreen = () => {
     for (let message of model.activeConversation.messages){
         view.addMessage(message);
     }
+
+    for (let member of model.activeConversation.users)  {
+        view.addMember(member);
+    }
+    // add member form listener
+    const addMemberForm = document.getElementById('add-member-form');
+    addMemberForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const newMemberEmail = addMemberForm.memberEmail.value;
+        controller.addMember({
+            newMember: newMemberEmail,
+        });
+
+        addMemberForm.memberEmail.value = '';
+    });
 };
 
 view.showNotification = (conversationId) => {
@@ -223,4 +257,11 @@ view.showNotification = (conversationId) => {
 view.removeNotification = (conversationId) => {
     const conversation = document.getElementById(conversationId);
     conversation.lastChild.style.display = 'none';
+};
+
+view.addMember = (memberEmail) => {
+    const member = document.createElement('div');
+    member.classList.add('member');
+    member.innerHTML = `<i>#${memberEmail}</i>`;
+    document.getElementById('member-list').appendChild(member);
 };
