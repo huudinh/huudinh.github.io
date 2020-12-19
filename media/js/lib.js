@@ -385,8 +385,7 @@ function myLazy(sec, attr) {
 
     for (let i = 0; i < section_loads.length; i++) {
         let pos_top = section_loads[i].getBoundingClientRect().top;
-        let pos_bottom = section_loads[i].getBoundingClientRect().bottom;
-       
+        let pos_bottom = section_loads[i].getBoundingClientRect().bottom;       
         if (pos_top <= winTop && pos_bottom >= 0) {
             switch(attr){
                 case 'src':
@@ -434,5 +433,36 @@ function autoLazy(sec, attr) {
                    console.log(`Sorry, we are out of ${attr}.`);
            }
        },5000);
+    }
+}
+
+function LazyShowScreen(sec, attr) {
+    const section_loads = document.querySelectorAll(sec);
+    let win_height = screen.height;
+
+    for (let i = 0; i < section_loads.length; i++) {
+        if(section_loads[i].offsetTop < win_height){
+            switch(attr){
+                case 'loaded':
+                 section_loads[i].classList.add('loaded');
+                    break;
+                case 'src':
+                    section_loads[i].src = section_loads[i].dataset.src;
+                    section_loads[i].classList.remove('lazy');
+                    break;
+                case 'srcset':
+                    section_loads[i].srcset = section_loads[i].dataset.srcset;
+                    section_loads[i].classList.remove('lazy');
+                    break;
+                case 'img-bg':
+                    section_loads[i].classList.remove('lazy-bg');
+                    section_loads[i].classList.add('img-bg');
+                    break;
+                default:
+                    console.log(`Sorry, we are out of ${attr}.`);
+            }
+        }
+
+
     }
 }
