@@ -441,7 +441,7 @@ function LazyShowScreen(sec, attr) {
     let win_height = screen.height;
 
     for (let i = 0; i < section_loads.length; i++) {
-        if(section_loads[i].offsetTop < win_height){
+        if(section_loads[i].getBoundingClientRect().top < win_height){
             switch(attr){
                 case 'loaded':
                  section_loads[i].classList.add('loaded');

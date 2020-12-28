@@ -32,10 +32,10 @@ window.addEventListener("scroll", function () {
     myLazy('.lazy-bg','img-bg');
 }); 
 
-autoLazy('section','loaded');
-autoLazy('img.lazy','src');
-autoLazy('source.lazy','srcset');
-autoLazy('.lazy-bg','img-bg');
+// autoLazy('section','loaded');
+// autoLazy('img.lazy','src');
+// autoLazy('source.lazy','srcset');
+// autoLazy('.lazy-bg','img-bg');
 LazyShowScreen('img.lazy','src');
 
 
