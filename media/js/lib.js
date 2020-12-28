@@ -462,7 +462,5 @@ function LazyShowScreen(sec, attr) {
                     console.log(`Sorry, we are out of ${attr}.`);
             }
         }
-
-
     }
 }
