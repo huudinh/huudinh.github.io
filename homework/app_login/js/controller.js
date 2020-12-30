@@ -7,22 +7,48 @@ controller.login = async (loginInfo) => {
         alert('Nhap Password:');
     }
     if(loginInfo.email && loginInfo.password){
-        let checkLogin = false;
+        localStorage.setItem("checkLogin", 'false');
         for(let user of users ){
             //Check data.js
             if((loginInfo.email == user.email) && (loginInfo.password == user.password)){
-                view.setActiveScreen('mainScreen1');
+                // view.setActiveScreen('mainScreen1');
                 localStorage.setItem("checkLogin", 'true');
-                localStorage.setItem("user", 'user.email');
-                checkLogin = true;
+                localStorage.setItem("user", user.user);
+                localStorage.setItem("role", user.role);
                 break;
-            } 
+            }
         }
-        if(!checkLogin) {
+
+        switch (localStorage.getItem('role')){
+            case 'admin' :
+                view.setActiveScreen('mainScreen1');
+                document.getElementById('user').innerHTML = localStorage.getItem('user');
+                console.log('ok');
+                break;
+            case 'kangnam' :
+                view.setActiveScreen('mainScreen2');
+                document.getElementById('user').innerHTML = localStorage.getItem('user');
+                break;
+            case 'donga' :
+                view.setActiveScreen('mainScreen3');
+                document.getElementById('user').innerHTML = localStorage.getItem('user');
+                break;
+            case 'paris' :
+                view.setActiveScreen('mainScreen4');
+                document.getElementById('user').innerHTML = localStorage.getItem('user');
+                break;
+        }
+
+        if(localStorage.getItem('checkLogin') == 'false') {
             alert('Bạn nhập sai thông tin');
             view.setActiveScreen('login');
         }
-      
     }
-    
+}
+
+controller.logOut = () => {
+    localStorage.setItem("checkLogin", 'false');
+    localStorage.setItem("role", '');
+    // localStorage.setItem('user', '');
+    view.setActiveScreen('login');
 }
