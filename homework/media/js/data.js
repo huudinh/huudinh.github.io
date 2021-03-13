@@ -212,6 +212,10 @@ let data = {
                             name : 'Video 9: Quick Quiz',
                             link : 'Section-3/video-9/'
                         },
+                        {
+                            name : 'Video 10: Algorithm',
+                            link : 'Section-3/video-10/'
+                        },
                     ]
                 },
                
