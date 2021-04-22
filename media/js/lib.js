@@ -40,9 +40,12 @@ let tab_links = document.querySelectorAll('ul.tabs li.tab-link');
 
 for (let tab_nav of tab_navs) {
     tab_nav.addEventListener('click', (e) => {
-        let tab_id = e.target.getAttribute('data-tab');
+        // let tab_id = e.target.getAttribute('data-tab');
+        let tab_id = tab_nav.getAttribute('data-tab');
+        // console.log(tab_id);
 
-        let navParent = e.target.parentElement;
+        // let navParent = e.target.parentElement;
+        let navParent = tab_nav.parentElement;
         let navChildrens = navParent.children;
 
         for (let navChildren of navChildrens) {
@@ -50,7 +53,8 @@ for (let tab_nav of tab_navs) {
         }
 
         // Remove Current tabcontent
-        let navParent2 = e.target.parentElement.parentElement;
+        // let navParent2 = e.target.parentElement.parentElement;
+        let navParent2 = tab_nav.parentElement.parentElement;
         let navChildrens2 = navParent2.children;
 
         for (let navChildren2 of navChildrens2) {
