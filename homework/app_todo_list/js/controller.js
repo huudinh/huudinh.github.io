@@ -46,7 +46,6 @@ controller.finishJob = () => {
             if(text[i]){
                 let jobFn = text[i].textContent;
                 console.log(jobFn);
-                location.reload();
                 // Truyen doi so vao ham Finish Job
                 model.fnListJob(jobFn);
             }
