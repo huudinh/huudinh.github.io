@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="test-form" method="GET" action="">
+        <input type="text" name="Truong_so_1" placeholder="Trường số 1" />
+        <input type="text" name="Truong_so_2" placeholder="Trường số 2" />
+        <input type="text" name="Truong_so_3" placeholder="Trường số 3" />
+        <button type="submit" id="submit-form">Gửi</button>
+    </form>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var submit = $("button[type='submit']");
+            submit.click(function () {
+                var data = $('form#test-form').serialize();
+                $.ajax({
+                    type: 'GET',
+                    url: 'https://script.google.com/macros/s/AKfycbwNDZdcONENw-EA0lVweN_98myB2cGG1YSR6HjuuQ/exec',
+                    dataType: 'json',
+                    crossDomain: true,
+                    data: data,
+                    success: function (data) {
+                        if (data == 'false') {
+                            alert('Thêm không thành công, bạn cũng có thể sử dụng để hiển thị Popup hoặc điều hướng');
+                        } else {
+                            alert('Đã thêm dữ liệu vào Form');
+                        }
+                    }
+                });
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>
