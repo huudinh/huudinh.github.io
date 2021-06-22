@@ -51,63 +51,73 @@
 .thumbnails {
     margin: 20px 0;
     text-align: center;
+    li {
+        display: inline-block;
+        cursor: pointer;
+        border: 5px solid #fff;
+        width: 50px;
+    }
+    .tns-nav-active {
+        background: none;
+        border-color: #000;
+    }
+    img {
+        vertical-align: bottom;
+        height: auto;
+        max-height: 50px;
+    }
+}
+.slide_dot {
+    margin: 20px 0;
+    text-align: center;
+    li {
+        display: inline-block;
+        cursor: pointer;
+        width: 20px;
+        height:20px;
+        border-radius: 100%;
+        border: 2px solid #ccc;
+        background: none;
+    }
+    .tns-nav-active {
+        border: 2px solid #ccc;
+        background:#ccc;
+    }
 }
 
-.thumbnails li {
-    display: inline-block;
-    cursor: pointer;
-    border: 5px solid #fff;
-}
 
-.thumbnails .tns-nav-active {
-    background: none;
-    border-color: #000;
-}
 
-.thumbnails li {
-    width: 50px;
-}
-
-.thumbnails img {
-    vertical-align: bottom;
-    height: auto;
-    max-height: 50px;
-}
 
 .controls {
     text-align: center;
-}
-
-.controls li {
-    display: block;
-    position: absolute;
-    top: 50%;
-    height: 60px;
-    line-height: 50px;
-    margin-top: -30px;
-    padding: 0 15px;
-    cursor: pointer;
-    transition: background 0.3s;
-    font-size: 68px;
-    color: #ccc;
-}
-.controls li:focus {
-    outline: none;
-}
-
-.controls li img {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.controls .prev {
-    left: 0;
-}
-
-.controls .next {
-    right: 0;
-}
-
-.controls li:hover {
-    background: rgba(0, 0, 0, 0.1);
+    li {
+        display: block;
+        position: absolute;
+        top: 50%;
+        height: 60px;
+        line-height: 50px;
+        margin-top: -30px;
+        padding: 0 15px;
+        cursor: pointer;
+        transition: background 0.3s;
+        font-size: 68px;
+        color: #ccc;
+        &:focus {
+            outline: none;
+        }
+        &:hover {
+            background: rgba(0, 0, 0, 0.1);
+        }
+        img {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    .prev {
+        left: 0;
+    }
+    
+    .next {
+        right: 0;
+    }
 }
