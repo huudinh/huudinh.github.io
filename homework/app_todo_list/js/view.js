@@ -19,10 +19,11 @@ view.setActiveScreen = (screenName) => {
             // Reset Job
             setTimeout(()=>{
                 controller.resetJob();
-
             },1000);
 
             // Add Job to DB
-            controller.removeJob();
+            setTimeout(()=>{
+                controller.removeJob();
+            },1000);
     }
 }

@@ -1,22 +1,30 @@
 const controller = {};
 
+controller.addDB = (inputValue) => {      
+    if (inputValue === '') {
+        alert("You must write something!");
+    } else {
+        let jobName = inputValue;
+        // Add Job to DB
+        model.addListJob(jobName);
+    }
+    inputValue = "";
+};
+
 // Add Job
 controller.addJob = () => {
+    //Read Input
+    let inputValue = document.getElementById("myInput")
+
     document.getElementById('addBtn').addEventListener('click', ()=>{
-        //Read Input
-        let inputValue = document.getElementById("myInput").value;
-
-        if (inputValue === '') {
-            alert("You must write something!");
-        } else {
-            
-            let jobName = inputValue;
-            // Add Job to DB
-            model.addListJob(jobName);
-
-        }
-        document.getElementById("myInput").value = "";
+        controller.addDB(inputValue.value);
     });
+    
+    inputValue.addEventListener('keypress', (e)=>{
+        if(e.key === 'Enter'){
+            controller.addDB(inputValue.value);
+        }
+    })
 }
 
 // Remove Job
