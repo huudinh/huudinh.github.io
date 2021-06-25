@@ -22,6 +22,7 @@
                     <p>Touch enabled jQuery plugin that lets you creat a beautiful responsive carousel slider</p>
                     <p><a target="_blank" rel="nofollow" href="http://ganlanyuan.github.io/tiny-slider/"><u>Demo
                                 tiny-slider</u></a></p>
+
                     <h3>Add class <b>.slider</b> for Slide Intro</h3>
                     <div class="slideshow">
                         <div class="slider">
@@ -65,6 +66,7 @@
                         </ul>
                     </div>
                     <p></p>
+
                     <h3>Add class <b>.multi_slide</b> for Multi Slider </h3>
                     <div class="multi_slide">
                         <div>
@@ -121,7 +123,8 @@
                         </div>
                     </div>
                     <p></p>
-                    <h3>Add class <b>.slider_3, .slider_4 ...</b> for show 3 item, 4 item ...</h3>
+
+                    <h3>Slider Item Show</h3>
                     <div class="slider_3">
                         <div>
                             <img class="tns-lazy"
@@ -150,7 +153,8 @@
                         </div>
                     </div>
                     <p></p>
-                    <h3>Add class Center <b>.slider_4, .slider_5 ...</b> for show 4 item, 5 item ...</h3>
+
+                    <h3>Slider Center Active</h3>
                     <div class="slider_4">
                         <div>
                             <img class="tns-lazy"
@@ -178,7 +182,8 @@
                                 style="width:100%" data-src="https://www.w3schools.com/w3css/img_mountains.jpg" alt="">
                         </div>
                     </div>
-                    <h3>Add class <b>.slider_vertical.</b> for show slider vertical</h3>
+
+                    <h3>Slider Vertical</h3>
                     <div style="width:200px;margin:0 auto">
                         <div class="slider_vertical">
                             <div>
@@ -204,7 +209,7 @@
                         </div>
                     </div>
 
-                    <h3>Add class <b>.slider_thumb.</b> for show slider thumbnail</h3>
+                    <h3>Slider Thumbnail</h3>
                     <div class="slide_thumb" id="slide_thumb">
                         <div>
                             <div>
@@ -276,6 +281,86 @@
                             </li>
                         </ul>
                         <ul class="controls" id="customize-controls">
+                            <li class="prev">
+                                <span aria-label="Previous">‹</span>
+                            </li>
+                            <li class="next">
+                                <span aria-label="Next">›</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h3>Slider Thumbnail Groups</h3>
+                    <div class="slide_thumb" id="slideGroup">
+                        <div class="slideGroupList">
+                            <div>
+                                <div>
+                                    <img src="https://source.unsplash.com/collection/993239/600x400" alt=""
+                                        style="width:100%">
+                                </div>
+                                <p>
+                                    Sunt dignissimos distinctio, veniam, tenetur aspernatur nulla!
+                                </p>
+                            </div>
+                            <div>
+                                <div>
+                                    <img src="https://source.unsplash.com/collection/1673600/600x400" alt=""
+                                        style="width:100%">
+                                </div>
+                                <p>
+                                    Corrupti, libero minima nihil expedita officiis? Quo.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="slideGroupList">
+                            <div>
+                                <div>
+                                    <img src="https://source.unsplash.com/collection/1513994/600x400" alt=""
+                                        style="width:100%">
+                                </div>
+                                <p>
+                                    Alias rem, ab impedit recusandae repellat tempore.
+                                </p>
+                            </div>
+                            <div>
+                                <div>
+                                    <img src="https://source.unsplash.com/collection/502925/600x400" alt=""
+                                        style="width:100%">
+                                </div>
+                                <p>
+                                    Nisi inventore quo delectus perspiciatis voluptatibus, quae.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="slideGroupList">
+                            <div>
+                                <div>
+                                    <img src="https://source.unsplash.com/collection/1891993/600x400" alt=""
+                                        style="width:100%">
+                                </div>
+                                <p>
+                                    Nisi harum earum consectetur laudantium iusto, laboriosam.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide_thumbNav">
+                        <ul class="thumbnails" id="slideGroup_Nav">
+                            <li>
+                                <img src="https://source.unsplash.com/collection/993239/600x400" alt=""
+                                    style="width:100%">
+                            </li>
+                            <li>
+                                <img src="https://source.unsplash.com/collection/1513994/600x400" alt=""
+                                    style="width:100%">
+                            </li>
+                            <li>
+                                <img src="https://source.unsplash.com/collection/1891993/600x400" alt=""
+                                    style="width:100%">
+                            </li>
+                        </ul>
+                        <ul class="controls" id="slideGroup_Ctl">
                             <li class="prev">
                                 <span aria-label="Previous">‹</span>
                             </li>
@@ -436,8 +521,6 @@
 
                     </div>
 
-
-
                 </div>
             </div>
         </div>
@@ -447,6 +530,7 @@
     <script type="text/javascript" src="media/js/lib.js"></script>
     <script src="media/js/tiny-slider.js"></script>
     <script>
+        // Single Slider
         var slider = tns({
             container: '.slider',
             items: 1,
@@ -462,6 +546,7 @@
             controlsContainer: '#slider-nav',
         });
 
+        // Multil Slider
         [].forEach.call(document.querySelectorAll('.multi_slide'), function (el) {
             tns({
                 container: el,
@@ -476,6 +561,8 @@
                 gutter: 10,
             });
         });
+
+        //Slider Item
         var slider_3 = tns({
             container: '.slider_3',
             items: 3,
@@ -487,6 +574,8 @@
             lazyloadSelector: '.tns-lazy',
             gutter: 10,
         });
+
+        // Slider Active Center
         var slider_4 = tns({
             container: '.slider_4',
             items: 4,
@@ -509,6 +598,17 @@
                 }
             },
         });
+        slider_4.getInfo().slideItems[slider_4.getInfo().index].classList.add('active');
+        slider_4.events.on('indexChanged', () => {
+            const info = slider_4.getInfo();
+            const indexPrev = info.indexCached;
+            const indexCurr = info.index;
+            console.log(indexPrev, indexCurr);
+            info.slideItems[indexPrev].classList.remove('active');
+            info.slideItems[indexCurr].classList.add('active');
+        });
+
+        // Slider Vertical
         var slider_vertical = tns({
             container: '.slider_vertical',
             items: 2,
@@ -521,8 +621,9 @@
             gutter: 10,
         });
 
+        // Slider Thumbnail
         var customize = tns({
-            container: '.slide_thumb',
+            container: '#slide_thumb',
             items: 3,
             controlsContainer: '#customize-controls',
             navContainer: '#customize-thumbnails',
@@ -533,8 +634,39 @@
             gutter: 10,
         });
 
-        //Slide Step
-        var customize = tns({
+        // Slider Thumbnail Groups
+        // var sliders = [],
+        //     containers = document.querySelectorAll(".slideGroupList");
+
+        // for (var i = 0, l = containers.length; i < l; i++) {
+        //     sliders.push(tns({
+        //         container: containers[i],
+        //     }));
+        // }
+
+        [].forEach.call(document.querySelectorAll('.slideGroupList'), function (el) {
+            tns({
+                container: el,
+                items: 1,
+                gutter: 10,
+                navPosition: "bottom",
+                mouseDrag: true,
+                loop: false,
+            });
+        });
+        var slideGroup = tns({
+            container: "#slideGroup",
+            items: 1,
+            controlsContainer: '#slideGroup_Ctl',
+            navContainer: "#slideGroup_Nav",
+            navAsThumbnails: true,
+            autoplay: false,
+            autoplayTimeout: 1000,
+            gutter: 10,
+        });
+
+        //Slider Step by Step
+        var slide_step = tns({
             container: '#slide_step',
             items: 3,
             controlsContainer: '#slide_stepControl',
@@ -545,7 +677,7 @@
             autoplayButton: '#customize-toggle',
             gutter: 10,
         });
-        
+
         // Slide Pro
         var slider_pro = tns({
             container: '.slider_pro',
@@ -571,19 +703,11 @@
             controlsPosition: 'bottom',
         });
 
-        slider_4.getInfo().slideItems[slider_4.getInfo().index].classList.add('active');
-        slider_4.events.on('indexChanged', () => {
-            const info = slider_4.getInfo();
-            const indexPrev = info.indexCached;
-            const indexCurr = info.index;
-            console.log(indexPrev, indexCurr);
-            info.slideItems[indexPrev].classList.remove('active');
-            info.slideItems[indexCurr].classList.add('active');
-        });
+
     </script>
     <style>
         .active img {
-            border:2px solid violet;
+            border: 2px solid violet;
 
         }
     </style>
