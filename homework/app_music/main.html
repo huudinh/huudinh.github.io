@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCI Music</title>
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="sbLeft">
+    <div class="sbLeftLogo">
+        <i class="icon-headphones"></i><span>sci Music</span>
+    </div>
+    <div class="sbLeftType">
+        <div class="sbLeftType__title"><i class="icon-music-1"></i>Thể loại</div>
+        <ul>
+            <li><a href="#">Trữ Tình</a></li>
+            <li><a href="#">Pop</a></li>
+            <li><a href="#">Pop</a></li>
+            <li><a href="#">Rock</a></li>
+            <li><a href="#">Nhạc Trẻ</a></li>
+            <li><a href="#">Nhạc Sàn</a></li>
+            <li><a href="#">DJ</a></li>
+        </ul>
+    </div>
+    
+    <div class="sbLeftType sbLeftType-bg">
+        <div class="sbLeftType__title"><i class="icon-cog"></i>Tiện ích</div>
+        <ul>
+            <li><a href="#">Đăng bài hát</a></li>
+            <li><a href="#">Yêu cầu bài hát</a></li>
+            <li><a href="#">Góp ý</a></li>
+        </ul>
+    </div>
+</div> 
+<div class="sbRight">
+    <div class="sbRightRegist">
+        <div class="sbRightRegist__form" id="formIntro">
+            <div class="sbRightRegist__title"><i class=" icon-music-1"></i>THƯ VIỆN CỦA TÔI</div>
+            <div class="sbRightRegist__note">
+                Hãy đăng nhập hoặc tạo tài khoản để lưu danh sách yêu thích của chính bạn!
+            </div>
+            <div class="sbRightRegist__button">
+                <button class="sbRightRegist__login">Đăng nhập</button>
+                <button class="sbRightRegist__regist">Đăng ký</button>
+            </div>
+        </div>
+        <div class="sbRightRegist__form" id="formRegist">
+            <div class="sbRightRegist__title"><i class="icon-edit-1"></i>Đăng ký</div>
+            <div class="sbRightRegist__input">
+                <input type="text" placeholder="Họ Tên:">
+                <input type="text" placeholder="Email:">
+                <input type="password" placeholder="Mật khẩu:">
+                <input type="password" placeholder="Nhập lại mật khẩu:">
+            </div>
+            <div class="sbRightRegist__button">
+                <button class="sbRightRegist__login">Đăng ký</button>
+            </div>
+        </div>
+        <div class="sbRightRegist__form" id="formLogin">
+            <div class="sbRightRegist__title"><i class="icon-login"></i>Đăng nhập</div>
+            <div class="sbRightRegist__input">
+                <input type="text" placeholder="Email">
+                <input type="password" placeholder="Password">
+            </div>
+            <div class="sbRightRegist__button">
+                <button class="sbRightRegist__login">Đăng nhập</button>
+                <p class="sbRightRegist__note">Nếu chưa có tài khoản bạn đăng ký <a id="regist-text" href="#">tại đây</a></p>
+            </div>
+        </div>
+        <div class="sbRightRegist__say">
+            "Âm nhạc là sự sống. Đó là lý do trái tim ta có nhịp đập."<br>
+            <i>𑁋 Louis Armstrong</i>
+        </div>
+        <div class="sbRightHeart" id="heartbeat">
+            <svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="currentColor" class="bi bi-soundwave" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8.5 2a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-1 0v-11a.5.5 0 0 1 .5-.5zm-2 2a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zm-6 1.5A.5.5 0 0 1 5 6v4a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm8 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm-10 1A.5.5 0 0 1 3 7v2a.5.5 0 0 1-1 0V7a.5.5 0 0 1 .5-.5zm12 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0V7a.5.5 0 0 1 .5-.5z"></path>
+            </svg>
+            <i class="icon-heart-1"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="currentColor" class="bi bi-soundwave" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8.5 2a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-1 0v-11a.5.5 0 0 1 .5-.5zm-2 2a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zm-6 1.5A.5.5 0 0 1 5 6v4a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm8 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm-10 1A.5.5 0 0 1 3 7v2a.5.5 0 0 1-1 0V7a.5.5 0 0 1 .5-.5zm12 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0V7a.5.5 0 0 1 .5-.5z"></path>
+            </svg>
+        </div>
+    
+    </div>
+    <div class="sbRightRegist__title"><i class="icon-folder-open"></i>Quảng cáo</div>
+    <div class="sbRightAdv">
+        <a href="#">
+            <img src="images/bang-nhac.jpg" alt="">
+        </a>
+    </div>
+
+</div> 
+<div class="ms">
+    <div class="msMain">
+        <div class="msHead">
+            <div class="msHeadSearch">
+                <i class="icon-search-1"></i>
+                <input placeholder="Nhập tên bài hát, nghệ sĩ">
+            </div>
+        </div>
+        <div class="msPostSong">
+            <div class="msPostSongTitle"><i class="icon-edit"></i>ĐĂNG BÀI HÁT MỚI</div>
+            <div class="msPostSongForm">
+                <div class="msPostSong__row">
+                    <div class="msPostSong__col">
+                        <label>Tên bài <span>*</span></label> 
+                        <input type="text" placeholder="Ví dụ: Cát Bụi">
+                        <label>Ca sĩ/Ban nhạc <span>*</span></label> 
+                        <input type="text" placeholder="Ví dụ: Cẩm Ly, Đan Trường">
+                    </div>
+                    <div class="msPostSong__col">
+                        <label>Thể loại <span>*</span></label> 
+                        <input type="text" placeholder="Ví dụ: Nhạc Vàng">
+                        <label>Tác giả </label> 
+                        <input type="text" placeholder="Ví dụ: Trịnh Công Sơn">
+                    </div>
+                </div>
+                <label>Link bài hát <span>*</span></label> 
+                <input type="text" placeholder="Link youtube">
+                <label>Lời bài hát</label> 
+                <textarea rows="10" cols="10"></textarea>
+                <button>Đăng bài hát</button>
+            </div>
+        </div>
+        <div class="msSong">
+            <div class="msSongTitle">
+                <b>Bài hát : Anh Không Tha Thứ</b>
+                <i>- Đình Dũng</i>
+            </div>
+            <div class="msSongView">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/P1mpIG0CJGc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="msSongDetail">
+                <div class="msSongDetail__title">
+                    <div>
+                        <b>Sáng tác :</b> MV <br>
+                        <b>Lời bài hát:</b>
+                    </div>
+                    <div class="msSongDetail__like like">
+                        Bình chọn : <i class="icon-heart-empty" id="like"></i> 117
+                    </div>
+                </div>
+                <div class="msSongDetail__content">
+                    Bờ mi ấy xin đừng ngấn lệ như ngày em bước đi<br>
+
+                    Giờ ôm than vãn cũng ích gì người bận tâm chi<br>
+
+                    Giờ nơi phương xa đó nhung gấm quanh mình<br>
+
+                    Người có nhớ không nghĩa tình?<br>
+
+                    Khó khăn còn thương nhau mãi đâu sao giờ u sầu<br>
+
+                    Chỉ mong em sẽ chọn đúng người thật lòng thương lấy em<br>
+
+                    Bởi em đau anh cũng rất buồn vì mình từng yêu thương<br>
+
+                    Và xin em hãy nhớ lấy tháng năm này<br>
+
+                    Mình đã có nhau như vậy<br>
+
+                    Lỡ sau này ta trông thấy nhau xin đừng ngoảnh đầu<br>
+
+                    [ĐK:]<br>
+
+                    Cả cuộc đời này anh không tha thứ cho bản thân mình vì đánh mất em<br>
+
+                    Một người đàn ông nhưng đang than khóc như một đứa trẻ<br>
+
+                    Muộn phiền nào hơn khi anh trông thấy<br>
+
+                    Thế giới của mình sánh bước bên ai<br>
+
+                    Vì sao người lại đang tâm nỡ xé tim anh làm hai<br>
+
+                    2. Chỉ mong em sẽ chọn đúng người thật lòng thương lấy em<br>
+
+                    Bởi em đau anh cũng rất buồn vì mình từng yêu thương<br>
+
+                    Và xin em hãy nhớ lấy tháng năm này<br>
+
+                    Mình đã có nhau như vậy<br>
+
+                    Lỡ sau này ta trông thấy nhau xin đừng ngoảnh đầu<br>
+
+
+                    
+                    [ĐK:] Cả cuộc đời này anh không tha thứ cho bản thân mình vì đánh mất em<br>
+
+                    Một người đàn ông nhưng đang than khóc như một đứa trẻ<br>
+
+                    Muộn phiền nào hơn khi anh trông thấy<br>
+
+                    Thế giới của mình sánh bước bên ai<br>
+
+                    Vì sao người lại đang tâm nỡ xé tim anh làm hai<br>
+
+                    [ĐK:] Cả cuộc đời này anh không tha thứ cho bản thân mình vì đánh mất em<br>
+
+                    Một người đàn ông nhưng đang than khóc như một đứa trẻ<br>
+
+                    Muộn phiền nào hơn khi anh trông thấy<br>
+
+                    Thế giới của mình sánh bước bên ai<br>
+
+                    Vì sao người lại đang tâm nỡ xé tim anh làm hai<br>
+
+                    Vì sao người lại đang tâm nỡ xé tim anh làm hai<br>
+                </div>
+            </div>
+        </div>
+        <div class="msSection">
+            <div class="msSectionTitle">
+                Top 100 bài hát đề cử
+            </div>
+            <div class="msSectionList">
+                <table>
+                    <tr>
+                        <td>1.</td>
+                        <td>
+                            <b>Bản Tình Cuối</b>
+                            <i>Bằng Kiều</i>
+                        </td>
+                        <td><i class="icon-heart-empty"></i><br><i class="icon-headphones"></i>117</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>
+                            <b>Bản Tình Cuối</b>
+                            <i>Bằng Kiều</i>
+                        </td>
+                        <td><i class="icon-heart-empty"></i><br><i class="icon-headphones"></i>117</td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>
+                            <b>Bản Tình Cuối</b>
+                            <i>Bằng Kiều</i>
+                        </td>
+                        <td><i class="icon-heart-empty"></i><br><i class="icon-headphones"></i>117</td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>
+                            <b>Bản Tình Cuối</b>
+                            <i>Bằng Kiều</i>
+                        </td>
+                        <td><i class="icon-heart-empty"></i><br><i class="icon-headphones"></i>117</td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td>
+                            <b>Bản Tình Cuối</b>
+                            <i>Bằng Kiều</i>
+                        </td>
+                        <td><i class="icon-heart-empty"></i><br><i class="icon-headphones"></i>117</td>
+                    </tr>
+                    <tr>
+                        <td>6.</td>
+                        <td>
+                            <b>Bản Tình Cuối</b>
+                            <i>Bằng Kiều</i>
+                        </td>
+                        <td><i class="icon-heart-empty"></i><br><i class="icon-headphones"></i>117</td>
+                    </tr>
+                    <tr>
+                        <td>7.</td>
+                        <td>
+                            <b>Bản Tình Cuối</b>
+                            <i>Bằng Kiều</i>
+                        </td>
+                        <td><i class="icon-heart-empty"></i><br><i class="icon-headphones"></i>117</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+        <div class="msFooter">
+            Powere by <b>Code Team Sale & MKT</b> <br>
+            © 2021 SCI Music. All rights reserved
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+.slideshow {
+    position: relative;
+}
+.tns {
+    &-controls {
+        text-align: center;
+        margin-bottom: 10px;
+        & [disabled] {
+            color: #999999;
+            background: #b3b3b3;
+            cursor: not-allowed !important;
+        }
+        & [aria-controls] {
+            font-size: 15px;
+            margin: 0 5px;
+            padding: 0 1em;
+            height: 2.5em;
+            color: #000;
+            background: #e8e8e8;
+            border-radius: 3px;
+            border: 0;
+        }
+        &:focus{
+            outline:none;
+        }
+    }
+    &-nav {
+        text-align: center;
+        margin: 10px 0;
+        outline: none;
+        & > [aria-controls] {
+            width: 9px;
+            height: 9px;
+            padding: 0;
+            margin: 0 5px;
+            border-radius: 50%;
+            background: #ddd;
+            border: 0;
+        }
+        & > .tns-nav-active {
+            background: #999;
+        }
+    }
+}
+
+
+.slide_thumbNav {
+    position: relative;
+}
+
+.thumbnails {
+    margin: 20px 0;
+    text-align: center;
+    li {
+        display: inline-block;
+        cursor: pointer;
+        border: 5px solid #fff;
+        width: 50px;
+    }
+    .tns-nav-active {
+        background: none;
+        border-color: #000;
+    }
+    img {
+        vertical-align: bottom;
+        height: auto;
+        max-height: 50px;
+    }
+}
+.slide_dot {
+    margin: 20px 0;
+    text-align: center;
+    li {
+        display: inline-block;
+        cursor: pointer;
+        width: 20px;
+        height:20px;
+        border-radius: 100%;
+        border: 2px solid #ccc;
+        background: none;
+    }
+    .tns-nav-active {
+        border: 2px solid #ccc;
+        background:#ccc;
+    }
+}
+
+
+
+
+.controls {
+    text-align: center;
+    li {
+        display: block;
+        position: absolute;
+        top: 50%;
+        height: 60px;
+        line-height: 50px;
+        margin-top: -30px;
+        padding: 0 15px;
+        cursor: pointer;
+        transition: background 0.3s;
+        font-size: 68px;
+        color: #ccc;
+        &:focus {
+            outline: none;
+        }
+        &:hover {
+            background: rgba(0, 0, 0, 0.1);
+        }
+        img {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    .prev {
+        left: 0;
+    }
+    
+    .next {
+        right: 0;
+    }
+}
