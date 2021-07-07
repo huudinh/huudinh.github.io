@@ -17,39 +17,39 @@
             <ul>
                 <li>
                     <div style="font-weight: bold; font-family: Arial, Helvetica, sans-serif;">Product Name</div>
-                    <input type="text" style="width: 706px;height: 22px;background-color:#f7f69e;border: 1px solid grey;" id="product_name">
+                    <input type="text" style="background-color:#f7f69e;" id="product_name">
                 </li>
                 <li>
                     <div style="font-weight: bold; font-family: Arial, Helvetica, sans-serif;">Manufacturer Name</div>
-                    <select type="text" style="width: 712px;height: 29px;border: 1px solid grey;" id="manufacturer_name" onchange="changeManufacturer()">
+                    <select type="text" style="" id="manufacturer_name" onchange="changeManufacturer()">
                     </select>
                 </li>
                 <li>
                     <div style="font-weight: bold; font-family: Arial, Helvetica, sans-serif;">Category Name</div>
-                    <select type="text" style="width: 712px;height: 29px;border: 1px solid grey;" id="category_name">
+                    <select type="text" style="" id="category_name">
                     </select>
                 </li>
                 <li>
                     <div style="font-weight: bold; font-family: Arial, Helvetica, sans-serif;">Price</div>
-                    <input type="text" style="width: 706px;height: 22px;border: 1px solid grey;" id="price" onkeyup="updateTotalPrice()">
+                    <input type="text" style="" id="price" onkeyup="updateTotalPrice()">
                 </li>
                 <li>
                     <div style="font-weight: bold; font-family: Arial, Helvetica, sans-serif;">Quantity</div>
-                    <input type="text" style="width: 706px;height: 22px;border: 1px solid grey;" id="quantity" onkeyup="updateTotalPrice()">
+                    <input type="text" style="" id="quantity" onkeyup="updateTotalPrice()">
                 </li>
                 <li>
                     <div style="font-weight: bold; font-family: Arial, Helvetica, sans-serif;">Total Price</div>
-                    <input type="text" style="width: 706px;height: 22px;border: 1px solid grey;background-color: rgb(241, 232, 232);" id="total_price" disabled>
+                    <input type="text" style="background-color: rgb(241, 232, 232);" id="total_price" disabled>
                 </li>
-                <div style="display: flex;">
-                    <button type="button" style="background-color: #6895e3" onclick="addProduct()">Add products</button>
-                    <button style="background-color: #e6d08a" type="reset" id="reset_btn">Reset</button>
+                <div class="mainControl">
+                    <button type="button" class="mainControlAdd" onclick="addProduct()">Add products</button>
+                    <button class="mainControlReset" type="reset" id="reset_btn">Reset</button>
                 </div>
             </ul>
         </form>
     </div>
-    <table border="1" cellspacing='0' cellpadding="5" style="margin-top: 50px;">
-        <caption style="background-color: #4970a3;color: white;height: 30px;padding-top: 8px;">Management Products</caption>
+    <table>
+        <caption>Management Products</caption>
         <thead>
             <tr id="headtable">
                 <th>No</th>

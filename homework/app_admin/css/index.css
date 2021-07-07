@@ -1,34 +1,95 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+table{
+    border: 1px solid #2189d4;
+    padding: 15px;
+    margin-top:15px;
+    width:900px;
+    margin:25px auto 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+td, th{
+    padding:5px 10px;
+    text-align: left;
+    border:1px solid #ccc;
+}
+td button{
+    border:none;
+    border-radius: 4px;
+    color:#fff;
+    cursor: pointer;
+    padding:6px 12px;
+    margin-right: 5px;
+}
+td:nth-child(8) button{
+    background:#f1ac45;
+}
+td:nth-child(9) button{
+    background:#f15545;
+}
+th{
+    font-size:13px;
+}
+caption{
+    background-color: #2189d4;
+    color: white;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 8px 8px 0 0;
+}
 .main {
-    border: 1px solid #4970a3;
+    border: 1px solid #2189d4;
     border-radius: 5px;
-    width: 800px;
-    height: 472px;
+    width: 900px;
     margin: 0px auto;
+}
+.mainControl button{
+    border:none;
+    border-radius: 4px;
+    color:#fff;
+    cursor: pointer;
+    padding:10px 12px;
+    margin-right: 5px;
+}
+button:hover,td button:hover{
+    transition: .5s;
+    opacity: 0.8;
+}
+.mainControlAdd{
+    background:#11ad11;
+
+}
+.mainControlReset{
+    background:#f1ac45
+
 }
 
 .top {
-    background-color: #4970a3;
-    width: 99.4%;
-    height: 30px;
-    padding-left: 5px;
-    padding-top: 5px;
+    background-color: #2189d4;
+    height: 40px;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 ul {
     list-style-type: none;
+    padding:20px 30px;
 }
-
+input, select{
+    width:100%;
+    padding:7px 10px;
+    border:1px solid #ccc
+}
 li {
     margin-bottom: 16px;
 }
 
-table {
-    margin: 0px auto;
-    width: 800px;
-}
 
-button {
-    padding: 10px;
-    margin-right: 15px;
-}
+
