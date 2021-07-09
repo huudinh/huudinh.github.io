@@ -133,18 +133,19 @@ components.formInfo = `
 `;
 
 components.formRegist = `
-    <div class="sbRightRegist__form" id="formRegist">
+    <form class="sbRightRegist__form" id="formRegist">
         <div class="sbRightRegist__title"><i class="icon-edit-1"></i>Đăng ký</div>
         <div class="sbRightRegist__input">
-            <input type="text" placeholder="Họ Tên:">
-            <input type="text" placeholder="Email:">
-            <input type="password" placeholder="Mật khẩu:">
-            <input type="password" placeholder="Nhập lại mật khẩu:">
+            <input name="name" type="text" placeholder="Họ Tên:">
+            <input name="email" type="text" placeholder="Email:">
+            <input name="password" type="password" placeholder="Mật khẩu:">
+            <input name="repassword" type="password" placeholder="Nhập lại mật khẩu:">
         </div>
         <div class="sbRightRegist__button">
             <button class="sbRightRegist__login">Đăng ký</button>
+            <p class="sbRightRegist__note">Chuyển sang đăng nhập <a id="login-text" href="#">tại đây</a></p>
         </div>
-    </div>
+    </form>
 `;
 
 components.formLogin = `
@@ -156,7 +157,7 @@ components.formLogin = `
         </div>
         <div class="sbRightRegist__button">
             <button class="sbRightRegist__login">Đăng nhập</button>
-            <p class="sbRightRegist__note">Nếu chưa có tài khoản bạn đăng ký <a id="regist-text" href="#">tại đây</a></p>
+            <p class="sbRightRegist__note">Chuyển sang đăng ký <a id="regist-text" href="#">tại đây</a></p>
         </div>
     </div>
 `;

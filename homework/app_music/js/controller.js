@@ -41,6 +41,19 @@ controller.postSong = () => {
     });
 }
 
+// Post User
+controller.postUser = () => {
+    const formRegist = document.getElementById('formRegist');
+
+    formRegist.addEventListener('submit', (e)=>{
+        e.preventDefault();
+
+        const userInfo = {
+            
+        }
+    });
+}
+
 // Vote
 controller.btnLike = (song) =>{
     let like = document.getElementById('like');
@@ -59,6 +72,46 @@ controller.btnLike = (song) =>{
             likeNum += 1;
         }
         like.getElementsByTagName('span')[0].innerHTML = likeNum;
+    });
+}
+
+
+// Chose Login & Regist
+controller.login = () =>{
+    let login = document.getElementById('login');
+
+    document.getElementById('login-button').addEventListener('click', ()=>{
+        login.innerHTML = components.formLogin;
+
+        // View Regist
+        function viewRegist(){
+            document.getElementById('regist-text').addEventListener('click', ()=>{
+                login.innerHTML = components.formRegist;
+    
+                document.getElementById('login-text').addEventListener('click', ()=>{
+                    login.innerHTML = components.formLogin;
+                    viewRegist();
+                });
+            });
+        }
+        viewRegist();
+    });
+
+
+    document.getElementById('regist-button').addEventListener('click', ()=>{
+        login.innerHTML = components.formRegist;
+         // View Login
+        function viewLogin(){
+            document.getElementById('login-text').addEventListener('click', ()=>{
+                login.innerHTML = components.formLogin;
+    
+                document.getElementById('regist-text').addEventListener('click', ()=>{
+                    login.innerHTML = components.formRegist;
+                    viewLogin()
+                });
+            });
+        }
+        viewLogin();
     });
 }
 

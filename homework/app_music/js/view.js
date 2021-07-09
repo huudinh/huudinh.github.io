@@ -1,4 +1,17 @@
 const view = {};
+
+// view.setLogin = (elementId) => {
+//     document.getElementById(elementId).addEventListener('click', ()=>{
+//         document.getElementById('login').innerHTML = components.formLogin;
+//     });
+// }
+
+// view.setRegist = (elementId) => {
+//     document.getElementById(elementId).addEventListener('click', ()=>{
+//         document.getElementById('login').innerHTML = components.formRegist;
+//     });
+// }
+
 view.setActiveScreen = (screenName) => {
     switch (screenName) {
         case 'main':
@@ -20,16 +33,9 @@ view.setActiveScreen = (screenName) => {
             // View Login Regist
             document.getElementById('login').innerHTML = components.formInfo;
 
-            document.getElementById('login-button').addEventListener('click', ()=>{
-                document.getElementById('login').innerHTML = components.formLogin;
-                // View Regist
-                document.getElementById('regist-text').addEventListener('click', ()=>{
-                    document.getElementById('login').innerHTML = components.formRegist;
-                });
-            });
-            document.getElementById('regist-button').addEventListener('click', ()=>{
-                document.getElementById('login').innerHTML = components.formRegist;
-            });
+            controller.login();
+
+            
         
             
            
