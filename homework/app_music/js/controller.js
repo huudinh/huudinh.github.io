@@ -87,6 +87,7 @@ controller.login = () =>{
         function viewRegist(){
             document.getElementById('regist-text').addEventListener('click', ()=>{
                 login.innerHTML = components.formRegist;
+                addUser();
     
                 document.getElementById('login-text').addEventListener('click', ()=>{
                     login.innerHTML = components.formLogin;
@@ -95,11 +96,16 @@ controller.login = () =>{
             });
         }
         viewRegist();
+        
+
+        
     });
 
 
     document.getElementById('regist-button').addEventListener('click', ()=>{
         login.innerHTML = components.formRegist;
+        addUser();
+
          // View Login
         function viewLogin(){
             document.getElementById('login-text').addEventListener('click', ()=>{
@@ -113,6 +119,42 @@ controller.login = () =>{
         }
         viewLogin();
     });
+
+    // Add user to Data
+    function addUser(){
+        let formRegist = document.getElementById('formRegist');
+        // console.log(formRegist);
+        formRegist.addEventListener('submit', (e) => {
+            e.preventDefault();
+    
+            const userInfo = {
+                name: formRegist.name.value,
+                email: formRegist.email.value,
+                password: formRegist.password.value,
+                repassword: formRegist.repassword.value,
+            }
+    
+            if(!userInfo.name){
+                alert('Bạn chưa nhập tên');
+            }
+            else if(!userInfo.email){
+                alert('Bạn chưa nhập email');
+            }
+            else if(!userInfo.password){
+                alert('Bạn chưa nhập password:');
+            }
+            else if(!userInfo.repassword){
+                alert('Bạn chưa nhập lại mật khẩu:');
+            }
+            else if(userInfo.password != userInfo.repassword){
+                alert('Mật khẩu nhập lại không đúng');
+            }
+            if(userInfo.name && userInfo.email && userInfo.password && userInfo.repassword && userInfo.password == userInfo.repassword){
+                model.addUser(userInfo);
+            }
+            
+        });
+    }
 }
 
 // Show Song

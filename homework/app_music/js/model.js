@@ -104,3 +104,17 @@ model.addSong = async (songInfo) => {
     });
     alert('Bạn đã đăng bài hát thành công');
 }
+
+//Create UserMusic
+model.addUser = async (userInfo) => {
+    // console.log(songInfo);
+    // Add data to DB
+    userMusic.push ({
+        userName: userInfo.name,
+        email: userInfo.email,
+        password: userInfo.password,
+        role: 'member'
+
+    });
+    alert('Bạn đã đăng ký thành công');
+}
