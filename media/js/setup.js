@@ -25,7 +25,7 @@ window.addEventListener("scroll", function () {
     // Add Onscroll .menu a
     onScroll();   
 }); 
-LazyShowScreen('img.lazy','src');
+
 
 
 
