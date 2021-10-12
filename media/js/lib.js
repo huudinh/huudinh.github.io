@@ -322,18 +322,6 @@ function onScroll() {
     });
 }
 
-function myLoad(sec, name) {
-    const section_loads = document.querySelectorAll(sec);
-    let winTop = document.documentElement.scrollTop;
-
-    for (let i = 0; i < section_loads.length; i++) {
-        let pos = section_loads[i].offsetTop;
-        if (pos < winTop + 600) {
-            section_loads[i].classList.add(name);
-        }
-    }
-}
-
 // Remove Class : 1. Name Button / 2. Name Object / 3. Name Class Add
 function addClass(btn, obj, className) {
     let btns = document.querySelectorAll(btn);

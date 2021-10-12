@@ -697,7 +697,17 @@
 		// autoLazy('source.lazy','srcset');
 		// autoLazy('.lazy-bg','img-bg');
 		LazyShowScreen('img.lazy','src');
+		function myLoad(sec, name) {
+			const section_loads = document.querySelectorAll(sec);
+			let winTop = document.documentElement.scrollTop;
 
+			for (let i = 0; i < section_loads.length; i++) {
+				let pos = section_loads[i].offsetTop;
+				if (pos < winTop + 600) {
+					section_loads[i].classList.add(name);
+				}
+			}
+		}
 		// Lazy load
 		function addImgDefault(sec, attr){
 			const section_loads = document.querySelectorAll(sec);
