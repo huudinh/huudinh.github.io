@@ -65,7 +65,7 @@ function nextSlides(n, no) {
         slider.sort(function(a, b){return 0.5 - Math.random()});
         console.log(slider);
         slideIndex[no] = 0;
-        alert('Bạn đã xem hết');
+        // alert('Bạn đã xem hết');
         for(let i = 0; i < x.length; i++){
             img[i].setAttribute('src', slider[i]['url']);
         }
