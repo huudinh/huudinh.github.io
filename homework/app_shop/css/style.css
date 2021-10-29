@@ -1,0 +1,13 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.header {
+    background: #000
+}
+
+.header__slogan {
+    color: rgb(255, 217, 0);
+    padding: 20px 0;
+    font-size: 21px;
+}
