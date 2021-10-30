@@ -54,7 +54,7 @@ body {
     padding: 20px 0;
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 .characters__item {
@@ -62,7 +62,7 @@ body {
     border-radius: 3px;
     display: grid;
     grid-template-areas: "name image" "house image";
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 5fr 2fr;
     padding: 10px 20px;
 }
 
@@ -104,4 +104,30 @@ body {
 
 .characters__profileInfo p {
     margin: 8px 0;
+}
+
+@media (max-width:480px) {
+    h1 {
+        font-size: 23px;
+    }
+    .container {
+        padding: 20px;
+    }
+    .characters {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .characters__profile {
+        display: block;
+        height: auto;
+        max-width: 100%;
+    }
+    .characters__profile img {
+        width: 100%;
+    }
+    .characters__item {
+        grid-template-columns: 2fr 1fr;
+    }
+    .characters__item h2 {
+        font-size: 18px;
+    }
 }
