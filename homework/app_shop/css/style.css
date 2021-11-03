@@ -1,15 +1,43 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.container{
+    max-width: 1200px;
+    margin:0 auto;
+}
 body {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
 .header {
-    background: #000
+    background: #000;
+    display: flex;
+    justify-content: space-between;
 }
-
+.header__logo{
+    color: #ffdc00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    font-size: 30px;
+    text-transform: uppercase;
+}
 .header__slogan {
     color: rgb(255, 217, 0);
     padding: 20px 0;
-    font-size: 21px;
+    font-size: 18px;
+    width: 60%;
 }
-
-.header__iconCart img {}
+.header__icon{
+    width: 200px;
+    padding-right:40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.header__iconCart img {
+    width: 50px;
+}
