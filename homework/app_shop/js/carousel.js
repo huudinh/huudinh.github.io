@@ -5,6 +5,7 @@ var nextBtn = carousel.querySelector('.carousel-next');
 var pagination = carousel.querySelector('.carousel-pagination');
 var bullets = [].slice.call(carousel.querySelectorAll('.carousel-bullet'));
 var totalItems = container.querySelectorAll('.carousel-item').length;
+console.log(totalItems);
 var percent = (100 / totalItems);
 var currentIndex = 0;
 

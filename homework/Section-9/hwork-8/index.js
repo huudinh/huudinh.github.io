@@ -2,6 +2,7 @@
 async function getAPI() {
     const conn = await fetch('https://sheetdb.io/api/v1/0bw1giza56c1j?sheet=sheet2');
     const data = await conn.json();
+    console.log(data);
     let prods = [];
     for (let item of data) {
         prods.push(item.name);
