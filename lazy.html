@@ -5,8 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>SCI FRAMEWORK</title>
     <meta name="Resource-type" content="Document" />
-    <meta name="viewport"
-        content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
     <link id="pagestyle" rel="stylesheet" type="text/css" href="media/css/style.css" />
     <link id="pagestyle" rel="stylesheet" type="text/css" href="media/css/intro.css" />
     <script type="text/javascript" src="media/js/lib-min.js"></script>
@@ -37,14 +36,14 @@
                     <p>2. src -> data-src</p>
                     <picture>
                         <source class="lazy" media="(min-width:600px)" data-srcset="https://ik.imagekit.io/demo/img/image9.jpeg?tr=w-400,h-300">
-                        <img class="lazy" data-src="https://ik.imagekit.io/demo/img/image9.jpeg?tr=w-400,h-300" alt=""> 
+                        <img class="lazy" data-src="https://ik.imagekit.io/demo/img/image9.jpeg?tr=w-400,h-300" alt="">
                     </picture>
                     <h3>III. Lazy Background</h3>
                     <p>1. add class .lazy-bg</p>
                     <p>2. together class .img-bg</p>
-                    <div id="bg-image" class="lazy-bg">
-
-                    </div>
+                    <div id="bg-image" class="lazy-bg"></div>
+                    <div class="load"></div>
+                    <div class="slide_run"></div>
                     <style>
                         img {
                             background: #F1F1FA;
@@ -54,12 +53,12 @@
                             margin: 10px auto;
                             border: 0;
                         }
-
+                        
                         #bg-image.lazy {
                             background-image: none;
                             background-color: #F1F1FA;
                         }
-
+                        
                         #bg-image.img-bg {
                             background-image: url("https://ik.imagekit.io/demo/img/image10.jpeg?tr=w-600,h-400");
                             max-width: 600px;
@@ -74,33 +73,102 @@
     </div>
     <script type="text/javascript" src="media/js/data.js"></script>
     <script type="text/javascript" src="media/js/intro.js"></script>
-   
-    <script>
-        // add Img Lazy Demo
-        // addImgDefault('img.lazy', 'src');
-        // addImgDefault('source.lazy', 'srcset');
 
-        window.addEventListener("scroll", function () {
-            // Add Onscroll .menu a
-            // Add Lazy Screen LDP
+    <script>
+        window.addEventListener("scroll", function() {
+            // Lazy Images
             myLazy('img.lazy', 'src');
             myLazy('source.lazy', 'srcset');
-            myLazy('.lazy-bg', 'img-bg');
-        }); 
+            // Lazy Class
+            myLazy('.lazy-bg', 'img-bg', 'lazy-bg');
+            myLazy('.load', 'loaded', 'load');
+            myLazy('.slide_run', 'slide', 'slide_run');
+        });
 
-        // autoLazy('img.lazy','src');
-        // autoLazy('source.lazy','srcset');
-        // autoLazy('.lazy-bg','img-bg');
-        LazyShowScreen('img.lazy','src');
+        lazyShowScreen('img.lazy', 'src');
 
-        // Lazy load
-        function addImgDefault(sec, attr){
+        function myLazy(section, attr, sectionDelete) {
+            const section_loads = document.querySelectorAll(section);
+            let winTop = window.innerHeight;
+
+            for (let i = 0; i < section_loads.length; i++) {
+                let pos_top = section_loads[i].getBoundingClientRect().top;
+                let pos_bottom = section_loads[i].getBoundingClientRect().bottom;
+                if (pos_top <= winTop && pos_bottom >= 0) {
+                    if (sectionDelete) {
+                        section_loads[i].classList.remove(sectionDelete);
+                        section_loads[i].classList.add(attr);
+
+                    } else if (attr == 'srcset') {
+                        section_loads[i].srcset = section_loads[i].dataset.srcset;
+                        section_loads[i].classList.remove('lazy');
+
+                    } else if (attr == 'src') {
+                        section_loads[i].src = section_loads[i].dataset.src;
+                        section_loads[i].classList.remove('lazy');
+
+                    } else {
+                        console.log(`Sorry, we are out of ${attr}.`);
+                    }
+                }
+            }
+        }
+
+        function lazyShowScreen(section, attr, sectionDelete) {
+            const section_loads = document.querySelectorAll(section);
+            let win_height = screen.height;
+
+            for (let i = 0; i < section_loads.length; i++) {
+                if (section_loads[i].getBoundingClientRect().top < win_height) {
+                    if (sectionDelete) {
+                        section_loads[i].classList.remove(sectionDelete);
+                        section_loads[i].classList.add(attr);
+
+                    } else if (attr == 'srcset') {
+                        section_loads[i].srcset = section_loads[i].dataset.srcset;
+                        section_loads[i].classList.remove('lazy');
+
+                    } else if (attr == 'src') {
+                        section_loads[i].src = section_loads[i].dataset.src;
+                        section_loads[i].classList.remove('lazy');
+
+                    } else {
+                        console.log(`Sorry, we are out of ${attr}.`);
+                    }
+                }
+            }
+        }
+
+        function autoLazy(section, attr, sectionDelete) {
+            const section_loads = document.querySelectorAll(section);
+            for (let i = 0; i < section_loads.length; i++) {
+                setTimeout(() => {
+                    if (sectionDelete) {
+                        section_loads[i].classList.remove(sectionDelete);
+                        section_loads[i].classList.add(attr);
+
+                    } else if (attr == 'srcset') {
+                        section_loads[i].srcset = section_loads[i].dataset.srcset;
+                        section_loads[i].classList.remove('lazy');
+
+                    } else if (attr == 'src') {
+                        section_loads[i].src = section_loads[i].dataset.src;
+                        section_loads[i].classList.remove('lazy');
+
+                    } else {
+                        console.log(`Sorry, we are out of ${attr}.`);
+                    }
+                }, 5000);
+            }
+        }
+
+        function addImgDefault(sec, attr) {
             const section_loads = document.querySelectorAll(sec);
             let data = 'data:image/gif;base64,R0lGODlhAQABAPAAAMzMzAAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==';
 
             for (let i = 0; i < section_loads.length; i++) {
                 // add src default
-                switch(attr){
+                switch (attr) {
                     case 'src':
                         section_loads[i].src = data;
                         break;
@@ -110,92 +178,8 @@
                     default:
                         console.log(`Sorry, we are out of ${attr}.`);
                 }
-            }    
-        }
-
-        function myLazy(sec, attr) {
-            const section_loads = document.querySelectorAll(sec);
-            let winTop = window.innerHeight;
-
-            for (let i = 0; i < section_loads.length; i++) {
-                let pos_top = section_loads[i].getBoundingClientRect().top;
-                let pos_bottom = section_loads[i].getBoundingClientRect().bottom;       
-                if (pos_top <= winTop && pos_bottom >= 0) {
-                    switch(attr){
-                        case 'src':
-                            section_loads[i].src = section_loads[i].dataset.src;
-                            section_loads[i].classList.remove('lazy');
-                            break;
-                        case 'srcset':
-                            section_loads[i].srcset = section_loads[i].dataset.srcset;
-                            section_loads[i].classList.remove('lazy');
-                            break;
-                        case 'img-bg':
-                            section_loads[i].classList.remove('lazy-bg');
-                            section_loads[i].classList.add('img-bg');
-                            break;
-                        default:
-                            console.log(`Sorry, we are out of ${attr}.`);
-                    }
-                    
-                }
             }
         }
-        function autoLazy(sec, attr) {
-            const section_loads = document.querySelectorAll(sec);
-            for (let i = 0; i < section_loads.length; i++) {
-            setTimeout(()=>{
-                switch(attr){
-                    case 'loaded':
-                        section_loads[i].classList.add('loaded');
-                        break;
-                    case 'src':
-                        section_loads[i].src = section_loads[i].dataset.src;
-                        section_loads[i].classList.remove('lazy');
-                        break;
-                    case 'srcset':
-                        section_loads[i].srcset = section_loads[i].dataset.srcset;
-                        section_loads[i].classList.remove('lazy');
-                        break;
-                    case 'img-bg':
-                        section_loads[i].classList.remove('lazy-bg');
-                        section_loads[i].classList.add('img-bg');
-                        break;
-                    default:
-                        console.log(`Sorry, we are out of ${attr}.`);
-                }
-            },5000);
-            }
-        }
-        function LazyShowScreen(sec, attr) {
-            const section_loads = document.querySelectorAll(sec);
-            let win_height = screen.height;
-
-            for (let i = 0; i < section_loads.length; i++) {
-                if(section_loads[i].getBoundingClientRect().top < win_height){
-                    switch(attr){
-                        case 'loaded':
-                        section_loads[i].classList.add('loaded');
-                            break;
-                        case 'src':
-                            section_loads[i].src = section_loads[i].dataset.src;
-                            section_loads[i].classList.remove('lazy');
-                            break;
-                        case 'srcset':
-                            section_loads[i].srcset = section_loads[i].dataset.srcset;
-                            section_loads[i].classList.remove('lazy');
-                            break;
-                        case 'img-bg':
-                            section_loads[i].classList.remove('lazy-bg');
-                            section_loads[i].classList.add('img-bg');
-                            break;
-                        default:
-                            console.log(`Sorry, we are out of ${attr}.`);
-                    }
-                }
-            }
-        }
-        
     </script>
 </body>
 
