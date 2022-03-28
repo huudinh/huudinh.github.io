@@ -330,20 +330,27 @@ input:focus {
   margin-left: auto; }
 
 .container {
-  padding: 0 15px;
-  margin: 0 auto;
-  position: relative;
-  width: 1170px; }
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative; }
 
-@media (max-width: 992px) {
-  .container {
-    width: 970px; } }
-@media (max-width: 768px) {
-  .container {
-    width: 750px; } }
-@media (max-width: 600px) {
+@media (min-width: 280px) {
   .container {
     width: 100%; } }
+@media (min-width: 414px) {
+  .container {
+    width: 414px; } }
+@media (min-width: 768px) {
+  .container {
+    width: 750px; } }
+@media (min-width: 992px) {
+  .container {
+    width: 970px; } }
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px; } }
 .block {
   display: block;
   width: 100%; }
