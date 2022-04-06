@@ -1,4 +1,5 @@
 /* Tobi.CSS 1.0 September 2018 by Dinh Trieu */
+
 html {
     box-sizing: border-box
 }
@@ -9,7 +10,9 @@ html {
     box-sizing: inherit
 }
 
+
 /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
+
 html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
@@ -218,22 +221,26 @@ textarea {
     font: inherit
 }
 
+
 /* End extract */
+
 html,
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 15px;
     line-height: 1.5;
-    color:#505050;
+    color: #212529;
 }
 
 html {
     overflow-x: hidden
 }
-a{
+
+a {
     text-decoration: none;
-    color:#333;
+    color: #333;
 }
+
 h1 {
     font-size: 36px
 }
@@ -268,18 +275,21 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 400;
     margin: 20px 0 10px
 }
+
 hr {
     border: 0;
     border-top: 1px solid #eee;
     margin: 20px 0;
 }
-p{
-    margin:0 0 10px;
+
+p {
+    margin: 0 0 10px;
 }
+
 button:focus,
 input:focus {
     outline: none;
