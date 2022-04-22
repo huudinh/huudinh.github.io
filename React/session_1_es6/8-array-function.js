@@ -7,25 +7,6 @@ const mapArr2 = mapArr.map((item) => {
 
 console.log(mapArr, mapArr2);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // filter
 const filterArr = [1, 2, 3, 4, 5, 6];
 const filterArr2 = filterArr.filter((item) => {
@@ -33,25 +14,6 @@ const filterArr2 = filterArr.filter((item) => {
 });
 
 console.log(filterArr, filterArr2);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // reduce

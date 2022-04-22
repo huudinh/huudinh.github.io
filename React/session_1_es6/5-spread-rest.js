@@ -4,31 +4,17 @@
 
 const arr = [1, 2, 3];
 
-
-
 console.log(arr);
 
 console.log(...arr);
-
-
-
-
-
 
 
 const arr2 = [0,...arr, 4];
 console.log(arr2);
 
 
-
-
-
-
 const concatedArr = [...arr, ...arr2];
 console.log('concatedArr', concatedArr);
-
-
-
 
 
 const obj = { name: 'Mindx' };
@@ -38,11 +24,6 @@ const objCloned = {
     ...obj,
 };
 console.log(objCloned);
-
-
-
-
-
 
 
 /*
@@ -63,4 +44,3 @@ const sum = (...numbers) => {
 };
 
 console.log(sum(1, 2, 3, 4, 5, 6));
-

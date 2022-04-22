@@ -8,9 +8,6 @@
 //object
 
 
-
-
-
 // primitive data type
 let x = 1;
 let y = x;
@@ -20,13 +17,6 @@ console.log(x === z); // true
 
 x = 2;
 console.log(x === y); // false
-
-
-
-
-
-
-
 
 
 

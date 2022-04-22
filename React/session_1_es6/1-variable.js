@@ -11,26 +11,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
     const
 */
@@ -46,23 +26,6 @@
 // console.log('arr: ', arr);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 
     hoisting là hành vi của JS khi các câu lệnh khai báo 
     được đẩy lên trên  đầu của scope hiện tại. 
@@ -76,23 +39,6 @@
     console.log('foo: ', foo);
     foo = 'foo';
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
