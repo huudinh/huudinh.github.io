@@ -306,22 +306,44 @@ var Accordion = function (options) {
 };
 
 // onScroll Active Menu
-function onScroll() {
-    const menu = document.querySelectorAll('.menu a');
+function onScroll(classItem, area, act) {
+    const menu = document.querySelectorAll(classItem);
     let y = document.documentElement.scrollTop;
-    let sections = document.querySelectorAll('.temp');
+    let sections = document.querySelectorAll(area);
     let i = 0;
+    let actClass = '.'+act
     sections.forEach(function (section) {
         let z = section.offsetTop - 70;
-        let active = document.querySelectorAll('.menu a.active');
+        let active = document.querySelectorAll(actClass);
         if (z <= y) {
-            active[0].classList.remove('active');
-            menu[i].classList.add('active');
+            active[0].classList.remove(act);
+            menu[i].classList.add(act);
         }
         if (i < menu.length - 1) {
             i++;
         }
     });
+}
+
+// Scroll menu
+function scrollClick(classItem) {
+    const classItems = document.querySelectorAll(classItem);
+    for (const item of classItems) {
+        item.addEventListener("click", clickHandler);
+    }
+
+    function clickHandler(e) {
+        e.preventDefault();
+        const href = this.getAttribute("href");
+
+        if (href != '#') {
+            const offsetTop = document.querySelector(href).offsetTop;
+            scroll({
+                top: offsetTop - 70,
+                behavior: "smooth"
+            });
+        }
+    }
 }
 
 // Remove Class : 1. Name Button / 2. Name Object / 3. Name Class Add
