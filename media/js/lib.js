@@ -311,7 +311,7 @@ function onScroll(classItem, area, act) {
     let y = document.documentElement.scrollTop;
     let sections = document.querySelectorAll(area);
     let i = 0;
-    let actClass = '.'+act
+    let actClass = '.' + act;
     sections.forEach(function (section) {
         let z = section.offsetTop - 70;
         let active = document.querySelectorAll(actClass);
