@@ -1,6 +1,6 @@
 import './NameCard.css';
 
-const NameCard = (props) => {
+const NameCard = () => {
     return (
         <div className="name-card">
             <div className="name">Name: Alice</div>
