@@ -1,19 +1,15 @@
 import {useState} from 'react'
 
-const App = () => {
-	return (
-		<div>
-			<Counter />
-		</div>
-	);
+function App(){
+	return <div><Counter /></div>;
 };
 
 const Counter = () => {
-	const countState = useState(10)
+	const countState = useState(0)
+	// console.log('countState', countState);
+
 	const count = countState[0]
 	const setCount = countState[1]
-	// const [count, setCount] = useState(10)
-
 
 	const onIncreaseClick = () => {
 		setCount(count + 1)

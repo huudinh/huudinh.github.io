@@ -1,35 +1,20 @@
 import { useState } from 'react'
 
-const App = () => {
-	return (
-		<div>
-			<Person />
-		</div>
-	);
+function App(){
+	return <div><Person /></div>;
 };
 
 const Person = () => {
-	const [person, setPerson] = useState({
-	  name: 'Mindx',
-	  age: 7,
-	});
+	const [person, setPerson] = useState({ name: 'Mindx', age: 7 });
   
 	const onIncreaseAge = () => {
-	  setPerson({
-		...person,
-		age: person.age + 1,
-	  });
+	  setPerson({ ...person, age: person.age + 1 });
 	};
   
 	const onDecreaseAge = () => {
 	  setPerson((prev) => {
-		if(prev.age === 0){
-		  return prev;
-		}
-		return {
-		  ...prev,
-		  age: prev.age - 1,
-		};
+		if(prev.age === 0){ return prev; }
+		return { ...prev, age: prev.age - 1 };
 	  });
 	}
   

@@ -1,6 +1,6 @@
 import {useState} from 'react'
 
-const App = () => {
+function App(){
 	return (
 		<div>
 			<Counter />

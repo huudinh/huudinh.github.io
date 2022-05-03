@@ -1,9 +1,5 @@
-const App = () => {
-	return(
-		<div>
-			<Counter />
-		</div>
-	);
+function App(){
+	return <div><Counter /></div>;
 };
 
 const Counter = () => {
@@ -16,7 +12,12 @@ const Counter = () => {
 		console.log('Mouse over');
 	}
 	
-	return <button onClick={onIncreaseClick} onMouseOver={onIncreaseMouseOver}>Click me</button>
+	return (
+		<div>
+			<span>0</span>
+			<button onClick={onIncreaseClick} onMouseOver={onIncreaseMouseOver}>Click me</button>
+		</div>
+	);
 }
 
 export default App;

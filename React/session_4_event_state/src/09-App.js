@@ -1,11 +1,7 @@
 import {useState} from 'react'
 
-const App = () => {
-	return (
-		<div>
-			<Person />
-		</div>
-	);
+function App(){
+	return <div><Person /></div>;
 };
 
 const Person = () => {
