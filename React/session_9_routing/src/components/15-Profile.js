@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Profile = () => {
     return (
@@ -12,7 +12,6 @@ const Profile = () => {
                     <NavLink to='/profile/courses'>Courses</NavLink>
                 </li>
             </ul>
-            <Outlet />
         </div>
     );
 };

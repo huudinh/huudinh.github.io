@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const Home = () => {
@@ -6,12 +5,6 @@ const Home = () => {
     const handleLoginClick = () => {
         navigate('/welcome');
     };
-
-    useEffect(() => {
-        setTimeout(() => {
-            navigate('/welcome');
-        }, 1000);
-    }, [navigate]);
 
     return (
         <div>

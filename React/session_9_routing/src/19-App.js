@@ -4,8 +4,6 @@ import NavBar from './components/NavBar';
 import Products from "./components/Products";
 import Welcome from "./components/Welcome";
 import Profile, { Courses, About } from './components/Profile';
-import ProductDetail from './components/ProductDetail';
-
 
 function App() {
   return (
@@ -13,13 +11,10 @@ function App() {
       <header>
         <NavBar />
       </header>
-      <hr/>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/welcome' element={<Welcome />} />
-        <Route path='/products' element={<Products />} >
-          <Route path=':id' element={<ProductDetail />} />
-        </Route>
+        <Route path='/products' element={<Products />} />
         <Route path='/profile' element={<Profile />} >
             <Route path='about' element={<About />} />
             <Route path='courses' element={<Courses />} />

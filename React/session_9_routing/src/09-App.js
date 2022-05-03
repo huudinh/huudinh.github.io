@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from "./components/Home";
-import NavBar from './components/NavBar';
 import Products from "./components/Products";
 import Welcome from "./components/Welcome";
+import NavBar from './components/NavBar';
 
 
 function App() {
@@ -11,6 +11,7 @@ function App() {
       <header>
         <NavBar />
       </header>
+      <hr/>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/welcome' element={<Welcome />} />
