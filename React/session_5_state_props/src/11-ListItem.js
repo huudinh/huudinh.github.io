@@ -4,7 +4,6 @@ const ListItem = (props) => {
     const [done, setDone] = useState(false);
 
     const handleClick = () => {
-        console.log(props.value);
         setDone(true);
     };
 
