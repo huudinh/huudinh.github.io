@@ -5,7 +5,7 @@ const Scrolling = () => {
         console.log('start effect');
         const handleScrolling = () => {
             console.log(document.documentElement.scrollTop);
-        }
+        };
         document.addEventListener('scroll', handleScrolling);
         return () => {
             // cleanup

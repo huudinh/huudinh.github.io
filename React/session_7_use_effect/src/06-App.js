@@ -1,6 +1,6 @@
-import { useState } from "react";
 import Counting from "./Counting";
 import Scrolling from "./Scrolling";
+import { useState } from "react";
 
 function App() {
   const [scrollingVisible, setScrollingVisible] = useState(true);
