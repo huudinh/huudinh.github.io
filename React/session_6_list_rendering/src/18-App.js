@@ -1,7 +1,6 @@
 import TodoList from "./TodoList";
 import Hobbies from './Hobbies';
 import Input from "./Input";
-import Login from "./Login";
 
 function App() {
   return (
@@ -9,7 +8,6 @@ function App() {
       <TodoList />
       <Hobbies />
       <Input />
-      <Login />
     </div>
   );
 }

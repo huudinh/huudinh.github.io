@@ -18,19 +18,21 @@ export default function Input() {
   };
 
   return (
-    <div className="App">
+    <div>
       <button onClick={append}>Append</button>
       <button onClick={prepend}>Prepend</button>
-      {inputs.map((input, idx) => {
-        return (
-          <li key={idx}>
-            <label>
-              {input}
-              <input />
-            </label>
-          </li>
-        );
-      })}
+      <ul>
+        {inputs.map((input, idx) => {
+          return (
+            <li key={idx}>
+              <label>
+                {input}
+                <input />
+              </label>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }

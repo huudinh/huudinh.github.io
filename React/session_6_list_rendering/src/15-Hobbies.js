@@ -7,20 +7,31 @@ const Hobbies = () => {
         { id: 2, hobbies: 'piao' },
     ]);
 
+    const handleDelete = (id) =>{
+        setHobbies((prev) => {
+            const item = prev.filter((item) => {
+                return item.id !== id;
+            })
+            return item;
+        });
+    };
+
     return(
         <div>
             <h1>Rate your Hobbies</h1>
             <ul>
                 {hobbies.map((item, idx) => {
                     return (
-                        <li>
+                        <li key={item.id}>
                             <span>I </span>
                             <select>
                                 <option>like</option>
                                 <option>love</option>
                             </select>
                             <span>{item.hobbies}</span>
-                            <button>x</button>
+                            <button onClick={() => {
+                                handleDelete(item.id);
+                            }}>x</button>
                         </li>
                     )
                 })}

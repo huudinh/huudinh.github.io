@@ -1,19 +1,21 @@
 import { useState } from "react";
 
 const TodoList = () => {
-    const [todoItem, setTodoItem] = useState(['homework', 'shopping']);
+    const [todoItems, setTodoItems] = useState(['homework', 'shopping']);
 
-    console.log(todoItem);
+    console.log(todoItems);
 
     const onAddClick = () => {
-        setTodoItem([...todoItem, 'new todo item']);
+        setTodoItems([...todoItems, 'new todo item']);
     };
 
     return (
         <div>
             <button onClick={onAddClick}>add</button>
             <ul>
-                {[<li>{todoItem[0]}</li>,<li>{todoItem[1]}</li>]}
+                {todoItems.map((item)=>{
+                    return <li>{item}</li>
+                })}
             </ul>
         </div>
     );

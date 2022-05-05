@@ -6,12 +6,17 @@ const Login = () => {
     let button = null;
 
     if (isLoggedIn){
-        button = <button>Log out</button>;
+        button = <button onClick={() => {
+            setIsLoggedIn(false);
+        }}>Log out</button>;
     } else {
-        button = <button>Log in</button>;
+        button = <button onClick={() => {
+            setIsLoggedIn(true);
+        }}>Log in</button>;
     }
 
     return <div>{button}</div>;
+
 };
 
 export default Login;

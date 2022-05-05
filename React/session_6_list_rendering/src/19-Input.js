@@ -18,7 +18,7 @@ export default function Input() {
   };
 
   return (
-    <div className="App">
+    <div>
       <button onClick={append}>Append</button>
       <button onClick={prepend}>Prepend</button>
       <ul>

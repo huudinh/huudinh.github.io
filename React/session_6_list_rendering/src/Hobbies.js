@@ -8,12 +8,6 @@ const Hobbies = () => {
     ]);
 
     const handleDelete = (id) =>{
-        // setHobbies((prev) => {
-        //     const item = prev.filter((item) => {
-        //         return item.id != id;
-        //     })
-        //     return item;
-        // })
         const updateHobbies = hobbies.filter((item) => {
             return item.id !== id;
         });

@@ -1,26 +1,24 @@
 import { useState } from "react";
 
 const TodoList = () => {
-    const [todoItem, setTodoItem] = useState(['homework', 'shopping']);
+    const [todoItems, setTodoItems] = useState(['homework', 'shopping']);
 
-    console.log(todoItem);
+    console.log(todoItems);
 
     const onAddClick = () => {
-        setTodoItem([...todoItem, 'new todo item']);
+        setTodoItems([...todoItems, 'new todo item']);
     };
 
     const todoItemLi = [];
 
-    todoItem.forEach((item) => {
+    todoItems.forEach((item) => {
         todoItemLi.push(<li>{item}</li>);
     });
 
     return (
         <div>
             <button onClick={onAddClick}>add</button>
-            <ul>
-                {todoItemLi}
-            </ul>
+            <ul>{todoItemLi}</ul>
         </div>
     );
 };
