@@ -1,153 +1,153 @@
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function() {
 
-// Accrodion Multil
-var acc = document.getElementsByClassName("accordions-title");
-var i;
+    // Accrodion Multil
+    var acc = document.getElementsByClassName("accordions-title");
+    var i;
 
-for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-        } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-    });
-}
-
-// Accrodions Level 
-var acc = document.getElementsByClassName("accordions_lv-title");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
-        }
-    });
-}
-
-//Tabs
-
-let tab_navs = document.querySelectorAll("ul.tabs li");
-let tab_links = document.querySelectorAll('ul.tabs li.tab-link');
-// let tab_contents = document.querySelectorAll('.tab-content');
-
-for (let tab_nav of tab_navs) {
-    tab_nav.addEventListener('click', (e) => {
-        // let tab_id = e.target.getAttribute('data-tab');
-        let tab_id = tab_nav.getAttribute('data-tab');
-        // console.log(tab_id);
-
-        // let navParent = e.target.parentElement;
-        let navParent = tab_nav.parentElement;
-        let navChildrens = navParent.children;
-
-        for (let navChildren of navChildrens) {
-            navChildren.classList.remove('current');
-        }
-
-        // Remove Current tabcontent
-        // let navParent2 = e.target.parentElement.parentElement;
-        let navParent2 = tab_nav.parentElement.parentElement;
-        let navChildrens2 = navParent2.children;
-
-        for (let navChildren2 of navChildrens2) {
-            navChildren2.classList.remove('current');
-        }
-
-        let tab_id_active = document.getElementById(tab_id);
-
-        tab_nav.classList.add('current');
-        tab_id_active.classList.add('current');
-    });
-}
-
-//Tabs Single
-
-const tab_nav_sis = document.querySelectorAll('.tabs .tab');
-
-for (let tab_nav_si of tab_nav_sis) {
-    tab_nav_si.addEventListener('click', (e) => {
-        let navParent = e.target.parentElement;
-        let navChildrens = navParent.children;
-
-        for (let navChildren of navChildrens) {
-            navChildren.classList.remove('active');
-        }
-
-        tab_nav_si.classList.add('active');
-    });
-}
-
-//Tabs Single IMG
-
-const tab_nav_si_imgs = document.querySelectorAll('.tabs .tab img');
-for (let tab_nav_si_img of tab_nav_si_imgs) {
-    tab_nav_si_img.addEventListener('click', (e) => {
-        let navParent = e.target.parentElement.parentElement;
-        let navChildrens = navParent.children;
-
-        for (let navChildren of navChildrens) {
-            navChildren.classList.remove('active');
-        }
-
-        tab_nav_si_img.classList.add('active');
-    });
-}
-
-// modal
-let modalButton = document.getElementsByClassName('modal-btn');
-let modals = document.getElementsByClassName('modal');
-let modalClose = document.getElementsByClassName('modal-close');
-let closePic = document.getElementsByClassName('modal-closePic');
-let modalBG = document.getElementsByClassName('modal-bg');
-
-for (let i = 0; i < modalButton.length; i++) {
-    for (let j = 0; j < modals.length; j++) {
-        let x = modalButton[i].getAttribute('data-modal');
-        let y = modals[j].getAttribute('id');
-        let modalCheck = function () {
-            if (x == y) {
-                return true;
-            }
-        }
-        //Show Modal
-        modalButton[i].addEventListener("click", () => {
-            if (modalCheck()) {
-                modals[j].style.display = "block";
-
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
             }
         });
-
-        //Hide Modal
-        let modalHide = function (n) {
-            for (let i = 0; i < n.length; i++) {
-                n[i].addEventListener("click", () => {
-                    if (modalCheck()) {
-                        modals[j].style.display = "none";
-                    }
-                });
-            }
-        }
-
-        modalHide(modalClose);
-        modalHide(modalBG);
-        modalHide(closePic);
     }
-}
 
-// Video Popup
+    // Accrodions Level 
+    var acc = document.getElementsByClassName("accordions_lv-title");
+    var i;
 
-// Chèn Box Modal
-let container = document.getElementsByTagName('body');
-container[0].insertAdjacentHTML('beforeEnd',
-    `<div class="modal modal-clipBox" id="modal-clip">
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+
+    //Tabs
+
+    let tab_navs = document.querySelectorAll("ul.tabs li");
+    let tab_links = document.querySelectorAll('ul.tabs li.tab-link');
+    // let tab_contents = document.querySelectorAll('.tab-content');
+
+    for (let tab_nav of tab_navs) {
+        tab_nav.addEventListener('click', (e) => {
+            // let tab_id = e.target.getAttribute('data-tab');
+            let tab_id = tab_nav.getAttribute('data-tab');
+            // console.log(tab_id);
+
+            // let navParent = e.target.parentElement;
+            let navParent = tab_nav.parentElement;
+            let navChildrens = navParent.children;
+
+            for (let navChildren of navChildrens) {
+                navChildren.classList.remove('current');
+            }
+
+            // Remove Current tabcontent
+            // let navParent2 = e.target.parentElement.parentElement;
+            let navParent2 = tab_nav.parentElement.parentElement;
+            let navChildrens2 = navParent2.children;
+
+            for (let navChildren2 of navChildrens2) {
+                navChildren2.classList.remove('current');
+            }
+
+            let tab_id_active = document.getElementById(tab_id);
+
+            tab_nav.classList.add('current');
+            tab_id_active.classList.add('current');
+        });
+    }
+
+    //Tabs Single
+
+    const tab_nav_sis = document.querySelectorAll('.tabs .tab');
+
+    for (let tab_nav_si of tab_nav_sis) {
+        tab_nav_si.addEventListener('click', (e) => {
+            let navParent = e.target.parentElement;
+            let navChildrens = navParent.children;
+
+            for (let navChildren of navChildrens) {
+                navChildren.classList.remove('active');
+            }
+
+            tab_nav_si.classList.add('active');
+        });
+    }
+
+    //Tabs Single IMG
+
+    const tab_nav_si_imgs = document.querySelectorAll('.tabs .tab img');
+    for (let tab_nav_si_img of tab_nav_si_imgs) {
+        tab_nav_si_img.addEventListener('click', (e) => {
+            let navParent = e.target.parentElement.parentElement;
+            let navChildrens = navParent.children;
+
+            for (let navChildren of navChildrens) {
+                navChildren.classList.remove('active');
+            }
+
+            tab_nav_si_img.classList.add('active');
+        });
+    }
+
+    // modal
+    let modalButton = document.getElementsByClassName('modal-btn');
+    let modals = document.getElementsByClassName('modal');
+    let modalClose = document.getElementsByClassName('modal-close');
+    let closePic = document.getElementsByClassName('modal-closePic');
+    let modalBG = document.getElementsByClassName('modal-bg');
+
+    for (let i = 0; i < modalButton.length; i++) {
+        for (let j = 0; j < modals.length; j++) {
+            let x = modalButton[i].getAttribute('data-modal');
+            let y = modals[j].getAttribute('id');
+            let modalCheck = function() {
+                    if (x == y) {
+                        return true;
+                    }
+                }
+                //Show Modal
+            modalButton[i].addEventListener("click", () => {
+                if (modalCheck()) {
+                    modals[j].style.display = "block";
+
+                }
+            });
+
+            //Hide Modal
+            let modalHide = function(n) {
+                for (let i = 0; i < n.length; i++) {
+                    n[i].addEventListener("click", () => {
+                        if (modalCheck()) {
+                            modals[j].style.display = "none";
+                        }
+                    });
+                }
+            }
+
+            modalHide(modalClose);
+            modalHide(modalBG);
+            modalHide(closePic);
+        }
+    }
+
+    // Video Popup
+
+    // Chèn Box Modal
+    let container = document.getElementsByTagName('body');
+    container[0].insertAdjacentHTML('beforeEnd',
+        `<div class="modal modal-clipBox" id="modal-clip">
     <div class="modal-closePic">&times;</div>
     <div class="modal-bg"></div>
     <div class="modal-box modal-box-video animate-zoom">
@@ -156,54 +156,54 @@ container[0].insertAdjacentHTML('beforeEnd',
         </div>
     </div>
 </div>`
-);
+    );
 
-let modalVideos = document.getElementsByClassName('modal-clip');
-for (let modalVideo of modalVideos) {
+    let modalVideos = document.getElementsByClassName('modal-clip');
+    for (let modalVideo of modalVideos) {
 
-    let modalSrc = modalVideo.getAttribute('data-video');
+        let modalSrc = modalVideo.getAttribute('data-video');
 
-    modalSrc = `//www.youtube-nocookie.com/embed/${modalSrc}?rel=0&controls=1&autoplay=1&nocookie=true&mute=true`;
+        modalSrc = `//www.youtube-nocookie.com/embed/${modalSrc}?rel=0&controls=1&autoplay=1&nocookie=true&mute=true`;
 
-    //Tat Popup Video Button Close
-    let modalClipBoxs = document.getElementsByClassName('modal-clipBox');
+        //Tat Popup Video Button Close
+        let modalClipBoxs = document.getElementsByClassName('modal-clipBox');
 
-    // console.log(modalClipBoxs[0]);
+        // console.log(modalClipBoxs[0]);
 
-    let youtube = document.getElementById('youtube');
-    modalVideo.addEventListener('click', () => {
-        youtube.setAttribute('src', modalSrc);
-        setTimeout(() => {
-            modalClipBoxs[0].style.display = "block";
-        }, 200);
-    });
+        let youtube = document.getElementById('youtube');
+        modalVideo.addEventListener('click', () => {
+            youtube.setAttribute('src', modalSrc);
+            setTimeout(() => {
+                modalClipBoxs[0].style.display = "block";
+            }, 200);
+        });
 
-    for (let item of closePic) {
-        for (let modalClipBox of modalClipBoxs) {
-            item.addEventListener("click", () => {
-                modalClipBox.style.display = "none";
-                youtube.setAttribute('src', '');
-            });
+        for (let item of closePic) {
+            for (let modalClipBox of modalClipBoxs) {
+                item.addEventListener("click", () => {
+                    modalClipBox.style.display = "none";
+                    youtube.setAttribute('src', '');
+                });
+            }
+
         }
 
-    }
+        // Tat Popup Video Background
+        for (let item of modalBG) {
+            for (let modalClipBox of modalClipBoxs) {
+                item.addEventListener("click", () => {
+                    modalClipBox.style.display = "none";
+                    youtube.setAttribute('src', '');
+                });
+            }
 
-    // Tat Popup Video Background
-    for (let item of modalBG) {
-        for (let modalClipBox of modalClipBoxs) {
-            item.addEventListener("click", () => {
-                modalClipBox.style.display = "none";
-                youtube.setAttribute('src', '');
-            });
         }
-
     }
-}
 
 });
 
 // Accrodion Single
-var Accordion = function (options) {
+var Accordion = function(options) {
     var element = typeof options.element === 'string' ?
         document.getElementById(options.element) : options.element,
         openTab = options.openTab,
@@ -217,7 +217,7 @@ var Accordion = function (options) {
     function render() {
         // attach classes to buttons and containers
         [].forEach.call(element.querySelectorAll('button'),
-            function (item) {
+            function(item) {
                 item.classList.add(titleClass);
                 item.nextElementSibling.classList.add(contentClass);
             });
@@ -250,14 +250,15 @@ var Accordion = function (options) {
 
         toggle(e.target.nextElementSibling);
     }
+
     function removeActive() {
-        [].forEach.call(element.querySelectorAll('.' + titleClass), function (item) {
+        [].forEach.call(element.querySelectorAll('.' + titleClass), function(item) {
             item.classList.remove("active");
         });
     }
 
     function closeAll() {
-        [].forEach.call(element.querySelectorAll('.' + contentClass), function (item) {
+        [].forEach.call(element.querySelectorAll('.' + contentClass), function(item) {
             item.style.height = 0;
         });
     }
@@ -307,22 +308,24 @@ var Accordion = function (options) {
 
 // onScroll Active Menu
 function onScroll(classItem, area, act) {
-    const menu = document.querySelectorAll(classItem);
-    let y = document.documentElement.scrollTop;
-    let sections = document.querySelectorAll(area);
-    let i = 0;
-    let actClass = '.' + act;
-    sections.forEach(function (section) {
-        let z = section.offsetTop - 70;
-        let active = document.querySelectorAll(actClass);
-        if (z <= y) {
-            active[0].classList.remove(act);
-            menu[i].classList.add(act);
-        }
-        if (i < menu.length - 1) {
-            i++;
-        }
-    });
+    if (screen.width > 1180) {
+        const menu = document.querySelectorAll(classItem);
+        let y = document.documentElement.scrollTop;
+        let sections = document.querySelectorAll(area);
+        let i = 0;
+        let actClass = '.' + act;
+        sections.forEach(function(section) {
+            let z = section.offsetTop - 70;
+            let active = document.querySelectorAll(actClass);
+            if (z <= y) {
+                active[0].classList.remove(act);
+                menu[i].classList.add(act);
+            }
+            if (i < menu.length - 1) {
+                i++;
+            }
+        });
+    }
 }
 
 // Scroll menu
