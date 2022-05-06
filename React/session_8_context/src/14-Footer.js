@@ -3,8 +3,8 @@ const Footer = () => {
         <div className="center border" style={{ height: 50 }}>
             Footer
             <select>
-                <option>Light</option>
-                <option>Dark</option>
+                <option value='light'>Light</option>
+                <option value='dark'>Dark</option>
             </select>
         </div>
     );
