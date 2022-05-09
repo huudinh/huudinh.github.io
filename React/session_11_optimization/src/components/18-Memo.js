@@ -48,7 +48,7 @@ const Pure = (props) => {
 const propsAreEquals = (prevProps, nextProps) => {
     console.log('prevProps', prevProps);
     console.log('nextProps', nextProps);
-    return prevProps.name === nextProps.name && prevProps.age === nextProps.age;
+    return prevProps.name === nextProps.name;
 };
 
 const Memoized = memo(Pure, propsAreEquals);

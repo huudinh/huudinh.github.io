@@ -4,7 +4,7 @@ import UseMemo from './components/UseMemo';
 function App() {
   return (
     <div >
-      <UseMemo />
+      <Memo />
     </div>
   );
 }

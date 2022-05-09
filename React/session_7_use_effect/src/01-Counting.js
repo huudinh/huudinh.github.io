@@ -8,7 +8,7 @@ const Counting = () => {
             <p>Count: {count}</p>
             <button 
                 onClick={() => {
-                    setCount(count+1);
+                    setCount(count + 1);
                 }}
             >
                 Increase
