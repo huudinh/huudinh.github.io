@@ -52,19 +52,19 @@ const useHistory = (value) => {
         if(history.length === 0){
             return;
         }
-        const last  = history[history.length - 1];
+        const last  = history[history.length - 2];
         setCurrentValue(last);
         setHistory((prev) => {
             return prev.filter((item, idx) => {
                 return idx < history.length - 1;
-            });
+            })
         });
     };
 
     useEffect(() => {
         setHistory((prev) => {
-            return [ ...prev, currentValue];
-        });
+            return [...prev, currentValue];
+        })
     }, [currentValue]);
 
     return {
@@ -72,7 +72,9 @@ const useHistory = (value) => {
         setValue: setCurrentValue, 
         undo: undo,
         history: history,
-    };
+
+    }
+
 };
 
 export { useInput, useHover, useLocalStorage, useHistory };
