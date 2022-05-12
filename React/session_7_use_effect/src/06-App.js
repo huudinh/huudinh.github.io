@@ -6,7 +6,7 @@ function App() {
   const [scrollingVisible, setScrollingVisible] = useState(true);
 
   return (
-    <div >
+    <div style={{minHeight:1500}} >
         <Counting />
         <hr></hr>
         <button
