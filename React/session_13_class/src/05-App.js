@@ -4,7 +4,7 @@ function App() {
 
   return (
     <div>
-      <NameCard />
+      <NameCard name='Alice' age={20} />
     </div>
   );
 }

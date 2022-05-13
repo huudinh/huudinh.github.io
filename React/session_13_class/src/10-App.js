@@ -1,10 +1,10 @@
-import NameCard from "./NameCard";
+import Counter from "./Counter";
 
 function App() {
 
   return (
     <div>
-      <NameCard name='Alice' age={20} />
+      <Counter />
     </div>
   );
 }

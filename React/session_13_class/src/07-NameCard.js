@@ -1,10 +1,16 @@
-const NameCard = (props) => {
-    return (
-        <div>
-            <div>Name: {props.name}</div>
-            <div>Age: {props.age}</div>
-        </div>
-    );
-};
+import { Component } from 'react'
+
+class NameCard extends Component {
+	render(){
+		return (
+			<div>
+				<div>Name: Alice</div>
+            	<div>Age: 20</div>
+			</div>
+		)
+    }
+	
+}
+
 
 export default NameCard;

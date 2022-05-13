@@ -4,13 +4,12 @@ class NameCard extends Component {
 	render(){
 		return (
 			<div>
-				<div>Name: Alice</div>
-            	<div>Age: 20</div>
+				<div>Name: {this.props.name}</div>
+                <div>Age: {this.props.age}</div>
 			</div>
 		)
     }
 	
 }
-
 
 export default NameCard;
