@@ -7,7 +7,7 @@ function App() {
   return (
     <div style={{height: '100vh', display: 'flex', flexDirection: 'column'}}>
       <Header />
-      <div style={{ display: 'flex', flex: 1, alignItems: 'stretch' }}>
+      <div>
         <Sidebar />
         <Content />
       </div>
