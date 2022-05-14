@@ -1,12 +1,10 @@
-import React from 'react';
+import { Component } from "react";
+// Mounting - constructor()
 
-class Header extends React.Component {
+class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {favoritecolor: "red"};
-  }
-  static getDerivedStateFromProps(props, state) {
-    return {favoritecolor: props.favcol };
   }
   render() {
     return (
