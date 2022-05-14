@@ -1,24 +1,25 @@
-import React from 'react';
+import { Component } from "react";
 
-class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {favoritecolor: "red"};
-  }
-  static getDerivedStateFromProps(props, state) {
-    return {favoritecolor: props.favcol };
-  }
-  render() {
-    return (
-      <h1>My Favorite Color is {this.state.favoritecolor}</h1>
-    );
-  }
+class Counter extends Component {
+    state = {
+        value: 0
+    }
+
+    handleClick = () => {
+        this.setState({
+            value: this.state.value + 1
+        });
+    };
+
+    render(){
+        return (
+            <div>
+                <span>{this.state.value}</span>
+                <button onClick={this.handleClick}>Increase</button>
+            </div>
+        )
+    }
+    
 }
 
-function App(){
-	return (
-		<Header />
-	)
-}
-
-export default App;
+export default Counter;
