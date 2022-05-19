@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import TodoItem from "./TodoItem";
+import Todo from "./Todo";
 let id = 0
 
 const Todos = () => {
@@ -46,7 +46,7 @@ const Todos = () => {
         </form>
         {filteredTodos.map((todo) => {
           return (
-            <TodoItem
+            <Todo
               key={todo.id}
               {...todo}
               handleToggleCheck={handleToggleCheck}

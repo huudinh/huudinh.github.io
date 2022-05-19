@@ -7,9 +7,9 @@ const Todos = () => {
   const [filteredTodos, setFilteredTodos] = useState(() => todos)
   const [addInput, setAddInput] = useState(() => '');
 
-  const handleAddTodo = (e) => {
-    e.preventDefault()
-    if (!addInput) return
+  const handleAddTodo = (event) => {
+    event.preventDefault()
+    if (!addInput) return;
     const todo = {
       id,
       description: addInput,
@@ -22,7 +22,7 @@ const Todos = () => {
 
   useEffect(() => {
     setFilteredTodos(todos)
-  }, [todos])
+  }, [todos]);
 
   return (
     <>
