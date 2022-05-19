@@ -28,7 +28,7 @@ const Todos = () => {
 
   const handleDeleteTodo = (id) => {
     setTodos(todos.filter((todo) => todo.id !== +id))
-  }  
+  }
 
   useEffect(() => {
     setFilteredTodos(todos)

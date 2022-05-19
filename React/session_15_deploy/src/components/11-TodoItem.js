@@ -7,16 +7,20 @@ const TodoItem = (props) => {
     setChecked(props.completed);
   }, [props.completed]);
 
+  const handleToggleCheck = () => {
+    props.handleToggleCheck(props.id);
+  }
+
   return (
     <ul>
       <li>
         <div className="description-wrapper">
-          <span className="circle" onClick={() => props.handleToggleCheck(props.id)}>
+          <span className="circle" onClick={() => handleToggleCheck()}>
             {checked ? <span className="checked"></span> : null}
           </span>
           <h4 className={props.completed ? `completed` : ''}>{props.description}</h4>
         </div>
-        <span className="remove" onClick={() => props.handleDeleteTodo(props.id)}>x</span>
+        <span className="remove">x</span>
       </li>
     </ul>
   )
