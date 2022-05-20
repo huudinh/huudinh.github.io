@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const PokemonDetail = () => {
-    const [pokemon, setPokemon] = useState(null);
+    const [pokemon, setPokemon] = useState();
     const params = useParams();
 
     console.log(pokemon);

@@ -4,7 +4,7 @@ import axios from 'axios';
 // http://localhost:3001/pokemon/pikachu
 
 const PokemonDetail = () => {
-    const [pokemon, setPokemon] = useState(null);
+    const [pokemon, setPokemon] = useState();
     const params = useParams();
 
     console.log(pokemon);
