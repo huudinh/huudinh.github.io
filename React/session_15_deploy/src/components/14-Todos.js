@@ -6,7 +6,6 @@ const Todos = () => {
   const [todos, setTodos] = useState(() => [])
   const [filteredTodos, setFilteredTodos] = useState(() => todos)
   const [addInput, setAddInput] = useState(() => '');
-  const [activeFilter, setActiveFilter] = useState(() => 'All')
 
   const handleAddTodo = (event) => {
     event.preventDefault()
@@ -22,27 +21,17 @@ const Todos = () => {
   }
 
   const handleToggleCheck = (id) => {
-    const todo = todos.find((todo) => todo.id === id)
+    const todo = todos.find((todo) => todo.id === +id)
     todo.completed = !todo.completed
     setTodos([...todos])
   }
 
   const handleDeleteTodo = (id) => {
-    setTodos(todos.filter((todo) => todo.id !== id))
+    setTodos(todos.filter((todo) => todo.id !== +id))
   }  
 
-  const handleClearCompleted = () => {
-    setTodos(todos.filter((todo) => todo.completed === false))
-  }
-
-  const handleFilterChange = (filter) => {
-    setActiveFilter(filter.id)
-  }
-
   useEffect(() => {
-    if (activeFilter === 'All') {
-      setFilteredTodos(todos)
-    }
+    setFilteredTodos(todos)
   }, [todos]);
 
   return (
@@ -74,17 +63,12 @@ const Todos = () => {
             {`${todos.filter((todo) => todo.completed === false).length} todos left`}
           </div>
           <div className="filters-wrapper">
-            <button id="All" 
-              className={`filter ${activeFilter === 'All' ? 'active' : ''}`}
-              onClick={(e) => handleFilterChange(e.target)}
-            >
-              All
-            </button>
+            <button id="All" className="filter active">All</button>
             <button id="Active" className="filter">Active</button>
             <button id="Completed" className="filter">Completed</button>
           </div>
           <div>
-            <button className="clear-completed" onClick={handleClearCompleted}>Clear completed</button>
+            <button className="clear-completed">Clear completed</button>
           </div>
         </div>
       </section>
