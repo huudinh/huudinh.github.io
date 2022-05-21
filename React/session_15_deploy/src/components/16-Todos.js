@@ -42,12 +42,8 @@ const Todos = () => {
   useEffect(() => {
     if (activeFilter === 'All') {
       setFilteredTodos(todos)
-    } else if (activeFilter === 'Active') {
-      setFilteredTodos(todos.filter((todo) => todo.completed === false))
-    } else if (activeFilter === 'Completed') {
-      setFilteredTodos(todos.filter((todo) => todo.completed === true))
     }
-  }, [todos, activeFilter]);
+  }, [todos]);
 
   return (
     <>
@@ -78,27 +74,14 @@ const Todos = () => {
             {`${todos.filter((todo) => todo.completed === false).length} todos left`}
           </div>
           <div className="filters-wrapper">
-            <button 
-              id="All" 
+            <button id="All" 
               className={`filter ${activeFilter === 'All' ? 'active' : ''}`}
               onClick={(event) => handleFilterChange(event.target)}
             >
               All
             </button>
-            <button 
-              id="Active" 
-              className={`filter ${activeFilter === 'Active' ? 'active' : ''}`}
-              onClick={(event) => handleFilterChange(event.target)}
-            >
-              Active
-            </button>
-            <button 
-              id="Completed" 
-              className={`filter ${activeFilter === 'Completed' ? 'active' : ''}`}
-              onClick={(event) => handleFilterChange(event.target)}
-            >
-              Completed
-            </button>
+            <button id="Active" className="filter">Active</button>
+            <button id="Completed" className="filter">Completed</button>
           </div>
           <div>
             <button className="clear-completed" onClick={handleClearCompleted}>Clear completed</button>

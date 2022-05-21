@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Todo from "./Todo";
+import Todo from "./TodoItem";
 let id = 0
 
 const Todos = () => {

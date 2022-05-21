@@ -1,4 +1,4 @@
-const Todo = (props) => {
+const TodoItem = (props) => {
   return (
     <ul>
       <li>
@@ -14,4 +14,4 @@ const Todo = (props) => {
   )
 }
 
-export default Todo;
+export default TodoItem;

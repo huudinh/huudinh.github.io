@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Todo from "./Todo";
+import Todo from "./TodoItem";
 let id = 0
 
 const Todos = () => {
@@ -21,7 +21,7 @@ const Todos = () => {
   }
 
   const handleToggleCheck = (id) => {
-    const todo = todos.find((todo) => todo.id === +id)
+    const todo = todos.find((todo) => todo.id === id)
     todo.completed = !todo.completed
     setTodos([...todos])
   }
