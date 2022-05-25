@@ -44,8 +44,8 @@ const Todos = () => {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(filteredTodos));
-  }, [filteredTodos]);
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
 
   useEffect(() => {
     if (activeFilter === 'All') {
