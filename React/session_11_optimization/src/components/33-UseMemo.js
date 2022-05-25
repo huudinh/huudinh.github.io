@@ -27,7 +27,7 @@ const UseMemo = () => {
         console.log('memoizedDouble Item Change');
     }, [memoziedDoubleItems]);
 
-    const getUser = useCallback((id) => {
+    const getUser = useCallback(() => {
         fetch('https://randomuser.me/api/')
             .then((res) => res.json())
             .then((resJson) => {

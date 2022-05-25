@@ -12,7 +12,7 @@ const Memo = () => {
     };
 
     const updateAge = () => {
-        setValue({ ...value, age: value.age + 'x' });
+        setValue({ ...value, age: value.age + 1 });
     };
 
     return (
