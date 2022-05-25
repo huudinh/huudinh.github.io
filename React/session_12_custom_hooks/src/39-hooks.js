@@ -57,7 +57,7 @@ const useHistory = (value) => {
         setHistory((prev) => {
             return prev.filter((item, idx) => {
                 return idx < history.length - 1;
-            })
+            });
         });
     };
 

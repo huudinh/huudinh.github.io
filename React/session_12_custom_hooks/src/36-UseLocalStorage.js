@@ -14,7 +14,6 @@ const UseLocalStorage = () => {
     return (
         <div>
             {count}
-            {count2}
             <button onClick={handleIncrease}>Increase</button>
             <button onClick={handleDecrease}>Decrease</button>
         </div>
@@ -22,3 +21,4 @@ const UseLocalStorage = () => {
 };
 
 export default UseLocalStorage;
+// Stop localstorage

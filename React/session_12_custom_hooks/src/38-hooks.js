@@ -51,9 +51,8 @@ const useHistory = (value) => {
     useEffect(() => {
         setHistory((prev) => {
             return [...prev, currentValue];
-        })
+        });
     }, [currentValue]);
-
 };
 
 export { useInput, useHover, useLocalStorage };

@@ -1,16 +1,16 @@
 import { useState, useEffect } from 'react';
-import Todo from './Todo';
+import TodoItem from "./TodoItem";
 let id = 0
 
 const Todos = () => {
   const [todos, setTodos] = useState(() => [])
   const [filteredTodos, setFilteredTodos] = useState(() => todos)
-  const [addInput, setAddInput] = useState(() => '')
+  const [addInput, setAddInput] = useState(() => '');
   const [activeFilter, setActiveFilter] = useState(() => 'All')
 
-  const handleAddTodo = (e) => {
-    e.preventDefault()
-    if (!addInput) return
+  const handleAddTodo = (event) => {
+    event.preventDefault()
+    if (!addInput) return;
     const todo = {
       id,
       description: addInput,
@@ -21,15 +21,15 @@ const Todos = () => {
     id++
   }
 
-  const handleDeleteTodo = (id) => {
-    setTodos(todos.filter((t) => t.id !== +id))
-  }
-
   const handleToggleCheck = (id) => {
-    const todo = todos.find((todo) => todo.id === +id)
+    const todo = todos.find((todo) => todo.id === id)
     todo.completed = !todo.completed
     setTodos([...todos])
   }
+
+  const handleDeleteTodo = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id))
+  }  
 
   const handleClearCompleted = () => {
     setTodos(todos.filter((todo) => todo.completed === false))
@@ -38,74 +38,74 @@ const Todos = () => {
   const handleFilterChange = (filter) => {
     setActiveFilter(filter.id)
   }
+  
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(filteredTodos));
+  }, [filteredTodos]);
 
   useEffect(() => {
     if (activeFilter === 'All') {
       setFilteredTodos(todos)
     } else if (activeFilter === 'Active') {
-      setFilteredTodos(todos.filter((t) => t.completed === false))
+      setFilteredTodos(todos.filter((todo) => todo.completed === false))
     } else if (activeFilter === 'Completed') {
-      setFilteredTodos(todos.filter((t) => t.completed === true))
+      setFilteredTodos(todos.filter((todo) => todo.completed === true))
     }
-  }, [activeFilter, todos])
+  }, [todos, activeFilter]);
 
   return (
     <>
       <h1>todos</h1>
       <section className="todos-container">
-        <form onSubmit={handleAddTodo} autoComplete="off">
-          <input
-            type="text"
-            name="add"
-            id="add"
-            placeholder="What needs to be done?"
+        <form onSubmit={handleAddTodo} >
+          <input 
+            type="text" 
+            name="add" 
+            id="add" 
+            placeholder="What needs to be done?" 
             value={addInput}
-            onChange={(e) => setAddInput(e.target.value)}
+            onChange={(event) => setAddInput(event.target.value)}
           />
         </form>
         {filteredTodos.map((todo) => {
           return (
-            <Todo
+            <TodoItem
               key={todo.id}
               {...todo}
-              handleDeleteTodo={handleDeleteTodo}
               handleToggleCheck={handleToggleCheck}
+              handleDeleteTodo={handleDeleteTodo}
             />
           )
         })}
         <div className="filters-container">
           <div className="remaining">
-            {`${todos.filter((t) => t.completed === false).length} todos left`}
+            {`${todos.filter((todo) => todo.completed === false).length} todos left`}
           </div>
           <div className="filters-wrapper">
-            <button
-              id="All"
+            <button 
+              id="All" 
               className={`filter ${activeFilter === 'All' ? 'active' : ''}`}
-              onClick={(e) => handleFilterChange(e.target)}
+              onClick={(event) => handleFilterChange(event.target)}
             >
               All
             </button>
-            <button
-              id="Active"
+            <button 
+              id="Active" 
               className={`filter ${activeFilter === 'Active' ? 'active' : ''}`}
-              onClick={(e) => handleFilterChange(e.target)}
+              onClick={(event) => handleFilterChange(event.target)}
             >
               Active
             </button>
-            <button
-              id="Completed"
-              className={`filter ${
-                activeFilter === 'Completed' ? 'active' : ''
-              }`}
-              onClick={(e) => handleFilterChange(e.target)}
+            <button 
+              id="Completed" 
+              className={`filter ${activeFilter === 'Completed' ? 'active' : ''}`}
+              onClick={(event) => handleFilterChange(event.target)}
             >
               Completed
             </button>
           </div>
           <div>
-            <button className="clear-completed" onClick={handleClearCompleted}>
-              Clear completed
-            </button>
+            <button className="clear-completed" onClick={handleClearCompleted}>Clear completed</button>
           </div>
         </div>
       </section>
