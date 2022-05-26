@@ -48,12 +48,32 @@ const useHistory = (value) => {
     const [currentValue, setCurrentValue] = useState(value);
     const [history, setHistory] = useState([]);
 
+    const undo = () => {
+        if(history.length === 0){
+            return;
+        }
+        const last  = history[history.length - 2];
+        setCurrentValue(last);
+        setHistory((prev) => {
+            return prev.filter((item, idx) => {
+                return idx < history.length - 1;
+            });
+        });
+    };
+
     useEffect(() => {
         setHistory((prev) => {
             return [...prev, currentValue];
-        });
+        })
     }, [currentValue]);
+
+    return {
+        value: currentValue, 
+        setValue: setCurrentValue, 
+        undo: undo,
+        history: history,
+    }
 };
 
-export { useInput, useHover, useLocalStorage };
+export { useInput, useHover, useLocalStorage, useHistory };
 

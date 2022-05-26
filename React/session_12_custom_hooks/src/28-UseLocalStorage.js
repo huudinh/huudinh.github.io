@@ -11,6 +11,10 @@ const UseLocalStorage = () => {
     };
 
     useEffect(() => {
+        setCount(Number(localStorage.getItem('count')));
+    }, []);
+
+    useEffect(() => {
         localStorage.setItem('count', count);
     }, [count]);
 
@@ -24,3 +28,4 @@ const UseLocalStorage = () => {
 };
 
 export default UseLocalStorage;
+// View Output

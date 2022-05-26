@@ -2,6 +2,7 @@ import { useLocalStorage } from "./hooks";
 
 const UseLocalStorage = () => {
     const [count, setCount] = useLocalStorage();
+    const [count2, setCount2] = useLocalStorage();
 
     const handleIncrease = () => {
         setCount(count + 1);

@@ -1,22 +1,21 @@
-import { useState } from "react";
 import { useInput } from "./hooks";
 
 const UseInpput = () => {
-    const [input, setInput] = useState('');
-
-    const value = useInput()
-
-    const handleInputChange = (event) => {
-        setInput(event.target.value);   
-    };
+    const input = useInput();
+    const input2 = useInput();
+    const input3 = useInput();
 
     const handleGetValue = () => {
-        console.log(input);
+        console.log(input.value);
+        console.log(input2.value);
+        console.log(input3.value);
     };
 
     return (
         <div>
-            <input value={value} onChange={handleInputChange} />
+            <input value={input.value} onChange={input.handleChange} />
+            <input value={input2.value} onChange={input2.handleChange} />
+            <input value={input3.value} onChange={input3.handleChange} />
             <button onClick={handleGetValue}>Get value</button>
         </div>
     );

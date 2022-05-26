@@ -1,12 +1,12 @@
-// import { useState } from 'react';
+import UseInpput from "./UseInput";
 
-// Wrong
-// const App = () => {
-// 	const handleClick = () => {
-// 		const [state, setState] = useState();
-// 	}
+const App = () => {
+	return (
+    <div>
+      <UseInpput />
+    </div>
+  );
+}
 
-// 	return <div></div>
-// }
 
-// export default App;
+export default App;

@@ -3,10 +3,11 @@ import UseLocalStorage from "./UseLocalStorage";
 const App = () => {
 	return (
     <div>
-      <UseLocalStorage></UseLocalStorage>
+      <UseLocalStorage />
     </div>
   );
 }
 
 
 export default App;
+// View Output
