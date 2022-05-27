@@ -22,3 +22,4 @@ const UseInpput = () => {
 };
 
 export default UseInpput;
+// View Output

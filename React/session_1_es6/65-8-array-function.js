@@ -1,3 +1,5 @@
+console.log('array function');
+
 // map
 const mapArr = [1, 2, 3];
 
@@ -23,3 +25,9 @@ const sum = number.reduce((total, item) => {
 }, 0);
 
 console.log(sum);
+
+const multi = number.reduce((total, item) => {
+    return total * item;
+}, 0);
+
+console.log(multi);

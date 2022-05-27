@@ -1,3 +1,5 @@
+console.log('reference-primitive');
+
 // string
 // number
 // boolean
@@ -6,7 +8,6 @@
 // symbol
 
 //object
-
 
 // primitive data type
 let x = 1;
@@ -17,8 +18,6 @@ console.log(x === z); // true
 
 x = 2;
 console.log(x === y); // false
-
-
 
 // reference data type
 let foo = {};
@@ -31,6 +30,3 @@ console.log(bar);
 foo = {};
 bar = {};
 console.log(foo === bar); // false
-
-foo.name = 'Mindx';
-console.log(foo, bar);

@@ -8,10 +8,9 @@ export const sub = (a, b) => {
 
 export { sum };
 
+const math = {
+    sum: sum,
+    sub: sub
+}
 
-// const math = {
-//     sum: sum,
-//     sub: sub
-// }
-
-// export default math;
+export default math;
