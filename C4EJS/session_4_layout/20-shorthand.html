@@ -11,38 +11,39 @@
 <body>
     <style>
         .box {
-            display: inline-flex;
+            display: flex;
+            background: #ddd;
+            width: 100%;
+            height: 500px;
         }
         
-        .box__item {
+        .box__item {            
             padding: 10px;
             text-align: center;
             font-size: 30px;
-            display: inline-block;
+            width:120px;
+            height:120px;
         }
         
-        .box__danger {
+        .box__item--danger {
             background-color: #dc3545;
+            flex:1;
         }
         
-        .box__warning {
+        .box__item--warning {
             background-color: #ffc107;
         }
         
-        .box__success {
+        .box__item--success {
             background-color: #198754;
         }
     </style>
     <div class="box">
-        <div class="box__item box__success">Success</div>
-        <div class="box__item box__warning">Warning</div>
-        <div class="box__item box__danger">Danger</div>
+        <div class="box__item box__item--success">1</div>
+        <div class="box__item box__item--warning">2</div>
+        <div class="box__item box__item--danger">3</div>
     </div>
-    <div class="box">
-        <div class="box__item box__success">Success</div>
-        <div class="box__item box__warning">Warning</div>
-        <div class="box__item box__danger">Danger</div>
-    </div>
+
 </body>
 
 </html>

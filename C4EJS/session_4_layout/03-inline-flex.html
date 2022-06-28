@@ -11,18 +11,13 @@
 <body>
     <style>
         .box {
-            display: flex;
-            background: #ddd;
-            width: 500px;
-            height: 500px;
-            align-items: flex-start;
+            display: inline-flex;
         }
         
         .box__item {
             padding: 10px;
             text-align: center;
             font-size: 30px;
-            width:20%;
         }
         
         .box__item--danger {
@@ -31,7 +26,6 @@
         
         .box__item--warning {
             background-color: #ffc107;
-            align-self: center;
         }
         
         .box__item--success {
@@ -39,11 +33,15 @@
         }
     </style>
     <div class="box">
-        <div class="box__item box__item--success">Success</div>
-        <div class="box__item box__item--warning">Warning</div>
-        <div class="box__item box__item--danger">Danger</div>
+        <div class="box__item box__item--success">1</div>
+        <div class="box__item box__item--warning">2</div>
+        <div class="box__item box__item--danger">3</div>
     </div>
-
+    <div class="box">
+        <div class="box__item box__item--success">4</div>
+        <div class="box__item box__item--warning">5</div>
+        <div class="box__item box__item--danger">6</div>
+    </div>
 </body>
 
 </html>
