@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <script>
+        
+        //1. kiểu dữ liệu
+        {
+            let x = 3;
+            let y = 3.14;
+
+            console.log('1.1',typeof x);
+            console.log('1.2',typeof y);
+        }
+
+        //thêm 0
+        {
+            let x = 1e6;
+            console.log('2',x);
+        }
+
+        //thêm thập phân
+        {
+            let x = 1e-3;
+            console.log('3',x);
+        }
+
+        //làm tròn số
+        {
+            let num = 5.36789;
+            let n = num.toFixed();
+
+            console.log('4',n);
+        }
+
+        // làm tròn xuống
+        {
+            let x = Math.floor(1.6);
+
+            console.log("5 Làm tròn 1.6 xuống", x);
+        }
+
+        // Làm tròn lên
+        {
+            let x = Math.ceil(1.4);
+
+            console.log("6 làm tròn 1.4 lên", x);
+        }
+
+        // Lấy giá trị tuyệt đối
+        {
+            let x = Math.abs(-7.25);
+
+            console.log("7 Lấy giá trị tuyệt đối -7.25", x);
+        }
+
+        // Lấy căn bậc hai
+        {
+            let x = Math.sqrt(9);
+
+            console.log("8 Lấy căn bậc hai 9", x);
+        }
+
+    </script>
+</body>
+</html>
