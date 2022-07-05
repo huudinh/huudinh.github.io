@@ -5,20 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS</title>
+
 </head>
 <body>
     <script>
-        
-        // console.log(greeting);
-        
-        var greeting = "say hello";
+        // program to show the change in global variable
+        let a = 'hello';
 
-        var greeting = "hey hi";
-        {
-            var greeting = "say Hello instead";
+        function greet() {
+            a = 3;
         }
 
-        console.log(greeting);
+        // before the function call
+        console.log(a);
+
+        // after the function call
+        greet();
+        console.log(a);
 
     </script>
 </body>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+
+</head>
+
+<body>
+    <script>
+        // function expression, hoisting supported
+        sum(3, 3);
+        function sum(a, b) {
+            console.log('adding 2 numbers');
+            return a + b;
+        }
+
+        // anonumous function, no hoisting supported
+        multi(2, 3);
+        const multi = function (a, b) {
+            console.log('multi');
+            return a * b;
+        }
+
+        // arrow function, no hoisting supported
+        sub(3, 2);
+        const sub = (a, b) => {
+            console.log('subtracting 2 numbers');
+            return a - b;
+        }
+
+    </script>
+</body>
+
+</html>
