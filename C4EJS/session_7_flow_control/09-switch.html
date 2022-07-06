@@ -12,32 +12,24 @@
 <body>
     <script>
 
-        let day;
+        let text;
+        let favDrink = prompt("What's your favorite drink?", "Coca-Cola");
 
-        switch (new Date().getDay()) {
-            case 0:
-                day = "Sunday";
+        switch (favDrink) {
+            case "Coca-Cola":
+                text = "Excellent choice. Coca-Cola is good for your soul.";
                 break;
-            case 1:
-                day = "Monday";
+            case "Pepsi":
+                text = "Pepsi is my favorite too!";
                 break;
-            case 2:
-                day = "Tuesday";
+            case "Sprite":
+                text = "Really? Are you sure the Sprite is your favorite?";
                 break;
-            case 3:
-                day = "Wednesday";
-                break;
-            case 4:
-                day = "Thursday";
-                break;
-            case 5:
-                day = "Friday";
-                break;
-            case 6:
-                day = "Saturday";
             default:
+                text = "I have never heard of that one..";
         }
-        console.log("Today is " + day);
+
+        console.log(text);
 
     </script>
 </body>
