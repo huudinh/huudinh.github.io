@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,40 +12,46 @@
         2. Viết JS ở đâu
         3. Ouput
         4. Input
-        5. Var (block scoped, hoisting)
-            - var
-            - let
-            - const
-        6. Operators
-            - Addition (+)
-            - Substraction (-)
-            - Multiplication (*)
-            - Division (/)
-            - Remainder (%)
-            - ++ và - -
+        5. Variable
+            - Lưu trữ dữ liệu
+            - Key (var, let, const)
+            - Cách đặt tên
+                + Có thể bao gồm cả chữ và số
+                + Không được bắt đầu bằng số
+                + Không được chứa những ký tự đặc biệt (khoảng trắng cũng tính là ký tự đặc biệt), ngoại trừ "_" và "$".
+                + Không được trùng với các từ khóa (keywords) của javascript.
+            - Phạm vi hoạt động (Block scoped)
+            - Tự khai báo (hoisting)
 
-        7. DataTypes
-            - Primitive
-                + number
-                + string
-                + Boolean
-                + BigInt
-                + Symbol
-                + Undefined
-                + Null
-            - None-Primitives
-                + object (array, function, object)
-        8. Method
-            - Number method: (Math.sqrt, ...)
-            - String method: (text.toLowerCase, ...)
-        9. String template (`${x}`)
+        6. DataTypes
+            - Type
+                + Primitive (number, string, Boolean, BigInt, Symbol, Undefined, Null)
+                + None-Primitives (object [array, function, object])
+            - String            
+                + Dấu nháy kép (Double quotes): "javascript"
+                + Dấu nháy đơn (Single quotes): 'javascript'
+                + Backticks: `javascript`
+                + String template (`${x}`)
+            - Number
+                - Addition (+)
+                - Substraction (-)
+                - Multiplication (*)
+                - Division (/)
+                - Remainder (%)
+                - ++ và - -
+            - Conversion
+                + String to Number: let n = Number('45');
+                + Number to String: let s = String(198);
 
+            - Method
+                + Number method: (Math.sqrt, ...)
+                + String method: (text.toLowerCase, ...)
             ------------------------------------------------>
 
 </head>
+
 <body>
     <script>
-        
         let name = 'JS129';
 
         console.log(name);
@@ -52,7 +59,7 @@
         //alert('hi ban');
 
         alert(name);
-
     </script>
 </body>
+
 </html>
