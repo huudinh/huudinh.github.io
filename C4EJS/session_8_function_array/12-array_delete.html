@@ -11,13 +11,19 @@
 
 <body>
     <script>
+        const cars = ["BMW", "Volvo", "Saab", "Ford"];
 
-        for (let i = 9; i > 0; i--) {
+        const itemIndex = 1;
 
-            console.log(i);
+        cars.splice(itemIndex, 1)
 
-        }
+        console.log(cars);
 
+        const newCars = cars.filter((item, index) => {
+            return index != itemIndex;
+        })
+
+        console.log(newCars);
     </script>
 </body>
 
