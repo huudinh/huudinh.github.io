@@ -11,20 +11,19 @@
 
 <body>
     <script>
-        const fruits = ["Banana", "Orange", "Apple", "Mango"];
-
-        console.log(fruits)
-
         // Push
-        fruits.push("Kiwi");
-        console.log(fruits);
-
-        const moreFruits = ["Starfruit", "Grapefruit"];
+        {
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            fruits.push("Kiwi");
+            console.log(fruits);
+        }
 
         // concat
-        const newFruits = fruits.concat(moreFruits);
-        console.log(newFruits);
-
+        {
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            const addFruits = ["Starfruit", "Grapefruit"];
+            console.log(fruits.concat(addFruits));
+        }
     </script>
 </body>
 

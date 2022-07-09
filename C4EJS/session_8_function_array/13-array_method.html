@@ -11,19 +11,29 @@
 
 <body>
     <script>
-        const cars = ["BMW", "Volvo", "Saab", "Ford"];
+        const ages = [3, 10, 18, 20];
 
-        const itemIndex = 1;
+        console.log(ages.find((age) => {
+            return age > 18;
+        }));
 
-        cars.splice(itemIndex, 1)
+        console.log(ages.findIndex((age) => {
+            return age > 18;
+        }));
 
-        console.log(cars);
+        // return logic
+        console.log(ages.some((age) => {
+            return age > 18;
+        }));
 
-        const newCars = cars.filter((item, index) => {
-            return index != itemIndex;
-        })
+        // return logic
+        console.log(ages.every((age) => {
+            return age > 18;
+        }));
 
-        console.log(newCars);
+        //max - min
+        console.log(Math.max(...ages));
+        console.log(Math.min(...ages));
     </script>
 </body>
 

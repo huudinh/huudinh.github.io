@@ -11,28 +11,40 @@
 
 <body>
     <script>
-        const cars = ["BMW", "Volvo", "Saab", "Ford"];
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+
+        console.log(fruits[0]);
+
+        // spread operator
+        console.log(...fruits);
 
         // loop for
-        for (let i = 0; i < cars.length; i++) {
-            console.log(cars[i]);
+        console.log('1. Loop for');
+        for (let i = 0; i < fruits.length; i++) {
+            console.log(fruits[i]);
         }
 
         // loop for in
-        for (let index in cars) {
-            console.log(cars[index]);
+        console.log('2. Loop in');
+
+        for (let index in fruits) {
+            console.log(fruits[index]);
         }
 
         // loop for of
-        for (let item of cars) {
+        console.log('3. Loop of');
+
+        for (let item of fruits) {
             console.log(item);
         }
-        
+
         // loop forEach
-        cars.forEach((item, index) => {
+        console.log('4. Loop forEach');
+
+        fruits.forEach((item, index) => {
             console.log(index, item);
         });
-
     </script>
 </body>
 

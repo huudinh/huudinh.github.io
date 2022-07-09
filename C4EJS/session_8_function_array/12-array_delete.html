@@ -11,19 +11,20 @@
 
 <body>
     <script>
-        const cars = ["BMW", "Volvo", "Saab", "Ford"];
+        {
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            const itemIndex = 1;
+            fruits.splice(itemIndex, 1)
+            console.log(fruits);
+        }
 
-        const itemIndex = 1;
-
-        cars.splice(itemIndex, 1)
-
-        console.log(cars);
-
-        const newCars = cars.filter((item, index) => {
-            return index != itemIndex;
-        })
-
-        console.log(newCars);
+        {
+            let fruits = ["Banana", "Orange", "Apple", "Mango"];
+            fruits = fruits.filter((item, index) => {
+                return index != 0;
+            })
+            console.log(fruits);
+        }
     </script>
 </body>
 

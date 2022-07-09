@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+
+</head>
+
+<body>
+    <script>
+        let person = '';
+        let num = 0;
+        let userData = [
+            ["Yamada", 28, "Tokyo"],
+            ["Kiyoshi", 30, "Hanoi"],
+            ["Honda", 24, "Osaka"],
+        ];
+
+        userData.forEach((item) => {
+            num++;
+            person += num + '. ';
+
+            for (let i = 0; i < item.length; i++) {
+                person += item[i] + ' ';
+            }
+
+            person += "\n";
+
+        });
+
+        console.log(person);
+    </script>
+</body>
+
+</html>

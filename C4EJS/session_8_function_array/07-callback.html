@@ -11,21 +11,43 @@
 
 <body>
     <script>
-        function sayHi(name) {
-            alert('Hi ' + name);
+        // No parame
+        {
+            function sayHi(name) {
+                alert('Hi ' + name);
+            }
+
+            function sayGoodby(name) {
+                alert('Goodbye ' + name);
+            }
+
+            function say(f) {
+                alert('Here I say');
+                f();
+            }
+
+            say(sayHi);
+            say(sayGoodby);
         }
 
-        function sayGoodby(name) {
-            alert('Goodbye ' + name);
-        }
+        // Param
+        {
+            function sayHi(name) {
+                alert('Hi ' + name);
+            }
 
-        function say(name, f) {
-            alert('Here I say');
-            f(name);
-        }
+            function sayGoodby(name) {
+                alert('Goodbye ' + name);
+            }
 
-        say('Dinh', sayHi);
-        say('Dinh', sayGoodby);
+            function say(name, f) {
+                alert('Here I say');
+                f(name);
+            }
+
+            say('Dinh', sayHi);
+            say('Dinh', sayGoodby);
+        }
     </script>
 </body>
 

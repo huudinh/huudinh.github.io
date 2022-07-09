@@ -11,21 +11,37 @@
 
 <body>
     <script>
-        const cars = ["BMW", "Volvo", "Saab", "Ford"];
-
-        cars[0] = 'Vinfat';
-
-        console.log(cars);
-
-        for (let i = 0; i < cars.length; i++) {
-            console.log(`${i}: ${cars[i]}`);
+        // Update Index
+        {
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            fruits[0] = 'Watermelon';
+            console.log(fruits);
         }
 
-        const newCars = cars.map((item, index) => {
-            return index == 0 ? 'BMW' : item;
-        });
+        // Update For
+        {
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            for (let i = 0; i < fruits.length; i++) {
+                fruits[i] = `${i + 1}: ${fruits[i]}`
+            }
+            console.log(fruits);
+        }
 
-        console.log(newCars);
+        // Update Map
+        {
+            let fruits = ["Banana", "Orange", "Apple", "Mango"];
+            fruits = fruits.map((item, index) => {
+                return index == 0 ? 'Lemon' : item;
+            });
+            console.log(fruits);
+        }
+
+        // fill [array.fill(value, start, end)]
+        {
+            let fruits = ["Banana", "Orange", "Apple", "Mango"];
+            fruits = fruits.fill('Lemon', 1, 2);
+            console.log(fruits);
+        }
     </script>
 </body>
 
