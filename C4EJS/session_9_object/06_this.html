@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        // "this" trong hàm này tham chiếu đến đối tượng person, bởi
+        // vì fullname là hàm được gọi bởi đói tượng này
+        const person = {
+            firstname: 'John',
+            lastname: 'Doe',
+            fullname: function(){
+                console.log(this.firstname + ' ' + this.lastname);
+            },
+            age: 50,
+            eyecolor: 'blue',
+        }
+        person.fullname();
+
+        // "this" trong hàm này sẽ có giá trị của đối tượng window bởi vì
+        // fullname() là hàm được định nghĩa một cách toàn cục,
+        var firstname = 'Peter', lastname = 'Doe';
+        function fullname(){
+            console.log(this.firstname + ' ' + this.lastname);
+        }
+
+        fullname();
+        window.fullname();
+
+ 
+
+           
+        
+
+        
+    </script>
+    
+</body>
+</html>

@@ -8,20 +8,23 @@
 
     <!----------------------------------------
         1. Object
-            - Init
+            - Init / Update / Delete
             - Read
                 + 1. Read Property
                 + 2. Object destructuring
                 + 3. Loop For In
                 + 4. Read Combo (Input, Loop, Conditional, Break)
             - Update
-            - Delete
-        2. JavaScript Primitives & Reference Types
-        3. Object & Array
-        4. Object literal
-        5. Nested Object
-        6. Object & this
-        7. Object to Array
+                + 1. Update Propery
+                + 2. Update Combo
+        2. Primitives & Reference Types
+        3. Object & Array & Function
+            - array in object (Object advance)
+            - object in object (Nested Object)
+            - function in object (Object literal)
+            - object in array (Data list)
+        4. This
+        5. Object to Array
 
     ------------------------------------------------>
 
@@ -32,7 +35,9 @@
             const person = {}
             console.log(person);
         }
+
         {
+            // Init
             const person = {
                 firstname: 'John',
                 lastname: 'Doe',
@@ -40,7 +45,18 @@
                 eyecolor: 'blue',
             }
             console.log(person);
+
+            // Create
+            person.city = 'New York';
+            console.log(person);
+
+            // Delete
+            delete person.age;
+            console.log(person)
+
         }
+
+
     </script>
     
 </body>

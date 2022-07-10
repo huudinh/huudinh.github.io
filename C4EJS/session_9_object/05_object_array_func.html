@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        // 1. Array in Object
+        console.log('1. Array in Object');
+        {
+            const person = {
+                firstname: 'John',
+                lastname: 'Doe',
+                age: 50,
+                eyecolor: 'blue',
+                interest: ['swim', 'running', 'eat icecream']
+            }
+
+            let interest = person.interest;
+            console.log(interest);
+
+            for(let item of interest){
+                console.log(item);
+            }
+
+        }
+
+        // 2. Object in Object
+        console.log('2. Object in Object');
+        {
+            const person = {
+                firstname: 'John',
+                lastname: 'Doe',
+                age: 50,
+                eyecolor: 'blue',
+                marks: {
+                    science: 70,
+                    math: 75
+                }
+            }
+            console.log(person.firstname, person.marks.math);
+        }
+
+        // 3. Function in Object
+        console.log('3. Function in Object');
+        {
+            const person = {
+                firstname: 'John',
+                lastname: 'Doe',
+                age: 50,
+                eyecolor: 'blue',
+                greet: function() {
+                    console.log('Hello');
+                }
+            }
+            person.greet();
+        }
+
+        // 4. Object in Array
+        console.log('4. Object in Array');
+        {
+            const persons = [
+                {
+                    firstname: 'John',
+                    lastname: 'Doe',
+                    age: 50,
+                    eyecolor: 'blue',
+                },
+                {
+                    firstname: 'Peter',
+                    lastname: 'Doe',
+                    age: 40,
+                    eyecolor: 'blue',
+                },
+                {
+                    firstname: 'Mark',
+                    lastname: 'Doe',
+                    age: 30,
+                    eyecolor: 'blue',
+                },
+            ]
+            console.log(persons); 
+    
+            for(let person of persons){
+                console.log(`name: ${person.firstname} ${person.lastname}, age: ${person.age}`)
+            }
+        }
+    </script>
+    
+</body>
+</html>
