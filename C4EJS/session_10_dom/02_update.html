@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <h1 id='msg'>Singers</h1>
+    <ul>
+        <li class="singer">James Bay</li>
+        <li class="singer">Nate Ruess</li>
+        <li class="singer">Ed Sheeran</li>
+        <li class="singer">Steve Garrigan</li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius error reprehenderit architecto sapiente et eveniet sunt culpa. Reprehenderit, ab! Modi eligendi libero laudantium laboriosam autem vitae ipsum, quisquam a. Necessitatibus!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius error reprehenderit architecto sapiente et eveniet sunt culpa. Reprehenderit, ab! Modi eligendi libero laudantium laboriosam autem vitae ipsum, quisquam a. Necessitatibus!</p>
+
+    <script>
+        const d = document.getElementById('msg');
+        d.textContent = '<i>Famous singers</i>';
+
+        d.innerHTML = '<i>Famous singers</i>';
+    </script>
+</body>
+
+</html>

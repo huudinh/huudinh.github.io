@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <h1 id='msg'>Singers</h1>
+    <ul>
+        <li class="singer">James Bay</li>
+        <li class="singer">Nate Ruess</li>
+        <li class="singer">Ed Sheeran</li>
+        <li class="singer">Steve Garrigan</li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius error reprehenderit architecto sapiente et eveniet sunt culpa. Reprehenderit, ab! Modi eligendi libero laudantium laboriosam autem vitae ipsum, quisquam a. Necessitatibus!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius error reprehenderit architecto sapiente et eveniet sunt culpa. Reprehenderit, ab! Modi eligendi libero laudantium laboriosam autem vitae ipsum, quisquam a. Necessitatibus!</p>
+    <p id="date" onclick="showtime()">Click show time now</p>
+    <button id="btnLike">Like</button>
+    <button id="btnVote">Vote</button>
+
+    <script>
+        // 2. onclick
+        // 2.1 Trong HTML
+        function showtime() {
+            const d = document.getElementById('date');
+            d.innerHTML = Date();
+        }
+
+        // 2.2 Trong JS
+        const btnVote = document.getElementById('btnVote');
+
+        btnVote.onclick = () => {
+            btnVote.innerHTML = 'Voted';
+            console.log('Voted');
+        }
+
+        btnVote.onclick = () => {
+            btnVote.innerHTML = 'Voted...';
+            console.log('Voted...');
+        }
+
+        // 1. addEventListener
+        const btnLike = document.getElementById('btnLike');
+
+        btnLike.addEventListener('click', () => {
+            btnLike.innerHTML = 'Liked';
+            console.log('Liked');
+        });
+
+        btnLike.addEventListener('click', () => {
+            btnLike.innerHTML = 'Liked...';
+            console.log('Liked...');
+        });
+
+        //3. target
+        btnLike.addEventListener('click', (event) => {
+            btnLike.innerHTML = 'Liked';
+            console.log(event.target);
+        });
+
+        btnVote.onclick = (event) => {
+            btnVote.innerHTML = 'Voted';
+            console.log('Voted');
+            console.log(event.target);
+        }
+    </script>
+</body>
+
+</html>
