@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <style>
+        .color {
+            color: white;
+        }
+    </style>
+
+    <div id="parent">
+        <p id="first-child">Some child text</p>
+        <p id="second-child">Some more child text</p>
+    </div>
+
+    <input type="submit">
+
+    <script>
+        const firstChild = document.getElementById('first-child');
+
+        // 1. Parent Node
+        console.log(firstChild.parentNode);
+
+        // 2. Dom Style
+        firstChild.parentNode.style.backgroundColor = 'gray';
+        firstChild.parentNode.style.padding = '5px 20px';
+        firstChild.parentNode.style.marginBottom = '20px';
+
+        // 3. Dom Atribute
+        document.getElementById('second-child').setAttribute('class', 'color');
+        document.getElementsByTagName('input')[0].removeAttribute('type');
+    </script>
+</body>
+
+</html>

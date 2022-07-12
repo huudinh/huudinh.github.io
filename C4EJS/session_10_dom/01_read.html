@@ -12,6 +12,7 @@
             - Read id
             - Read class
             - Read tags
+            - querySelector / querySelectorAll
         2. Update DOM
             - textContent
             - innerHTML
@@ -26,6 +27,10 @@
             - removeChild
                 + firstElementChild 
                 + lastElementChild 
+        6. Style & Atribute
+            - ParentNode
+            - Dom Style
+            - Attribute
 
 
     ------------------------------------------------>
@@ -33,12 +38,13 @@
 
 <body>
     <h1 id='msg'>Singers</h1>
-    <ul>
+    <ul id="list">
         <li class="singer">James Bay</li>
         <li class="singer">Nate Ruess</li>
         <li class="singer">Ed Sheeran</li>
-        <li class="singer">Steve Garrigan</li>
+        <li class="singer">Steve Garrigan <span>(Hot)</span></li>
     </ul>
+    <p><span>View more</span></p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius error reprehenderit architecto sapiente et eveniet sunt culpa. Reprehenderit, ab! Modi eligendi libero laudantium laboriosam autem vitae ipsum, quisquam a. Necessitatibus!</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius error reprehenderit architecto sapiente et eveniet sunt culpa. Reprehenderit, ab! Modi eligendi libero laudantium laboriosam autem vitae ipsum, quisquam a. Necessitatibus!</p>
 
@@ -66,6 +72,23 @@
 
             for (let i = 0; i < x.length; i++) {
                 console.log(x[i]);
+            }
+        }
+
+        // 4. QuerySelector
+        {
+            const list = document.getElementById('list');
+
+            // QuerySelector
+            list.querySelector('li').innerHTML = 'Hello';
+            list.querySelector('li span').innerHTML = '(Good)';
+
+
+            // QuerySelectorAll
+            const lists = document.querySelectorAll('li');
+
+            for (let i = 0; i < lists.length; i++) {
+                lists[i].innerHTML = 'hi';
             }
         }
     </script>
