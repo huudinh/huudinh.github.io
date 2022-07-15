@@ -1,0 +1,62 @@
+.main {
+  align-content: stretch;
+  height: 100vh;
+  margin: 0;
+}
+.main iframe {
+  width: 100%;
+  height: 97vh;
+  border: none;
+}
+.mainBox {
+  flex: 1;
+}
+
+.side {
+  background: #e9ebee;
+  padding: 0;
+  width: 350px;
+}
+.sideBar {
+  padding: 10px;
+}
+.sideBar .accordions-title {
+  background-color: #fff;
+}
+.sideBar .accordions-title.active {
+  background-color: #fff;
+}
+.sideBar .accordions_lv-title,
+.sideBar .accordions_lv-title.active {
+  background: #fff;
+}
+.sideBar .accordions_lv-title:hover,
+.sideBar .accordions_lv-title.active:hover {
+  background: #e9ebee;
+}
+.sideBar a:hover {
+  color: #c00;
+  text-decoration: underline;
+}
+.sideBar a:focus {
+  color: chocolate;
+}
+.sideBar a:active {
+  color: yellow;
+}
+.sideBar li {
+  padding: 2px 0;
+}
+
+a {
+  color: blue;
+}
+
+@media screen and (max-width: 414px) {
+  .main {
+    height: auto;
+  }
+  .side {
+    max-width: 100%;
+  }
+}/*# sourceMappingURL=theme.css.map */

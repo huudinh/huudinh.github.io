@@ -9,7 +9,7 @@
 
     <!----------------------------------------
         1. Object
-            - Init / Update / Delete
+            - Init / Create / Delete / Assign
             - Read
                 + 1. Read Property
                 + 2. Object destructuring
@@ -55,6 +55,16 @@
             delete person.age;
             console.log(person)
 
+            // Assign
+
+            const x = {
+                name: 'Alice'
+            }
+            const y = {
+                age: 20
+            }
+            const z = Object.assign(x, y);
+            console.log(z)
         }
     </script>
 
