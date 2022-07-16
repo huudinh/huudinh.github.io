@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!----------------------------------------
+        1. localStorage
+            - Store: localStorage.setItem()
+            - Retrieve: localStorage.getItem()
+            - Remove: localStorage.removeItem()
+            
+        2. sessionStorage
+            - Store: sessionStorage.setItem()
+            - Retrieve: sessionStorage.getItem()
+            - Remove: sessionStorage.removeItem()
+            
+        3. json
+           
+
+    ------------------------------------------------>
+</head>
+
+<body>
+    <button onclick="clickCounter()">Click me!</button>
+
+    <div id="result"></div>
+
+    <script>
+        let clickCount;
+
+        function clickCounter() {
+            if (clickCount) {
+                clickCount = Number(clickCount) + 1;
+            } else {
+                clickCount = 1;
+            }
+
+            document.getElementById('result').innerHTML = `You have clicked the button ${clickCount} tims(s).`;
+        }
+    </script>
+</body>
+
+</html>
