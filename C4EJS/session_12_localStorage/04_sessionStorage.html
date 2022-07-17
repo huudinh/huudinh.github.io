@@ -15,17 +15,17 @@
 
     <script>
         function clickCounter() {
-            if (localStorage.clickCount) {
-                localStorage.clickCount = Number(localStorage.clickCount) + 1;
+            if (sessionStorage.clickCount) {
+                sessionStorage.clickCount = Number(sessionStorage.clickCount) + 1;
             } else {
-                localStorage.clickCount = 1;
+                sessionStorage.clickCount = 1;
             }
-            document.getElementById('number').innerHTML = localStorage.clickCount;
+            document.getElementById('number').innerHTML = sessionStorage.clickCount;
         }
 
         // load localStorage
-        if (localStorage.clickCount) {
-            document.getElementById('number').innerHTML = localStorage.clickCount;
+        if (sessionStorage.clickCount) {
+            document.getElementById('number').innerHTML = sessionStorage.clickCount;
         }
     </script>
 </body>
