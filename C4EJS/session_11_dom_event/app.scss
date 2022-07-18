@@ -55,8 +55,17 @@ body {
             margin: 20px 10px;
             display: flex;
             justify-content: space-between;
+            cursor: pointer;
             &:hover {
                 border-color: #9361bf
+            }
+            &.completed {
+                background: #eee;
+                .booksList__name {
+                    text-decoration: line-through;
+                    font-style: italic;
+                    color: #9361bf;
+                }
             }
         }
         &__delete {

@@ -56,9 +56,18 @@ body {
   margin: 20px 10px;
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 .booksList li:hover {
   border-color: #9361bf;
+}
+.booksList li.completed {
+  background: #eee;
+}
+.booksList li.completed .booksList__name {
+  text-decoration: line-through;
+  font-style: italic;
+  color: #9361bf;
 }
 .booksList__delete {
   background: #9361bf;

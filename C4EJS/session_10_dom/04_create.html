@@ -24,6 +24,16 @@
     <br/>
     <br/>
     <p id="insert"><b>mesages...</b></p>
+    <style>
+        .button{
+            background: blue;
+            display:inline;
+            color:#fff;
+            cursor: pointer;
+            border:none;
+            padding:5px 15px;
+        }
+    </style>
 
     <script>
         // 1. insertAdjacentHTML
@@ -36,13 +46,15 @@
 
         d.insertAdjacentHTML('afterbegin', ` <div>afterbegin</div> `);
 
-        d.insertAdjacentHTML('afterend', ` <div>afterend</div> `);
+        d.insertAdjacentHTML('afterend', ` <div class="button">afterend</div> `);
 
         // 2. createElement
 
         const btn = document.createElement("button");
 
         btn.innerHTML = "Hello Button";
+
+        btn.classList.add('button');
 
         d.appendChild(btn);
     </script>

@@ -1,33 +1,27 @@
-const list = document.querySelector('.booksList ul');
+const ul = document.querySelector('.booksList ul');
 const forms = document.forms;
 
-// delete books
-list.addEventListener('click', (e) => {
-    if (e.target.className == 'booksList__delete') {
-        const li = e.target.parentElement;
-        li.parentNode.removeChild(li);
+// load books
+function loadBooks() {
+    let listBooks = data;
+    ul.innerHTML = '';
+
+    for (let i = 0; i < listBooks.length; i++) {
+        let book = listBooks[i];
+        readBooks(book.name, book.completed);
     }
-});
+}
 
-// add books
+loadBooks();
 
-const addForm = forms['booksAdd'];
-addForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    // create element
-    const input = addForm.querySelector('input[type="text"]');
+// Read Books
+function readBooks(inputValue, completed) {
     const li = document.createElement('li');
     const bookName = document.createElement('span');
     const deleteBtn = document.createElement('span');
 
-    if (input.value == '') {
-        alert('Please enter the book');
-        return;
-    }
-
     // add text content
-    bookName.textContent = input.value;
+    bookName.textContent = inputValue;
     deleteBtn.textContent = 'delete';
 
     // add class
@@ -37,21 +31,56 @@ addForm.addEventListener('submit', (e) => {
     // addend to DOM
     li.appendChild(bookName);
     li.appendChild(deleteBtn);
-    list.appendChild(li);
+
+    if(completed){
+        li.classList.add('completed');
+    }
+
+    ul.appendChild(li);
+
+    li.addEventListener('click', toggleFinal);
 
     // reset input
-    input.value = '';
+    document.querySelector('.booksAdd input').value = '';
+
+}
+
+function toggleFinal() {
+    if (this.classList.contains('completed')) {
+        this.classList.remove('completed');
+    } else {
+        this.classList.add('completed');
+    }
+}
+
+// delete books
+ul.addEventListener('click', (e) => {
+    if (e.target.className == 'booksList__delete') {
+        const li = e.target.parentElement;
+        li.parentNode.removeChild(li);
+    }
+});
+
+// add books
+const addForm = forms['booksAdd'];
+addForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const input = e.target.querySelector('input').value;
+    if (input == '') {
+        alert('Please enter the book');
+        return;
+    }
+    readBooks(input, false);
 });
 
 // filter
-
 const searchBook = forms['books__search'];
 searchBook.addEventListener('keyup', (e) => {
     e.preventDefault();
 
     const input = searchBook.querySelector('input');
     const filter = input.value.toUpperCase();
-    const ul = document.querySelector('.booksList ul');
     const li = ul.querySelectorAll('li');
 
     for (let i = 0; i < li.length; i++) {
@@ -62,9 +91,5 @@ searchBook.addEventListener('keyup', (e) => {
         } else {
             li[i].style.display = 'none';
         }
-        console.log(name);
-
     }
-
-
 })
