@@ -47,7 +47,7 @@ function readBooks(inputValue, completed) {
 
     ul.appendChild(li);
 
-    li.addEventListener('dblclick', toggleFinal);
+    li.addEventListener('click', toggleFinal);
 
     // store
     saveBooks();
