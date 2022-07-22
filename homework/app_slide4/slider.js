@@ -1,43 +1,63 @@
-let slideArray = [
+let slideArray1 = [
     {
-      title : 'The Walking Dead',
-      background : 'https://acollectivemind.files.wordpress.com/2013/12/season-4-complete-cast-poster-the-walking-dead-the-walking-dead-35777405-2528-670.png',
-      link : '#',
+        title: 'The Walking Dead',
+        background: 'https://acollectivemind.files.wordpress.com/2013/12/season-4-complete-cast-poster-the-walking-dead-the-walking-dead-35777405-2528-670.png',
+        link: '#',
     },
     {
-      title : 'The Big Bang Theory',
-      background : 'https://www.denofgeek.com/wp-content/uploads/2019/02/tbbt_12-15.jpg',
-      link : '#',
+        title: 'The Big Bang Theory',
+        background: 'https://www.denofgeek.com/wp-content/uploads/2019/02/tbbt_12-15.jpg',
+        link: '#',
     },
     {
-      title : 'The Last Man on Earth',
-      background : 'https://www.wired.com/wp-content/uploads/2015/02/LMOE-AliveInTuscon_scene44_0028_hires2.jpg',
-      link : '#',
+        title: 'The Last Man on Earth',
+        background: 'https://www.wired.com/wp-content/uploads/2015/02/LMOE-AliveInTuscon_scene44_0028_hires2.jpg',
+        link: '#',
     },
-  ];
-class Slider{
-    constructor(){
+];
+let slideArray2 = [
+    {
+        title: 'The Walking Dead',
+        background: 'https://www.denofgeek.com/wp-content/uploads/2019/02/tbbt_12-15.jpg',
+        link: '#',
+    },
+    {
+        title: 'The Big Bang Theory',
+        background: 'https://acollectivemind.files.wordpress.com/2013/12/season-4-complete-cast-poster-the-walking-dead-the-walking-dead-35777405-2528-670.png',
+        link: '#',
+    },
+    {
+        title: 'The Last Man on Earth',
+        background: 'https://www.wired.com/wp-content/uploads/2015/02/LMOE-AliveInTuscon_scene44_0028_hires2.jpg',
+        link: '#',
+    },
+];
+class Slider {
+    constructor(slideArray) {
+        this.$slideArray = slideArray;
+
         this.$slideIndex = 0;
         this.$currentSlideIndex = 0;
 
         this.$container = document.createElement('div');
+        this.$container.classList.add('slider');
         this.$mySlider = document.createElement('div');
-        this.$mySlider.classList.add('mySlider');
+        this.$mySlider.classList.add('sliderBox');
 
-        for(let i = 0; i < slideArray.length; i++){
-            
-           
+        for (let i = 0; i < this.$slideArray.length; i++) {
+
+
             this.$link = document.createElement('a');
-            this.$link.src = slideArray[i].link;
+            this.$link.src = this.$slideArray[i].link;
 
             this.$img = document.createElement('img');
-            this.$img.src = slideArray[i].background;
+            this.$img.src = this.$slideArray[i].background;
             this.$img.classList.add('singleSlide');
-            this.$img.alt = slideArray[i].title;
+            this.$img.alt = this.$slideArray[i].title;
 
-            if(i == 0){
+            if (i == 0) {
                 this.$img.style = 'left:0';
-            } else{
+            } else {
                 this.style = '';
             }
 
@@ -61,22 +81,21 @@ class Slider{
 
         this.$imgRight = document.createElement('img');
         this.$imgRight.src = 'right-arrow.png';
-        console.log(slideArray);
     }
 
- 
+
 
     prevSlide = () => {
         this.$nextSlideIndex;
-        if(this.$currentSlideIndex === 0){
-            this.$nextSlideIndex = slideArray.length -1;
+        if (this.$currentSlideIndex === 0) {
+            this.$nextSlideIndex = this.$slideArray.length - 1;
         } else {
-            this.$nextSlideIndex = this.$currentSlideIndex -1;
+            this.$nextSlideIndex = this.$currentSlideIndex - 1;
         }
         // Ẩn slide hiện tại, hiện slide "currentSlideIndex"
         this.$mySlider.childNodes[this.$nextSlideIndex].firstChild.style.left = '-100%';
         this.$mySlider.childNodes[this.$currentSlideIndex].firstChild.style.left = 0;
-   
+
         this.$mySlider.childNodes[this.$nextSlideIndex].firstChild.setAttribute("class", "singleSlide slideInLeft");
         this.$mySlider.childNodes[this.$currentSlideIndex].firstChild.setAttribute("class", "singleSlide slideOutRight");
 
@@ -86,7 +105,7 @@ class Slider{
 
     nextSlide = () => {
         this.$nextSlideIndex;
-        if(this.$currentSlideIndex === slideArray.length - 1){
+        if (this.$currentSlideIndex === this.$slideArray.length - 1) {
             this.$nextSlideIndex = 0;
         } else {
             this.$nextSlideIndex = this.$currentSlideIndex + 1;
@@ -94,7 +113,7 @@ class Slider{
         // Ẩn slide hiện tại, hiện slide "currentSlideIndex"
         this.$mySlider.childNodes[this.$nextSlideIndex].firstChild.style.left = '100%';
         this.$mySlider.childNodes[this.$currentSlideIndex].firstChild.style.left = 0;
-   
+
         this.$mySlider.childNodes[this.$nextSlideIndex].firstChild.setAttribute("class", "singleSlide slideInRight");
         this.$mySlider.childNodes[this.$currentSlideIndex].firstChild.setAttribute("class", "singleSlide slideOutLeft");
 
@@ -102,7 +121,7 @@ class Slider{
         this.$currentSlideIndex = this.$nextSlideIndex;
     }
 
-    render(){
+    render() {
         this.$container.appendChild(this.$mySlider);
         this.$container.appendChild(this.$sliderNav);
         this.$sliderNav.appendChild(this.$sliderPrev);
@@ -114,6 +133,8 @@ class Slider{
 }
 
 const app = document.getElementById('app');
-const slider = new Slider();
+const slider = new Slider(slideArray1);
+const slider2 = new Slider(slideArray2);
 app.appendChild(slider.render());
+app.appendChild(slider2.render());
 
