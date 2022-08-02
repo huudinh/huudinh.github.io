@@ -1,3 +1,5 @@
+console.log('Variable');
+
 let x = 1;
 console.log('x ', x);
 x = 2;
@@ -19,3 +21,7 @@ var foo = 'foo';
     console.log('foo: ', foo);
     foo = 'foo';
 */
+
+const arr = [];
+arr.push(1);
+console.log('arr: ', arr);

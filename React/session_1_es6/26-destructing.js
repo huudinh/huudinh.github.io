@@ -11,3 +11,4 @@ const obj = {
 const name = obj.name;
 const age = obj.age;
 const address = obj.address;
+// console.log(name, age, address);

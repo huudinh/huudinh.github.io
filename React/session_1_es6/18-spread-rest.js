@@ -6,8 +6,12 @@ console.log(arr);
 
 console.log(...arr);
 
+// ---------------------------------------------
+
 const arr2 = [0,...arr, 4];
 console.log(arr2);
+// View Output
 
 const concatedArr = [...arr, ...arr2];
 console.log('concatedArr', concatedArr);
+// View Output

@@ -25,7 +25,9 @@ const y = 2;
 const z = 3;
 Math.max(x, y, z);
 
-const sum = (a, b, ...numbers) => {
+// ----------------------------------------
+
+const sum = (...numbers) => {
     let total = 0;
     for (i = 0; i < numbers.length; i++){
         total += numbers[i];
@@ -34,3 +36,4 @@ const sum = (a, b, ...numbers) => {
 };
 
 console.log(sum(1, 2, 3, 4, 5, 6));
+// View Output

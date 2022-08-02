@@ -9,13 +9,16 @@ console.log(...arr);
 const arr2 = [0,...arr, 4];
 console.log(arr2);
 
+// -----------------------------------------------------
+
 const concatedArr = [...arr, ...arr2];
 console.log('concatedArr', concatedArr);
+// View Output
 
 const obj = { name: 'Mindx' };
 const objCloned = {
-    address: 'Hanoi',
-    name: 'CI_76',
     ...obj,
+    address: 'Hanoi',
 };
 console.log(objCloned);
+// View Output

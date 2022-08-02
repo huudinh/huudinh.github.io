@@ -1,4 +1,4 @@
-// console.log('Arrow Function');
+console.log('Arrow Function');
 
 // function expression, hoisting supported
 function sum(a, b) {
