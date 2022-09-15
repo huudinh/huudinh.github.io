@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const generateId = () => Math.floor(Math.random() * 10000);
 
-export default function Input() {
+const Input = () => {
   const [inputs, setInputs] = useState([]);
 
   const append = () => {
@@ -49,3 +49,5 @@ export default function Input() {
     </div>
   );
 }
+
+export default Input;
