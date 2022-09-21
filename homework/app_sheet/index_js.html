@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .border{
+            border:1px solid #c00!important;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="register-form">
+        <input type="text" name="Truong_so_1" placeholder="Trường số 1" />
+        <input type="text" name="Truong_so_2" placeholder="Trường số 2" />
+        <input type="text" name="Truong_so_3" placeholder="Trường số 3" />
+        <button type="submit" id="submit-form">Gửi</button>
+    </form>
+    <script type="text/javascript">
+        (function () {
+            const registerForm = document.getElementById('register-form');
+            registerForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const registerInfo = {
+                    name: registerForm.Truong_so_1,
+                    phone: registerForm.Truong_so_2,
+                    note: registerForm.Truong_so_3,
+                };
+                validateForm(registerInfo);
+            });
+
+        })();
+
+        /* Hàm Kiểm Tra Form Dự Đoán */
+        function validateForm(registerInfo) {
+
+            if (registerInfo.name.value == "") {
+                alert("Bạn chưa nhập Tên");
+                registerInfo.name.classList.add("border");
+                return false;
+            } else {
+                registerInfo.name.classList.remove("border");
+            }
+            if (registerInfo.phone.value == "") {
+                alert("Bạn chưa nhập số điện thoại");
+                registerInfo.phone.classList.add("border");
+                return false;
+            } else if (isNaN(registerInfo.phone.value)) {
+                alert("Số điện thoại của bạn có ký tự");
+                registerInfo.phone.classList.add("border");
+                return false;
+            } else if (!getValidNumber(registerInfo.phone.value)) {
+                alert("Số điện thoại của bạn không đúng");
+                registerInfo.phone.classList.add("border");
+                return false;
+            } else {
+                registerInfo.phone.classList.remove("border")
+
+            }
+
+            sendAPI(registerInfo);
+            alert('Bạn đã gửi thành công');
+            registerInfo.name.value = '';
+            registerInfo.phone.value = '';
+            registerInfo.note.value = '';
+        }
+
+        /* Check Số điện thoại */
+        function getValidNumber(value) {
+            value = value.trim();
+            if (value.substring(0, 1) == '1') {
+                value = value.substring(1);
+            }
+            if (value.length == 10) {
+                return value;
+            }
+            return false;
+        }
+        function sendAPI(registerInfo){
+            // var formdata = new FormData();
+            data1 = registerInfo.name.value;
+            data2 = registerInfo.phone.value;
+            data3 = registerInfo.note.value;
+    
+            var requestOptions = {
+            method: 'GET',
+            // body: formdata,
+            redirect: 'follow'
+            };
+    
+            fetch(`https://script.google.com/macros/s/AKfycbwNDZdcONENw-EA0lVweN_98myB2cGG1YSR6HjuuQ/exec?Truong_so_1=${data1}&Truong_so_2=${data2}&Truong_so_3=${data3}`, requestOptions)
+            .then(response => response.text())
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
+        }
+        // sendAPI('dinh 5','nhung 4','trang 4');
+
+    </script>
+</body>
+
+</html>
