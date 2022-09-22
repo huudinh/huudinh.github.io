@@ -11,7 +11,7 @@
 
 <body>
     <script>
-        // anonumous function, hoisting supported
+        // declaration function, hoisting supported
         sum(3, 3);
 
         function sum(a, b) {
@@ -19,7 +19,7 @@
             return a + b;
         }
 
-        // function expression, no hoisting supported
+        // expression function, no hoisting supported
         multi(2, 3);
         const multi = function(a, b) {
             console.log('multi');
