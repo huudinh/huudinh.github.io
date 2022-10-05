@@ -6,8 +6,8 @@ const Ref = () => {
     const handleFocus = () => {
         console.log(document.getElementById('myTxt'));
         console.log(inputRef.current);
-        
-        document.getElementById('myTxt').focus();
+
+        inputRef.current.focus();
     };
 
     return (

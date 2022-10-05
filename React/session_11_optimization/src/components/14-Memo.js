@@ -7,9 +7,19 @@ const Memo = () => {
         setValue({ ...value });
     };
 
+    const updateName = () => {
+        setValue({ ...value, name: value.name + 'x' });
+    };
+
+    const updateAge = () => {
+        setValue({ ...value, age: value.age + 1 });
+    };
+
     return (
         <div>
             <button onClick={updateValue}>Change value</button>
+            <button onClick={updateName}>Change name</button>
+            <button onClick={updateAge}>Change age</button>
             <Normal name={value.name} age={value.age} />
             <Memoized name={value.name} age={value.age} />
         </div>
@@ -35,6 +45,12 @@ const Pure = (props) => {
     );
 };
 
-const Memoized = memo(Pure);
+const propsAreEquals = (prevProps, nextProps) => {
+    console.log('prevProps', prevProps);
+    console.log('nextProps', nextProps);
+    return prevProps.name === nextProps.name;
+};
+
+const Memoized = memo(Pure, propsAreEquals);
 
 export default Memo;

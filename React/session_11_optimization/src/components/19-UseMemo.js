@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const UseMemo = () => {
     const [items, setItems] = useState([1, 2, 3]);
@@ -8,10 +8,6 @@ const UseMemo = () => {
     const addToItems = () => {
         setItems([...items, 1]);
     }
-
-    useEffect(() => {
-        console.log('doubleItems changed');
-    }, [doubleItems]);
 
     return (
         <div>

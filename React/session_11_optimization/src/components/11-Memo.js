@@ -1,4 +1,4 @@
-import { useState, memo } from 'react';
+import { useState } from 'react';
 
 const Memo = () => {
     const [value, setValue] = useState({ name: 'Mindx', age: 20 });
@@ -11,7 +11,6 @@ const Memo = () => {
         <div>
             <button onClick={updateValue}>Change value</button>
             <Normal name={value.name} age={value.age} />
-            <Memoized name={value.name} age={value.age} />
         </div>
     )
 };
@@ -24,23 +23,5 @@ const Normal = (props) => {
         </div>
     );
 };
-
-const Pure = (props) => {
-    // shallow compare
-    console.log('Pure, Re-render');
-    return (
-        <div>
-            Pure: { props.name } { props.age }
-        </div>
-    );
-};
-
-const propsAreEquals = (prevProps, nextProps) => {
-    console.log('prevProps', prevProps);
-    console.log('nextProps', nextProps);
-    return true;
-};
-
-const Memoized = memo(Pure, propsAreEquals);
 
 export default Memo;
