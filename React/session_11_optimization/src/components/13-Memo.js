@@ -38,6 +38,7 @@ const Pure = (props) => {
 const propsAreEquals = (prevProps, nextProps) => {
     console.log('prevProps', prevProps);
     console.log('nextProps', nextProps);
+    // return false;
     return true;
 };
 
