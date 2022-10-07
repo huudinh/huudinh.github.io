@@ -6,9 +6,9 @@ const UseLocalStorage = () => {
 
     return (
         <div>
-            {count}
-            <button onClick={handleIncrease}>Increase</button>
-            <button onClick={handleDecrease}>Decrease</button>
+            {count.value}
+            <button onClick={count.increase}>Increase</button>
+            <button onClick={count.decrease}>Decrease</button>
             <br/><br/>
             {count2.value} 
             <button onClick={count2.increase}>Increase</button>
