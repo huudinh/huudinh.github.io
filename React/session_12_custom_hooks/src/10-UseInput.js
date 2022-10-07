@@ -4,7 +4,7 @@ import { useInput } from "./hooks";
 const UseInpput = () => {
     const [input, setInput] = useState('');
 
-    const [value, setValue] = useInput()
+    const value = useInput()
 
     const handleInputChange = (event) => {
         setInput(event.target.value);   

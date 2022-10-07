@@ -33,6 +33,14 @@ const useHover = () => {
 const useLocalStorage = () => {
     const [value, setValue] = useState(0);
 
+    useEffect(() => {
+        setValue(Number(localStorage.getItem('count')));
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem('count', value);
+    }, [value]);
+
     return [value, setValue];
 }
 

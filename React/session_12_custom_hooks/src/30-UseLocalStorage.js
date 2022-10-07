@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useLocalStorage } from "./hooks";
 
 const UseLocalStorage = () => {
@@ -11,14 +10,6 @@ const UseLocalStorage = () => {
         setCount(count - 1);
     };
 
-    useEffect(() => {
-        setCount(Number(localStorage.getItem('count')));
-    }, []);
-
-    useEffect(() => {
-        localStorage.setItem('count', count);
-    }, [count]);
-
     return (
         <div>
             {count}
@@ -29,3 +20,4 @@ const UseLocalStorage = () => {
 };
 
 export default UseLocalStorage;
+// View Output

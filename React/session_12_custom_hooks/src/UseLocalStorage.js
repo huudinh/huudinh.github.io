@@ -1,20 +1,18 @@
 import { useLocalStorage } from "./hooks";
 
 const UseLocalStorage = () => {
-    const [count, setCount] = useLocalStorage('count1');
-
-    const handleIncrease = () => {
-        setCount(count + 1);
-    };
-    const handleDecrease = () => {
-        setCount(count - 1);
-    };
+    const count = useLocalStorage('count1');
+    const count2 = useLocalStorage('count2');
 
     return (
         <div>
-            {count}
-            <button onClick={handleIncrease}>Increase</button>
-            <button onClick={handleDecrease}>Decrease</button>
+            {count.value} 
+            <button onClick={count.increase}>Increase</button>
+            <button onClick={count.decrease}>Decrease</button>
+            <br/><br/>
+            {count2.value} 
+            <button onClick={count2.increase}>Increase</button>
+            <button onClick={count2.decrease}>Decrease</button>
         </div>
     );
 };

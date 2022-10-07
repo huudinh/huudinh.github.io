@@ -30,30 +30,11 @@ const useHover = () => {
     return [elemRef, isHover];
 };
 
-const useLocalStorage = (name) => {
+const useLocalStorage = () => {
     const [value, setValue] = useState(0);
-
-    useEffect(() => {
-        setValue(Number(localStorage.getItem(name)));
-    }, [name]);
-
-    useEffect(() => {
-        localStorage.setItem(name, value);
-    }, [value, name]);
 
     return [value, setValue];
 }
 
-const useHistory = (value) => {
-    const [currentValue, setCurrentValue] = useState(value);
-    const [history, setHistory] = useState([]);
-
-    useEffect(() => {
-        setHistory((prev) => {
-            return [...prev, currentValue];
-        });
-    }, [currentValue]);
-};
-
-export { useInput, useHover, useLocalStorage, useHistory };
+export { useInput, useHover, useLocalStorage };
 

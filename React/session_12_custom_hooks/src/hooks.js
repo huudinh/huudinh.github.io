@@ -33,6 +33,13 @@ const useHover = () => {
 const useLocalStorage = (name) => {
     const [value, setValue] = useState(0);
 
+    const handleIncrease = () => {
+        setValue(value + 1);
+    };
+    const handleDecrease = () => {
+        setValue(value - 1);
+    };
+
     useEffect(() => {
         setValue(Number(localStorage.getItem(name)));
     }, [name]);
@@ -41,7 +48,11 @@ const useLocalStorage = (name) => {
         localStorage.setItem(name, value);
     }, [value, name]);
 
-    return [value, setValue];
+    return {
+        value: value,
+        increase: handleIncrease,
+        decrease: handleDecrease,
+    };
 }
 
 const useHistory = (value) => {

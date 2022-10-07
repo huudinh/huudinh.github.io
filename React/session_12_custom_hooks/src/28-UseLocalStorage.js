@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+import { useLocalStorage } from "./hooks";
 
 const UseLocalStorage = () => {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useLocalStorage();
 
     const handleIncrease = () => {
         setCount(count + 1);
@@ -28,4 +29,3 @@ const UseLocalStorage = () => {
 };
 
 export default UseLocalStorage;
-// View Output

@@ -1,9 +1,9 @@
-import UseHistory from "./UseHistory";
+import UseLocalStorage from "./UseLocalStorage";
 
 const App = () => {
 	return (
     <div>
-      <UseHistory />
+      <UseLocalStorage />
     </div>
   );
 }

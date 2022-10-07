@@ -6,6 +6,13 @@ const UseLocalStorage = () => {
     const handleIncrease = () => {
         setCount(count + 1);
     };
+    const handleDecrease = () => {
+        setCount(count - 1);
+    };
+
+    useEffect(() => {
+        setCount(Number(localStorage.getItem('count')));
+    }, []);
 
     useEffect(() => {
         localStorage.setItem('count', count);
@@ -15,6 +22,7 @@ const UseLocalStorage = () => {
         <div>
             {count}
             <button onClick={handleIncrease}>Increase</button>
+            <button onClick={handleDecrease}>Decrease</button>
         </div>
     );
 };
