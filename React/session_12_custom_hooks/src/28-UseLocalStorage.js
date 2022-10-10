@@ -12,7 +12,10 @@ const UseLocalStorage = () => {
     };
 
     useEffect(() => {
-        setCount(Number(localStorage.getItem('count')));
+        const items = Number(localStorage.getItem('count'));
+        if (items) {
+            setValue(items);
+        }
     }, []);
 
     useEffect(() => {

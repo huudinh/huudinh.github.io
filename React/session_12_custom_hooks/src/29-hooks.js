@@ -34,7 +34,10 @@ const useLocalStorage = () => {
     const [value, setValue] = useState(0);
 
     useEffect(() => {
-        setValue(Number(localStorage.getItem('count')));
+        const items = Number(localStorage.getItem('count'));
+        if (items) {
+            setValue(items);
+        }
     }, []);
 
     useEffect(() => {
