@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>SCI FRAMEWORK</title>
+    <meta name="Resource-type" content="Document" />
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link id="pagestyle" rel="stylesheet" type="text/css" href="media/css/style-min.css" />
+    <link id="pagestyle" rel="stylesheet" type="text/css" href="media/css/intro.css" />
+    <script type="text/javascript" src="media/js/lib.js"></script>
+</head>
+
+<body>
+    <div class="header"></div>
+    <div class="sidebar">
+        <div class="sidebarBox sidebar-left"></div>
+        <div class="main">
+            <div id="mainLoad">
+                <div class="container">
+                    <style>
+                        .animation1{display:flex;gap:20px;flex-direction:column;align-items:center}
+                        .animation1__line1{width:calc(100% / 3)}
+                        .animation1__line2{display:flex;gap:20px}
+                        .animation1__line2 div{width:calc(100% / 3)}
+                        .animation1 img{width:100%;height:auto;display:block}
+                        .document{display:flex;flex-direction:column}
+                        .document a{transition:all .2s linear}
+                        .document a:hover{color:blue;text-decoration:underline}
+                    </style>
+                    <h1>Animation</h1>
+                    <div class="document">
+                        <h3>Get more animation here!</h3>
+                        <a href="https://animate.style/">1. https://animate.style/</a>
+                        <a href="https://github.com/graingert/WOW/blob/master/css/libs/animate.css#L1175">2. https://github.com/graingert/WOW/blob/master/css/libs/animate.css#L1175</a>
+                    </div>
+                    <h3>I. Animation</h3>
+                    <p>=> add class efect: .fadeInDown, .fadeInLeft, .fadeIn, .fadeInRight, .fadeInUp and add .load</p>
+                    <div class="animation1">
+                        <div class="animation1__line1">
+                            <div class="fadeInDown load">
+                                <img src="https://ik.imagekit.io/demo/img/image2.jpeg?tr=w-400,h-300" alt="">
+                            </div>
+                        </div>
+                        <div class="animation1__line2">
+                            <div class="fadeInLeft load">
+                                <img src="https://ik.imagekit.io/demo/img/image1.jpeg?tr=w-400,h-300" alt="">
+                            </div>
+                            <div class="fadeIn load">
+                                <img src="https://ik.imagekit.io/demo/img/image4.jpeg" alt="">
+                            </div>
+                            <div class="fadeInRight load">
+                                <img src="https://ik.imagekit.io/demo/img/image3.jpg?tr=w-400,h-300" alt="">
+                            </div>
+                        </div>
+                        <div class="animation1__line1">
+                            <div class="fadeInUp load">
+                                <img src="https://ik.imagekit.io/demo/img/image3.jpg?tr=w-400,h-300" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <h3>I. Animation delay</h3>
+                    <p>=> add Atribute delay-time="600"</p>
+                    <div class="animation1">
+                        <div class="animation1__line1">
+                            <div class="fadeInDown load" delay-time="600">
+                                <img src="https://ik.imagekit.io/demo/img/image2.jpeg?tr=w-400,h-300" alt="">
+                            </div>
+                        </div>
+                        <div class="animation1__line2">
+                            <div class="fadeInLeft load" delay-time="700">
+                                <img src="https://ik.imagekit.io/demo/img/image1.jpeg?tr=w-400,h-300" alt="">
+                            </div>
+                            <div class="fadeIn load" delay-time="500">
+                                <img src="https://ik.imagekit.io/demo/img/image4.jpeg" alt="">
+                            </div>
+                            <div class="fadeInRight load" delay-time="800">
+                                <img src="https://ik.imagekit.io/demo/img/image3.jpg?tr=w-400,h-300" alt="">
+                            </div>
+                        </div>
+                        <div class="animation1__line1">
+                            <div class="fadeInUp load" delay-time="900">
+                                <img src="https://ik.imagekit.io/demo/img/image3.jpg?tr=w-400,h-300" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="media/js/data.js"></script>
+    <script type="text/javascript" src="media/js/intro.js"></script>
+
+<!--lazy load-->
+<script>
+    document.addEventListener("scroll", function() {
+        myLazy('img.lazy', 'src');
+        myLazy('source.lazy', 'srcset');
+        myLazy('.lazy-bg', 'img-bg');
+        myLazy('.load', 'loaded');
+    });
+    LazyShowScreen('img.lazy', 'src')
+    LazyShowScreen('.load', 'loaded')
+
+    // Lazy load
+    function myLazy(sec, attr) {
+        const section_loads = document.querySelectorAll(sec);
+        let winTop = window.innerHeight;
+
+        for (let i = 0; i < section_loads.length; i++) {
+            let pos_top = section_loads[i].getBoundingClientRect().top;
+            let pos_bottom = section_loads[i].getBoundingClientRect().bottom;
+            let delay = section_loads[i].getAttribute('delay-time');
+            if (pos_top <= winTop && pos_bottom >= 0) {
+                switch (attr) {
+                    case 'src':
+                        section_loads[i].src = section_loads[i].dataset.src;
+                        section_loads[i].classList.remove('lazy');
+                        break;
+                    case 'srcset':
+                        section_loads[i].srcset = section_loads[i].dataset.srcset;
+                        section_loads[i].classList.remove('lazy');
+                        break;
+                    case 'img-bg':
+                        section_loads[i].classList.remove('lazy-bg');
+                        section_loads[i].classList.add('img-bg');
+                        break;
+                    case 'loaded':
+                        setTimeout(() => {
+                            section_loads[i].classList.remove('load');
+                            section_loads[i].classList.add('loaded');
+                        }, delay)
+                        break;
+                    case 'slide':
+                        section_loads[i].classList.add('slide');
+                        break;
+                    default:
+                        console.log(`Sorry, we are out of ${attr}.`);
+                }
+
+            }
+        }
+
+    }
+
+    function LazyShowScreen(sec, attr) {
+        const section_loads = document.querySelectorAll(sec);
+        let win_height = screen.height;
+        for (let i = 0; i < section_loads.length; i++) {
+            let delay = section_loads[i].getAttribute('delay-time') || 0;
+
+            if (section_loads[i].getBoundingClientRect().top < win_height) {
+                switch (attr) {
+                    case 'loaded':
+                        setTimeout(() => {
+                            section_loads[i].classList.add('loaded');
+                            section_loads[i].classList.remove('load');
+                        }, delay)
+                        break;
+                    case 'src':
+                        section_loads[i].src = section_loads[i].dataset.src;
+                        section_loads[i].classList.remove('lazy');
+                        break;
+                    case 'srcset':
+                        section_loads[i].srcset = section_loads[i].dataset.srcset;
+                        section_loads[i].classList.remove('lazy');
+                        break;
+                    case 'img-bg':
+                        section_loads[i].classList.remove('lazy-bg');
+                        section_loads[i].classList.add('img-bg');
+                        break;
+                    case 'slide':
+                        section_loads[i].classList.remove('slide');
+                        section_loads[i].classList.add('slide');
+                        break;
+                    default:
+                        console.log(`Sorry, we are out of ${attr}.`);
+                }
+            }
+        }
+    }
+</script>
+</body>
+
+</html>

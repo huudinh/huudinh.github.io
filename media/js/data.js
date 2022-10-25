@@ -38,6 +38,10 @@ let data = {
             link : 'modal.html'
         },
         {
+            name : 'Animation',
+            link : 'animation.html'
+        },
+        {
             name : 'Icon Font',
             link : 'icon.html'
         },        
