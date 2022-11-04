@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!----------------------------------------
+        1. Box model
+            - block
+            - width/ height
+                px / % / vw - vh
+            - border
+                - border-width
+                - border-style
+                - border-color
+                - border-radius
+            - padding
+                - shortcode: top - right - bottom - left
+                - width = width + padding
+                - box-sizing
+            - margin
+            
+        2. Position
+            - static
+            - relative
+            - absolute
+            - index
+            - fixed
+            - sticky
+    ------------------------------------------------>
+</head>
+<body>
+    <h1>Box Modal & Position</h1>
+    <ol type="I">
+        <li>Box model
+            <ol>
+                <li>Block</li>
+                <li>Width/ height (px / % / vw - vh)</li>
+                <li>Border <br><i>( border-width - border-style - border-color - border-radius)</i></li>
+                <li>Padding 
+                    <ul>
+                        <li>Shortcode: top - right - bottom - left</li>
+                        <li>Width = width + border + padding</li>
+                        <li>Box-sizing</li>
+                    </ul>
+                </li>
+                <li>Margin</li>
+            </ol>
+        </li>
+        <li>Position
+            <ul>
+                <li>Relative</li>
+                <li>Absolute</li>
+                <li>Index</li>
+                <li>Fixed</li>
+                <li>Sticky</li>
+            </ul>
+        </li>
+    </ol>
+    <style>
+        header,footer{
+            background-color:#e5e5e5;
+            text-align:center;
+            padding:15px;
+            margin:10px 0;
+        }
+    </style>
+    <h2>Box Modal</h2>
+    <div class="container">
+        <header>
+            <h1>Hello World</h1>
+        </header>
+        <main class="main">
+            <div class="main__nav box">
+                Menu
+            </div>
+            <div class="main__content box">
+                Content
+            </div>
+            <div class="main__sidebar box">
+                Sidebar
+            </div>
+        </main>
+        <footer>
+            © copyright 2022
+        </footer>
+    </div>
+    <h2>Position</h2>
+    <style>
+        header{
+            position: sticky;
+            top:0;
+            z-index: 2;
+        }
+        .box{
+            border:2px solid #ccc;
+            background: #fff;
+            height: 50px;
+        }
+        .main{
+            height: 100vh;
+            background-color: #eee;
+            position: relative;
+        }
+        .main__nav,.main__sidebar{
+            width:20%;
+            position: absolute;
+            top:0
+        }
+        .main__nav{
+            left:0;
+        }
+        .main__sidebar{
+            right:0
+        }
+        .main__content{
+            position: absolute;
+            width: 60%;
+            left:20%;
+        }
+
+    </style>
+</body>
+</html>
