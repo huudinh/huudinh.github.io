@@ -1,0 +1,264 @@
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+}
+body{
+    padding:0;
+    margin:0;
+    font-family: 'Roboto Slab', serif;
+}
+
+/* Framework */
+.active{
+    font-weight: 700;
+    color: red;
+}
+.bgDanger {
+    background-color: #dc3545;
+}
+
+.bgWarning {
+    background-color: #ffc107;
+}
+
+.bgSuccess {
+    background-color: #198754;
+}
+
+/* Layout */
+.listMenu{
+    margin: 20px;
+}
+header, footer{
+    background-color: rgb(180, 191, 201);
+    padding:15px 45px;
+    border:10px solid black;
+    text-align: center;
+}
+header{
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    top:0;
+}
+
+main{
+    border:10px solid black;
+    display: flex;
+    margin-top: 164px;;
+}
+
+.main__item{
+    background-color:#eee;
+    padding:10px 20px;
+    border:5px solid #ccc;
+    margin:10px;
+    width:200px;
+}
+
+.main__item--content{
+    width:68%;
+    z-index: 2;
+    left:0;
+}
+
+.main__item--sidebar{
+    width:30%;
+}
+.sidebar{
+    position: relative;
+    height: 100%;
+}
+.sidebar__banner{
+    position: sticky;
+    top:220px;
+}
+.sidebar__banner img{
+    width:100%
+}
+
+/* Inline & block */
+.navMain ul{
+    list-style: none;
+}
+.navMain li{
+    display: inline;
+    padding: 5px;
+}
+.navMain a{
+    text-decoration: none;
+    padding: 5px;
+    color:black;
+    border-radius: 4px;
+}
+.navMain a:hover{
+    background-color: blue;
+    color:white;
+}
+
+/* Block */
+.blockBox__item {
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+    display: block;
+}
+
+/* Inline */
+.inlineBox__item {
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+    display: inline;
+}
+
+/* Inline Block */
+.inlineBlockBox__item {
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+    display: inline-block;
+}
+
+/* Flex*/
+.flexBox{
+    display: flex;
+}
+.flexBox__item {
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+
+/* Inline Flex*/
+
+.inlineFlexBox{
+    display: inline-flex;
+}
+.inlineFlexBox__item {
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+
+/* wrap */
+.flexBox--wrap{
+    flex-wrap: wrap;
+}
+.flexBox__item--wrap{
+    width:200px;
+}
+
+/* gap */
+.flexBox--gap{
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+/* Align Item */
+.bigBox{
+    display: flex;
+    background: #ddd;
+    width: 100%;
+    height: 300px;
+}
+
+.bigBox__item {
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+.bigBox__item--w20{
+    width:20%
+}
+.bigBox__item--w33{
+    width:33.3333%;
+}
+.bigBox__item--w220px{
+    width:220px;
+}
+
+.bigBox__item--w100{
+    width:100%
+}
+.bigBox--alignItem {
+    align-items: flex-start;
+}
+
+/* Flex Direction */
+.bigBox--flexDirection{
+    flex-direction: row-reverse;
+}
+
+/* Justify Content */
+.bigBox--justifyContent{
+    justify-content: center;
+}
+
+/* Align Item */
+.bigBox__item--alignSelf{
+    align-self: flex-end;
+}
+
+/* Align Content */
+.bigBox--alignContent{
+    align-content: space-between;
+}
+
+/* Order */
+.bigBox__item--order1{
+    order:1;
+}
+.bigBox__item--order2{
+    order:2;
+}
+.bigBox__item--order3{
+    order:3;
+}
+
+/* Flex Grow */
+.bigBox--flexGrow1{
+    flex-grow: 1;
+}
+.bigBox__item--flexGrow1{
+    flex-grow: 1;
+}
+.bigBox__item--flexGrow3{
+    flex-grow: 3;
+}
+
+/* Flex Basis */
+.bigBox__item--flexBasis{
+    flex-basis: 100%;
+}
+
+/* Flex Shrink */
+.bigBox__item--flexShrink3{
+    flex-shrink: 3;
+}
+
+/* Flex */
+.bigBox__item--flex{
+    flex: 1;
+}
+
+/* Grid */
+.girdBox {
+    display: grid;
+    width: 500px;
+    height: 500px;
+    background-color: gray;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+}
+
+.girdBox__item {            
+    width: 150px;
+    height: 150px;
+    background-color: lightgreen;
+    border: 1px solid black;
+    font-size: 24px;
+}
