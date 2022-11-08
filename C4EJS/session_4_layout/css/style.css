@@ -2,6 +2,9 @@
 * {
     box-sizing: border-box;
 }
+html {scroll-behavior:smooth;}
+h2[id]{scroll-margin-top:170px;}
+h3[id]{scroll-margin-top:170px;}
 body{
     padding:0;
     margin:0;
@@ -9,6 +12,10 @@ body{
 }
 
 /* Framework */
+.container{
+    max-width: 1200px;
+    margin:0 auto;
+}
 .active{
     font-weight: 700;
     color: red;
@@ -30,9 +37,8 @@ body{
     margin: 20px;
 }
 header, footer{
-    background-color: rgb(180, 191, 201);
+    background-color: #fff;
     padding:15px 45px;
-    border:10px solid black;
     text-align: center;
 }
 header{
@@ -43,35 +49,38 @@ header{
 }
 
 main{
-    border:10px solid black;
+    border-bottom: 0;
     display: flex;
-    margin-top: 164px;;
+    margin-top: 135px;
 }
 
 .main__item{
     background-color:#eee;
     padding:10px 20px;
-    border:5px solid #ccc;
     margin:10px;
-    width:200px;
 }
 
 .main__item--content{
-    width:68%;
-    z-index: 2;
-    left:0;
+    flex:1;
+    width: 80%;
 }
 
 .main__item--sidebar{
-    width:30%;
+    width:310px;
 }
 .sidebar{
     position: relative;
-    height: 100%;
+    height: 99%;
+}
+.sidebar a{
+    color:#333;
+}
+.sidebar a:hover{
+    color:#dc3545
 }
 .sidebar__banner{
     position: sticky;
-    top:220px;
+    top:190px;
 }
 .sidebar__banner img{
     width:100%
@@ -92,7 +101,7 @@ main{
     border-radius: 4px;
 }
 .navMain a:hover{
-    background-color: blue;
+    background-color: #dc3545;
     color:white;
 }
 
@@ -248,17 +257,26 @@ main{
 /* Grid */
 .girdBox {
     display: grid;
-    width: 500px;
-    height: 500px;
-    background-color: gray;
+    padding:10px;
+    background-color: #2196F3;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto;
 }
-
 .girdBox__item {            
-    width: 150px;
-    height: 150px;
-    background-color: lightgreen;
+    padding:15px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid black;
     font-size: 24px;
+}
+.girdBox--gap{
+    gap:10px;
+}
+.gridBox__item--column{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.gridBox__item--row{
+    grid-row-start: 1;
+    grid-row-end: 3;
 }
