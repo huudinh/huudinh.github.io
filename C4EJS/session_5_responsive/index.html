@@ -189,14 +189,24 @@
     </footer>
 </body>
 <script>
-    const menu = document.querySelector('.navMain span');
+    const menu = document.querySelector('.navMain span i');
+    const menuBox = document.querySelector('.navMain ul');
+
     menu.addEventListener('click', ()=>{
         acitveMenu();
     })
     
     function acitveMenu() {
-        const menuBox = document.querySelector('.navMain ul')
         menuBox.classList.toggle("navActive");
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target != menu) {
+            setTimeout(()=>{
+                menuBox.classList.remove("navActive");
+            }, 500);
+        }
     }
 </script>
 </html>
