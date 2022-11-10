@@ -184,6 +184,10 @@ main{
         border-top: 1px solid #ccc;
     }
     .navMain:hover ul{
+        display: none;
+        /* display: block; */
+    }
+    .navMain:hover ul.navActive{
         display: block;
     }
     .navMain span{

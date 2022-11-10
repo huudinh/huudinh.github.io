@@ -16,7 +16,7 @@
 <body>
     <header>
         <div class="container">
-            <h1>Responsive Website</h1>
+            <h1 id="slogan">Responsive Website</h1>
             <nav class="navMain">
                 <span><i style="font-size:24px" class="fa">&#xf0c9;</i></span>
                 <ul>
@@ -189,19 +189,14 @@
     </footer>
 </body>
 <script>
-    let navs = document.querySelectorAll('.navMain li');
-    let menu = document.querySelector('.navMain span');
-
+    const menu = document.querySelector('.navMain span');
     menu.addEventListener('click', ()=>{
-        document.querySelector('.navMain ul').style.display = 'block';
+        acitveMenu();
     })
-
-    for(let i = 0; i < navs.length; i++){
-        navs[i].addEventListener('click', ()=> {
-            setTimeout(()=> {
-                document.querySelector('.navMain ul').style.display = 'none';
-            },500);
-        })
+    
+    function acitveMenu() {
+        const menuBox = document.querySelector('.navMain ul')
+        menuBox.classList.toggle("navActive");
     }
 </script>
 </html>
