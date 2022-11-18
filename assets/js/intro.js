@@ -8,7 +8,7 @@ const header = document.querySelectorAll('.header');
 header[0].insertAdjacentHTML('beforeEnd',
     `<div class="row">
         <div class="col-md-6">
-            <div class="header__logo font">SCI FRAMEWORK</div>
+            <div class="header__logo font"><a href="/">SCI FRAMEWORK</a></div>
         </div>
         <div class="col-md-6">
             <div class="header__slogan">FRONTEND WEB DEVELOPER SITE </div>
