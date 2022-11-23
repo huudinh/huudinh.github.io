@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 //Show Modal
             modalButton[i].addEventListener("click", () => {
                 if (modalCheck()) {
-                    modals[j].style.display = "block";
+                    modals[j].style.display = "flex";
 
                 }
             });
@@ -149,12 +149,12 @@ document.addEventListener("DOMContentLoaded", function() {
     container[0].insertAdjacentHTML('beforeEnd',
         `<div class="modal modal-clipBox" id="modal-clip">
     <div class="modal-closePic">&times;</div>
-    <div class="modal-bg"></div>
     <div class="modal-box modal-box-video animate-zoom">
         <div class="modal-video">
             <iframe id="youtube" src="" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
+    <div class="modal-bg"></div>
 </div>`
     );
 
@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function() {
         modalVideo.addEventListener('click', () => {
             youtube.setAttribute('src', modalSrc);
             setTimeout(() => {
-                modalClipBoxs[0].style.display = "block";
+                modalClipBoxs[0].style.display = "flex";
             }, 200);
         });
 
