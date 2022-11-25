@@ -3,7 +3,7 @@ const recruitCard = (data) => {
   return `
     <div class="brandPost_dls_1_0_0__item">
         <div class="brandPost_dls_1_0_0__pic">
-            <img src="${data.pic}" class="modal-btn" data-modal="modal-pic" alt="">
+            <img src="${data.pic}" class="modal-btn" alt="${data.name}">
         </div>
         <div class="brandPost_dls_1_0_0__name">${data.name}</div>
         <div class="brandPost_dls_1_0_0__des">${data.des}</div>
@@ -27,7 +27,7 @@ const render = (list, count) => {
     }
   }
   //Call modal
-  modalRun();
+  modalRun(list);
 };
 
 // Khai báo số bài viết trên trang
@@ -79,14 +79,14 @@ function showPage(num){
 }
 
 // compoinent modal popup
-const modalPop = () => {
+const modalPop = (list, index) => {
   return `
     <div class="modal" id="modal-pic" style="display:flex">
         <div class="modal-closePic">×</div>
         <div class="modal-bg"></div>
         <div class="modal-box modal-box-img animate-zoom">
             <div class="modal-pic" style="text-align:center">
-                <img src="images/pic-1.jpg" alt="">
+                <img src="${list[index].pic}" alt="photo">
             </div>
         </div>
     </div>
@@ -94,13 +94,12 @@ const modalPop = () => {
 }
 
 // Methor modal popup
-function modalRun(){
+function modalRun(list){
   const modalItem = document.querySelectorAll('.modal-btn');
-  // console.log(modalItem);
-  modalItem.forEach((item)=> {
-    // console.log(item)
+  console.log(list);
+  modalItem.forEach((item, index)=> {
     item.addEventListener('click', ()=>{
-      document.querySelector('#modal').insertAdjacentHTML('beforeend', modalPop());
+      document.querySelector('#modal').insertAdjacentHTML('beforeend', modalPop(list, index));
       document.querySelector('.modal-closePic').addEventListener('click', () => {
         document.querySelector('#modal').innerHTML = '';
       });
