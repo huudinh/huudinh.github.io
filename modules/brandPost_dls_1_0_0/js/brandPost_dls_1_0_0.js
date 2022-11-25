@@ -26,6 +26,8 @@ const render = (list, count) => {
         recruitCard(list[i]);
     }
   }
+  //Call modal
+  modalRun();
 };
 
 // Khai báo số bài viết trên trang
@@ -74,4 +76,37 @@ function showPage(num){
     li[i].classList.remove('act');
   }
   li[num-1].classList.add('act');
+}
+
+// compoinent modal popup
+const modalPop = () => {
+  return `
+    <div class="modal" id="modal-pic" style="display:flex">
+        <div class="modal-closePic">×</div>
+        <div class="modal-bg"></div>
+        <div class="modal-box modal-box-img animate-zoom">
+            <div class="modal-pic" style="text-align:center">
+                <img src="images/pic-1.jpg" alt="">
+            </div>
+        </div>
+    </div>
+  `;
+}
+
+// Methor modal popup
+function modalRun(){
+  const modalItem = document.querySelectorAll('.modal-btn');
+  // console.log(modalItem);
+  modalItem.forEach((item)=> {
+    // console.log(item)
+    item.addEventListener('click', ()=>{
+      document.querySelector('#modal').insertAdjacentHTML('beforeend', modalPop());
+      document.querySelector('.modal-closePic').addEventListener('click', () => {
+        document.querySelector('#modal').innerHTML = '';
+      });
+      document.querySelector('.modal-bg').addEventListener('click', () => {
+        document.querySelector('#modal').innerHTML = '';
+      });
+    });
+  });
 }
