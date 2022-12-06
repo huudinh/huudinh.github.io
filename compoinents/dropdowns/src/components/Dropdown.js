@@ -34,7 +34,6 @@ class Dropdown {
         this.$container.className = 'dropdown'
 
         this.$dropdown = document.createElement('ul')
-        this.$dropdown.className = 'dropdown-menu end-0 mt-2 w-100'
 
         this.renderDropdownItem()
 
@@ -48,7 +47,8 @@ class Dropdown {
 
     }
     setStatus = (status) => {
-        this.$dropdownButon.innerHTML = status
+        this.$dropdownButon.innerHTML = status;
+        this.$dropdown.classList.toggle('active')
     }
     renderDropdownItem = () => {
         this.statusList.map(e => {

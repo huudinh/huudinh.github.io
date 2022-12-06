@@ -8,7 +8,7 @@ class DropdownItem {
         this.$container.addEventListener('click', () => {
             this.setDropdown()
         })
-        this.$item = document.createElement('button')
+        this.$item = document.createElement('span')
         this.$item.className = 'dropdown-item'
         this.$item.innerHTML = title
     }
