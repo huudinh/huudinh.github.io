@@ -1,19 +1,24 @@
 import { InputGroup } from "./InputGroup.js";
+// import { setScreen } from '../app.js';
 
 class Login {
     $container;
+    $title;
     $usernameInput;
     $passwordInput;
     $btnSubmit;
 
     constructor() {
+        this.$title = document.createElement('div');
+        this.$title.innerHTML = 'Đăng nhập hệ thống';
+        this.$title.classList.add('login__title');
         this.$container = document.createElement('form');
+        this.$container.classList.add('login');
+        this.$container.addEventListener('submit', this.handleSubmit);
         this.$usernameInput = new InputGroup('Username', 'text');
         this.$passwordInput = new InputGroup('Password', 'password');
         this.$btnSubmit = document.createElement('button');
         this.$btnSubmit.innerHTML = 'Submit';
-        this.$btnSubmit.addEventListener('click', this.handleSubmit);
-
     }
 
     handleSubmit = (evt) => {
@@ -37,6 +42,7 @@ class Login {
     }
 
     render() {
+        this.$container.appendChild(this.$title);
         this.$container.appendChild(this.$usernameInput.render());
         this.$container.appendChild(this.$passwordInput.render());
         this.$container.appendChild(this.$btnSubmit);

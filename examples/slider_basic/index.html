@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://huudinh.github.io/assets/sass/lib.min.css">
+    <link rel="stylesheet" href="./assets/sass/slider.min.css">
+    <style>
+         @font-face {
+            font-family: 'fontello';
+            src: url(https://huudinh.github.io/assets/fonts/fontello.woff2) format("woff2"), url(https://huudinh.github.io/assets/fonts/fontello.woff) format("woff");
+        }
+    </style>
+    <link rel="stylesheet" href="https://huudinh.github.io/assets/sass/icon.min.css">
+</head>
+
+<body style="background-color: #F3F4F6;">
+    <div class="container" style="padding-top: 20px;">
+        <div class="slider">
+            <!-- <div class="slider__item ">
+                <img class="slider__image" src="https://www.w3schools.com/w3css/img_snowtops.jpg" style="width:100%">
+                <p class="slider__text">Slideshow1</p>
+            </div>
+            <div class="slider__item ">
+                <img class="slider__image" src="https://www.w3schools.com/w3css/img_snowtops.jpg" style="width:100%">
+                <p class="slider__text">Slideshow1</p>
+            </div> -->
+        </div>
+        <div class="slider__control">
+            <button class="slider__arrow slider__arrow--prev"><i class="icon-angle-left"></i></button>
+            <button class="slider__arrow slider__arrow--next"><i class="icon-angle-right"></i></button>
+        </div>
+    </div>
+
+    <script>
+        const arr = [
+            {
+                "image": "https://www.w3schools.com/w3css/img_snowtops.jpg",
+                "text": "Slideshow1"
+            },
+            {
+                "image": "https://www.w3schools.com/w3css/img_lights.jpg",
+                "text": "Slideshow2"
+            },
+            {
+                "image": "https://www.w3schools.com/w3css/img_mountains.jpg",
+                "text": "Slideshow3"
+            },
+            {
+                "image": "https://www.w3schools.com/w3css/img_forest.jpg",
+                "text": "Slideshow4"
+            },
+        ];
+
+        // compoinent slide
+        const slideCard = (data) => {
+            return `
+                <div class="slider__item ">
+                    <img class="slider__image" src="${data.image}" alt="${data.text}" style="width:100%">
+                    <p class="slider__text">${data.text}</p>
+                </div>
+            `;
+        };
+        for(let i = 0; i < arr.length; i++){
+            let slider = document.querySelector('.slider');
+            if(i < 2){
+                slider.innerHTML += slideCard(arr[i]);
+            }
+        }
+
+        const btnNext = document.getElementsByClassName('slider__arrow--next');
+        const btnPrev = document.getElementsByClassName('slider__arrow--prev');
+        const img = document.getElementsByClassName('slider__image');
+        const text = document.getElementsByClassName('slider__text');
+        let i = 0;
+        btnNext[0].addEventListener("click", function () {
+            plusDivs(1);
+            i++;
+            for (let x = 0; x < img.length; x++) {
+                if (i >= arr.length) {
+                    i = 0;
+                }
+                img[x].setAttribute('src', arr[i].image);
+                text[x].innerText = arr[i].text;
+            }
+
+        });
+        btnPrev[0].addEventListener('click', function () {
+            plusDivs(-1);
+            i--;
+            for (let x = 0; x < img.length; x++) {
+                if (i <= -1) {
+                    i = arr.length - 1;
+                }
+                img[x].setAttribute('src', arr[i].image);
+                text[x].innerText = arr[i].text;
+            }
+
+
+        })
+        let slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            let i;
+            let x = document.getElementsByClassName("slider__item");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
