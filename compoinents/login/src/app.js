@@ -1,5 +1,5 @@
-import Login from "../components/Login.js";
-import Home from "../components/Home.js";
+import Login from "./components/Login.js";
+import Home from "./components/Home.js";
 
 const app = document.getElementById("root");
 const login = new Login();
@@ -13,23 +13,15 @@ export const setScreen = (component) => {
     }
     currentScreen = app.appendChild(component.render());
 };
-export const getPage = () => {
+
+export const getScreen = () => {
     if (!localStorage.getItem("isLogin")) {
         setScreen(login);
         return;
-    }
-    setScreen(home);
+    } 
+    if (localStorage.getItem("isLogin")) {
+        setScreen(home);
+        return;
+    } 
     return;
 };
-
-// let currentScreen = null;
-// const app = document.getElementById('root');
-
-// const setScreen = (screen)=>{
-//     if (currentScreen){
-//         app.removeChild(currentScreen);
-//     }
-//     currentScreen = app.appendChild(screen.render());
-// };
-
-// export { setScreen };

@@ -1,19 +1,19 @@
 import { InputGroup } from "./InputGroup.js";
 import { setScreen } from '../app.js';
 import Home from './Home.js';
-import Register from './Register.js';
+import Login from './Login.js';
 
-class Login {
+class Register {
     $container;
     $title;
     $usernameInput;
     $passwordInput;
     $btnSubmit;
-    $linkToRegister;
+    $linkToLogin;
 
     constructor() {
         this.$title = document.createElement('div');
-        this.$title.innerHTML = 'Đăng nhập hệ thống';
+        this.$title.innerHTML = 'Đăng ký thành viên';
         this.$title.classList.add('login__title');
         this.$container = document.createElement('form');
         this.$container.classList.add('login');
@@ -22,15 +22,15 @@ class Login {
         this.$passwordInput = new InputGroup('Password', 'password');
         this.$btnSubmit = document.createElement('button');
         this.$btnSubmit.innerHTML = 'Submit';
-        this.$linkToRegister = document.createElement('div');
-        this.$linkToRegister.classList.add('link');
-        this.$linkToRegister.innerHTML = 'Create new account';
-        this.$linkToRegister.addEventListener('click', this.moveToRegister);
+        this.$linkToLogin = document.createElement('div');
+        this.$linkToLogin.classList.add('link');
+        this.$linkToLogin.innerHTML = 'Create new account';
+        this.$linkToLogin.addEventListener('click', this.moveToLogin);
     }
 
-    moveToRegister = () => {
-        const register = new Register();
-        setScreen(register);
+    moveToLogin = () => {
+        const login = new Login();
+        setScreen(login);
     }
 
     handleSubmit = (evt) => {
@@ -64,10 +64,11 @@ class Login {
         this.$container.appendChild(this.$usernameInput.render());
         this.$container.appendChild(this.$passwordInput.render());
         this.$container.appendChild(this.$btnSubmit);
-        this.$container.appendChild(this.$linkToRegister);
+        this.$container.appendChild(this.$linkToLogin);
+
         return this.$container;
     }
 
 }
 
-export default Login;
+export default Register;
