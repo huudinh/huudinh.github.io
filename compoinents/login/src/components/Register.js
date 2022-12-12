@@ -1,6 +1,5 @@
 import { InputGroup } from "./InputGroup.js";
 import { setScreen } from '../app.js';
-import Home from './Home.js';
 import Login from './Login.js';
 
 class Register {
@@ -36,12 +35,12 @@ class Register {
     }
 
     saveUser = (info) => {
+        let listUsers = [];
         if (localStorage.getItem('users') != null) {
-            let listUsers = JSON.parse(localStorage.getItem('users'));
-
-            listUsers.push(info);
-            localStorage.setItem('users', JSON.stringify(listUsers));
-        }
+            listUsers = JSON.parse(localStorage.getItem('users'));
+        } 
+        listUsers.push(info);
+        localStorage.setItem('users', JSON.stringify(listUsers));
     }
 
     handleSubmit = (evt) => {
@@ -77,10 +76,7 @@ class Register {
             const login = new Login();
             setScreen(login);
         }
-      
-
     }
-
 
     render() {
         this.$container.appendChild(this.$title);
@@ -92,7 +88,6 @@ class Register {
 
         return this.$container;
     }
-
 }
 
 export default Register;
