@@ -8,6 +8,7 @@ class Register {
     $title;
     $usernameInput;
     $passwordInput;
+    $passwordInputConfirm;
     $btnSubmit;
     $linkToLogin;
 
@@ -20,11 +21,12 @@ class Register {
         this.$container.addEventListener('submit', this.handleSubmit);
         this.$usernameInput = new InputGroup('Username', 'text');
         this.$passwordInput = new InputGroup('Password', 'password');
+        this.$passwordInputConfirm = new InputGroup('Confirm Password', 'password');
         this.$btnSubmit = document.createElement('button');
         this.$btnSubmit.innerHTML = 'Submit';
         this.$linkToLogin = document.createElement('div');
         this.$linkToLogin.classList.add('link');
-        this.$linkToLogin.innerHTML = 'Create new account';
+        this.$linkToLogin.innerHTML = 'Back to Login';
         this.$linkToLogin.addEventListener('click', this.moveToLogin);
     }
 
@@ -33,10 +35,20 @@ class Register {
         setScreen(login);
     }
 
+    saveUser = (info) => {
+        if (localStorage.getItem('users') != null) {
+            let listUsers = JSON.parse(localStorage.getItem('users'));
+
+            listUsers.push(info);
+            localStorage.setItem('users', JSON.stringify(listUsers));
+        }
+    }
+
     handleSubmit = (evt) => {
         evt.preventDefault();
         const username = this.$usernameInput.getInputValue();
         const password = this.$passwordInput.getInputValue();
+        const confirmPassword = this.$passwordInputConfirm.getInputValue();
 
         if(!username){
             this.$usernameInput.setError('Username cannot be empty!');
@@ -52,17 +64,29 @@ class Register {
             this.$passwordInput.setError();
         }
 
-        if(username == 'admin' && password == '123456'){
-            localStorage.setItem("isLogin", true);
-            const home = new Home();
-            setScreen(home);
+        if(!confirmPassword){
+            this.$passwordInputConfirm.setError('Confirm Password cannot be empty!');
+        } else if(confirmPassword !=  password){
+            this.$passwordInputConfirm.setError('Confirm password not matched!');
+        } else{
+            this.$passwordInputConfirm.setError();
+            this.saveUser({
+                username: username,
+                password: password,
+            });
+            const login = new Login();
+            setScreen(login);
         }
+      
+
     }
+
 
     render() {
         this.$container.appendChild(this.$title);
         this.$container.appendChild(this.$usernameInput.render());
         this.$container.appendChild(this.$passwordInput.render());
+        this.$container.appendChild(this.$passwordInputConfirm.render());
         this.$container.appendChild(this.$btnSubmit);
         this.$container.appendChild(this.$linkToLogin);
 

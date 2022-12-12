@@ -52,6 +52,18 @@ class Login {
             this.$passwordInput.setError();
         }
 
+        if(localStorage.getItem('users')){
+            const user = JSON.parse(localStorage.getItem('users'));
+
+            for(let i = 0; i < user.length; i++){
+                if(username == user[i].username && password == user[i].password){
+                    localStorage.setItem("isLogin", true);
+                    const home = new Home();
+                    setScreen(home);
+                }
+            }
+        }
+
         if(username == 'admin' && password == '123456'){
             localStorage.setItem("isLogin", true);
             const home = new Home();

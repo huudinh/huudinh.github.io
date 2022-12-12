@@ -19,6 +19,7 @@ class Home {
     }
     moveToLogin = () => {
         const login = new Login();
+        localStorage.removeItem('isLogin');
         setScreen(login);
     }
     render() {
