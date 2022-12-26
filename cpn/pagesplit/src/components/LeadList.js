@@ -4,7 +4,6 @@ class LeadList {
     constructor({ data }) {
         this.data = data
         this.$container = document.createElement('div')
-
         this.$theadTr = document.createElement('div')
         this.$theadTr.className = 'row dataTable__title'
 
