@@ -21,6 +21,8 @@ export const getLead = async({ pageNum }) => {
                 newData.push(item)
             }
         });
+        console.log(newData);
+        console.log(pageCount);
         return {
             render: newData,
             pageCount: pageCount

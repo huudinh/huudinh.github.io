@@ -4,17 +4,12 @@ import Pagination from "./Pagination.js";
 
 class Lead {
     index = 1
-    // isLoading = false
-
     constructor() {
         this.$dataTable = document.createElement('div')
         this.$dataTable.className = `dataTable`;
-
         this.$table = document.createElement('div')
-
         this.$pagiBox = document.createElement('div')
         this.$pagiBox.className = `dataTable__page`
-
         this.getAllLead()
     }
 
@@ -24,11 +19,9 @@ class Lead {
 
     getAllLead = async () => {
         try {
-            // loading(true)
             const res = await getLead({
                 pageNum: this.index,
             })
-            // loading(false)
 
             this.$leadList = new LeadList({ data: res.render })
             this.$pagination = new Pagination({ count: res.pageCount, index: this.index, setIndex: this.setIndex, getAllData: this.getAllLead })
