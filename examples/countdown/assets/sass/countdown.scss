@@ -1,0 +1,24 @@
+.app{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.count{
+    margin: 0 auto;
+    text-align: center;
+    span{
+        background: #ccc;
+        border-radius: 5px;
+        padding: 0 15px;
+        margin:5px;
+        box-shadow: 0 1px 8px rgba(0,0,0,.1);
+    }
+    &__item1{
+        font-size:15em
+    }
+    &__item2{
+        font-size:3em
+    }
+}
