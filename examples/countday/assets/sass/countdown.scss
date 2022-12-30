@@ -1,0 +1,36 @@
+.app{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.count{
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    text-transform: uppercase;
+    align-items: center;
+    &__text{
+        background: #ccc;
+        border-radius: 5px;
+        padding:4px 20px;
+        margin:5px;
+        box-shadow: 0 1px 8px rgba(0,0,0,.1);
+    }
+    span{
+        display: block;
+        font-size:3em;
+        line-height: 1.2em;
+    }
+    p{
+        font-size:2em;
+    }
+    &__item1{
+        font-size:2em;
+        margin:3em 0;
+    }
+    &__item2{
+        font-size:1.5em;
+    }
+}
