@@ -1,14 +1,13 @@
 <?php
-	/*SLIDER 1.0.1*/
-	'id_slider_1_0_1' => array(
-		'key' => 'id_slider_1_0_1',
-		'name' => 'slider_1_0_1',
+	'id_slider_da_1_0_0' => array(
+		'key' => 'id_slider_da_1_0_0',
+		'name' => 'slider_da_1_0_0',
 		'label' => 'Slider 1.0.1',
 		'display' => 'block',
 		'sub_fields' => array(
 			array(
 				/* Tab Slider Desktop*/
-				'key' => 'id_slider_1_0_1_tab1',
+				'key' => 'id_slider_da_1_0_0_tab1',
 				'label' => 'Slider Desktop',
 				'name' => '',
 				'type' => 'tab',
@@ -24,7 +23,7 @@
 				'endpoint' => 0,
 			),
 			array(
-				'key' => 'id_slider_1_0_1_sub1',
+				'key' => 'id_slider_da_1_0_0_sub1',
 				'label' => 'Slide Desktop',
 				'name' => 'slide_pc',
 				'type' => 'gallery',
@@ -52,7 +51,7 @@
 			),
 			array(
 				/* Tab Slider Mobile*/
-				'key' => 'id_slider_1_0_1_tab2',
+				'key' => 'id_slider_da_1_0_0_tab2',
 				'label' => 'Slider Mobile',
 				'name' => '',
 				'type' => 'tab',
@@ -68,7 +67,7 @@
 				'endpoint' => 0,
 			),
 			array(
-				'key' => 'id_slider_1_0_1_sub2',
+				'key' => 'id_slider_da_1_0_0_sub2',
 				'label' => 'Slide Mobile',
 				'name' => 'slide_mb',
 				'type' => 'gallery',
@@ -98,5 +97,4 @@
 		'min' => '',
 		'max' => '',
 	),
-	/*END SLIDER 1.0.1*/
 ?>
