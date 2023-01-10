@@ -15,7 +15,10 @@ const slideBuild = (data) => {
 
 const slideNext = (data) => {
     let count = 1
-    setInterval(() => {
+    const time = setInterval(() => {
+        if (data.length == 1) {
+            clearInterval(time);
+        }
         if(count < data.length){
             slideBuild(data[count])
             count++; 
