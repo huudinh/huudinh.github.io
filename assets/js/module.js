@@ -112,10 +112,11 @@ function renderModule (type, module, data, logic){
     let url = `${type}/${module}/`;
     loadDoc(`${url}code.html`, insertLayout);
     
-    // Function xu ly
+    // Function xu ly Template & Image
     function insertLayout(xhttp) {
         document.getElementById(`${module}`).innerHTML = xhttp.responseText;
         imgTheme(`${url}`, `.${module} img`);
+        sourceTheme(`${url}`, `.${module} source`);
     }
 
     // Khai baos url
