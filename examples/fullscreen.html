@@ -1,0 +1,58 @@
+<div class="map-wrapper">
+    <div id="map" class="map">
+        Chao các bạn
+        <p>
+            <a id="fullscreen" class="fullscreen" href="#">Fullscreen</a>
+        </p>
+        <p>
+            <a id="exitFullscreen" class="fullscreen" href="#">Exit Fullscreen</a>
+        </p>
+    </div>
+</div>
+<style>
+    .map{
+        color:#fff;
+    }
+    body{
+        background: #fff;
+    }
+    .map:-webkit-full-screen { width: 100%; height: 100%; background: #fff;}
+    .map:-moz-full-screen { width: 100%; height: 100%;  background: #fff}
+    .map:-ms-full-screen { width: 100%; height: 100%;  background: #fff}
+    .map:full-screen { width: 100%; height: 100%;  background: #fff}
+</style>
+<script>
+    var fullscreen_element = document.getElementById('map');
+    var fullscreen_button = document.getElementById('fullscreen');
+    var exitFullscreen = document.getElementById('exitFullscreen');
+
+    fullscreen_button.addEventListener('click', function () {
+        launchFullScreen(fullscreen_element);
+    }, false);
+
+    exitFullscreen.addEventListener('click', function () {
+        cancelFullscreen(fullscreen_element);
+    }, false);
+
+    function cancelFullscreen() {
+        if (document.cancelFullScreen) {
+            document.cancelFullScreen();
+        } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if (document.webkitCancelFullScreen) {
+            document.webkitCancelFullScreen();
+        }
+    }
+
+    function launchFullScreen(element) {
+        if (element.requestFullScreen) {
+            element.requestFullScreen();
+        } else if (element.mozRequestFullScreen) {
+            element.mozRequestFullScreen();
+        } else if (element.webkitRequestFullScreen) {
+            element.webkitRequestFullScreen();
+        } else if (element.msRequestFullScreen) {
+            element.msRequestFullScreen();
+        }
+    }
+</script>
