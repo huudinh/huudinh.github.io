@@ -1,0 +1,59 @@
+.sidebar_mz_1_0_0 {
+    &__breadcrumb {
+        background: var(--primary-color);
+        color: #fff;
+        padding: 5px 15px;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    &__item {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    &__pic {
+        width:110px;
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    &__title {
+        font-size: 16px;
+        margin-top: 10px;
+        margin-top: 0;
+        text-align: justify;
+        flex:1;
+        &:hover {
+            color: var(--primary-color);
+        }
+    }
+
+    &__banner {
+        margin-top: 20px;
+        img {
+            width: 100%;
+            height:auto;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        &__breadcrumb {
+            margin-bottom: 2px;
+        }
+        &__item {
+            margin-top: 15px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        width: 100%;
+        &__pic {
+            width: 155px;
+        }
+    }
+}

@@ -34,6 +34,10 @@ let data = {
             link : 'lazy.html'
         },
         {
+            name : 'Lazyload 2',
+            link : 'lazy-v2.html'
+        },
+        {
             name : 'Modal',
             link : 'modal.html'
         },

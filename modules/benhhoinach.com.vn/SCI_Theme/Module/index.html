@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAGAZINE</title>
+    <link rel="stylesheet" href="assets/sass/lib.min.css" />
+    <link rel="stylesheet" href="assets/sass/custom.min.css">
+    <script src="./assets/js/lib.min.js"></script>
+    <script src="./assets/js/module.min.js"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div id="header_mz_1_0_0"></div>
+    <div class="header_mz_1_0_0__bg" id="headerBg"></div>
+    <!-- END HEADER -->
+
+    <!-- SLIDER -->
+    <section id="slider_mz_1_0_0"></section>
+    <!-- END SLIDER -->
+
+    <!-- NEWS -->
+    <section class="news_mz_1_0_0" id="news_mz_1_0_0"></section>
+    <!-- END NEWS -->
+
+    <!-- VIDEO -->
+    <section class="video_mz_1_0_0" id="video_mz_1_0_0"></section>
+    <!-- END VIDEO -->
+
+    <!-- NEWS -->
+    <div class="container">
+        <div class="newsMain">
+            <div class="newsMain__boxLeft">
+                <section class="news_mz_2_0_0" id="news_mz_2_0_0"></section>
+            </div>
+            <div class="newsMain__boxRight">
+                <section class="sidebar_mz_1_0_0" id="sidebar_mz_1_0_0"></section>
+            </div>
+        </div>
+    </div>
+    <!-- END NEWS -->
+
+    <!-- FOOTER -->
+    <footer class="footer_mz_1_0_0" id="footer_mz_1_0_0"></footer>
+    <!-- END FOOTER -->
+</body>
+
+<script>
+    renderModule('Header', 'header_mz_1_0_0', '', 'logic');
+    renderModule('Home', 'slider_mz_1_0_0', '', '');
+    renderModule('Home', 'news_mz_1_0_0', '', '');
+    renderModule('Home', 'video_mz_1_0_0', '', '');
+    renderModule('Home', 'news_mz_2_0_0', '', '');
+    renderModule('Home', 'sidebar_mz_1_0_0', '', '');
+    renderModule('Footer', 'footer_mz_1_0_0', '', '');
+</script>
+
+</html>
