@@ -135,6 +135,10 @@
         text-align: justify;
         font-size: 16px;
         line-height: 1.8;
+            img {
+                max-width: 100%;
+                margin: 10px auto;
+            }
 
         a {
             color: var(--primary-color);
@@ -167,14 +171,7 @@
 
         &__title {
             font-size: 18px;
-        }
-
-        &__text {
-            img {
-                width: 100%;
-                margin: 10px auto;
-            }
-        }
+        }        
 
         &__navg {
             display: block;
