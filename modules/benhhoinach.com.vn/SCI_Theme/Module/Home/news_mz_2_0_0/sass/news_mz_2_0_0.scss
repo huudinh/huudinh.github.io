@@ -1,5 +1,4 @@
 .news_mz_2_0_0 {
-
     &__breadcrumb {
         font-size: 20px;
         margin:0 0 15px;
@@ -17,7 +16,6 @@
             top: 0;
         }
     }
-   
 
     &__box {
         display: flex;
@@ -54,7 +52,7 @@
     }
 
     &__desc {
-        width: 50%;
+        flex:1;
     }
 
     &__boxBottom {

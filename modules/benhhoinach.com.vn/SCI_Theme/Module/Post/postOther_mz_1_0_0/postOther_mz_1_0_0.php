@@ -33,11 +33,12 @@
 			$excerpt = wp_trim_words( get_the_excerpt($post->ID), 120 );
 			$content .='
 				<div class="postOther_mz_1_0_0__item">
-					<div class="postOther_mz_1_0_0__pic">
-						<a href="'.get_permalink().'"><img width="1200" height="848" src="'.$img.'" alt="'.get_the_title().'"></a>
-					</div>
+					<a class="postOther_mz_1_0_0__pic" href="'.get_permalink().'">
+						<img width="1200" height="848" class="lazy" data-src="'.$img.'" alt="'.get_the_title().'">
+					</a>
 					<div class="postOther_mz_1_0_0__text">
 						<h3 class="postOther_mz_1_0_0__title"><a href="'.get_permalink().'">'.get_the_title().'</a></h3>
+						<p class="postOther_mz_1_0_0__desc">'.$excerpt.'</p>
 					</div>
 				</div>
 			';
