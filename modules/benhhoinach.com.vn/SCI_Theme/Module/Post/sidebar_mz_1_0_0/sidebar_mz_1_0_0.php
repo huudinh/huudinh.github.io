@@ -27,7 +27,8 @@
         $args = array(
             'post_status' => 'publish',
             'showposts' => 0,
-            'orderby' => 'desc',
+            'orderby' => 'rand',
+            'post__not_in' => array($post->ID),
             'category__not_in' => array( 295 ),
         );
         $getposts = new WP_query($args); 
@@ -35,6 +36,7 @@
         while ($getposts->have_posts() && $num < 8) : 
             $num++;
             $getposts->the_post(); 
+            $do_not_duplicate[$post->ID] = $post->ID;
             $kim = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'thumbnail');            
             $img = ($kim[0]!='')?$kim[0]:catch_that_image($post->ID);
             $time = get_the_date('d/m/Y');

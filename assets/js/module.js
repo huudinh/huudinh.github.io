@@ -1,4 +1,4 @@
-const $ = document.querySelector.bind(document)
+const $o = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
 // Rewrite image import no-lazy

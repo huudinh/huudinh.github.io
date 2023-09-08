@@ -1,6 +1,6 @@
 <?php
     // Home page
-    if(is_home() || is_front_page()) {
+    if ( is_page_template( 'templates/page_home.php' ) ) {
         include(locate_template("Module/Home/slider_mz_1_0_0/sass/slider_mz_1_0_0.min.css"));
         include(locate_template("Module/Home/news_mz_1_0_0/sass/news_mz_1_0_0.min.css"));
         include(locate_template("Module/Home/video_mz_1_0_0/sass/video_mz_1_0_0.min.css"));

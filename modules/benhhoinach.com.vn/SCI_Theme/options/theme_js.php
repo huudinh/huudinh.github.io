@@ -1,6 +1,6 @@
 <?php
     // Home Page
-    if(is_home() || is_front_page()) {
+    if ( is_page_template( 'templates/page_home.php' ) ) {
         include(locate_template('Module/assets/js/tiny-slider.min.js')); 
     } 
     // All Page

@@ -13,7 +13,8 @@
                 $info = explode("\n", $field['info']);
 
                 $postId = get_the_ID();
-                if($postId == $info[1]){
+                //if($postId == $info[1]){
+                if ( is_page_template( 'templates/page_home.php' ) ) {
                     $div = 'h1';
                 } else {
                     $div = 'div';
