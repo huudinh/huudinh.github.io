@@ -204,7 +204,7 @@ function onReady(callback) {
 function setVisible(selector, visible) {
     document.querySelector(selector).style.display = visible ? 'block' : 'none';
 }
-if( $('.page') && $('.loading') ){
+if( $o('.page') && $o('.loading') ){
     onReady(function() {
         setVisible('.page', true);
         setVisible('#loading', false);
