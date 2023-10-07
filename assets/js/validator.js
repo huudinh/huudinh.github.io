@@ -174,3 +174,12 @@ Validator.isConfirmed = (selector, getConfirmValue, message) => {
         }
     }
 }
+
+Validator.addInput = (selector, getInput) => {
+    return {
+        selector: selector,
+        test: function () {
+            document.querySelector(selector).value = getInput();
+        }
+    }
+}
