@@ -7,7 +7,7 @@ function imgTheme(path, tag) {
     for (let item of image) {
         if (!item.classList.contains('noneImg')) {
             let src = item.getAttribute('src');
-            if(src){
+            if (src) {
                 src = path + src;
                 item.setAttribute('src', src);
             }
@@ -19,7 +19,7 @@ function sourceTheme(path, tag) {
     let image = $$(tag);
     for (let item of image) {
         let srcset = item.getAttribute('srcset');
-        if(srcset){
+        if (srcset) {
             srcset = path + srcset;
             item.setAttribute('srcset', srcset);
         }
@@ -31,7 +31,7 @@ function dataTheme(path, tag) {
     let image = $$(tag);
     for (let item of image) {
         let datasrc = item.getAttribute('data-src');
-        if(datasrc){
+        if (datasrc) {
             datasrc = path + datasrc;
             item.setAttribute('data-src', datasrc);
         }
@@ -43,13 +43,52 @@ function dataSourceTheme(path, tag) {
     let image = document.querySelectorAll(tag);
     for (let item of image) {
         let src = item.getAttribute('data-srcset');
-        if(src){
+        if (src) {
             src = path + src;
             item.setAttribute('data-srcset', src);
         }
     }
 }
-document.addEventListener("scroll", function() {
+// Scroll Horizontal
+function scrollHorizontal(className) {
+    const scroll = document.querySelector(className);
+    var isDown = false;
+    var scrollX;
+    var scrollLeft;
+
+    // Mouse Up Function
+    scroll.addEventListener("mouseup", () => {
+        isDown = false;
+        scroll.classList.remove("active");
+    });
+
+    // Mouse Leave Function
+    scroll.addEventListener("mouseleave", () => {
+        isDown = false;
+        scroll.classList.remove("active");
+    });
+
+    // Mouse Down Function
+    scroll.addEventListener("mousedown", (e) => {
+        e.preventDefault();
+        isDown = true;
+        scroll.classList.add("active");
+        scrollX = e.pageX - scroll.offsetLeft;
+        scrollLeft = scroll.scrollLeft;
+    });
+
+    // Mouse Move Function
+    scroll.addEventListener("mousemove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        var element = e.pageX - scroll.offsetLeft;
+        var scrolling = (element - scrollX) * 2;
+        scroll.scrollLeft = scrollLeft - scrolling;
+    });
+}
+
+// Layzyload
+document.addEventListener("scroll", function () {
     myLazy('img.lazy', 'src');
     myLazy('source.lazy', 'srcset');
     myLazy('.lazy-bg', 'img-bg');
@@ -212,7 +251,7 @@ function LazyShowScreen(sec, attr) {
 // Ajaxload
 function loadDoc(url, cFunction) {
     const xhttp = new XMLHttpRequest();
-    xhttp.onload = function() { cFunction(this); }
+    xhttp.onload = function () { cFunction(this); }
     xhttp.open("GET", url);
     xhttp.send();
 }
@@ -280,7 +319,7 @@ function renderModule(type, module, data, logic) {
 }
 
 function onReady(callback) {
-    var intervalId = window.setInterval(function() {
+    var intervalId = window.setInterval(function () {
         if (document.getElementsByTagName('body')[0] !== undefined) {
             window.clearInterval(intervalId);
             callback.call(this);
@@ -291,8 +330,8 @@ function onReady(callback) {
 function setVisible(selector, visible) {
     document.querySelector(selector).style.display = visible ? 'block' : 'none';
 }
-if( $o('.page') && $o('.loading') ){
-    onReady(function() {
+if ($o('.page') && $o('.loading')) {
+    onReady(function () {
         setVisible('.page', true);
         setVisible('#loading', false);
     });
