@@ -1,6 +1,11 @@
 @import "tobi/var";
 .font {
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    font-family: Roboto, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial;
+}
+@media (max-width:600px){
+    h1, h2, h3, h4, h5, h6{
+        padding-left:15px;
+    }
 }
 .pages {
     margin: 20px auto;
