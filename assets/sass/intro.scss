@@ -6,6 +6,10 @@
     h1, h2, h3, h4, h5, h6{
         padding-left:15px;
     }
+    .navIcon{
+        top:14px;
+    }
+
 }
 .pages {
     margin: 20px auto;
@@ -44,6 +48,7 @@
     }
     @media (max-width:600px){
         padding-left: 0;
+        padding-top:60px;
     }
     &Show{
         padding-left:280px;
@@ -96,6 +101,9 @@
     }
     &.row>div {
         align-self: flex-end
+    }
+    @media (max-width:600px){
+        padding: 10px 20px;
     }
 }
 .sidebarBox {
