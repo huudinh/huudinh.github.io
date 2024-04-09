@@ -272,8 +272,8 @@ function renderModule(type, module, data, logic) {
                 sourceTheme(`${url}`, `.${module} source`);
                 dataTheme(`${url}`, `.${module} img`);
                 dataSourceTheme(`${url}`, `.${module} source`);
-                lazyShowScreen('img.lazy', 'src')
-                lazyShowScreen('source.lazy', 'srcset')
+                LazyShowScreen('img.lazy', 'src')
+                LazyShowScreen('source.lazy', 'srcset')
             }
 
             // Khai baos url
