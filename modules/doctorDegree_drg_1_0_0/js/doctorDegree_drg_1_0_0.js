@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
             slideIndex++;
             count -= imgSize;
             showSlides(count);
+            prevBtn.classList.remove('disable');
            
         } else {
             nextBtn.classList.add('disable');
@@ -58,6 +59,8 @@ document.addEventListener("DOMContentLoaded", function () {
             slideIndex--;
             count += imgSize;
             showSlides(count);
+            nextBtn.classList.remove('disable');
+
         } else {
             prevBtn.classList.add('disable');
             alert('Bạn vui lòng chọn mũi tên xem tiếp')
