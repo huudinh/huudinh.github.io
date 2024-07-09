@@ -13,10 +13,21 @@ document.addEventListener("DOMContentLoaded", function () {
     // Kiểm tra màn hình
     function screenCheck(){
         if(window.innerWidth < 600){
-            for(let i = 0; i < img.length; i++){
+            addStyle(true);
+        } else{
+            addStyle(false);
+        }
+        imgSize = slides[0].offsetWidth + 10;
+    }
+
+    // Xử lý responsive style ảnh
+    function addStyle(check) {
+        for(let i = 0; i < img.length; i++){
+            if(check){
                 img[i].setAttribute("style", `width:${box.offsetWidth}px!important`);
+            } else {
+                img[i].removeAttribute("style");
             }
-            imgSize = slides[0].offsetWidth + 10;
         }
     }
 
