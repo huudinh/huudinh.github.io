@@ -176,9 +176,9 @@ document.addEventListener("DOMContentLoaded", function() {
             <div class="modal" id="modal-pic" style="display:flex">
                 <div class="modal-closePic" id="modal-closePic">&times;</div>
                 <div class="modal-bg" id="modal-bg"></div>
-                <div class="modal-box modal-box-img animate-zoom">
-                    <div class="modal-pic">
-                        <img src="${url}" style="width:100%" alt="img">
+                <div class="modal-box modal-box-video animate-zoom">
+                    <div class="modal-pic" style="text-align:center">
+                        <img src="${url}" style="max-width:100%" alt="img">
                     </div>
                 </div>
             </div>
@@ -188,9 +188,15 @@ document.addEventListener("DOMContentLoaded", function() {
     let modalImages = document.getElementsByClassName('modal-image');
     
     for (let modalImage of modalImages) {
-        let src = modalImage.querySelector('img').src
+
+        let url = modalImage.getAttribute('data-image');
+
+        if(url == null) {
+            url = modalImage.querySelector('img').src
+        }
+
         modalImage.addEventListener('click', () => {
-            document.getElementsByTagName('body')[0].insertAdjacentHTML('beforeEnd', imagePopupCard(src));
+            document.getElementsByTagName('body')[0].insertAdjacentHTML('beforeEnd', imagePopupCard(url));
             document.getElementById('modal-closePic').addEventListener("click", () => {
                 document.getElementById('modal-pic').remove();
             });
