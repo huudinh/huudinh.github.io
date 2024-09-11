@@ -33,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     //Tabs
-
     let tab_navs = document.querySelectorAll("ul.tabs li");
     let tab_links = document.querySelectorAll('ul.tabs li.tab-link');
     // let tab_contents = document.querySelectorAll('.tab-content');
@@ -69,9 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     //Tabs Single
-
     const tab_nav_sis = document.querySelectorAll('.tabs .tab');
-
     for (let tab_nav_si of tab_nav_sis) {
         tab_nav_si.addEventListener('click', (e) => {
             let navParent = e.target.parentElement;
@@ -86,7 +83,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     //Tabs Single IMG
-
     const tab_nav_si_imgs = document.querySelectorAll('.tabs .tab img');
     for (let tab_nav_si_img of tab_nav_si_imgs) {
         tab_nav_si_img.addEventListener('click', (e) => {
@@ -170,6 +166,37 @@ document.addEventListener("DOMContentLoaded", function() {
             
             document.getElementById('modal-bg').addEventListener("click", () => {
                 document.getElementById('modal-clip').remove();
+            });
+        });
+    }
+
+    // Image Popup
+    const imagePopupCard = (url) => {
+        return `
+            <div class="modal" id="modal-pic" style="display:flex">
+                <div class="modal-closePic" id="modal-closePic">&times;</div>
+                <div class="modal-bg" id="modal-bg"></div>
+                <div class="modal-box modal-box-img animate-zoom">
+                    <div class="modal-pic">
+                        <img src="${url}" style="width:100%" alt="img">
+                    </div>
+                </div>
+            </div>
+        `
+    }
+
+    let modalImages = document.getElementsByClassName('modal-image');
+    
+    for (let modalImage of modalImages) {
+        let src = modalImage.querySelector('img').src
+        modalImage.addEventListener('click', () => {
+            document.getElementsByTagName('body')[0].insertAdjacentHTML('beforeEnd', imagePopupCard(src));
+            document.getElementById('modal-closePic').addEventListener("click", () => {
+                document.getElementById('modal-pic').remove();
+            });
+            
+            document.getElementById('modal-bg').addEventListener("click", () => {
+                document.getElementById('modal-pic').remove();
             });
         });
     }
