@@ -39,27 +39,29 @@ add_role('moderator', __(
 );
 
 //Lấy ảnh đầu tiên làm đại diện
-function catch_that_image($id = null)
-{
+function catch_that_image($id = null) {
     global $post, $posts;
     $first_img = '';
     ob_start();
     ob_end_clean();
+    
     if ($id != '') {
         $post_content = get_post_field('post_content', $id);
-        $output       = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post_content, $matches);
+        $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post_content, $matches);
     } elseif (is_single()) {
-        $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $posts['0']->post_content, $matches);
+        $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $posts[0]->post_content ?? '', $matches);
     } else {
-        $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+        $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content ?? '', $matches);
     }
-    $first_img = $matches [1] [0];
 
-    if (empty($first_img)) {
+    // Kiểm tra sự tồn tại của $matches[1][0] trước khi gán vào $first_img
+    if (!empty($matches[1]) && isset($matches[1][0])) {
+        $first_img = $matches[1][0];
+    } else {
         $first_img = get_template_directory_uri() . "/Module/assets/images/no-image.jpg";
     }
+    
     return $first_img;
-
 }
 
 function subh_get_post_view( $postID ) {
@@ -85,6 +87,41 @@ function subh_get_post_view( $postID ) {
    }
 
 // Phân trang
+// function pagination($pages = '', $range = 4)
+// {  
+//      $showitems = ($range * 2)+1;  
+//      global $paged;
+//      if(empty($paged)) $paged = 1;
+//      if($pages == '')
+//      {
+//          global $wp_query;
+//          $pages = $wp_query->max_num_pages;
+//          if(!$pages)
+//          {
+//              $pages = 1;
+//          }
+//      }   
+ 
+//      if(1 != $pages)
+//      {
+//          echo "<ul class=\"page_nav\"><div class=\"wp-pagenavi\"><span class=\"pages\">Trang ".$paged."/".$pages."</span>";
+//          if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo "<a href='".get_pagenum_link(1)."'>««</a>";
+//          if($paged > 1 && $showitems < $pages) echo "<a href='".get_pagenum_link($paged - 1)."'>«</a>";
+ 
+//          for ($i=1; $i <= $pages; $i++)
+//          {
+//              if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
+//              {
+//                  echo ($paged == $i)? "<span class=\"current\">".$i."</span>":"<a href='".get_pagenum_link($i)."' class=\"inactive\">".$i."</a>";
+//              }
+//          }
+ 
+//          if ($paged < $pages && $showitems < $pages) echo "<a href=\"".get_pagenum_link($paged + 1)."\">»</a>";  
+//          if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<a href='".get_pagenum_link($pages)."'>»»</a>";
+//          echo "</div></ul>\n";
+//      }
+// }
+// Phân trang
 function pagination($pages = '', $range = 4)
 {  
      $showitems = ($range * 2)+1;  
@@ -92,14 +129,13 @@ function pagination($pages = '', $range = 4)
      if(empty($paged)) $paged = 1;
      if($pages == '')
      {
-         global $wp_query;
-         $pages = $wp_query->max_num_pages;
-         if(!$pages)
-         {
-             $pages = 1;
-         }
+        global $wp_query;
+        $pages = $wp_query->max_num_pages;
+        if(!$pages)
+        {
+            $pages = 1;
+        }
      }   
- 
      if(1 != $pages)
      {
          echo "<ul class=\"page_nav\"><div class=\"wp-pagenavi\"><span class=\"pages\">Trang ".$paged."/".$pages."</span>";
@@ -113,7 +149,6 @@ function pagination($pages = '', $range = 4)
                  echo ($paged == $i)? "<span class=\"current\">".$i."</span>":"<a href='".get_pagenum_link($i)."' class=\"inactive\">".$i."</a>";
              }
          }
- 
          if ($paged < $pages && $showitems < $pages) echo "<a href=\"".get_pagenum_link($paged + 1)."\">»</a>";  
          if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<a href='".get_pagenum_link($pages)."'>»»</a>";
          echo "</div></ul>\n";
@@ -355,4 +390,64 @@ if( function_exists('acf_add_options_page') ) {
     //     'parent_slug'   => 'theme-general-settings',
     // ));
 }
+add_action('before_delete_post', function ($post_id) {
+    // Lấy tất cả các file đính kèm liên quan đến bài viết
+    $attachments = get_children([
+        'post_type' => 'attachment',
+        'post_parent' => $post_id,
+    ]);
+
+    // Xóa từng file đính kèm
+    foreach ($attachments as $attachment_id => $attachment) {
+        wp_delete_attachment($attachment_id, true);
+    }
+});
+
+// Xóa kích thước ảnh mặc định
+remove_image_size('thumbnail');
+remove_image_size('medium');
+remove_image_size('large');
+remove_image_size('medium_large');
+remove_image_size('1536x1536');
+remove_image_size('2048x2048');
+
+// Xóa kích thước ảnh do theme hoặc plugin tạo
+add_filter('intermediate_image_sizes_advanced', function($sizes) {
+    return [];
+});
+
+
+// Hàm duyệt qua và xóa tệp không phải ảnh
+$upload_dir = wp_upload_dir(); // Lấy đường dẫn thư mục uploads
+$dir = $upload_dir['basedir']; // Đường dẫn gốc của thư mục uploads
+
+function delete_non_image_files($dir) {
+    $allowed_extensions = ['jpg', 'jpeg', 'png', 'gif']; // Định dạng ảnh được phép
+    $files = scandir($dir); // Lấy danh sách tất cả các tệp trong thư mục
+
+    foreach ($files as $file) {
+        if ($file === '.' || $file === '..') {
+            continue; // Bỏ qua thư mục hiện tại và thư mục cha
+        }
+
+        $file_path = $dir . DIRECTORY_SEPARATOR . $file;
+
+        if (is_file($file_path)) {
+            $file_extension = pathinfo($file_path, PATHINFO_EXTENSION);
+
+            // Xóa tệp nếu không phải định dạng ảnh hoặc nếu là ảnh có đuôi .bk.jpg
+            if (!in_array(strtolower($file_extension), $allowed_extensions) || strpos($file, '.bk.png') !== false) {
+                unlink($file_path); // Xóa tệp
+            }
+        } elseif (is_dir($file_path)) {
+            // Nếu là thư mục con, gọi lại hàm
+            delete_non_image_files($file_path);
+        }
+    }
+}
+
+// Thực thi hàm
+// delete_non_image_files($dir);
+
+
 ?>

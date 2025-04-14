@@ -16,9 +16,10 @@
         </li>
         <?php 
             $doctor = get_field('doctor');
-            $title = $doctor->post_title;
-            $link = '/'.$doctor->post_type.'/'.$doctor->post_name;
-            if($title){
+            if($doctor){
+                $title = $doctor->post_title;
+
+                $link = '/'.$doctor->post_type.'/'.$doctor->post_name;
                 echo '
                     <li class="post_author_1_0_0__Person">                        
                         <div class="symp"> *</div>
@@ -29,16 +30,16 @@
             }
         ?>
             
-        <!-- <li class="post_author_1_0_0__View">
+        <li class="post_author_1_0_0__View">
             <div class="symp"> *</div>
             <div class="post_author_1_0_0__iconview"></div>
             <?php
-                // $pageview = get_post_meta(get_the_ID(),'pageview',true);
-                // if($pageview =="") $pageview ="0";
-                // $pageview = (int)$pageview +1;
-                // update_post_meta( get_the_ID(), 'pageview', $pageview );
+                $pageview = get_post_meta(get_the_ID(),'pageview',true);
+                if($pageview =="") $pageview ="0";
+                $pageview = (int)$pageview +1;
+                update_post_meta( get_the_ID(), 'pageview', $pageview );
             ?>
-            <p><?php //echo $pageview ?> lượt xem</p>
-        </li> -->
+            <p><?php echo $pageview ?> lượt xem</p>
+        </li>
     </ul>
 </div>

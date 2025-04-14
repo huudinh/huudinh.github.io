@@ -32,49 +32,54 @@
                         <a class="header_mz_1_0_0__link" href="/">Trang chủ</a>
                     </li>
                     <?php
-                        foreach( $field as $key => $value){
-                            foreach($value as $key2 => $list){
-                                if( $list['acf_fc_layout'] == 'menu_don' ):
-                                    $main_tt = explode(" | ",  $list["title"]);
-                                    echo '
-                                        <li class="header_mz_1_0_0__menuItem">
-                                            <a class="header_mz_1_0_0__link" href="'.$main_tt[1].'">'.$main_tt[0].'</a>
-                                        </li>
-                                    ';
-                                elseif( $list['acf_fc_layout'] == 'menu_sub' ):
-                                    $main_tt = explode(" | ",  $list["title"]);
-                                    echo '
-                                        <li class="header_mz_1_0_0__menuItem">
-                                            <div class="header_mz_1_0_0__link">'.$main_tt[0].' <i class="header_mz_1_0_0__iconDown"></i></div>
-                                            <div class="header_mz_1_0_0__dropdown">
-                                                '.$list["col1"].'
-                                            </div>
-                                        </li>
-                                    ';
-                                // elseif ( $list['acf_fc_layout'] == 'menu_sub_full' ):
-                                //     $main_tt = explode(" | ",  $list["title"]);
-                                //     $main_ct = explode("&nbsp;",  $list["col1"]);
-                                //     echo '
-                                //         <div class="header_lhl_1_0_0__menuItem haveDropdown">
-                                //             <a class="header_lhl_1_0_0__menuTitle" href="'.$main_tt[1].'">'.$main_tt[0].'</a>
-                                //             <div class="header_lhl_1_0_0__dropdown">
-                                //                 <div class="header_lhl_1_0_0__dropdownBox">
-                                //     ';
-                                //         foreach($main_ct as $num => $value){
-                                //             echo '
-                                //                 <div class="header_lhl_1_0_0__dropdownCate">
-                                //                     '.$value.'
-                                //                 </div>
-                                //             ';
-                                //         }
-                                //     echo '
-                                //                 </div>
-                                //             </div>
-                                //         </div>
-                                //     ';
-                                endif;
-                            }
+                    if (is_array($field) || is_object($field)) {
+                        foreach( $field['id_header_mz_1_0_0_sub1'] as $list){
+                            if( $list['acf_fc_layout'] == 'menu_don' ):
+                                $main_tt = explode(" | ",  $list["title"]);
+                                echo '
+                                    <li class="header_mz_1_0_0__menuItem">
+                                        <a class="header_mz_1_0_0__link" href="'.$main_tt[1].'">'.$main_tt[0].'</a>
+                                    </li>
+                                ';
+                            elseif( $list['acf_fc_layout'] == 'menu_sub' ):
+                                $main_tt = explode(" | ",  $list["title"]);
+                                echo '
+                                    <li class="header_mz_1_0_0__menuItem">
+                                        <div class="header_mz_1_0_0__link">'.$main_tt[0].' <i class="header_mz_1_0_0__iconDown"></i></div>
+                                        <div class="header_mz_1_0_0__dropdown">
+                                            '.$list["col1"].'
+                                        </div>
+                                    </li>
+                                ';
+                            endif;
                         }
+                    }
+                    // if (is_array($field) || is_object($field)) {
+                    //     foreach( $field as $key => $value){
+                    //         if (is_array($value) || is_object($value)) {
+                    //             foreach($value as $key2 => $list){
+                    //                 if( $list['acf_fc_layout'] == 'menu_don' ):
+                    //                     $main_tt = explode(" | ",  $list["title"]);
+                    //                     echo '
+                    //                         <li class="header_mz_1_0_0__menuItem">
+                    //                             <a class="header_mz_1_0_0__link" href="'.$main_tt[1].'">'.$main_tt[0].'</a>
+                    //                         </li>
+                    //                     ';
+                    //                 elseif( $list['acf_fc_layout'] == 'menu_sub' ):
+                    //                     $main_tt = explode(" | ",  $list["title"]);
+                    //                     echo '
+                    //                         <li class="header_mz_1_0_0__menuItem">
+                    //                             <div class="header_mz_1_0_0__link">'.$main_tt[0].' <i class="header_mz_1_0_0__iconDown"></i></div>
+                    //                             <div class="header_mz_1_0_0__dropdown">
+                    //                                 '.$list["col1"].'
+                    //                             </div>
+                    //                         </li>
+                    //                     ';
+                    //                 endif;
+                    //             }
+                    //         }
+                    //     }
+                    // }
                     ?>
                 </ul>
             </div>
@@ -83,3 +88,6 @@
 
     <div class="header_mz_1_0_0__bg" id="headerBg"></div>
 </header>
+<script>
+    <?php include(locate_template('Module/Header/header_mz_1_0_0/js/header_mz_1_0_0.min.js'));  ?>
+</script>

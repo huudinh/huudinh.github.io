@@ -1,7 +1,6 @@
 <?php 
     get_header(); 
 ?>
-
 <div class="container">
     <div class="newsMain">
         <div class="newsMain__boxLeft">
@@ -19,9 +18,17 @@
                     if ( have_posts() ) :
                         $i = 0;
                         while ( have_posts() ) : the_post();
-                            global $post; 
-                            $kim = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large');            
-                            $img = ($kim[0]!='')?$kim[0]:catch_that_image($post->ID);
+                            global $post;
+
+                            // Get the featured image
+                            $kim = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large');
+
+                            // Safely handle $kim to ensure it's an array
+                            if ( is_array($kim) && isset($kim[0]) && $kim[0] != '' ) {
+                                $img = $kim[0];
+                            } else {
+                                $img = catch_that_image($post->ID);
+                            }
 
                             $excerpt = wp_trim_words( get_the_excerpt($post->ID), 30 );
 
@@ -49,7 +56,7 @@
                             $i++;
                         endwhile;
                     endif;
-                ?>
+                    ?>
             </div></div></section>
 
             <section class="cate_mz_2_0_0">
@@ -60,7 +67,12 @@
                         while ( have_posts() ) : the_post();
                             global $post; 
                             $kim = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large');            
-                            $img = ($kim[0]!='')?$kim[0]:catch_that_image($post->ID);
+                            // Safely handle $kim to ensure it's an array
+                            if ( is_array($kim) && isset($kim[0]) && $kim[0] != '' ) {
+                                $img = $kim[0];
+                            } else {
+                                $img = catch_that_image($post->ID);
+                            }
 
                             $excerpt = wp_trim_words( get_the_excerpt($post->ID), 30 );
 

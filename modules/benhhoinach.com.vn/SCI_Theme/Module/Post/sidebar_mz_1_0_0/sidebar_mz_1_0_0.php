@@ -7,7 +7,12 @@
         $related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 8, 'post__not_in' => array($post->ID) ) );
         if( $related ) foreach( $related as $key => $post ) {
             $kim = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'thumbnail');            
-            $img = ($kim[0]!='')?$kim[0]:catch_that_image($post->ID);
+            // $img = ($kim[0]!='')?$kim[0]:catch_that_image($post->ID);
+            if ( is_array($kim) && isset($kim[0]) && $kim[0] != '' ) {
+                $img = $kim[0];
+            } else {
+                $img = catch_that_image($post->ID);
+            }
             setup_postdata($post); 
             echo '
                 <div class="sidebar_mz_1_0_0__item">
@@ -27,8 +32,7 @@
         $args = array(
             'post_status' => 'publish',
             'showposts' => 0,
-            'orderby' => 'rand',
-            'post__not_in' => array($post->ID),
+            'orderby' => 'desc',
             'category__not_in' => array( 295 ),
         );
         $getposts = new WP_query($args); 
@@ -36,9 +40,13 @@
         while ($getposts->have_posts() && $num < 8) : 
             $num++;
             $getposts->the_post(); 
-            $do_not_duplicate[$post->ID] = $post->ID;
             $kim = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'thumbnail');            
-            $img = ($kim[0]!='')?$kim[0]:catch_that_image($post->ID);
+            // $img = ($kim[0]!='')?$kim[0]:catch_that_image($post->ID);
+            if ( is_array($kim) && isset($kim[0]) && $kim[0] != '' ) {
+                $img = $kim[0];
+            } else {
+                $img = catch_that_image($post->ID);
+            }
             $time = get_the_date('d/m/Y');
             echo'
                 <div class="sidebar_mz_1_0_0__item">

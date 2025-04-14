@@ -30,7 +30,12 @@
                     ';
                     while ($getposts->have_posts()) : $getposts->the_post();   
                         $kim = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large');            
-                        $img = ($kim[0]!='')?$kim[0]:catch_that_image($post->ID);
+                        // $img = ($kim[0]!='')?$kim[0]:catch_that_image($post->ID);
+                        if ( is_array($kim) && isset($kim[0]) && $kim[0] != '' ) {
+                            $img = $kim[0];
+                        } else {
+                            $img = catch_that_image($post->ID);
+                        }
                         $title = get_the_title($post->ID);
                         $excerpt = wp_trim_words( get_the_excerpt($post->ID), 30 );
                         if($i == 0){
