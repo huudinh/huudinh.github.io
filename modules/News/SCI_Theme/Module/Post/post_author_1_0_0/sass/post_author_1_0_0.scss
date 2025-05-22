@@ -1,0 +1,58 @@
+.post_author_1_0_0 {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    &__navg {
+        display: flex;
+        margin:0;
+        padding:0;
+    }
+    li {
+        list-style-type: none;
+        display: flex;
+        padding-right: 10px;
+    }
+    &__iconDate {
+        background: url('/wp-content/themes/SCI_Theme/Module/Post/post_author_1_0_0/images/date.png') no-repeat;
+        width: 25px;
+        height: 30px;
+    }
+    &__iconPerson {
+        background: url('/wp-content/themes/SCI_Theme/Module/Post/post_author_1_0_0/images/person.png') no-repeat;
+        width: 25px;
+        height: 30px;
+        margin-top: 2px;
+    }
+    &__iconDoctor {
+        background: url('/wp-content/themes/SCI_Theme/Module/Post/post_author_1_0_0/images/doctor.png') no-repeat;
+        width: 25px;
+        height: 30px;
+    }
+    &__iconview {
+        background: url('/wp-content/themes/SCI_Theme/Module/Post/post_author_1_0_0/images/view.png') no-repeat;
+        width: 25px;
+        height: 30px;
+        margin-top: 3px;
+    }
+    p {
+        font-weight: 600;
+        color: #000;
+    }
+    .symp {
+        height: 30px;
+        line-height: 30px;
+        padding-right: 5px;
+        color: #000;
+    }
+    .line {
+        border-top: 2px solid #eee;
+    }
+    @media (max-width: 768px) {
+        &__navg {
+            flex-wrap: wrap;
+        }
+    }
+    @media (max-width: 480px) {
+        &__navg {
+            padding-left: 0;
+        }
+    }
+}

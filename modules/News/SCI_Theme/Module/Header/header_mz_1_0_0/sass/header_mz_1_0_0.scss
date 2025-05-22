@@ -1,0 +1,224 @@
+.header_mz_1_0_0 {
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    width: 100%;
+    z-index: 20;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 46px;
+    }
+
+    &__logoTitle {
+        margin: 0;
+        font-size: 14px;
+        color: var(--primary-color);
+        padding-right:20px;
+        &--mb{
+            width:100%;
+            padding-left:15px;
+            display: none;
+        }
+        &::first-letter{
+            font-size: 56px;
+        }
+    }
+
+    &__menuMain {
+        display: flex;
+        align-items: center;
+        gap: 36px;
+        padding-left: 0;
+    }
+
+    &__menuItem {
+        list-style: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-size: 15px;
+        position: relative;
+        padding:20px 0;
+
+        &:hover {
+            color: var(--primary-color);
+            .header_mz_1_0_0__dropdown {
+                margin-top: 0px;
+                opacity: 1;
+                visibility: visible;
+                pointer-events: inherit;
+                transition: all 0.3s ease-out 0s;
+            }
+        }
+    }
+
+    &__link {
+        &:hover{
+            color: var(--primary-color);
+        }
+    }
+
+    &__dropdown {
+        position: absolute;
+        top: 58px;
+        left: -46px;
+        background-color: #fff;
+        box-shadow: 0 0px 6px 1px rgba(0,0,0,.1);
+        padding: 10px 15px;
+        visibility: hidden;
+        margin-top: 30px;
+        opacity: 0;
+        transform: translate(15%, 0);
+        border-radius: 6px;
+        width: 220px;
+
+        ul {
+            padding-left: 0;
+            list-style: none;
+            a:hover {
+                color: var(--primary-color);
+            }
+
+            li {
+                padding: 5px 0;
+                border-bottom: 1px dotted #ccc;
+                text-transform: none;
+                &:last-child{
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+
+    &__icon {
+        background-color: #dddddd;
+        border-radius: 20px;
+        padding: 6px;
+    }
+
+    &__iconSearch {
+        cursor: pointer;
+    }
+
+    &__nav {
+        display: none;
+        img {
+            display: none;
+        }
+    }
+
+    &__bg {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        &__logoTitle {
+            display: block;
+            margin: 0 auto;
+        }
+        
+        &__menu {
+            .header_mz_1_0_0__menuMain {
+                flex-direction: column;
+                overflow-y: auto;
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                padding:0;
+                margin: 0;
+                background: #fff;
+                width: 240px;
+                z-index: 20;
+                transform: translateX(-100%);
+                transition: all .3s linear;
+            }
+        }
+
+        &__nav {
+            display: block;
+            img {
+                display: block;
+                width:25px;
+            }
+        }
+
+        &__bg {
+            background: rgba(0, 0, 0, .5);
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+        }
+
+        &__menuMain {
+            gap: 10px;
+            align-items: stretch;
+        }
+
+        &__menuItem {
+            padding: 10px 15px 0;
+            border-top: 1px solid #eaeaea;
+            &:hover .header_mz_1_0_0__dropdown {
+                margin: 0;
+                padding:0;
+                display: block;
+                transform:translate(0, 0);
+            }
+        }
+
+        &__dropdown {
+            left: 0%;
+            width:100%;
+            z-index: 20;
+            position: initial;
+            transform: translate(-10%, 0);
+            display: none;
+            box-shadow: none;
+            ul {
+                width: 100%;
+                margin:0;
+                li {
+                    list-style: none;
+                    border-bottom: none;
+                    background-color: #ededed;
+                    padding: 6px 10px;
+                    margin: 4px 0;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &__iconDown {
+            content: "";
+            position: absolute;
+            right: 10px;
+            top: 17px;
+            background: url('/wp-content/themes/SCI_Theme/Module/Header/header_mz_1_0_0/images/icon-down.svg') no-repeat center;
+            background-size: contain;
+            width: 10px;
+            height: 7px;
+        }
+    }
+
+    @media (max-width: 1280px) {
+        &__link {
+            padding: 0;
+        }
+    }
+}
+
+.show {
+    transform: translateX(0) !important;
+}

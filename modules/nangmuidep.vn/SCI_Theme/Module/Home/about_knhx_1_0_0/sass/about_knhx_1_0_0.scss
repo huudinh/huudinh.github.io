@@ -1,0 +1,61 @@
+.about_knhx_1_0_0{
+    margin: 40px 0;
+    z-index: 1;
+    position: relative;
+    &__bg{
+        background-size: cover;
+        background-position: center center;
+        padding: 40px 30px 90px;
+        border-radius: 11px;
+        height: 333px;
+    }
+    &__box{
+        width: 70%;
+        margin-left: auto;
+    }
+    &__title{
+        color: #005a7d;
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    &__description{
+        text-align: justify;
+        line-height: 1.8;
+        span{
+            font-weight: 600;
+        }
+        a{
+            color: red;
+            font-weight: 600;
+            display: inline-block;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    @media (max-width: 1200px){
+        &__box{
+            width: 75%;
+        }
+    }
+    @media (max-width: 1024px){
+        &__title{
+            font-size: 20px;
+        }
+    }
+    @media (max-width: 767px){
+        background-position: right center;
+        margin: 20px 0;
+        &__bg{
+            height: auto;
+            padding: 20px 20px;
+            border: none;
+        }
+        &__box{
+            width: 100%;
+        }
+        &__title{
+            margin-bottom: 10px;
+        }
+    }
+}

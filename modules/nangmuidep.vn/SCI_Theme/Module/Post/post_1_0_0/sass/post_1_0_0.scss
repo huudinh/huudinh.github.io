@@ -1,0 +1,225 @@
+.post_1_0_0 {
+    color: #000;
+    line-height: 26px;
+    font-size: 17px;
+    padding-top: 10px;
+    font-family: Segoe UI Midlevel, sans-serif;
+    &__title {
+        margin: 0px 0 10px;
+        font-size: 23px;
+        font-weight: 700;
+        color: var(--primary-color)
+    }
+    p.wp-caption-text{
+        text-align: center;
+        font-style: italic;
+    }
+    &__ytb{
+        iframe{
+            display: block;
+            margin:0 auto;
+        }
+    }
+    
+    .pcm a {
+        color: var(--primary-color);
+        font-weight: bold;
+    }
+    
+    &-author {
+        font-size: 16px;
+        padding-bottom: 10px;
+        a {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 14px
+        }
+    }
+    
+    p {
+        text-align: justify;
+        margin: 0 0 16px;
+    }
+    h2 {
+        font-size: 23px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    h4 {
+        font-size: 21px;
+    }
+
+    h6,
+    h5,
+    h4,
+    h3,
+    h2,
+    h1,
+    h4 b,
+    h3 b,
+    h2 b,
+    h1 b,
+    h4 strong,
+    h3 strong,
+    h2 strong,
+    h1 strong {
+        font-weight: 700 !important;
+        color: var(--primary-color);
+    }
+    
+    .btnkn1km.btn {
+        display: block
+    }
+
+    table {
+        border-collapse: initial !important;
+        width: 100% !important
+    }
+
+    table tr:first-child {
+        background: var(--primary-color);
+        text-align: center;
+        color: #fff;
+        font-weight: 600
+    }
+
+    table td {
+        border: 2px solid #DEDEDE;
+        padding: 0 10px;
+        font-size: 16px !important
+    }
+    
+    &__main {
+        padding: 5px 8px
+    }    
+
+    a {
+        color: var(--primary-color);
+        background: none;
+        font-weight: bold;
+    }
+
+    .btn {
+        background: none
+    }
+
+    .aligncenter {
+        margin: 20px auto;
+        text-align: center;
+        display: table;
+        max-width: 70%;
+        height: auto;
+        background:#eee;
+        @media (max-width:600px){
+            max-width: 100%;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        p.wp-caption-text{
+            margin: 0;
+            padding: 8px 10px;
+            line-height: 23px;
+            font-size: 15px;
+        }
+    }
+
+    blockquote {
+        border: 3px dashed #25c757eb;
+        background: #fff;
+        margin: 0 auto 10px;
+        padding: 0 20px;
+        max-width: 80%
+    }
+    
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+}
+.btnkn2km.btn {
+    display: block
+}
+div.aligncenter {
+    width: 100%!important;
+}
+div#toc_container {
+    margin: 0 auto 20px;
+    background: #f7fafb;
+    border: 1px solid #e3e3e3;
+    padding: 15px 20px;
+    width: 100%;
+    display: table;
+    transition: .5s;
+    z-index: 2;
+    overflow: scroll;
+    line-height: 25px;
+    font-size: 16px;
+}
+
+p.toc_title {
+    font-weight: 600;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+#toc_container a {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--primary-color) !important;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+#toc_container ul {
+    list-style: none;
+    padding: 0
+}
+
+#toc_container ul li ul {
+    list-style: none;
+    padding-left: 20px
+}
+
+@media (max-width: 912px) {
+    .post_1_0_0 {
+        line-height: 30px;
+        font-size:17px;
+		border-right:0;
+		padding-right:0;
+        h2 {
+            font-size: 20px;
+        }
+    
+        h3 {
+            font-size: 19px;
+        }
+    
+        h4 {
+            font-size: 18px;
+        }
+    }
+    .post_1_0_0__title {
+        font-size: 20px;
+        margin:0 0 15px;
+    }
+}
+@media (max-width:600px){
+	.post_1_0_0__ytb{
+		iframe{
+			width:100%;
+		}
+	}
+    div#toc_container {
+        width:100%;
+        padding:0px 15px;
+        font-size:14px;
+        line-height: 25px;
+    }
+}

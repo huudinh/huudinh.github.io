@@ -1,0 +1,170 @@
+.cate_1_0_0 {
+    &__time {
+        color: #9d9d9d;
+        display: block;
+        margin: 5px 0;
+        font-size: 15px;
+        a{
+            color:#9d9d9d;
+            &:hover{
+                color:var(--primary-color);
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+.cate_1_0_0__content ul {
+    padding-left: 0;
+    list-style: none
+}
+
+.cate_1_0_0__content li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dotted #d8d8d8
+}
+
+.cate_1_0_0__contentPic {
+    width: 250px;
+    a{
+        position: relative;
+        display: block;
+    }    
+}
+.video{
+    a:before{
+        content:'';
+        background:url('https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Category/cate_1_0_0/image/play.png') center no-repeat;
+        background-size: 20%;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top:0;
+    }
+}
+
+.cate_1_0_0__box {
+    padding: 10px 0 0;
+    border-bottom: 1px dotted #ddd
+}
+
+.cate_1_0_0__title {
+    margin: 10px 0 5px;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase
+}
+
+.cate_1_0_0__title a:hover {
+    color: var(--primary-color)
+}
+
+.cate_1_0_0__info {
+    font-size: 15px;
+    text-align: justify;
+    padding: 10px;
+    background: #eef9ff
+}
+
+.cate_1_0_0__info p {
+    margin: 0
+}
+
+.cate_1_0_0__contentPic img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.cate_1_0_0__contentBody {
+    flex: 1;
+    padding-left: 15px
+}
+
+.cate_1_0_0__contentTitle {
+    font-weight: 600;
+    color: #000;
+    font-size: 18px;
+    margin: 0;
+}
+
+.cate_1_0_0__contentTitle a:hover {
+    color: var(--primary-color)
+}
+
+.cate_1_0_0__contentDesc {
+    margin: 0;
+    text-align: justify;
+    font-size: 17px;
+}
+
+.cate_1_0_0__contentMore {
+    padding-top: 10px
+}
+
+.cate_1_0_0__contentMore a {
+    background: #fff;
+    color: #c2c2c2;
+    border-radius: 30px;
+    padding: 5px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc
+}
+
+.cate_1_0_0__contentMore a:hover {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color)
+}
+
+@media (max-width: 600px) {
+    .cate_1_0_0__contentTitle{
+        font-size:15px;
+    }
+    .cate_1_0_0__contentPic {
+        width: 150px;
+
+        img {
+            height: 150px;
+        }
+    }
+    .cate_1_0_0__content li {
+        flex-wrap: wrap
+    }
+    .cate_1_0_0__contentDesc {
+        display: none;
+        height: 65px;
+        font-size:15px;
+        overflow: hidden;
+        text-align: left
+    }
+    .cate_1_0_0__time {
+        margin: 2px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 375px) {
+    .cate_1_0_0__contentPic {
+        width: 120px
+    }
+
+    .cate_1_0_0__contentPic img {
+        height: 120px
+    }
+}
+
+@media (max-width: 320px) {
+    .cate_1_0_0__contentPic {
+        width: 100px
+    }
+
+    .cate_1_0_0__contentPic img {
+        height: 100px
+    }
+}

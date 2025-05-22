@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>doctor_knhx_1_0_0</title>
+    <link rel="stylesheet" href="https://huudinh.github.io/assets/sass/lib.min.css">
+    <link rel="stylesheet" href="sass/doctor_knhx_1_0_0.min.css">
+</head>
+<body>
+<section class="doctor_knhx_1_0_0 load">
+    <div class="container">
+        <div class="doctor_knhx_1_0_0__head">ĐỘI NGŨ BÁC SĨ TRIỆT LÔNG TẠI BVTM KANGNAM</div>
+        <div class="doctor_knhx_1_0_0__sub">Bệnh Viện Thẩm Mỹ Kangnam quy tụ đội ngũ bác sĩ, kỹ thuật viên triệt lông đầu ngành với nhiều năm kinh nghiệm chuyên sâu.</div>
+        <div class="doctor_knhx_1_0_0__doctors">
+            <div class="doctor_knhx_1_0_0__item" data-id="0">
+                <div class="doctor_knhx_1_0_0__avatar"><img src="/wp-content/themes/SCI_Theme/Module/Home/doctor_knhx_1_0_0/images/bac-si-thuy.png" alt="Bác sĩ Lê Thị Thủ"></div>
+                <div class="doctor_knhx_1_0_0__name">Bác sĩ Lê Thị Thủy</div>
+            </div>
+            <div class="doctor_knhx_1_0_0__item" data-id="1">
+                <div class="doctor_knhx_1_0_0__avatar"><img src="/wp-content/themes/SCI_Theme/Module/Home/doctor_knhx_1_0_0/images/giao-su-mobile-1.png" alt="Giáo sư Seo Kong-Myung"></div>
+                <div class="doctor_knhx_1_0_0__name">Giáo sư Seo Kong-Myung</div>
+            </div>
+            <div class="doctor_knhx_1_0_0__item" data-id="2">
+                <div class="doctor_knhx_1_0_0__avatar"><img src="/wp-content/themes/SCI_Theme/Module/Home/doctor_knhx_1_0_0/images/tien-si-mobile.png" alt="Tiến sĩ Lee Hwa-Beom"></div>
+                <div class="doctor_knhx_1_0_0__name">Tiến sĩ Lee Hwa-Beom</div>
+            </div>
+        </div>
+        <div class="doctor_knhx_1_0_0__navigation">
+            <div class="doctor_knhx_1_0_0__btn doctor_knhx_1_0_0__prev"><img src="/wp-content/themes/SCI_Theme/Module/Home/doctor_knhx_1_0_0/images/back.png" alt=""></div>
+            <div class="doctor_knhx_1_0_0__btn doctor_knhx_1_0_0__next"><img src="/wp-content/themes/SCI_Theme/Module/Home/doctor_knhx_1_0_0/images/next.png" alt=""></div>
+        </div>
+    </div>
+</section>
+
+<div id="box-render"></div>
+
+<template id="template-doctor">
+    <div class="modal modal__doctor" id="modal-doctor" style="display: flex;">
+        <div class="modal-bg"></div>
+        <div class="modal-box animate-pop">
+            <div class="modal-header">
+                <div class="modal-close">×</div>
+                <div class="modal-title"></div>
+            </div>
+            <div class="modal-body">
+                <ul class="modal__content"></ul>
+            </div>
+        </div>
+    </div>
+</template>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        funcRenderModalDoctor([
+            {
+                name: 'Bác sĩ Lê Thị Thủy',
+                description: `
+                <li>Bác sĩ phụ trách chính khoa da liễu Bệnh viện thẩm mỹ Kangnam</li>
+                <li>15 năm kinh nghiệm chuyên sâu về khám da liễu</li>
+                <li>Chuyên khoa sơ bộ da liễu Đại học Y Hà Nội</li>
+                <li>Trưởng khoa khám bệnh Bệnh viện da liễu Thanh Hóa</li>
+                `,
+            },
+            {
+                name: 'Giáo sư Seo Kong-Myung',
+                description: `
+                <li>Bác sĩ phụ trách chính khoa da liễu Bệnh viện thẩm mỹ Kangnam</li>
+                <li>15 năm kinh nghiệm chuyên sâu về khám da liễu</li>
+                <li>Chuyên khoa sơ bộ da liễu Đại học Y Hà Nội</li>
+                <li>Trưởng khoa khám bệnh Bệnh viện da liễu Thanh Hóa</li>
+                `,
+            },
+            {
+                name: 'Tiến sĩ Lee Hwa-Beom',
+                description: `
+                <li>Bác sĩ phụ trách chính khoa da liễu Bệnh viện thẩm mỹ Kangnam</li>
+                <li>15 năm kinh nghiệm chuyên sâu về khám da liễu</li>
+                <li>Chuyên khoa sơ bộ da liễu Đại học Y Hà Nội</li>
+                <li>Trưởng khoa khám bệnh Bệnh viện da liễu Thanh Hóa</li>
+                `,
+            },
+        ]);
+    });
+</script>
+
+    <script src="https://huudinh.github.io/assets/js/module.min.js"></script>
+    <script src="js/doctor_knhx_1_0_0.js"></script>
+</body>
+</html>

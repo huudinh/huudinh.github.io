@@ -1,0 +1,88 @@
+:root {
+    --primary-font: 'Montserrat', sans-serif;
+    --secondary-font: Roboto, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --white-color: #fff;
+    --basic-color: #f0f0f0;
+    --primary-color: #00597d;
+    --primary-color-light: #21AA50;
+    --second-color: #DEB407;
+    --third-color: #EF4324;
+    --info-color: #5bc0de;
+}
+
+.aligncenter,
+.aligncenter img {
+    margin: 0 auto;
+    display: table;
+    max-width: 100%
+}
+
+// .aligncenter {
+//     margin: 20px auto;
+//     text-align: center;
+//     display: block;
+//     max-width: 100%;
+//     height: auto
+// }
+
+.post{
+    padding-right: 50px;
+}
+
+blockquote {
+    border: 3px dashed #25c757eb;
+    background: #fff;
+    margin: 0 auto 10px;
+    padding: 0 20px;
+    max-width: 80%
+}
+
+// #toc_container {
+//     list-style: none;
+//     margin: 10px 0;
+//     padding: 10px;
+//     border: 1px solid #ccc;
+//     background: #eee;
+//     margin-bottom: 10px !important
+// }
+
+// #toc_container li a {
+//     padding: 2px 5px;
+//     font-weight: normal;
+//     display: block;
+//     font-size: 15px
+// }
+
+// body {
+//     padding-top: 65px;
+// }
+// body.site{
+//     padding-top: 90px;
+// }
+
+
+.mb {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    // body {
+    //     padding-top: 58px;
+    // }
+    // body.site {
+    //     padding-top: 58px;
+    // }
+}
+
+@media (max-width: 600px) {
+    .post{
+        padding-right: 0;
+    }
+    .mb {
+        display: block;
+    }
+
+    .pc {
+        display: none;
+    }
+}

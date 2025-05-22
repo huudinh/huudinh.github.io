@@ -1,0 +1,27 @@
+.aligncenter,.aligncenter img{margin:0 auto;display:table;max-width:100%;width:auto!important}
+.wp-caption-text{text-align:center;font-style:italic}
+.post_1_0_2 img{max-width:100%;height:auto}
+.post_1_0_2 h4,.post_1_0_2 h5,.post_1_0_2 h6{font-size:16px}
+.post_1_0_2 .post_1_0_2__detail p a{font-weight:600;color:var(--primary-color)}
+.post_1_0_2{overflow:hidden;text-align:justify;color:#000;font-size:17px; margin-bottom: 15px;}
+.post_1_0_2 .post_1_0_2__content table td:last-child{padding:0;display:table-cell}
+.post_1_0_2__main{padding:5px 8px}
+.post_1_0_2__detail{padding-top:10px}
+.post_1_0_2__title{margin:0;font-size:22px;font-weight:600;color:var(--primary-color);}
+.post_1_0_2 h2{font-size:21px;color:#ef4023!important;font-weight:700;position:relative;padding-bottom:5px;}
+.post_1_0_2 h2 span{color:#ef4023!important}
+.post_1_0_2 h3 span{font-size:18px!important}
+.post_1_0_2 h3{font-size:18px;color:#000;font-weight:700;}
+.post_1_0_2__date span a{color:#EF4324;text-decoration:underline}
+.post_1_0_2 .banner_1_0_1{text-align:center}
+.post_1_0_2 .banner_1_0_1 .banner_1_0_1__tt{text-align:center;margin:5px 0}
+div#toc_container{margin:20px auto}
+@media (max-width:812px) {
+.post_1_0_2__title{color:var(--primary-color)}
+.post_1_0_2__date span a{color:#ca1f00}
+}
+@media (max-width: 414px) {
+.post_1_0_2{line-height:24px;font-size:17px}
+.post_1_0_2__date p{font-size:17px}
+.post_1_0_2__date span{font-size:15px}
+}
