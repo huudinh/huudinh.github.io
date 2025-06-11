@@ -1,0 +1,138 @@
+.gallery_knhm_1_0_0{
+  padding: 30px 0;
+  .container{
+    padding:0;
+  }
+  &__inner{
+    display: flex;
+  }
+  &__video, &__album{
+    width: 50%;
+    padding: 0 15px;
+    img{
+      width: 100%;
+      height: 100%;
+      display: block;
+      transition: all 0.2s ease;
+    }
+  }
+  &__head {
+    text-align: center;
+    color: #222;
+    font-size: 24px;
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      width: 300px;
+      margin-left: -150px;
+      height: 1px;
+      background-color: #d8d8d8;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(100% - 1px);
+      left: 50%;
+      width: 200px;
+      margin-left: -100px;
+      height: 3px;
+      background-color: #6db2d3;
+    }
+  }
+  &__box{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    height: 330px;
+    @media (max-width:700px){
+      height: 260px;
+    }
+    &:hover{
+      &>img{
+        transform: scale(1.1);
+        transition: .4s;
+      }
+    }
+  }
+  &__slider{
+    position: relative;
+  }
+  &__play{
+    width: 70px;
+    height: 49px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -35px;
+    margin-top: -25px;
+    transition: all .2s ease;
+  }
+  &__btn{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 40px;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    &--next{
+      right: 0;
+      transition: .3s;
+      &:hover{
+        background: linear-gradient(to right, #ffffff00, #ffffffc5);
+        transition: .3s;
+      }
+    }
+    &--prev{
+      left: 0;
+      transition: .3s;
+      &:hover{
+        background: linear-gradient(to right, #ffffffbe, #ffffff00);
+        transition: .3s;
+      }
+    }
+    img{
+      width: 20px;
+      height: auto;
+      display: block;
+    }
+  }
+  @media (max-width: 768px){
+    &__head {
+      &::before {
+        width: 200px;
+        margin-left: -100px;
+      }
+      &::after {
+        width: 100px;
+        margin-left: -50px;
+      }
+    }
+    &__inner{
+      flex-direction: column;
+    }
+    &__video, &__album{
+      width: 100%;
+      padding: 0;
+    }
+    &__album{
+      margin-top: 20px;
+    }
+  }
+  @media (max-width: 430px){
+    padding: 20px 0;
+    &__head{
+      font-size: 18px;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+    }
+  }
+}

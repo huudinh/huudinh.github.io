@@ -1,0 +1,122 @@
+.service_kntm_1_0_0 {
+  padding: 40px 0;
+  &__head {
+    text-align: center;
+    color: #222;
+    font-size: 24px;
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      width: 300px;
+      margin-left: -150px;
+      height: 1px;
+      background-color: #d8d8d8;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(100% - 1px);
+      left: 50%;
+      width: 200px;
+      margin-left: -100px;
+      height: 3px;
+      background-color: #00597e;
+    }
+  }
+  &__boxSlide {
+    overflow: hidden;
+    position: relative;
+  }
+  &__box {
+    font-size: 0;
+    transition-duration: 0.3s;
+    transition-property: all;
+  }
+  &__item {
+    padding: 0 20px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  &__pic {
+    padding-bottom: 15px;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+  &__titleChild {
+    font-size: 15px;
+    text-align: center;
+  }
+  &__btn {
+    display: block;
+    width: 30px;
+    position: absolute;
+    top: 55%;
+    z-index: 10;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+  &__next {
+    right: 0;
+  }
+  &__prev {
+    left: 0;
+  }
+  @media (max-width: 768px){
+    &__head {
+      &::before {
+        width: 200px;
+        margin-left: -100px;
+      }
+      &::after {
+        width: 100px;
+        margin-left: -50px;
+      }
+    }
+  }
+  @media (max-width: 430px){
+    padding: 20px 0;
+    &__head{
+        font-size: 18px;
+        padding-bottom: 10px;
+      }
+    &__item{
+        padding: 0 10px;
+    }
+    &__btn{
+        width: 20px;
+    }
+  }
+}
+.slider_knbm_1_0_0__pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.pagination-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination-dot.active {
+    background-color: #333;
+}
+
