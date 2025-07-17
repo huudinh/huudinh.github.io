@@ -19,44 +19,157 @@
                 <div class="container">
                     <h1>Slider</h1>
                     <p>You creat a beautiful responsive carousel slider</p>
-                    <h3 id="1">Add class <b>.slider</b> for Slide Intro</h3>
+                    <h3>Slider auto</h3>
+                    <code>slider('.sv1', '#slider-nav-1', 1, '.slider__pagination', 4000);</code>
+                    <br>
+                    <br>
 
                     <section class="slider">
-                        <div class="container">
-                            <div class="slider__boxSlide">
-                                <div class="sv1 slider__box ">
-                                    <div class="slider__item">
-                                        <div class="slider__pic">
-                                            <img width="240" height="240" src="https://www.w3schools.com/w3css/img_lights.jpg" alt="">
-                                        </div>
+                        <div class="slider__boxSlide">
+                            <div class="sv1 slider__box ">
+                                <div class="slider__item">
+                                    <div class="slider__pic">
+                                        <img width="240" height="240" src="https://www.w3schools.com/w3css/img_lights.jpg" style="width:100%" alt="">
                                     </div>
-                                    <div class="slider__item">
-                                        <div class="slider__pic">
-                                            <img width="240" height="240" src="https://www.w3schools.com/w3css/img_snowtops.jpg" alt="">
-                                        </div>
+                                </div>
+                                <div class="slider__item">
+                                    <div class="slider__pic">
+                                        <img width="240" height="240" src="https://www.w3schools.com/w3css/img_snowtops.jpg" style="width:100%" alt="">
                                     </div>
-                                    <div class="slider__item">
-                                        <div class="slider__pic">
-                                            <img width="240" height="240" src="https://www.w3schools.com/w3css/img_mountains.jpg" alt="">
-                                        </div>
+                                </div>
+                                <div class="slider__item">
+                                    <div class="slider__pic">
+                                        <img width="240" height="240" src="https://www.w3schools.com/w3css/img_mountains.jpg" style="width:100%" alt="">
                                     </div>
                                 </div>
                             </div>
-                            <div class="slider__controls" id="slider-nav-1">
-                                <div class="slider__btn slider__prev">
-                                    <img src="assets/images/icon-arrow.png" alt="">
-                                </div>
-                                <div class="slider__btn slider__next">
-                                    <img src="assets/images/icon-arrow.png" alt="">
-                                </div>
-                            </div>
-                            <div class="slider__pagination"></div>
                         </div>
+                        <div class="slider__controls" id="slider-1">
+                            <div class="slider__btn slider__prev">
+                                <img src="assets/images/icon-arrow.png" alt="">
+                            </div>
+                            <div class="slider__btn slider__next">
+                                <img src="assets/images/icon-arrow.png" alt="">
+                            </div>
+                        </div>
+                        <div class="slider__pagination pagination-1"></div>
                     </section>  
-                    <script>slider('.sv1', '#slider-nav-1', 1, '.slider__pagination', 4000);</script>
-                    
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            slider('.sv1', '#slider-1', 1, '.pagination-1', 4000);
+                        });
+                    </script>
 
-           
+                    <h3>Slider not auto</h3>
+                    <code>slider('.sv2', '#slider-2', 2, '.pagination-2');</code>
+                    <br>
+                    <br>
+
+                    <section class="slider">
+                        <div class="slider__boxSlide">
+                            <div class="sv2 slider__box ">
+                                <div class="slider__item">
+                                    <div class="slider__pic">
+                                        <img width="240" height="240" src="https://www.w3schools.com/w3css/img_lights.jpg" style="width:100%" alt="">
+                                    </div>
+                                </div>
+                                <div class="slider__item">
+                                    <div class="slider__pic">
+                                        <img width="240" height="240" src="https://www.w3schools.com/w3css/img_snowtops.jpg" style="width:100%" alt="">
+                                    </div>
+                                </div>
+                                <div class="slider__item">
+                                    <div class="slider__pic">
+                                        <img width="240" height="240" src="https://www.w3schools.com/w3css/img_mountains.jpg" style="width:100%" alt="">
+                                    </div>
+                                </div>
+                                <div class="slider__item">
+                                    <div class="slider__pic">
+                                        <img width="240" height="240" src="https://www.w3schools.com/w3css/img_lights.jpg" style="width:100%" alt="">
+                                    </div>
+                                </div>
+                                <div class="slider__item">
+                                    <div class="slider__pic">
+                                        <img width="240" height="240" src="https://www.w3schools.com/w3css/img_snowtops.jpg" style="width:100%" alt="">
+                                    </div>
+                                </div>
+                                <div class="slider__item">
+                                    <div class="slider__pic">
+                                        <img width="240" height="240" src="https://www.w3schools.com/w3css/img_mountains.jpg" style="width:100%" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__controls" id="slider-2">
+                            <div class="slider__btn slider__prev">
+                                <img src="assets/images/icon-arrow.png" alt="">
+                            </div>
+                            <div class="slider__btn slider__next">
+                                <img src="assets/images/icon-arrow.png" alt="">
+                            </div>
+                        </div>
+                        <div class="slider__pagination pagination-2"></div>
+                    </section>  
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            slider('.sv2', '#slider-2', 2, '.pagination-2');
+                        });
+                    </script>
+                    <h3>Slider Responsive</h3>
+                    <code>slider('.sv3', '#slider-3', 3, 'slider__pagination');</code>
+                    <br>
+                    <br>
+
+                    <section class="slider">
+                        <div class="slider__boxSlide">
+                            <div class="sv3 slider__box ">
+                                <div class="slider__item">
+                                    <div class="slider__pic">
+                                        <img width="240" height="240" src="https://www.w3schools.com/w3css/img_lights.jpg" style="width:100%" alt="">
+                                    </div>
+                                </div>
+                                <div class="slider__item">
+                                    <div class="slider__pic">
+                                        <img width="240" height="240" src="https://www.w3schools.com/w3css/img_snowtops.jpg" style="width:100%" alt="">
+                                    </div>
+                                </div>
+                                <div class="slider__item">
+                                    <div class="slider__pic">
+                                        <img width="240" height="240" src="https://www.w3schools.com/w3css/img_mountains.jpg" style="width:100%" alt="">
+                                    </div>
+                                </div>
+                                <div class="slider__item">
+                                    <div class="slider__pic">
+                                        <img width="240" height="240" src="https://www.w3schools.com/w3css/img_lights.jpg" style="width:100%" alt="">
+                                    </div>
+                                </div>
+                                <div class="slider__item">
+                                    <div class="slider__pic">
+                                        <img width="240" height="240" src="https://www.w3schools.com/w3css/img_snowtops.jpg" style="width:100%" alt="">
+                                    </div>
+                                </div>
+                                <div class="slider__item">
+                                    <div class="slider__pic">
+                                        <img width="240" height="240" src="https://www.w3schools.com/w3css/img_mountains.jpg" style="width:100%" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__controls" id="slider-3">
+                            <div class="slider__btn slider__prev">
+                                <img src="assets/images/icon-arrow.png" alt="">
+                            </div>
+                            <div class="slider__btn slider__next">
+                                <img src="assets/images/icon-arrow.png" alt="">
+                            </div>
+                        </div>
+                        <div class="slider__pagination pagination-3"></div>
+                    </section>  
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            slider('.sv3', '#slider-3', 3, '.pagination-3');
+                        });
+                    </script>
 
                 </div>
             </div>
@@ -65,6 +178,10 @@
     <script type="text/javascript" src="assets/js/data.js"></script>
     <script type="text/javascript" src="assets/js/intro.js"></script>
     <script type="text/javascript" src="assets/js/lib.min.js"></script>
+    <script>
+        // slider('.sv1', '#slider-1', 1, '.slider__pagination', 4000);
+        // slider('.sv2', '#slider-2', 1, 'slider__pagination', 4000);
+    </script>
     
 </body>
 
