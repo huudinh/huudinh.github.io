@@ -84,19 +84,8 @@
     }
 
     @media (max-width: 430px) {
-        padding: 20px 0;
-
-        &__head {
-            font-size: 18px;
-            padding-bottom: 10px;
-        }
-
-        &__item {
-            padding: 0 10px;
-        }
-
         &__btn {
-            width: 20px;
+            width: 30px;
         }
     }
 }
