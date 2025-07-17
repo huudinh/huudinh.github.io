@@ -380,3 +380,125 @@ function removeClass(btn, obj, className) {
         });
     }
 }
+
+function slider(element, control, defaultPerPage, paginationSelector, autoTime = null) {
+    const wrapperGallery = document.querySelector(element);
+    const itemGallery = document.querySelectorAll(`${element} .slider__item`);
+    const controlNext = document.querySelector(`${control} .slider__next`);
+    const controlPrev = document.querySelector(`${control} .slider__prev`);
+    const paginationWrapper = paginationSelector ? document.querySelector(paginationSelector) : null;
+
+    if (!wrapperGallery || !controlNext || !controlPrev || itemGallery.length === 0) return;
+
+    const state = {
+        perPage: defaultPerPage,
+        widthItemChild: 100 / itemGallery.length,
+        transformLeft: 0,
+        currentPage: 0,
+        totalPage: 0
+    };
+
+    let autoSlideInterval = null;
+    let resumeTimeout = null;
+
+    const renderPagination = () => {
+        if (!paginationWrapper) return;
+        paginationWrapper.innerHTML = '';
+        for (let i = 0; i < state.totalPage; i++) {
+            const dot = document.createElement('button');
+            dot.className = 'slider__dot';
+            if (i === 0) dot.classList.add('active');
+            dot.dataset.index = i;
+            dot.addEventListener('click', () => {
+                goToPage(i);
+                pauseAutoSlideTemporarily(); // 👉 dừng tạm thời khi click dot
+            });
+            paginationWrapper.appendChild(dot);
+        }
+    };
+
+    const updatePaginationActive = () => {
+        if (!paginationWrapper) return;
+        const dots = paginationWrapper.querySelectorAll('.slider__dot');
+        dots.forEach(dot => dot.classList.remove('active'));
+        if (dots[state.currentPage]) dots[state.currentPage].classList.add('active');
+    };
+
+    const goToPage = (pageIndex) => {
+        state.currentPage = pageIndex;
+        state.transformLeft = pageIndex * state.perPage * state.widthItemChild;
+        wrapperGallery.style.transform = `translate3d(-${state.transformLeft}%, 0, 0)`;
+        updatePaginationActive();
+    };
+
+    const updateSliderSize = () => {
+        const innerWidth = window.innerWidth;
+        state.perPage = innerWidth < 431 ? 1 : innerWidth < 768 ? 3 : defaultPerPage;
+        const defaultWidthItem = 100 / state.perPage;
+
+        wrapperGallery.style.width = `${defaultWidthItem * itemGallery.length}%`;
+        state.widthItemChild = 100 / itemGallery.length;
+        state.totalPage = Math.ceil(itemGallery.length / state.perPage);
+        state.currentPage = 0;
+        state.transformLeft = 0;
+
+        itemGallery.forEach(item => {
+            item.style.width = `${state.widthItemChild}%`;
+        });
+
+        renderPagination();
+        wrapperGallery.style.transform = `translate3d(0%, 0, 0)`;
+
+        if (autoTime && autoTime > 0) {
+            clearInterval(autoSlideInterval);
+            clearTimeout(resumeTimeout);
+            autoSlide();
+        }
+    };
+
+    const nextSlide = () => {
+        state.currentPage++;
+        if (state.currentPage >= state.totalPage) state.currentPage = 0;
+        goToPage(state.currentPage);
+    };
+
+    const prevSlide = () => {
+        state.currentPage--;
+        if (state.currentPage < 0) state.currentPage = state.totalPage - 1;
+        goToPage(state.currentPage);
+    };
+
+    const autoSlide = () => {
+        if (!autoTime || autoTime <= 0) return;
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = setInterval(() => {
+            nextSlide();
+        }, autoTime);
+    };
+
+    const pauseAutoSlideTemporarily = () => {
+        if (!autoTime || autoTime <= 0) return;
+        clearInterval(autoSlideInterval);
+        clearTimeout(resumeTimeout);
+        resumeTimeout = setTimeout(() => {
+            autoSlide();
+        }, 5000); // 👉 chạy lại sau 5 giây
+    };
+
+    controlNext.addEventListener("click", () => {
+        nextSlide();
+        pauseAutoSlideTemporarily(); // 👉 dừng tạm thời khi click next
+    });
+
+    controlPrev.addEventListener("click", () => {
+        prevSlide();
+        pauseAutoSlideTemporarily(); // 👉 dừng tạm thời khi click prev
+    });
+
+    updateSliderSize();
+    window.addEventListener("resize", updateSliderSize);
+
+    if (autoTime && autoTime > 0) {
+        autoSlide();
+    }
+}

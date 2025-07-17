@@ -19,7 +19,7 @@ function service_kntm_1_0_0(element, control, defaultPerPage, paginationSelector
         if (!paginationWrapper) return;
         paginationWrapper.innerHTML = '';
         for (let i = 0; i < state.totalPage; i++) {
-            const dot = document.createElement('button');
+            const dot = document.createElement('span');
             dot.className = 'pagination-dot';
             if (i === 0) dot.classList.add('active');
             dot.dataset.index = i;
@@ -30,7 +30,7 @@ function service_kntm_1_0_0(element, control, defaultPerPage, paginationSelector
         }
     };
 
-    const updatePaginationActive = () => {
+    const updatePaginationActive = () => {        
         if (!paginationWrapper) return;
         const dots = paginationWrapper.querySelectorAll('.pagination-dot');
         dots.forEach(dot => dot.classList.remove('active'));
@@ -79,7 +79,4 @@ function service_kntm_1_0_0(element, control, defaultPerPage, paginationSelector
     window.addEventListener("resize", updateSliderSize);
 }
 
-// Gọi hàm khởi tạo
-service_kntm_1_0_0('.sv1', '#slider-nav-1', 4, '');
-// service_kntm_1_0_0('.sv2', '#slider-nav-2', 3);
-service_kntm_1_0_0('.sv2', '#slider-nav-2', 3, '.slider_knbm_1_0_0__pagination');
+

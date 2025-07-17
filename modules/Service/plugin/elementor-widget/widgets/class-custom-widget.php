@@ -106,6 +106,9 @@ class Custom_Widget extends Widget_Base {
             $url = esc_url( $item['link']['url'] ?? '#' );
             $pc  = esc_url( $item['image_desktop']['url'] );
             $mb  = esc_url( $item['image_mobile']['url'] );
+            if($mb = ''){
+                $mb = $pc;
+            }
 
             // HTML slide
             if($key == 0){

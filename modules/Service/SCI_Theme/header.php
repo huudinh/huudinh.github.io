@@ -43,8 +43,9 @@
 		// Gọi Module
 		if(html_entity_decode($module)){
 			$data = explode("\n", html_entity_decode($module));
-			$module_all = explode(' | ', $data[0]);
-			$module_home = explode(' | ', $data[1]);
+			
+			$module_all = isset($data[0]) ? explode(' | ', $data[0]) : [];
+    		$module_home = isset($data[1]) ? explode(' | ', $data[1]) : [];
 			
 			// Remove whitespace from each element
 			$module_all = array_map('trim', $module_all);

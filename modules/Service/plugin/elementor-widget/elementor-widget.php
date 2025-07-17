@@ -23,7 +23,7 @@ function custom_elementor_widget_init() {
         $elements_manager->add_category(
             'custom-category',
             [
-                'title' => __( 'Slider 1.0.0', 'plugin-name' ),
+                'title' => __( 'Module Web', 'plugin-name' ),
                 'icon'  => 'fa fa-plug',
             ]
         );

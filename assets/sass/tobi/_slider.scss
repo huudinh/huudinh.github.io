@@ -1,0 +1,86 @@
+.slider {
+  &__boxSlide {
+    overflow: hidden;
+    position: relative;
+  }
+  &__box {
+    font-size: 0;
+    transition-duration: 0.3s;
+    transition-property: all;
+  }
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+  }
+  &__pic {
+    padding-bottom: 15px;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+  &__titleChild {
+    font-size: 15px;
+    text-align: center;
+  }
+  &__btn {
+    cursor: pointer;
+    background: #fff;
+    border-radius: 100%;
+    display: block;
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+  &__next {
+    right: 5px;
+  }
+  &__prev {
+    left: 5px;
+    img{
+        transform: scale(-1);
+    }
+  }
+  &__pagination {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  &__dot {
+    width: 11px;
+    height: 2px;
+    border-radius: 0;
+    background: #ccc;
+    border: 0;
+    transition: all .2s ease
+  }
+
+  &__dot.active {
+      background: #fff;
+      width: 20px
+  }
+  @media (max-width: 430px){
+    padding: 20px 0;
+    &__head{
+        font-size: 18px;
+        padding-bottom: 10px;
+      }
+    &__item{
+        padding: 0 10px;
+    }
+    &__btn{
+        width: 20px;
+    }
+  }
+}

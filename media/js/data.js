@@ -22,8 +22,12 @@ let data = {
             link : 'accordion.html'
         },
         {
-            name : 'Tiny Slider',
+            name : 'Slider',
             link : 'slider.html'
+        },
+        {
+            name : 'Tiny Slider',
+            link : 'slider-tiny.html'
         },
         {
             name : 'Tabs',

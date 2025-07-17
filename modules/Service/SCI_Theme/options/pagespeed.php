@@ -16,14 +16,14 @@ function add_async_attribute($tag, $handle) {
  
  // Xoa chan js header
 function footer_enqueue_scripts() {
-    remove_action('wp_head', 'wp_print_scripts');
-    remove_action('wp_head', 'wp_print_head_scripts', 9);
-    remove_action('wp_head', 'wp_enqueue_scripts', 1);
+    remove_action('wp_enqueue_scripts', 'wp_print_scripts');
+    remove_action('wp_enqueue_scripts', 'wp_print_head_scripts', 9);
+    remove_action('wp_enqueue_scripts', 'wp_enqueue_scripts', 1);
     add_action('wp_footer', 'wp_print_scripts', 5);
     add_action('wp_footer', 'wp_enqueue_scripts', 5);
     add_action('wp_footer', 'wp_print_head_scripts', 5);
 }
-add_action('after_setup_theme', 'footer_enqueue_scripts');
+// add_action('after_setup_theme', 'footer_enqueue_scripts');
 
  //* Remove WP Embed Script
  function stop_loading_wp_embed() {
@@ -55,7 +55,7 @@ add_action( 'wp_enqueue_scripts', 'dm_remove_wp_block_library_css' );
 //  add_action('init', 'my_init');
  
  // Remove Emoji
- remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+ remove_action( 'wp_enqueue_scripts', 'print_emoji_detection_script', 7 );
  remove_action( 'wp_print_styles', 'print_emoji_styles' );
  
  // Remove the REST API endpoint.
@@ -68,51 +68,10 @@ add_action( 'wp_enqueue_scripts', 'dm_remove_wp_block_library_css' );
  remove_filter( 'oembed_dataparse', 'wp_filter_oembed_result', 10 );
  
  // Remove oEmbed discovery links.
- remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
+ remove_action( 'wp_enqueue_scripts', 'wp_oembed_add_discovery_links' );
  
  // Remove oEmbed-specific JavaScript from the front-end and back-end.
- remove_action( 'wp_head', 'wp_oembed_add_host_js' );
- 
- // Cai thien hieu suat cuon trang / Does not use passive listeners to improve scrolling performance
- function add_script_fix_devgg(){ ?>
-     <script>
-         (function() {
-             var supportsPassive = eventListenerOptionsSupported();
-             if (supportsPassive) {
-                 var addEvent = EventTarget.prototype.addEventListener;
-                 overwriteAddEvent(addEvent);
-             }
-             function overwriteAddEvent(superMethod) {
-                 var defaultOptions = {
-                     passive: true,
-                     capture: false
-                 };
-                 EventTarget.prototype.addEventListener = function(type, listener, options) {
-                     var usesListenerOptions = typeof options === 'object';
-                     var useCapture = usesListenerOptions ? options.capture : options;
-                     options = usesListenerOptions ? options : {};
-                     options.passive = options.passive !== undefined ? options.passive : defaultOptions.passive;
-                     options.capture = useCapture !== undefined ? useCapture : defaultOptions.capture;
-                     superMethod.call(this, type, listener, options);
-                 };
-             }
-             function eventListenerOptionsSupported() {
-                 var supported = false;
-                 try {
-                     var opts = Object.defineProperty({}, 'passive', {
-                         get: function() {
-                             supported = true;
-                         }
-                     });
-                     window.addEventListener("test", null, opts);
-                 } catch (e) {}
-                 return supported;
-             }
-         })();
-     </script>
- <?php }
-     
-// add_action('wp_footer', 'add_script_fix_devgg');
+//  remove_action( 'wp_enqueue_scripts', 'wp_oembed_add_host_js' );
 
 // Xóa Elementor css
 function remove_elementor_frontend_styles() {
