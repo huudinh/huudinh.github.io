@@ -431,30 +431,6 @@ function slider(element, control, defaultPerPage, paginationSelector, autoTime =
         updatePaginationActive();
     };
 
-    // const updateSliderSize = () => {
-    //     const innerWidth = window.innerWidth;
-    //     state.perPage = innerWidth < 431 ? 1 : innerWidth < 768 ? 3 : defaultPerPage;
-    //     const defaultWidthItem = 100 / state.perPage;
-
-    //     wrapperGallery.style.width = `${defaultWidthItem * itemGallery.length}%`;
-    //     state.widthItemChild = 100 / itemGallery.length;
-    //     state.totalPage = Math.ceil(itemGallery.length / state.perPage);
-    //     state.currentPage = 0;
-    //     state.transformLeft = 0;
-
-    //     itemGallery.forEach(item => {
-    //         item.style.width = `${state.widthItemChild}%`;
-    //     });
-
-    //     renderPagination();
-    //     wrapperGallery.style.transform = `translate3d(0%, 0, 0)`;
-
-    //     if (autoTime && autoTime > 0) {
-    //         clearInterval(autoSlideInterval);
-    //         clearTimeout(resumeTimeout);
-    //         autoSlide();
-    //     }
-    // };
     const updateSliderSize = () => {
         const innerWidth = window.innerWidth;
         state.perPage = innerWidth < 431 ? 1 : innerWidth < 768 ? 3 : defaultPerPage;
@@ -473,22 +449,12 @@ function slider(element, control, defaultPerPage, paginationSelector, autoTime =
         renderPagination();
         wrapperGallery.style.transform = `translate3d(0%, 0, 0)`;
 
-        // 👉 Thêm đoạn này để tính chiều cao slider
-        let maxHeight = 0;
-        itemGallery.forEach(item => {
-            item.style.height = 'auto'; // reset nếu trước đó đặt height
-            const itemHeight = item.offsetHeight;
-            if (itemHeight > maxHeight) maxHeight = itemHeight;
-        });
-        wrapperGallery.style.height = `${maxHeight}px`; // gán chiều cao cố định
-
         if (autoTime && autoTime > 0) {
             clearInterval(autoSlideInterval);
             clearTimeout(resumeTimeout);
             autoSlide();
         }
     };
-
 
     const nextSlide = () => {
         state.currentPage++;
