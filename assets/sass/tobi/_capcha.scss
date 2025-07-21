@@ -1,0 +1,36 @@
+.capcha{
+    margin: 0 0 10px 0;
+    &__note {
+        text-align: center;
+        margin: 0;
+        font-weight: 500
+    }
+    &__question {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 500;
+        input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0
+        }
+    
+        // input[type=number] {
+        //     -moz-appearance: textfield
+        // }
+    }
+    &__number {
+        margin: 0 5px
+    }
+
+    input.capcha__result {
+        width: 27px;
+        height: 27px;
+        padding: 3px;
+        border: none;
+        border-radius: 4px;
+        background-color: #eaeaea;
+        text-align: center;
+    }
+}
