@@ -34,5 +34,5 @@
 <body class="site">
 <div class="page">			
 <?php 
-	get_template_part('Module/Control/module_header'); 
+	get_template_part('Module/module_header'); 
 ?>

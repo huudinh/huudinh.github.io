@@ -1,4 +1,19 @@
 <?php 
+// Lấy domain hiện tại
+$domain = $_SERVER['HTTP_HOST'] ?? '';
+
+// Chuẩn hóa domain (loại bỏ www.)
+$domain = preg_replace('/^www\./', '', strtolower($domain));
+
+// Tạo đường dẫn tới file schema
+$schemaFile = __DIR__ . "/options/schema/{$domain}-schema.php";
+
+// Kiểm tra file tồn tại rồi include
+if (file_exists($schemaFile)) {
+    include $schemaFile;
+}
+
+// Thêm các chức năng khác
 include "options/disable-feeds.php";
 include "options/pagespeed.php";
 include "options/LP_HTML.php";
@@ -7,6 +22,7 @@ require_once 'shortcode.php';
 //Thêm Page Field
 include "options/group_page_field.php";
 include "options/cate_field.php";
+include "options/post_field.php";
 
 $role_object = get_role( 'editor' );
 $role_object->add_cap( 'manage_options' );
@@ -416,8 +432,5 @@ function delete_non_image_files($dir) {
 
 // Thực thi hàm
 // delete_non_image_files($dir);
-
-
-
 
 ?>

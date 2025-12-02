@@ -1,0 +1,25 @@
+.otherNews_mz_1_0_0 {
+  margin: 10px 0 20px;
+  padding-left: 20px;
+
+  &__item {
+    margin-bottom: 10px;
+  }
+
+  &__topic {
+    font-size: 21px;
+    font-weight: 600;
+    margin-top:20px;
+  }
+
+  &__title {
+    margin: 0;
+    color: var(--primary-color);
+    line-height: 1.4;
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

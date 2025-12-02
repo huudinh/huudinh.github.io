@@ -5,6 +5,8 @@
         <div class="newsMain__boxLeft">            
             <?php 
                 get_template_part('Module/Post/postDetail_mz_1_0_0/postDetail_mz_1_0_0'); 
+                get_template_part('Module/Post/faqs_mz_1_0_0/faqs_mz_1_0_0');
+                get_template_part('Module/Post/otherNews_mz_1_0_0/otherNews_mz_1_0_0');
                 get_template_part('Module/Post/comment_1_0_0/comment_1_0_0');
                 get_template_part('Module/Post/postOther_mz_1_0_0/postOther_mz_1_0_0'); 
             ?>

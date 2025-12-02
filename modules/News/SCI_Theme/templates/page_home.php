@@ -47,9 +47,9 @@ header("Cache-Control: max-age=31557600"); //30days (60sec  60min  24hours * 30d
 <body>
     <div class="page">
         <?php 
-            get_template_part('Module/Control/module_header'); 
-            get_template_part('Module/Control/module');	
-            get_template_part('Module/Control/module_footer');    
+            get_template_part('Module/module_header'); 
+            get_template_part('Module/module');	
+            get_template_part('Module/module_footer');    
         ?>
     </div>
     <div id="loading"></div>
@@ -60,4 +60,5 @@ header("Cache-Control: max-age=31557600"); //30days (60sec  60min  24hours * 30d
         <?php include(locate_template('options/theme_js.php')); ?>
     </script>
     
+    <?php wp_footer(); ?>
 </body>

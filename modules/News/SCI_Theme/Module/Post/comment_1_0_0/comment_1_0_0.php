@@ -61,8 +61,8 @@ if ( post_password_required() )
             <div class="modal-main">
                 <form action="/wp-comments-post.php" method="post" id="commentform" class="comment-form">
                     <p class="comment-form-author"><input name="author" type="text" value="" size="30" maxlength="245" required="required" placeholder="Họ tên *:..."></p>
-                    <p class="comment-form-email"><input name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" placeholder="Email:..." required="required"></p>
-                    <p class="comment-form-url"><input name="url" type="text" value="" size="30" maxlength="200" placeholder="Số điện thoại *:..." required="required"></p>
+                    <p class="comment-form-email"><input name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" placeholder="Email:..." ></p>
+                    <p class="comment-form-url"><input name="url" type="text" value="" size="30" maxlength="200" placeholder="Số điện thoại :..." ></p>
                     <p style="display:none;"><textarea type="hidden" id="comment-2" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p>
                     <p class="form-submit">
                     <input name="submit" type="submit" id="submit" class="submit" value="Hoàn thành"> 

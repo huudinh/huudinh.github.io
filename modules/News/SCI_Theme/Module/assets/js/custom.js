@@ -74,3 +74,18 @@ function replateTag(element, tag){
         return supported;
     }
 })();
+
+// Tìm tất cả các phần tử có class 'comment-author vcard'
+const authors = document.querySelectorAll('.comment-author.vcard');
+
+// Tạo thẻ <img> cần thêm
+const avatarHTML = `<img alt="Avatar photo" 
+    src="https://secure.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=32" 
+    srcset="https://secure.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=64 2x" 
+    class="avatar avatar-32 photo" 
+    height="32" width="32" loading="lazy" decoding="async">`;
+
+// Thêm ảnh vào từng phần tử tìm được
+authors.forEach(author => {
+    author.insertAdjacentHTML('afterbegin', avatarHTML);
+});

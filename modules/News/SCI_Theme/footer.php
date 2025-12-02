@@ -1,4 +1,4 @@
-<?php get_template_part('Module/Control/module_footer'); ?>   
+<?php get_template_part('Module/module_footer'); ?>   
 </div>
     <div id="loading"></div>
     

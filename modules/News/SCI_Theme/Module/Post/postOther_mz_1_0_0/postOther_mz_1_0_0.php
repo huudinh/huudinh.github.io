@@ -31,14 +31,8 @@
 		$content = '';
 		while ($my_query->have_posts()) {
 			$my_query->the_post();
-			$kim = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large');
-			// $img = ($kim[0] != '') ? $kim[0] : catch_that_image($post->ID);
-			// Safely handle $kim to ensure it's an array
-			if ( is_array($kim) && isset($kim[0]) && $kim[0] != '' ) {
-				$img = $kim[0];
-			} else {
-				$img = catch_that_image($post->ID);
-			}
+			$kim = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large');			
+			$img = (is_array($kim) && !empty($kim[0])) ? $kim[0] : catch_that_image($post->ID);
 			$excerpt = wp_trim_words( get_the_excerpt($post->ID), 120 );
 			$content .='
 				<div class="postOther_mz_1_0_0__item">

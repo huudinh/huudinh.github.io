@@ -9,15 +9,10 @@
 		?>
 		<div class="postDetail_mz_1_0_0__text">
 			<?php
-				// if (is_user_logged_in() && toc_get_index()):
-				// 	echo '<ul id="toc_container">' . toc_get_index() . '</ul>';
-				// endif;
-
 				while ( have_posts() ) : 
 					the_post();
 					the_content();
 				endwhile; 
-
 				echo wpautop(get_post_meta( $post->ID , 'tra_loi',true)); 
 			?>
 		</div>

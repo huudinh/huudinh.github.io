@@ -1,4 +1,5 @@
 <?php 
+
 /*popup video*/
 function youtube_shortcode($atts,$content=null){
 	$url = $atts['url'];
