@@ -8,7 +8,9 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
@@ -17,7 +19,13 @@ body {
 }
 
 /* HTML5 elements */
-article, aside, footer, header, nav, section, main {
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main {
     display: block;
 }
 
@@ -36,7 +44,12 @@ a {
 }
 
 /* Typography defaults */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 400;
     margin: 20px 0 10px;
 }
@@ -46,7 +59,10 @@ p {
 }
 
 /* Form elements */
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
     font: inherit;
     margin: 0;
 }
@@ -60,21 +76,39 @@ input::-moz-focus-inner {
 
 /* ====== PROJECT DEFAULT STYLE ====== */
 
-html, body {
+html,
+body {
     font-family: Roboto, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     font-size: 15px;
     line-height: 1.5;
     color: #212529;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 
 /* Headings */
-h1 { font-size: 36px; }
-h2 { font-size: 30px; }
-h3 { font-size: 24px; }
-h4 { font-size: 20px; }
-h5 { font-size: 18px; }
-h6 { font-size: 16px; }
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+h6 {
+    font-size: 16px;
+}
 
 /* HR */
 hr {
