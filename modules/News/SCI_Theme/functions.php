@@ -432,5 +432,34 @@ function delete_non_image_files($dir) {
 
 // Thực thi hàm
 // delete_non_image_files($dir);
+// Loai bo tu content
+function remove_and_replace_phrases($content) {
+    // Chuẩn hóa Unicode nếu có hỗ trợ (xử lý các ký tự có dấu tổ hợp)
+    if (class_exists('Normalizer')) {
+        $content = Normalizer::normalize($content, Normalizer::FORM_C);
+    }
 
+    // Khai báo cụm từ tìm kiếm
+    $replacements = array(
+        '19006466' => '0968.999.777',
+        '1900.6466' => '0968.999.777',
+    );
+
+    // Lặp danh sách các cụm từ khóa trong nội dung
+    foreach ($replacements as $search => $replace) {
+        // Chuẩn hóa từ khóa tìm kiếm luôn
+        if (class_exists('Normalizer')) {
+            $search = Normalizer::normalize($search, Normalizer::FORM_C);
+        }
+
+        // Không phân biệt hoa thường, hỗ trợ Unicode
+        $pattern = '/' . preg_quote($search, '/') . '/iu';
+        $content = preg_replace($pattern, $replace, $content);
+    }
+
+    return $content;
+}
+// Gọi hàm xử lý tiêu đề, nội dung
+add_filter('the_content', 'remove_and_replace_phrases');
+add_filter('the_title', 'remove_and_replace_phrases');
 ?>
