@@ -79,7 +79,7 @@
     #toc_container ul li ul {
         list-style: none;
         padding-left: 20px
-    }    
+    }
 
     table {
         width: 100%;
@@ -135,11 +135,12 @@
         text-align: justify;
         font-size: 16px;
         line-height: 1.8;
-            img {
-                max-width: 100%;
-                margin: 10px auto;
-                vertical-align: middle;
-            }
+
+        img {
+            max-width: 100%;
+            margin: 10px auto;
+            vertical-align: middle;
+        }
 
         a {
             color: var(--primary-color);
@@ -166,13 +167,14 @@
 
     @media (max-width: 600px) {
         width: 100%;
-        iframe{
-            width:100%;
+
+        iframe {
+            width: 100%;
         }
 
         &__title {
             font-size: 18px;
-        }        
+        }
 
         &__navg {
             display: block;

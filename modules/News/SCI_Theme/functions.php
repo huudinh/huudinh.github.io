@@ -443,6 +443,7 @@ function remove_and_replace_phrases($content) {
     $replacements = array(
         '19006466' => '0968.999.777',
         '1900.6466' => '0968.999.777',
+        '1900 6466' => '0968.999.777',
     );
 
     // Lặp danh sách các cụm từ khóa trong nội dung
@@ -462,4 +463,43 @@ function remove_and_replace_phrases($content) {
 // Gọi hàm xử lý tiêu đề, nội dung
 add_filter('the_content', 'remove_and_replace_phrases');
 add_filter('the_title', 'remove_and_replace_phrases');
+
+// // Thêm style formats vào TinyMCE
+// add_filter('tiny_mce_before_init', function($init) {
+
+//     $style_formats = [
+//         // [
+//         //     'title' => 'Nút đỏ',
+//         //     'selector' => 'a',
+//         //     'classes' => 'btn-red'
+//         // ],
+//         [
+//             'title' => 'Box nội dung 1',
+//             'block' => 'div',
+//             'classes' => 'post-box1',
+//             'wrapper' => true
+//         ],
+//         [
+//             'title' => 'Box nội dung 2',
+//             'block' => 'div',
+//             'classes' => 'post-box2',
+//             'wrapper' => true
+//         ],
+//         [
+//             'title' => 'Box nội dung 3',
+//             'block' => 'div',
+//             'classes' => 'post-box3',
+//             'wrapper' => true
+//         ],
+//         // [
+//         //     'title' => 'Text highlight',
+//         //     'inline' => 'span',
+//         //     'classes' => 'text-highlight'
+//         // ]
+//     ];
+
+//     $init['style_formats'] = wp_json_encode($style_formats);
+
+//     return $init;
+// });
 ?>
